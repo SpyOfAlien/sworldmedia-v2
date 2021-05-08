@@ -15,7 +15,8 @@
     "next": "latest",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-particles-js": "^3.4.1"
+    "react-particles-js": "^3.4.1",
+    "sass": "^1.32.12"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.3.0",

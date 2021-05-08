@@ -2,7 +2,7 @@ import Particles from "react-particles-js";
 import { FC } from "react";
 import particles from "../../../lib/particels/particels";
 import cn from "classnames";
-import styles from "./particels-layout.module.css";
+import styles from "./particels-layout.module.scss";
 
 interface Props {
   children?: any;
