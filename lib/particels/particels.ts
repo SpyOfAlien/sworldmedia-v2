@@ -1,10 +1,10 @@
 const particels = {
   particles: {
     number: {
-      value: 100,
+      value: 120,
       density: {
         enable: true,
-        value_area: 1500,
+        value_area: 1200,
       },
     },
     color: {
@@ -16,7 +16,6 @@ const particels = {
       color: "#A6DBF7",
     },
     move: {
-      direction: "none",
       speed: 0.2,
     },
     size: {
@@ -34,11 +33,9 @@ const particels = {
     events: {
       onclick: {
         enable: true,
-        mode: "push",
       },
       onhover: {
         enable: true,
-        mode: "grab",
       },
     },
     modes: {
