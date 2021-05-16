@@ -1,4 +1,4 @@
-const particels = {
+export default {
   particles: {
     number: {
       value: 120,
@@ -8,12 +8,12 @@ const particels = {
       },
     },
     color: {
-      value: "#83C9E1",
+      value: '#83C9E1',
     },
     line_linked: {
       enable: true,
       opacity: 0.1,
-      color: "#A6DBF7",
+      color: '#A6DBF7',
     },
     move: {
       speed: 0.2,
@@ -46,5 +46,3 @@ const particels = {
   },
   retina_detect: true,
 };
-
-export default particels;

@@ -1,7 +1,13 @@
 import '../styles/index.css';
+import { SectionManager } from '../lib/context/section-context';
+import { appWithTranslation } from 'next-i18next';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
-}
+const MyApp = ({ Component, pageProps }) => {
+  return (
+    <SectionManager>
+      <Component {...pageProps} />
+    </SectionManager>
+  );
+};
 
-export default MyApp;
+export default appWithTranslation(MyApp);
