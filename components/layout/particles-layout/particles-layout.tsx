@@ -15,7 +15,7 @@ const ParticlesLayout: FC<Props> = ({ children, className }) => {
   return (
     <>
       <Particles
-        className={cn('bg-gray-800 w-screen h-screen', styles.under)}
+        className={cn('sw-bg-background sw-w-screen sw-h-screen', styles.under)}
         params={particles}
       />
       {children}

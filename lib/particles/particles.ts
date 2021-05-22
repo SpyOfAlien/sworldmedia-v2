@@ -1,11 +1,7 @@
 export default {
   particles: {
     number: {
-      value: 120,
-      density: {
-        enable: true,
-        value_area: 1200,
-      },
+      value: 60,
     },
     color: {
       value: '#83C9E1',
@@ -14,12 +10,13 @@ export default {
       enable: true,
       opacity: 0.1,
       color: '#A6DBF7',
+      distance: 120,
     },
     move: {
-      speed: 0.2,
+      speed: 0.8,
     },
     size: {
-      value: 3,
+      value: 1.2,
     },
     opacity: {
       anim: {
@@ -29,20 +26,6 @@ export default {
       },
     },
   },
-  interactivity: {
-    events: {
-      onclick: {
-        enable: true,
-      },
-      onhover: {
-        enable: true,
-      },
-    },
-    modes: {
-      push: {
-        particles_nb: 1,
-      },
-    },
-  },
+
   retina_detect: true,
 };

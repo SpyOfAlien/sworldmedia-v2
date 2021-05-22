@@ -4,14 +4,12 @@ module.exports = {
     'components/**/*.{js,ts,jsx,tsx}',
     'components/common/**/*.{js,ts,jsx,tsx}',
   ],
+  prefix: 'sw-',
   theme: {
     extend: {
       colors: {
-        'accent-1': '#FAFAFA',
-        'accent-2': '#EAEAEA',
-        'accent-7': '#333',
-        success: '#0070f3',
-        cyan: '#79FFE1',
+        background: '#0E1C29',
+        modal: '#172D42',
       },
       spacing: {
         28: '7rem',
