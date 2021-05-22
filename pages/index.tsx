@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import { useViewportScroll } from 'framer-motion';
 import SmallCard from '../components/ui/cards/small/small';
 import ServiceGlow from '../components/icons/service-glow'
+import { ServiceDetail } from '../components/common';
 
 export const getStaticProps = async ({ locale, preview }) => {
   const allPosts = (await getAllPostsForHome(preview)) ?? [];
@@ -46,7 +47,7 @@ const HomePage = ({ locales, allPosts }) => {
       downHandler={onPageScrollDown}
     >
       <ParticlesLayout />
-      <section className="sw-absolute sw-top-0 sw-left-0 sw-flex sw-flex-col md:sw-flex-row sw-items-center sw-justify-center sw-w-full sw-h-screen">
+      {/* <section className="sw-absolute sw-top-0 sw-left-0 sw-flex sw-flex-col md:sw-flex-row sw-items-center sw-justify-center sw-w-full sw-h-screen">
         <div className="sw-w-full md:sw-w-1/2"></div>
         <div className="sw-w-full md:sw-w-1/2">
           <SmallCard cl="md:sw-w-4/5 sw-mx-auto" content="Truyền thông thương hiệu" icon="/assets/svg/brand-communication.svg"/>
@@ -56,6 +57,21 @@ const HomePage = ({ locales, allPosts }) => {
           <SmallCard cl="md:sw-w-4/5 sw-mx-auto" content="Tổ chức sự kiện" icon="/assets/svg/event.svg"/>
           </div>
           <ServiceGlow className="sw-absolute sw-h-screen sw-w-full xl:sw-w-auto sw-left-0"/>
+      </section> */}
+
+      <section className="sw-absolute sw-top-0 sw-left-0 sw-pt-xl sw-w-full sw-h-screen">
+
+      <ServiceDetail data={{
+        icon: '/assets/svg/brand-communication.svg',
+        name: 'Xây dựng thương hiệu',
+        label: 'Xây dựng thương hiệu',
+        content: 'S-World cung cấp giải pháp toàn diện cho thương hiệu khi tư vấn và xây dựng những yếu tố: Câu chuyện thương hiệu, slogan, định vị khách hàng và chiến lược phát triển, để doanh nghiệp đến gần hơn với khách hàng.',
+        subService: [
+          'Phát triển concept',
+          'Thiết kế bộ nhận diện thương hiệu',
+          'Chiến lược thương hiệu'
+        ]
+      }} />
       </section>
     </ReactScrollWheelHandler>
   );

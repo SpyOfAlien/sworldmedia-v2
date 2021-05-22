@@ -7,9 +7,9 @@ interface Props {
 }
 
 const Label: FC<Props> = ({ children, cl }) => {
-    return <p className={cn('sw-text-label', cl)}>
+    return <h3 className={cn('sw-text-h3 sw-title-gradient sw-capitalize sw-font-bold', cl)}>
         { children }
-    </p>
+    </h3>
 }
 
 export default Label
