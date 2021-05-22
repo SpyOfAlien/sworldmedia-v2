@@ -5,6 +5,8 @@ import ReactScrollWheelHandler from 'react-scroll-wheel-handler';
 import { useSection } from '../lib/context/section-context';
 import { useEffect } from 'react';
 import { useViewportScroll } from 'framer-motion';
+import SmallCard from '../components/ui/cards/small/small';
+import ServiceGlow from '../components/icons/service-glow'
 
 export const getStaticProps = async ({ locale, preview }) => {
   const allPosts = (await getAllPostsForHome(preview)) ?? [];
@@ -44,6 +46,17 @@ const HomePage = ({ locales, allPosts }) => {
       downHandler={onPageScrollDown}
     >
       <ParticlesLayout />
+      <section className="sw-absolute sw-top-0 sw-left-0 sw-flex sw-flex-col md:sw-flex-row sw-items-center sw-justify-center sw-w-full sw-h-screen">
+        <div className="sw-w-full md:sw-w-1/2"></div>
+        <div className="sw-w-full md:sw-w-1/2">
+          <SmallCard cl="md:sw-w-4/5 sw-mx-auto" content="Truyền thông thương hiệu" icon="/assets/svg/brand-communication.svg"/>
+          <SmallCard cl="md:sw-w-4/5 sw-mx-auto" content="Xây dựng thương hiệu" icon="/assets/svg/branding.svg"/>
+          <SmallCard cl="md:sw-w-4/5 sw-mx-auto" content="Sản xuất" icon="/assets/svg/production.svg"/>
+          <SmallCard cl="md:sw-w-4/5 sw-mx-auto" content="Kết nối quốc tế" icon="/assets/svg/international-relations.svg"/>
+          <SmallCard cl="md:sw-w-4/5 sw-mx-auto" content="Tổ chức sự kiện" icon="/assets/svg/event.svg"/>
+          </div>
+          <ServiceGlow className="sw-absolute sw-h-screen sw-w-full xl:sw-w-auto sw-left-0"/>
+      </section>
     </ReactScrollWheelHandler>
   );
 };
