@@ -11,7 +11,13 @@ interface Props {
 
 const Modal: FC<Props> = ({ children, open, onClose }) => {
   return (
-    <Portal>{open ? <div className={s.modal}>{children}</div> : null}</Portal>
+    <Portal>
+      {open ? (
+        <div className={s.modal}>
+          <div className={s.content}>{children}</div>
+        </div>
+      ) : null}
+    </Portal>
   );
 };
 

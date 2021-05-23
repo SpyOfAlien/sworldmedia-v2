@@ -63,21 +63,6 @@ const HomePage = ({ locales, allPosts }) => {
       </section> */}
 
       <section className="sw-absolute sw-top-0 sw-left-0 sw-pt-xl sw-w-full sw-h-screen">
-        {/* <ServiceDetail
-          data={{
-            icon: '/assets/svg/brand-communication.svg',
-            name: 'Xây dựng thương hiệu',
-            label: 'Xây dựng thương hiệu',
-            content: 'S-World cung cấp giải pháp toàn diện cho thương hiệu khi tư vấn và xây dựng những yếu tố: Câu chuyện thương hiệu, slogan, định vị khách hàng và chiến lược phát triển, để doanh nghiệp đến gần hơn với khách hàng.',
-            subService: [
-              'Phát triển concept',
-              'Thiết kế bộ nhận diện thương hiệu',
-              'Chiến lược thương hiệu',
-              'Chiến lược thương hiệu',
-            ]
-          }}
-        /> */}
-
         <div onClick={openModal}>Open menu</div>
         <div onClick={closeModal}>Close</div>
         {/* <Menu /> */}

@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import cn from 'classnames';
 import s from './page.module.scss';
 import Modal from '../modal/modal';
@@ -16,6 +16,7 @@ const ServiceDetail = dynamic(() => import('../../common/service-detail'));
 
 const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
   const { closeModal, displayModal, modalView } = useUI();
+  const [isActiveHumburger, setIsActiveHumburger] = useState(false);
 
   const brandCommunication = {
     icon: '/assets/svg/brand-communication.svg',
@@ -37,6 +38,17 @@ const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
       <Modal open={displayModal} onClose={closeModal}>
         {modalView === '' && <ServiceDetail data={brandCommunication} />}
       </Modal>
+
+      <div
+        className={cn(s.hamburger, s.hamburgerSlider, {
+          [s.active]: isActiveHumburger,
+        })}
+        onClick={() => setIsActiveHumburger(!isActiveHumburger)}
+      >
+        <div className={s.hamburgerBox}>
+          <span className={s.hamburgerInner}></span>
+        </div>
+      </div>
     </div>
   );
 };
