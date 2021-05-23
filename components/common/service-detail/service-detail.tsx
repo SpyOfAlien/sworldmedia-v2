@@ -1,9 +1,12 @@
 import { FC } from 'react'
 import Image from 'next/image'
 import Paragraph from '../typo/paragraph'
-import Heading from '../typo/title'
 import Label from '../typo/label'
 import { Container } from '../../layout'
+import cn from 'classnames'
+import s from './service-detail.module.scss'
+import Heading from '../typo/heading'
+import Arrow from '../../icons/arrow'
 
 interface Data {
     name: string,
@@ -22,7 +25,6 @@ const ServiceDetail: FC<Props> = ({ data, cl }) => {
     return <Container>
         <div className="sw-flex">
             <div className="sw-w-full xl:sw-w-1/2">
-             
                 <div className="sw-w-10/12">
 
                     <Image
@@ -32,18 +34,26 @@ const ServiceDetail: FC<Props> = ({ data, cl }) => {
                         alt={data.name}
                     />
                 
-                
                     <Label cl="sw-my-8">{data.name}</Label>
                     <Paragraph>{data.content}</Paragraph>
                 </div>
                 
             </div>
             <div className="sw-w-full xl:sw-w-1/2">
-                <div className="sw-w-10/12 sw-flex sw-flex-wrap">
-                    {data.subService.map(item => <div className="sw-w-2/5 sw-bg-modal sw-mr-2 sw-mb-2">
-                            <Paragraph cl="sw-title-gradient sw-text-label sw-font-bold">
+                <div className={cn("sw-w-10/12 sw-flex sw-flex-wrap", s.container)}>
+                    {data.subService.map(item =>
+                        <div
+                            className={
+                                cn("sw-w-2/5 sw-bg-modal hover:sw-bg-lightModal sw-mr-4 sw-mb-4 sw-flex sw-flex-col sw-justify-between",
+                                s.box)
+                            }
+                        >
+                            <Heading h='h6' cl="sw-text-gradient">
                                 { item }
-                            </Paragraph>
+                            </Heading>
+                            <div className="sw-w-full sw-flex sw-justify-end">
+                                <Arrow />
+                            </div>
                     </div>)}
                 </div>
             </div>

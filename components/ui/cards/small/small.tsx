@@ -28,7 +28,7 @@ const SmallCard: FC<Props> = ({ cl, icon, content }) => {
                 alt="Brand communication"
             />
         </div>
-        <Paragraph cl="sw-title-gradient sw-text-label sw-font-bold sw-flex-auto">
+        <Paragraph cl="sw-text-gradient sw-text-label sw-font-bold sw-flex-auto">
             { content }
         </Paragraph>
 

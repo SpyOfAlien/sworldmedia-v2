@@ -7,7 +7,7 @@ interface Props {
 }
 
 const Label: FC<Props> = ({ children, cl }) => {
-    return <h3 className={cn('sw-text-h3 sw-title-gradient sw-capitalize sw-font-bold', cl)}>
+    return <h3 className={cn('sw-text-h3 sw-text-gradient sw-capitalize sw-font-bold', cl)}>
         { children }
     </h3>
 }

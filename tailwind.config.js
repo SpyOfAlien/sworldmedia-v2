@@ -11,6 +11,7 @@ module.exports = {
       colors: {
         background: '#0E1C29',
         modal: '#172D42',
+        lightModal: '#1F3F5C',
         paragraph: '#B8CAE6'
       },
       spacing: {
@@ -30,17 +31,16 @@ module.exports = {
         'mobile': '28px',
       },
       fontSize: {
-        'desktop': '18px',
-        'tablet': '16px',
+        'bigscreen': '18px',
+        'desktop': '16px',
         'mobile': '14px',
         'p': '1rem',
-        'label': '2rem',
         'h1': '4.5rem',
         'h2': '3.5rem',
         'h3': '3rem',
-        '6xl': '2.75rem',
-        '7xl': '4.5rem',
-        '8xl': '6.25rem',
+        'h4': '',
+        'h5': '',
+        'h6': '1.333333rem'
       },
       boxShadow: {
         small: '0 5px 10px rgba(0, 0, 0, 0.12)',
@@ -53,7 +53,11 @@ module.exports = {
       backgroundImage: theme => ({
         'cta': `linear-gradient(254.68deg, #EBE9F9 2.29%, #F9F9FA 97.31%, #E9A9FF 97.31%, #FBFAFE 97.31%)`,
         'blue': `linear-gradient(234.85deg, #A6DBF7 9.06%, #51BCF9 102.41%)`
-       })
+       }),
+       screens: {
+         '3xl': '1920px'
+       }
     },
   },
+
 };

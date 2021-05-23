@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 @layer utilities {
-  .sw-title-gradient {
+  .sw-text-gradient {
     background: linear-gradient(234.85deg, #a6dbf7 9.06%, #51bcf9 102.41%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -59,13 +59,13 @@
 
   @screen md {
     html {
-      @apply sw-text-tablet;
+      @apply sw-text-desktop;
     }
   }
 
-  @screen xl {
+  @screen 3xl {
     html {
-      @apply sw-text-desktop;
+      @apply sw-text-bigscreen;
     }
   }
 }
