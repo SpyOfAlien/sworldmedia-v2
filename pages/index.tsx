@@ -79,6 +79,7 @@ const HomePage = ({ locales, allPosts }) => {
         /> */}
 
         <div onClick={openModal}>Open menu</div>
+        <div onClick={closeModal}>Close</div>
         {/* <Menu /> */}
       </section>
     </ReactScrollWheelHandler>

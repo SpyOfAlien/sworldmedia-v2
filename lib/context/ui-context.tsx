@@ -45,7 +45,7 @@ const UIReducer = (state: IUIState, action: Action) => {
     case 'CLOSE_MODAL': {
         return {
             ...state,
-            dispayModal: false
+            displayModal: false
         
         }
     }
