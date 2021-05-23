@@ -6,7 +6,7 @@ import { useSection } from '../lib/context/section-context';
 import { useEffect } from 'react';
 import { useViewportScroll } from 'framer-motion';
 import SmallCard from '../components/ui/cards/small/small';
-import ServiceGlow from '../components/glows/service-glow'
+import ServiceGlow from '../components/glows/service-glow';
 import { ServiceDetail } from '../components/common';
 import Menu from '../components/common/menu/menu';
 import { useUI } from '../lib/context/ui-context';
