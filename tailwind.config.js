@@ -35,11 +35,11 @@ module.exports = {
         'desktop': '16px',
         'mobile': '14px',
         'p': '1rem',
-        'h1': '4.5rem',
-        'h2': '3.5rem',
+        'h1': '4rem',
+        'h2': '3.11111111111rem',
         'h3': '3rem',
         'h4': '',
-        'h5': '',
+        'h5': '1.77777777778rem',
         'h6': '1.333333rem'
       },
       boxShadow: {

@@ -6,8 +6,9 @@ import { useSection } from '../lib/context/section-context';
 import { useEffect } from 'react';
 import { useViewportScroll } from 'framer-motion';
 import SmallCard from '../components/ui/cards/small/small';
-import ServiceGlow from '../components/icons/service-glow'
+import ServiceGlow from '../components/glows/service-glow'
 import { ServiceDetail } from '../components/common';
+import Menu from '../components/common/menu/menu';
 
 export const getStaticProps = async ({ locale, preview }) => {
   const allPosts = (await getAllPostsForHome(preview)) ?? [];
@@ -60,18 +61,21 @@ const HomePage = ({ locales, allPosts }) => {
       </section> */}
 
       <section className="sw-absolute sw-top-0 sw-left-0 sw-pt-xl sw-w-full sw-h-screen">
-
-      <ServiceDetail data={{
-        icon: '/assets/svg/brand-communication.svg',
-        name: 'Xây dựng thương hiệu',
-        label: 'Xây dựng thương hiệu',
-        content: 'S-World cung cấp giải pháp toàn diện cho thương hiệu khi tư vấn và xây dựng những yếu tố: Câu chuyện thương hiệu, slogan, định vị khách hàng và chiến lược phát triển, để doanh nghiệp đến gần hơn với khách hàng.',
-        subService: [
-          'Phát triển concept',
-          'Thiết kế bộ nhận diện thương hiệu',
-          'Chiến lược thương hiệu'
-        ]
-      }} />
+        {/* <ServiceDetail
+          data={{
+            icon: '/assets/svg/brand-communication.svg',
+            name: 'Xây dựng thương hiệu',
+            label: 'Xây dựng thương hiệu',
+            content: 'S-World cung cấp giải pháp toàn diện cho thương hiệu khi tư vấn và xây dựng những yếu tố: Câu chuyện thương hiệu, slogan, định vị khách hàng và chiến lược phát triển, để doanh nghiệp đến gần hơn với khách hàng.',
+            subService: [
+              'Phát triển concept',
+              'Thiết kế bộ nhận diện thương hiệu',
+              'Chiến lược thương hiệu',
+              'Chiến lược thương hiệu',
+            ]
+          }}
+        /> */}
+        <Menu />
       </section>
     </ReactScrollWheelHandler>
   );
