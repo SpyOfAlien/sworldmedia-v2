@@ -9,6 +9,7 @@ import SmallCard from '../components/ui/cards/small/small';
 import ServiceGlow from '../components/glows/service-glow'
 import { ServiceDetail } from '../components/common';
 import Menu from '../components/common/menu/menu';
+import { useUI } from '../lib/context/ui-context';
 
 export const getStaticProps = async ({ locale, preview }) => {
   const allPosts = (await getAllPostsForHome(preview)) ?? [];
@@ -24,6 +25,7 @@ export const getStaticProps = async ({ locale, preview }) => {
 const HomePage = ({ locales, allPosts }) => {
   // Context
   const { currentSection, onScrollUp, onScrollDown } = useSection();
+  const { openModal, closeModal } = useUI();
 
   const { scrollYProgress } = useViewportScroll();
 
@@ -75,7 +77,9 @@ const HomePage = ({ locales, allPosts }) => {
             ]
           }}
         /> */}
-        <Menu />
+
+        <div onClick={openModal}>Open menu</div>
+        {/* <Menu /> */}
       </section>
     </ReactScrollWheelHandler>
   );
