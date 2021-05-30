@@ -14,6 +14,10 @@ import Medium from '../components/ui/cards/medium/medium';
 import Image from 'next/image';
 import ProductSlider from '../components/ui/products/slider';
 import Products from '../lib/data/products';
+import WhyUs from '../components/common/whyus/whyus';
+import whyUsList from '../lib/data/whyus';
+import aboutUsList from '../lib/data/about-us';
+import AboutUs from '../components/common/about-us/about-us';
 
 export const getStaticProps = async ({ locale, preview }) => {
   const allPosts = (await getAllPostsForHome(preview)) ?? [];
@@ -50,7 +54,7 @@ const HomePage = ({ locales, allPosts }) => {
       upHandler={onPageScrollUp}
       downHandler={onPageScrollDown}
     >
-      {/* <ParticlesLayout /> */}
+      <ParticlesLayout />
       {/* <section className="sw-absolute sw-top-0 sw-left-0 sw-flex sw-flex-col md:sw-flex-row sw-items-center sw-justify-center sw-w-full sw-h-screen">
         <div className="sw-w-full md:sw-w-1/2"></div>
         <div className="sw-w-full md:sw-w-1/2">
@@ -74,8 +78,13 @@ const HomePage = ({ locales, allPosts }) => {
       {/* <Image src="/assets/svg/partner.svg" width={800} height={800}/> */}
 
       {/* </section> */}
-      <ProductSlider products={Products} />
+      {/* <ProductSlider products={Products} /> */}
       {/* <Menu /> */}
+
+      <section className="sw-absolute sw-top-0 sw-left-0">
+        {/* <WhyUs data={whyUsList} /> */}
+        <AboutUs data={aboutUsList} />
+      </section>
     </ReactScrollWheelHandler>
   );
 };

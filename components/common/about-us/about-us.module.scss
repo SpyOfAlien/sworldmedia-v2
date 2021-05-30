@@ -1,0 +1,15 @@
+.item-1 {
+}
+
+@screen md {
+  .item-0 {
+    @apply sw-col-start-1 sw-row-start-1 sw-items-end;
+  }
+  .item-1 {
+    @apply sw-items-end;
+  }
+
+  .item-2 {
+    @apply sw-col-start-2 sw-col-end-3;
+  }
+}

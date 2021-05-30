@@ -20,19 +20,24 @@ const Medium: FC<Props> = ({ cl, icon, content, title }) => {
   return (
     <div
       className={cn(
-        'sw-flex sw-flex-col sw-items-center',
+        'sw-flex sw-flex-col sw-items-center sw-px-4 3xl:sw-px-24',
         cl
       )}
     >
+      <div className="sw-mb-2">
+        <Image src={icon} width={120} height={120} />
+      </div>
+      {title ? (
         <div>
-            <Image src={icon} width={120} height={120} />
+          <Heading h="h5" cl="sw-text-gradient">
+            {title}
+          </Heading>
         </div>
-        <div>
-            <Heading h="h5" cl="sw-text-gradient"> {title} </Heading>
-        </div>
-        <div>
-            <Paragraph>{content}</Paragraph>
-        </div>
+      ) : null}
+
+      <div className="sw-text-center">
+        <Paragraph>{content}</Paragraph>
+      </div>
     </div>
   );
 };
