@@ -9,7 +9,8 @@ interface Props {
 
 const SubscribeForm: FC<Props> = ({ cl }) => {
   const [email, setEmail] = useState('');
-  const emailRegex = /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
+  const emailRegex =
+    /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
 
   const handleOnChange = (e: any) => {
     if (e) {
@@ -26,8 +27,6 @@ const SubscribeForm: FC<Props> = ({ cl }) => {
           body: JSON.stringify({ email: email, confirm: true }),
         }
       );
-
-      console.log('res', res.json());
     }
   };
 

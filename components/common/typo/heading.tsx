@@ -3,7 +3,7 @@ import cn from 'classnames';
 import s from './typo.module.scss';
 
 interface Props {
-  children: string;
+  children: any;
   cl?: string;
   h: string;
 }

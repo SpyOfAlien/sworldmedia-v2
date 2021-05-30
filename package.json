@@ -24,7 +24,9 @@
     "react-particles-js": "^3.4.1",
     "react-responsive": "^8.2.0",
     "react-scroll-wheel-handler": "^2.0.1",
-    "sass": "^1.32.12"
+    "react-slick": "^0.28.1",
+    "sass": "^1.32.12",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.3.0",

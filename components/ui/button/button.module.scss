@@ -1,0 +1,7 @@
+.button {
+  @apply sw-rounded-sm sw-flex sw-items-center sw-justify-center sw-font-bold sw-py-3 sw-my-4 sw-cursor-pointer;
+}
+
+.solid {
+  @apply sw-bg-paragraph;
+}

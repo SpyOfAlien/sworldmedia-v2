@@ -18,8 +18,6 @@ function useScrollDirection() {
 
     function handleScroll() {
       const newY = getSize();
-      console.log('scroll');
-
       setScrollY((prevstate) => {
         setScrollDirection(prevstate > newY ? 'up' : 'down');
         return newY;

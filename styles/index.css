@@ -4,6 +4,13 @@
 /* purgecss end ignore */
 @tailwind utilities;
 
+/* react slick */
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
+/* Overide react slick */
+@import './slider.css';
+
 @layer utilities {
   .sw-text-gradient {
     background: linear-gradient(234.85deg, #a6dbf7 9.06%, #51bcf9 102.41%);
@@ -48,6 +55,15 @@
     -moz-box-sizing: border-box;
     @apply sw-text-mobile;
   }
+
+  /* body::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  } */
 
   *,
   *:before,

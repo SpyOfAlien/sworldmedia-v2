@@ -16,8 +16,6 @@ const SmallCard: FC<Props> = ({ cl, icon, content }) => {
     query: '(min-device-width: 768px)',
   });
 
-  console.log('is', isDesktopOrLaptop);
-
   return (
     <div
       className={cn(
