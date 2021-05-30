@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import Image from 'next/image';
-import Heading from '../../common/typo/heading';
-import Paragraph from '../../common/typo/paragraph';
-import Button from '../button/button';
+import Heading from '../../ui/typo/heading';
+import Paragraph from '../../ui/typo/paragraph';
+import Button from '../../ui/button/button';
 import { Container } from '../../layout';
 import s from './product.module.scss';
 import cn from 'classnames';

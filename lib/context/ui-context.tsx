@@ -2,13 +2,13 @@ import React, { FC, useMemo } from 'react';
 import { ThemeProvider } from 'next-themes';
 
 interface IUIState {
-    displayModal: boolean
-    modalView: string
+  displayModal: boolean;
+  modalView: string;
 }
 
 const initialState: IUIState = {
   displayModal: false,
-  modalView: ''
+  modalView: '',
 };
 
 type MODAL_VIEWS =
@@ -17,43 +17,41 @@ type MODAL_VIEWS =
   | 'PRODUCTION'
   | 'INTERNAL_RELATION'
   | 'EVENT'
+  | 'MENU';
 
 type Action =
-    | {
-        type: 'OPEN_MODAL';
-        }
-    | {
-        type: 'CLOSE_MODAL';
-        }
-    | {
-        type: 'SET_MODAL_VIEW'
-        view: MODAL_VIEWS
+  | {
+      type: 'OPEN_MODAL';
     }
+  | {
+      type: 'CLOSE_MODAL';
+    }
+  | {
+      type: 'SET_MODAL_VIEW';
+      view: MODAL_VIEWS;
+    };
 
-export const UIContext = React.createContext<IUIState | any>(
-  initialState
-);
+export const UIContext = React.createContext<IUIState | any>(initialState);
 
 const UIReducer = (state: IUIState, action: Action) => {
   switch (action.type) {
     case 'OPEN_MODAL': {
-        return {
-            ...state,
-            displayModal: true
-        }
+      return {
+        ...state,
+        displayModal: true,
+      };
     }
     case 'CLOSE_MODAL': {
-        return {
-            ...state,
-            displayModal: false
-        
-        }
+      return {
+        ...state,
+        displayModal: false,
+      };
     }
     case 'SET_MODAL_VIEW': {
-        return {
-            ...state,
-            modalView: action.view,
-        }
+      return {
+        ...state,
+        modalView: action.view,
+      };
     }
   }
 };
@@ -61,17 +59,17 @@ const UIReducer = (state: IUIState, action: Action) => {
 const UIProvider: FC = (props) => {
   const [state, dispatch] = React.useReducer(UIReducer, initialState);
 
-  const openModal = () => dispatch({ type: 'OPEN_MODAL' })
-  const closeModal = () => dispatch({ type: 'CLOSE_MODAL' })
+  const openModal = () => dispatch({ type: 'OPEN_MODAL' });
+  const closeModal = () => dispatch({ type: 'CLOSE_MODAL' });
   const setModalView = (view: MODAL_VIEWS) =>
-  dispatch({ type: 'SET_MODAL_VIEW', view })
+    dispatch({ type: 'SET_MODAL_VIEW', view });
 
   const value = useMemo(
     () => ({
       ...state,
       openModal,
       closeModal,
-      setModalView
+      setModalView,
     }),
     [state]
   );

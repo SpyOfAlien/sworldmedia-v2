@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import Link from 'next/link';
 import WhiteLogo from '../../icons/white-logo';
-import Heading from '../typo/heading';
-import Paragraph from '../typo/paragraph';
+import Heading from '../../ui/typo/heading';
+import Paragraph from '../../ui/typo/paragraph';
 import Phone from '../../icons/phone';
 import Gmail from '../../icons/gmail';
 import Location from '../../icons/location';
@@ -10,14 +10,18 @@ import Facebook from '../../icons/facebook';
 import Youtube from '../../icons/youtube';
 import Linkedin from '../../icons/linkedin';
 import SubscribeForm from '../subscribe/subscribe';
+import MenuGlow from '../../glows/menu-glow';
 
 interface Props {}
 
 const Menu: FC<Props> = () => {
   return (
-    <div className="sw-flex 3xl:sw-w-8/12 sw-mx-auto">
+    <div className="sw-flex">
+      <div className="sw-absolute sw-inset-0 sw-z-1">
+        <MenuGlow />
+      </div>
       {/* Navigation */}
-      <div className="sw-flex sw-flex-col sw-text-gradient sw-text-h1 sw-font-bold sw-w-1/2">
+      <div className="sw-flex sw-flex-col sw-text-gradient sw-text-h1 sw-font-bold sw-w-1/2 sw-z-10">
         <Link href="/">
           <a className="sw-mb-md"> Trang chủ </a>
         </Link>
@@ -36,7 +40,7 @@ const Menu: FC<Props> = () => {
       </div>
 
       {/* Infor */}
-      <div className="sw-w-1/2">
+      <div className="sw-w-1/2 sw-z-10">
         <div className="sw-flex sw-flex-col sw-w-4/5 sw-mx-auto">
           <div className="sw-mb-md">
             <WhiteLogo />

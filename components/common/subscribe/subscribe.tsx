@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
 import cn from 'classnames';
-import Paragraph from '../typo/paragraph';
+import Paragraph from '../../ui/typo/paragraph';
 import s from './subscribe.module.scss';
 
 interface Props {

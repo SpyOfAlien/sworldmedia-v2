@@ -2,8 +2,8 @@ import { FC } from 'react';
 import cn from 'classnames';
 import { useMediaQuery } from 'react-responsive';
 import Image from 'next/image';
-import Heading from '../../../common/typo/heading';
-import Paragraph from '../../../common/typo/paragraph';
+import Heading from '../../typo/heading';
+import Paragraph from '../../typo/paragraph';
 
 interface Props {
   cl?: string;

@@ -5,19 +5,14 @@ import ReactScrollWheelHandler from 'react-scroll-wheel-handler';
 import { useSection } from '../lib/context/section-context';
 import { useEffect } from 'react';
 import { useViewportScroll } from 'framer-motion';
-import SmallCard from '../components/ui/cards/small/small';
-import ServiceGlow from '../components/glows/service-glow';
-import { ServiceDetail } from '../components/common';
-import Menu from '../components/common/menu/menu';
 import { useUI } from '../lib/context/ui-context';
-import Medium from '../components/ui/cards/medium/medium';
-import Image from 'next/image';
-import ProductSlider from '../components/ui/products/slider';
+import ProductSlider from '../components/common/products/slider';
 import Products from '../lib/data/products';
 import WhyUs from '../components/common/whyus/whyus';
 import whyUsList from '../lib/data/whyus';
 import aboutUsList from '../lib/data/about-us';
 import AboutUs from '../components/common/about-us/about-us';
+import ServicePage from '../components/common/services/service-page/service-page';
 
 export const getStaticProps = async ({ locale, preview }) => {
   const allPosts = (await getAllPostsForHome(preview)) ?? [];
@@ -33,11 +28,11 @@ export const getStaticProps = async ({ locale, preview }) => {
 const HomePage = ({ locales, allPosts }) => {
   // Context
   const { currentSection, onScrollUp, onScrollDown } = useSection();
-  const { openModal, closeModal } = useUI();
-
   const { scrollYProgress } = useViewportScroll();
 
-  useEffect(() => {}, [currentSection]);
+  useEffect(() => {
+    console.log('current section', currentSection);
+  }, [currentSection]);
 
   const onPageScrollUp = () => {
     // Check animation done
@@ -53,38 +48,38 @@ const HomePage = ({ locales, allPosts }) => {
     <ReactScrollWheelHandler
       upHandler={onPageScrollUp}
       downHandler={onPageScrollDown}
+      timeout={1000}
     >
       <ParticlesLayout />
-      {/* <section className="sw-absolute sw-top-0 sw-left-0 sw-flex sw-flex-col md:sw-flex-row sw-items-center sw-justify-center sw-w-full sw-h-screen">
-        <div className="sw-w-full md:sw-w-1/2"></div>
-        <div className="sw-w-full md:sw-w-1/2">
-          <SmallCard cl="md:sw-w-4/5 sw-mx-auto sw-mb-4" content="Truyền thông thương hiệu" icon="/assets/svg/brand-communication.svg"/>
-          <SmallCard cl="md:sw-w-4/5 sw-mx-auto sw-mb-4" content="Xây dựng thương hiệu" icon="/assets/svg/branding.svg"/>
-          <SmallCard cl="md:sw-w-4/5 sw-mx-auto sw-mb-4" content="Sản xuất" icon="/assets/svg/production.svg"/>
-          <SmallCard cl="md:sw-w-4/5 sw-mx-auto sw-mb-4" content="Kết nối quốc tế" icon="/assets/svg/international-relations.svg"/>
-          <SmallCard cl="md:sw-w-4/5 sw-mx-auto sw-mb-4" content="Tổ chức sự kiện" icon="/assets/svg/event.svg"/>
-          </div>
-          <ServiceGlow className="sw-absolute sw-h-screen sw-w-full xl:sw-w-auto sw-left-0"/>
-      </section> */}
 
-      {/* <section className="sw-absolute sw-top-0 sw-left-0 sw-w-full sw-h-screen"> */}
-      {/* <div onClick={openModal}>Open menu</div>
-        <div onClick={closeModal}>Close</div> */}
+      {/* About us */}
+      {currentSection === 1 ? (
+        <section className="sw-absolute sw-inset-0">
+          <AboutUs data={aboutUsList} />
+        </section>
+      ) : null}
 
-      {/* <Medium icon="/assets/svg/vision.svg" title="Hehe hehe" content="Là cầu nối truyền thông đặc biệt đưa Việt Nam đến gần thế giới"/>
-        <Medium icon="/assets/svg/target.svg" title="Hehe hehe" content="Là cầu nối truyền thông đặc biệt đưa Việt Nam đến gần thế giới"/>
-        <Medium icon="/assets/svg/business.svg" title="Hehe hehe" content="Là cầu nối truyền thông đặc biệt đưa Việt Nam đến gần thế giới"/> */}
+      {/* Services */}
 
-      {/* <Image src="/assets/svg/partner.svg" width={800} height={800}/> */}
+      {currentSection === 2 ? (
+        <section className="sw-absolute sw-inset-0">
+          <ServicePage />
+        </section>
+      ) : null}
 
-      {/* </section> */}
-      {/* <ProductSlider products={Products} /> */}
-      {/* <Menu /> */}
+      {/* Products */}
+      {currentSection === 3 ? (
+        <section className="sw-absolute sw-inset-0">
+          <ProductSlider products={Products} />
+        </section>
+      ) : null}
 
-      <section className="sw-absolute sw-top-0 sw-left-0">
-        {/* <WhyUs data={whyUsList} /> */}
-        <AboutUs data={aboutUsList} />
-      </section>
+      {/* Why us */}
+      {currentSection === 4 ? (
+        <section className="sw-absolute sw-inset-0">
+          <WhyUs data={whyUsList} />
+        </section>
+      ) : null}
     </ReactScrollWheelHandler>
   );
 };
