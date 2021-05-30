@@ -2,6 +2,7 @@ import { Container } from '../../../layout';
 import services from '../../../../lib/data/services';
 import SmallCard from '../../../ui/cards/small/small';
 import { useUI } from '../../../../lib/context/ui-context';
+import Image from 'next/image';
 
 const ServicePage = () => {
   const { openModal, closeModal, setModalView } = useUI();
@@ -13,7 +14,14 @@ const ServicePage = () => {
 
   return (
     <Container cl="sw-flex sw-flex-col md:sw-flex-row sw-items-center sw-justify-center sw-h-full sw-w-full">
-      <div className="sw-w-full md:sw-w-1/3"></div>
+      <div className="sw-w-full md:sw-w-1/3">
+        <Image
+          src="/assets/svg/aboutus.svg"
+          width={580}
+          height={580}
+          layout="responsive"
+        />
+      </div>
       <div className="sw-w-full md:sw-w-2/3">
         {services.map((item, idx) => (
           <SmallCard

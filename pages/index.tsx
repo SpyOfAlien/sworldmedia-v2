@@ -28,11 +28,8 @@ export const getStaticProps = async ({ locale, preview }) => {
 const HomePage = ({ locales, allPosts }) => {
   // Context
   const { currentSection, onScrollUp, onScrollDown } = useSection();
-  const { scrollYProgress } = useViewportScroll();
 
-  useEffect(() => {
-    console.log('current section', currentSection);
-  }, [currentSection]);
+  useEffect(() => {}, [currentSection]);
 
   const onPageScrollUp = () => {
     // Check animation done
