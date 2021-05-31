@@ -24,9 +24,16 @@ const ContactPage = () => {
 
   return (
     <div className="sw-flex sw-w-full sw-px-12 md:sw-px-24 xl:sw-px-0 xl:sw-p-0 sw-flex-col-reverse sw-pt-40 sw-flex-col xl:sw-flex-row xl:sw-h-screen sw-bg-background sw-relative">
-      {/* <div className="sw-absolute xl:sw-inset-0">
-        <ContactGlow />
-      </div> */}
+      {isDesktopOrLaptop ? (
+        <div className="sw-absolute sw-inset-0 sw-w-full">
+          <Image
+            src="/assets/svg/contact-glow.svg"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+          />
+        </div>
+      ) : null}
       <div className="sw-flex sw-flex-col xl:sw-flex-row sw-w-full xl:sw-w-1/2">
         <div className="sw-w-full sw-mb-24 sw-mx-auto xl:sw-h-screen sw-relative">
           {isDesktopOrLaptop ? (
