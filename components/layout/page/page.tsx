@@ -7,6 +7,7 @@ import dynamic from 'next/dynamic';
 import services from '../../../lib/data/services';
 import Menu from '../../common/menu/menu';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useRouter } from 'next/router';
 
 interface Props {
   children: any;
@@ -20,6 +21,7 @@ const ServiceDetail = dynamic(
 );
 
 const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
+  const route = useRouter();
   const { closeModal, displayModal, modalView, openModal, setModalView } =
     useUI();
   const [isActiveHumburger, setIsActiveHumburger] = useState(false);
@@ -27,6 +29,10 @@ const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
   useEffect(() => {
     setIsActiveHumburger(displayModal);
   }, [displayModal]);
+
+  useEffect(() => {
+    if (isActiveHumburger) closeModal();
+  }, [route]);
 
   const onHamburgerClick = () => {
     if (isActiveHumburger) {

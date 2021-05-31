@@ -4,8 +4,6 @@ import { ParticlesLayout } from '../components/layout';
 import ReactScrollWheelHandler from 'react-scroll-wheel-handler';
 import { useSection } from '../lib/context/section-context';
 import { useEffect } from 'react';
-import { useViewportScroll } from 'framer-motion';
-import { useUI } from '../lib/context/ui-context';
 import ProductSlider from '../components/common/products/slider';
 import Products from '../lib/data/products';
 import WhyUs from '../components/common/whyus/whyus';

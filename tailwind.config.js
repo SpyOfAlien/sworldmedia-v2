@@ -16,6 +16,7 @@ module.exports = {
         lg: '3rem',
         xl: '8rem',
         xxl: '14rem',
+        48: '48%',
       },
       letterSpacing: {
         tighter: '-.04em',

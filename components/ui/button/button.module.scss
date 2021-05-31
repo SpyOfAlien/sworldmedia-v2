@@ -1,5 +1,9 @@
 .button {
-  @apply sw-rounded-sm sw-flex sw-items-center sw-justify-center sw-font-bold sw-py-3 sw-my-4 sw-cursor-pointer;
+  @apply sw-rounded-sm sw-w-full sw-flex sw-items-center sw-justify-center sw-font-bold sw-py-3 sw-my-4 sw-cursor-pointer;
+}
+
+.gradient {
+  background: linear-gradient(234.85deg, #a6dbf7 9.06%, #51bcf9 102.41%);
 }
 
 .solid {

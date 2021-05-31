@@ -1,0 +1,13 @@
+.input {
+  border: 2px solid #b8cae5;
+  background: #172d42;
+  color: #b8cae5;
+
+  &::placeholder {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

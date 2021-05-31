@@ -11,6 +11,7 @@ import Youtube from '../../icons/youtube';
 import Linkedin from '../../icons/linkedin';
 import SubscribeForm from '../subscribe/subscribe';
 import MenuGlow from '../../glows/menu-glow';
+import Infor from '../../ui/infor/infor';
 
 interface Props {}
 
@@ -47,46 +48,23 @@ const Menu: FC<Props> = () => {
           </div>
 
           <div className="sw-mb-xsm">
-            <Heading h="h6" cl="sw-text-paragraph sw-mb-xsm">
-              Thông tin liên hệ
-            </Heading>
-            <span className="sw-flex sw-mb-sm">
-              <span className="sw-block">
-                <Phone />
-              </span>
-              <Paragraph cl="sw-ml-4 sw-font-normal">
-                (+84) 817 701 604
-              </Paragraph>
-            </span>
-            <span className="sw-flex sw-mb-sm">
-              <span className="sw-block">
-                <Gmail />
-              </span>
-              <Paragraph cl="sw-ml-4 sw-font-normal">
-                info@s-worldmedia.com
-              </Paragraph>
-            </span>
-            <span className="sw-flex sw-mb-sm">
-              <span className="sw-block">
-                <Location />
-              </span>
-              <Paragraph cl="sw-ml-4 sw-font-normal">
-                31.OT.09, Landmark 81, Vinhomes Central Park, 720A Điện Biên
-                Phủ, Phường 22, Quận Bình Thạnh, TP.HCM
-              </Paragraph>
-            </span>
+            <Infor />
           </div>
 
           <div className="sw-mb-xsm">
             <Paragraph cl="sw-mb-sm">Đăng ký nhận tin tức mới</Paragraph>
-            <SubscribeForm cl="sw-w-4/5" />
+            <SubscribeForm cl="sw-w-full md:sw-w-11/12 xl:sw-w-10/12" />
           </div>
 
-          <div className="sw-flex">
+          <div className="sw-flex sw-mb-xsm">
             <Facebook style={{ marginRight: '40px' }} />
             <Linkedin style={{ marginRight: '40px' }} />
             <Youtube style={{ marginRight: '40px' }} />
           </div>
+
+          <Paragraph cl="sw-mb-md">
+            S-World © 2021. All Rights Reserved.
+          </Paragraph>
         </div>
       </div>
     </div>
