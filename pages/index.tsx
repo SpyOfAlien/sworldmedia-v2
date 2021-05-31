@@ -13,6 +13,7 @@ import whyUsList from '../lib/data/whyus';
 import aboutUsList from '../lib/data/about-us';
 import AboutUs from '../components/common/about-us/about-us';
 import ServicePage from '../components/common/services/service-page/service-page';
+import Clients from '../components/common/clients/clients';
 
 export const getStaticProps = async ({ locale, preview }) => {
   const allPosts = (await getAllPostsForHome(preview)) ?? [];
@@ -64,15 +65,37 @@ const HomePage = ({ locales, allPosts }) => {
         </section>
       ) : null}
 
-      {/* Products */}
+      {/* Partners */}
+
       {currentSection === 3 ? (
+        <section className="sw-absolute sw-inset-0">
+          <Clients
+            title="Đối tác media"
+            imgSrc="/assets/svg/media-partner.svg"
+          />
+        </section>
+      ) : null}
+
+      {/* Clients */}
+
+      {currentSection === 4 ? (
+        <section className="sw-absolute sw-inset-0">
+          <Clients
+            title="Khách hàng của chúng tôi"
+            imgSrc="/assets/svg/clients.svg"
+          />
+        </section>
+      ) : null}
+
+      {/* Products */}
+      {currentSection === 5 ? (
         <section className="sw-absolute sw-inset-0">
           <ProductSlider products={Products} />
         </section>
       ) : null}
 
       {/* Why us */}
-      {currentSection === 4 ? (
+      {currentSection === 6 ? (
         <section className="sw-absolute sw-inset-0">
           <WhyUs data={whyUsList} />
         </section>
