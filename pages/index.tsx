@@ -14,6 +14,7 @@ import ServicePage from '../components/common/services/service-page/service-page
 import Clients from '../components/common/clients/clients';
 import { useMediaQuery } from 'react-responsive';
 import cn from 'classnames';
+import Glow from '../components/glows/glow';
 
 export const getStaticProps = async ({ locale, preview }) => {
   const allPosts = (await getAllPostsForHome(preview)) ?? [];
@@ -63,6 +64,13 @@ const HomePage = ({ locales, allPosts }) => {
       timeout={1000}
     >
       <ParticlesLayout />
+
+      {currentSection === 1 && <Glow path="about-glow" />}
+      {currentSection === 2 && <Glow path="service-glow" />}
+      {currentSection === 3 && <Glow path="partner-glow" />}
+      {currentSection === 4 && <Glow path="client-glow" />}
+      {currentSection === 6 && <Glow path="whyus-glow" />}
+
       <Container isVisible={currentSection === 1}>
         <AboutUs data={aboutUsList} />
       </Container>

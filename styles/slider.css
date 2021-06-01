@@ -13,10 +13,6 @@
   cursor: pointer;
 }
 
-.slick-dots li img:hover {
-  border: 4px red solid !important;
-}
-
 .sw-slide-arrow {
   position: absolute;
   bottom: 15px;

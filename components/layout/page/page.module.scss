@@ -7,7 +7,7 @@
   display: inline-block;
   cursor: pointer;
   transition-property: opacity, filter;
-  transition-duration: 0.15s;
+  transition-duration: 0.5s;
   transition-timing-function: linear;
   text-transform: none;
   background-color: transparent;
@@ -36,8 +36,9 @@
   position: absolute;
   background: linear-gradient(234.85deg, #a6dbf7 9.06%, #51bcf9 102.41%);
   transition-property: transform;
-  transition-duration: 0.15s;
+  transition-duration: 0.5s;
   transition-timing-function: ease;
+  border-radius: 6px;
 }
 
 .hamburgerInner::before,
@@ -60,7 +61,7 @@
   top: 10px;
   transition-property: transform, opacity;
   transition-timing-function: ease;
-  transition-duration: 0.15s;
+  transition-duration: 0.5s;
 }
 .hamburgerSlider .hamburgerInner::after {
   top: 20px;
