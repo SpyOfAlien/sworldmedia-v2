@@ -2,9 +2,11 @@ import Image from 'next/image';
 import { FC } from 'react';
 import Slider from 'react-slick';
 import ProductHero from './product-hero';
+import cn from 'classnames';
 
 interface Props {
   products: any[];
+  cl?: string;
 }
 
 const NextArrow = (props) => {
@@ -35,7 +37,7 @@ const PrevArrow = (props) => {
   );
 };
 
-const ProductSlider: FC<Props> = ({ products }) => {
+const ProductSlider: FC<Props> = ({ products, cl }) => {
   const baseUrl = '/assets/images/products';
 
   const settings = {

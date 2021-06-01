@@ -1,0 +1,33 @@
+.container {
+  @apply sw-w-11/12 sw-mx-auto sw-py-8;
+}
+
+@screen md {
+  .container {
+    @apply sw-w-10/12;
+  }
+}
+
+@screen lg {
+  .container {
+    @apply sw-w-4/5;
+  }
+}
+
+@screen xl {
+  .container {
+    @apply sw-w-10/12;
+  }
+}
+
+@screen 2xl {
+  .container {
+    @apply sw-w-10/12;
+  }
+}
+
+@screen 3xl {
+  .container {
+    @apply sw-w-9/12;
+  }
+}

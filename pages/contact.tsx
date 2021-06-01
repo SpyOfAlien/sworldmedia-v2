@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import ContactGlow from '../components/glows/contact-glow';
 import Facebook from '../components/icons/facebook';
 import Linkedin from '../components/icons/linkedin';
 import WhiteLogo from '../components/icons/white-logo';
@@ -12,7 +11,6 @@ import { useState } from 'react';
 import Tetxarea from '../components/ui/input/textarea';
 import Button from '../components/ui/button/button';
 import Heading from '../components/ui/typo/heading';
-import SubscribeForm from '../components/common/subscribe/subscribe';
 
 const ContactPage = () => {
   // State
@@ -22,8 +20,12 @@ const ContactPage = () => {
     query: '(min-device-width: 1280px)',
   });
 
+  const onSubscribe = () => {
+    console.log('subscribe');
+  };
+
   return (
-    <div className="sw-flex sw-w-full sw-px-12 md:sw-px-24 xl:sw-px-0 xl:sw-p-0 sw-flex-col-reverse sw-pt-40 sw-flex-col xl:sw-flex-row xl:sw-h-screen sw-bg-background sw-relative">
+    <div className="sw-flex sw-w-full sw-px-12 md:sw-px-24 xl:sw-px-0 xl:sw-p-0 sw-flex-col-reverse sw-pt-40 sw-flex-col xl:sw-flex-row xl:sw-h-screen sw-relative">
       {isDesktopOrLaptop ? (
         <div className="sw-absolute sw-inset-0 sw-w-full">
           <Image
@@ -115,7 +117,12 @@ const ContactPage = () => {
         </div>
 
         <div className="sw-w-full xl:sw-w-2/5">
-          <Button text="Gửi tin nhắn" type="gradient" />
+          <Button
+            cl="sw-h-10"
+            text="Gửi tin nhắn"
+            type="gradient"
+            onclick={onSubscribe}
+          />
         </div>
       </div>
     </div>

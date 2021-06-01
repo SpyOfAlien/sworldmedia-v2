@@ -1,9 +1,9 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { getAllPostsForHome } from '../lib/api';
-import { ParticlesLayout } from '../components/layout';
+import { Container, ParticlesLayout } from '../components/layout';
 import ReactScrollWheelHandler from 'react-scroll-wheel-handler';
 import { useSection } from '../lib/context/section-context';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import ProductSlider from '../components/common/products/slider';
 import Products from '../lib/data/products';
 import WhyUs from '../components/common/whyus/whyus';
@@ -12,6 +12,8 @@ import aboutUsList from '../lib/data/about-us';
 import AboutUs from '../components/common/about-us/about-us';
 import ServicePage from '../components/common/services/service-page/service-page';
 import Clients from '../components/common/clients/clients';
+import { useMediaQuery } from 'react-responsive';
+import cn from 'classnames';
 
 export const getStaticProps = async ({ locale, preview }) => {
   const allPosts = (await getAllPostsForHome(preview)) ?? [];
@@ -27,18 +29,32 @@ export const getStaticProps = async ({ locale, preview }) => {
 const HomePage = ({ locales, allPosts }) => {
   // Context
   const { currentSection, onScrollUp, onScrollDown } = useSection();
+  const [desktopView, setDesktopView] = useState(undefined);
 
-  useEffect(() => {}, [currentSection]);
+  useEffect(() => {
+    switch (currentSection) {
+      case 1:
+        setDesktopView(<AboutUs data={aboutUsList} />);
+        break;
+
+      default:
+        break;
+    }
+  }, [currentSection]);
 
   const onPageScrollUp = () => {
     // Check animation done
-    onScrollUp();
+    if (isDesktopOrLaptop) onScrollUp();
   };
 
   const onPageScrollDown = () => {
     // check animation done
-    onScrollDown();
+    if (isDesktopOrLaptop) onScrollDown();
   };
+
+  const isDesktopOrLaptop = useMediaQuery({
+    query: '(min-device-width: 1280px)',
+  });
 
   return (
     <ReactScrollWheelHandler
@@ -47,58 +63,50 @@ const HomePage = ({ locales, allPosts }) => {
       timeout={1000}
     >
       <ParticlesLayout />
+      <Container isVisible={currentSection === 1}>
+        <AboutUs data={aboutUsList} />
+      </Container>
 
-      {/* About us */}
-      {currentSection === 1 ? (
-        <section className="sw-absolute sw-inset-0">
-          <AboutUs data={aboutUsList} />
-        </section>
-      ) : null}
+      <Container isVisible={currentSection === 2}>
+        <ServicePage />
+      </Container>
 
-      {/* Services */}
-
-      {currentSection === 2 ? (
-        <section className="sw-absolute sw-inset-0">
-          <ServicePage />
-        </section>
-      ) : null}
-
-      {/* Partners */}
-
-      {currentSection === 3 ? (
-        <section className="sw-absolute sw-inset-0">
-          <Clients
-            title="Đối tác media"
-            imgSrc="/assets/svg/media-partner.svg"
-          />
-        </section>
-      ) : null}
-
-      {/* Clients */}
-
-      {currentSection === 4 ? (
-        <section className="sw-absolute sw-inset-0">
-          <Clients
-            title="Khách hàng của chúng tôi"
-            imgSrc="/assets/svg/clients.svg"
-          />
-        </section>
-      ) : null}
-
-      {/* Products */}
-      {currentSection === 5 ? (
-        <section className="sw-absolute sw-inset-0">
-          <ProductSlider products={Products} />
-        </section>
-      ) : null}
-
-      {/* Why us */}
-      {currentSection === 6 ? (
-        <section className="sw-absolute sw-inset-0">
-          <WhyUs data={whyUsList} />
-        </section>
-      ) : null}
+      <Container isVisible={currentSection === 3}>
+        <Clients title="Đối tác media" imgSrc="/assets/svg/media-partner.svg" />
+      </Container>
+      <Container isVisible={currentSection === 4}>
+        <Clients
+          title="Khách hàng của chúng tôi"
+          imgSrc="/assets/svg/clients.svg"
+        />
+      </Container>
+      <Container isFullpage={true} isVisible={currentSection === 5}>
+        <ProductSlider products={Products} />
+      </Container>
+      <Container isVisible={currentSection === 6}>
+        <WhyUs data={whyUsList} />
+      </Container>
     </ReactScrollWheelHandler>
+    // <div>
+    //   {isDesktopOrLaptop ? (
+
+    //   ) : (
+    //     <Container>
+    //       <AboutUs data={aboutUsList} />
+    //       <ServicePage />
+    //       <Clients
+    //         title="Đối tác media"
+    //         imgSrc="/assets/svg/media-partner.svg"
+    //       />
+    //       <Clients
+    //         title="Khách hàng của chúng tôi"
+    //         imgSrc="/assets/svg/clients.svg"
+    //       />
+    //       <ProductSlider products={Products} />
+    //       <WhyUs data={whyUsList} />
+    //     </Container>
+    //   )}
+    // </div>
   );
 };
 

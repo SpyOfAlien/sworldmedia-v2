@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 import cn from 'classnames';
-import Paragraph from '../../ui/typo/paragraph';
 import s from './subscribe.module.scss';
+import Button from '../../ui/button/button';
 
 interface Props {
   cl?: string;
@@ -33,13 +33,13 @@ const SubscribeForm: FC<Props> = ({ cl }) => {
   return (
     <div
       className={cn(
-        'sw-flex sw-bg-paragraph sw-h-12 sw-py-1 sw-pr-1 sw-pl-4 sw-items-center sw-justify-between sw-rounded-sm',
+        'sw-flex sw-bg-paragraph sw-py-1 sw-pr-1 sw-pl-4 sw-items-center sw-justify-between sw-rounded-sm',
         cl
       )}
     >
       <input
         className={cn(
-          'sw-bg-paragraph focus:sw-outline-none sw-h-full sw-rounded-sm',
+          'sw-bg-paragraph focus:sw-outline-none sw-h-full sw-w-9/12 sw-rounded-sm',
           s.input
         )}
         placeholder="Email"
@@ -50,12 +50,12 @@ const SubscribeForm: FC<Props> = ({ cl }) => {
         spellCheck="false"
         onChange={handleOnChange}
       />
-      <div
-        className="sw-bg-modal sw-rounded-sm sw-h-10 sw-flex sw-items-center sw-justify-center sw-w-24 sw-cursor-pointer"
-        onClick={handleSubscribe}
-      >
-        <Paragraph>Subscribe</Paragraph>
-      </div>
+      <Button
+        cl="sw-h-10 sw-w-32"
+        text="Subscribe"
+        type="gradient"
+        onclick={handleSubscribe}
+      />
     </div>
   );
 };

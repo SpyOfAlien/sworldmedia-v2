@@ -56,6 +56,13 @@
 }
 
 @media screen and (min-width: 1280px) {
+  .content {
+    height: 100px;
+  }
+
+  .overrideContainer {
+    top: 30%;
+  }
 }
 
 @media screen and (min-width: 1920px) {

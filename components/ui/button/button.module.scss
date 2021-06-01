@@ -1,11 +1,107 @@
+// .button {
+//   @apply sw-rounded-sm sw-w-full sw-flex sw-items-center sw-justify-center sw-font-bold sw-py-3 sw-my-4 sw-cursor-pointer;
+// }
+
+// .gradient {
+//   background: linear-gradient(90deg, #f2d6be -0.22%, #cbe8f7 99.78%);
+// }
+
+// .solid {
+//   @apply sw-bg-paragraph;
+// }
+
 .button {
-  @apply sw-rounded-sm sw-w-full sw-flex sw-items-center sw-justify-center sw-font-bold sw-py-3 sw-my-4 sw-cursor-pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f2d6be;
+  background: linear-gradient(90deg, #f2d6be -0.22%, #cbe8f7 99.78%);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
 }
 
-.gradient {
-  background: linear-gradient(234.85deg, #a6dbf7 9.06%, #51bcf9 102.41%);
+.button span {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
-.solid {
-  @apply sw-bg-paragraph;
+.button:before,
+.button:after {
+  position: absolute;
+  content: '';
+  height: 0%;
+  width: 1px;
+  box-shadow: -1px -1px 20px 0px rgba(255, 255, 255, 1),
+    -4px -4px 5px 0px rgba(255, 255, 255, 1),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.4), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.button:before {
+  right: 0;
+  top: 0;
+  transition: all 500ms ease;
+}
+
+.button:after {
+  left: 0;
+  bottom: 0;
+  transition: all 500ms ease;
+}
+
+.button:hover {
+  background: transparent;
+  color: #76aef1;
+  box-shadow: none;
+}
+
+.button:hover:before {
+  transition: all 500ms ease;
+  height: 100%;
+}
+.button:hover:after {
+  transition: all 500ms ease;
+  height: 100%;
+}
+
+.button span:before,
+.button span:after {
+  position: absolute;
+  content: '';
+  box-shadow: -1px -1px 20px 0px rgba(255, 255, 255, 1),
+    -4px -4px 5px 0px rgba(255, 255, 255, 1),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.4), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.button span:before {
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 0.5px;
+  transition: all 500ms ease;
+}
+
+.button span:after {
+  right: 0;
+  bottom: 0;
+  width: 0%;
+  height: 0.5px;
+  transition: all 500ms ease;
+}
+
+.button span:hover:before {
+  width: 100%;
+}
+
+.button span:hover:after {
+  width: 100%;
 }

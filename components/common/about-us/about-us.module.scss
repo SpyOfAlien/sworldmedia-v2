@@ -11,5 +11,14 @@
 
   .item-2 {
     @apply sw-col-start-2 sw-col-end-3;
+
+    div {
+      @apply sw-flex sw-items-center;
+    }
   }
+}
+
+.grid {
+  height: 100%;
+  grid-template-rows: repeat(2, 50%);
 }

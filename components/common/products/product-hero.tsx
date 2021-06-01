@@ -19,6 +19,8 @@ const ProductHero: FC<Props> = ({ product, cl }) => {
     query: '(min-device-width: 768px)',
   });
 
+  const onWatch = () => {};
+
   return (
     <div className="sw-relative sw-inset-0 sw-w-screen sw-h-screen">
       <Image
@@ -28,10 +30,10 @@ const ProductHero: FC<Props> = ({ product, cl }) => {
         layout="fill"
       />
       <div className="sw-absolute sw-inset-0 sw-z-20">
-        <Container cl="sw-h-full">
+        <Container isVisible={true} cl="sw-h-full">
           <div
             className={cn(
-              'sw-w-full 3xl:sw-w-5/12 sw-h-1/2 sw-flex sw-justify-center sw-flex-col sw-relative',
+              'sw-w-full xl:sw-w-1/2 3xl:sw-w-5/12 sw-h-1/2 sw-flex sw-justify-center sw-flex-col sw-relative',
               s.overrideContainer
             )}
           >
@@ -41,7 +43,12 @@ const ProductHero: FC<Props> = ({ product, cl }) => {
             <div className={cn('sw-my-xsm', s.content)}>
               <Paragraph>{content}</Paragraph>
             </div>
-            <Button cl="sw-w-1/3 md:sw-w-1/4" text="Xem video" type="solid" />
+            <Button
+              cl="sw-w-1/3 md:sw-w-1/4 sw-h-10"
+              text="Xem video"
+              type="gradient"
+              onclick={onWatch}
+            />
           </div>
         </Container>
       </div>

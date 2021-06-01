@@ -1,10 +1,15 @@
-import { Container } from '../../../layout';
+import { FC } from 'react';
 import services from '../../../../lib/data/services';
 import SmallCard from '../../../ui/cards/small/small';
 import { useUI } from '../../../../lib/context/ui-context';
 import Image from 'next/image';
+import cn from 'classnames';
 
-const ServicePage = () => {
+interface Props {
+  cl?: string;
+}
+
+const ServicePage: FC<Props> = ({ cl }) => {
   const { openModal, closeModal, setModalView } = useUI();
 
   const openPopup = (view) => {
@@ -13,7 +18,12 @@ const ServicePage = () => {
   };
 
   return (
-    <Container cl="sw-flex sw-flex-col md:sw-flex-row sw-items-center sw-justify-center sw-h-full sw-w-full">
+    <div
+      className={cn(
+        'sw-flex sw-flex-col md:sw-flex-row sw-items-center sw-justify-center sw-h-full sw-w-full',
+        cl
+      )}
+    >
       <div className="sw-w-full md:sw-w-1/3">
         <Image
           src="/assets/svg/aboutus.svg"
@@ -33,7 +43,7 @@ const ServicePage = () => {
           />
         ))}
       </div>
-    </Container>
+    </div>
   );
 };
 export default ServicePage;

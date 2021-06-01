@@ -52,17 +52,17 @@
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    @apply sw-text-mobile;
+    @apply sw-text-mobile sw-bg-background;
   }
 
-  /* body::-webkit-scrollbar {
+  body::-webkit-scrollbar {
     display: none;
   }
 
   body {
     -ms-overflow-style: none;
     scrollbar-width: none;
-  } */
+  }
 
   *,
   *:before,

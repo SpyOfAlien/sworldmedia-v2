@@ -1,0 +1,5 @@
+.root {
+  height: 100%;
+  grid-template-rows: repeat(2, 50%);
+  @apply sw-grid sw-grid-cols-1 sw-w-3/4 sw-mx-auto;
+}

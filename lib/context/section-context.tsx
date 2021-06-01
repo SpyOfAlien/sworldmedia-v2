@@ -17,9 +17,8 @@ type Action =
       type: 'SCROLL_DOWN';
     };
 
-export const SectionContext = React.createContext<ISectionState | any>(
-  initialState
-);
+export const SectionContext =
+  React.createContext<ISectionState | any>(initialState);
 
 const sectionReducer = (state: ISectionState, action: Action) => {
   switch (action.type) {

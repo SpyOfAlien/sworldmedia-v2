@@ -8,12 +8,16 @@ interface Props {
   text: string;
   icon?: string;
   cl?: string;
+  onclick: () => void;
 }
 
-const Button: FC<Props> = ({ type, text, icon, cl }) => {
+const Button: FC<Props> = ({ type, text, icon, cl, onclick }) => {
   return (
-    <div className={cn(s.button, cl, s[type])}>
-      <span> {text} </span>
+    <div className={cn(s.button, cl, s[type])} onClick={onclick}>
+      <span className="sw-font-bold sw-justify-center sw-text-brown sw-leading-4">
+        {' '}
+        {text}{' '}
+      </span>
       {icon ? (
         <Image
           src={icon}

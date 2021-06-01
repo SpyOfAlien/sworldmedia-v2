@@ -13,7 +13,7 @@
   cursor: pointer;
 }
 
-.slick-dots li.active img {
+.slick-dots li img:hover {
   border: 4px red solid !important;
 }
 

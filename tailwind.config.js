@@ -4,6 +4,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        black: '#000000',
+        brown: '#5f3d2c',
+        white: '#FFFFFF',
         background: '#040D21',
         modal: '#172D42',
         lightModal: '#1F3F5C',
@@ -51,6 +54,7 @@ module.exports = {
         blue: `linear-gradient(234.85deg, #A6DBF7 9.06%, #51BCF9 102.41%)`,
       }),
       screens: {
+        '2xl': '1680px',
         '3xl': '1920px',
       },
     },

@@ -1,21 +1,53 @@
 import { FC } from 'react';
 import cn from 'classnames';
+import s from './container.module.scss';
+import { motion, AnimatePresence, AnimateSharedLayout } from 'framer-motion';
 
 interface Props {
   children: any;
   cl?: string;
+  isFullpage?: boolean;
+  isVisible?: boolean;
 }
 
-const Container: FC<Props> = ({ children, cl }) => {
+const Container: FC<Props> = ({
+  children,
+  cl,
+  isFullpage = false,
+  isVisible,
+}) => {
+  const variants = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      transition: {
+        duration: 2,
+      },
+    },
+    exit: {
+      opacity: 0,
+    },
+  };
   return (
-    <div
-      className={cn(
-        'sw-w-11/12 md:sw-w-10/12 lg:sw-w-4/5 xl:sw-w-10/12 2xl:sw-w-10/12 3xl:sw-w-9/12 sw-mx-auto',
-        cl
+    <AnimatePresence>
+      {isVisible && (
+        <motion.div
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          variants={variants}
+          className={cn(
+            'sw-absolute sw-inset-0',
+            { [s.container]: !isFullpage },
+            cl
+          )}
+        >
+          {children}
+        </motion.div>
       )}
-    >
-      {children}
-    </div>
+    </AnimatePresence>
   );
 };
 

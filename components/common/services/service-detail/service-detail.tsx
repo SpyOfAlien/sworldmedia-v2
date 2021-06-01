@@ -28,7 +28,7 @@ const ServiceDetail: FC<Props> = ({ data, cl }) => {
       <div className="sw-absolute sw-inset-0">
         <ServiceGlow />
       </div>
-      <Container>
+      <Container cl="sw-flex sw-h-screen sw-items-center" isVisible={true}>
         <div className="sw-flex">
           <div className="sw-w-full xl:sw-w-1/2">
             <div className="sw-w-10/12">
