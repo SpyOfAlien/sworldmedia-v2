@@ -76,10 +76,6 @@ const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
         {modalView === 'MENU' && <Menu />}
       </Modal>
 
-      {mediumScreen && route.pathname === '/' && (
-        <ParticlesLayout cl="sw-absolute sw-inset-0" />
-      )}
-
       <div
         className={cn(s.hamburger, s.hamburgerSlider, {
           [s.active]: isActiveHumburger,

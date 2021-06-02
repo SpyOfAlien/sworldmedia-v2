@@ -56,64 +56,45 @@ const HomePage = ({ locales, allPosts }) => {
   });
 
   return (
-    <>
-      {' '}
-      {mediumScreen ? (
-        <ReactScrollWheelHandler
-          upHandler={onPageScrollUp}
-          downHandler={onPageScrollDown}
-          timeout={1000}
-        >
-          {currentSection === 1 && <Glow path="about-glow" />}
-          {currentSection === 2 && <Glow path="service-glow" />}
-          {currentSection === 3 && <Glow path="partner-glow" />}
-          {currentSection === 4 && <Glow path="client-glow" />}
-          {currentSection === 6 && <Glow path="whyus-glow" />}
+    <ReactScrollWheelHandler
+      upHandler={onPageScrollUp}
+      downHandler={onPageScrollDown}
+      timeout={mediumScreen ? 1000 : 0}
+    >
+      {mediumScreen && <ParticlesLayout />}
+      {currentSection === 1 && mediumScreen && <Glow path="about-glow" />}
+      {currentSection === 2 && mediumScreen && <Glow path="service-glow" />}
+      {currentSection === 3 && mediumScreen && <Glow path="partner-glow" />}
+      {currentSection === 4 && mediumScreen && <Glow path="client-glow" />}
+      {currentSection === 6 && mediumScreen && <Glow path="whyus-glow" />}
 
-          <Container isVisible={currentSection === 1}>
-            <AboutUs data={aboutUsList} />
-          </Container>
+      <Container isVisible={currentSection === 1 || !mediumScreen}>
+        <AboutUs data={aboutUsList} />
+      </Container>
 
-          <Container isVisible={currentSection === 2}>
-            <ServicePage />
-          </Container>
+      <Container isVisible={currentSection === 2 || !mediumScreen}>
+        <ServicePage />
+      </Container>
 
-          <Container isVisible={currentSection === 3}>
-            <Clients
-              title="Đối tác media"
-              imgSrc="/assets/svg/media-partner.svg"
-            />
-          </Container>
-          <Container isVisible={currentSection === 4}>
-            <Clients
-              title="Khách hàng của chúng tôi"
-              imgSrc="/assets/svg/clients.svg"
-            />
-          </Container>
-          <Container isFullpage={true} isVisible={currentSection === 5}>
-            <ProductSlider products={Products} />
-          </Container>
-          <Container isVisible={currentSection === 6}>
-            <WhyUs data={whyUsList} />
-          </Container>
-        </ReactScrollWheelHandler>
-      ) : (
-        <div className="sw-mx-8 sw-mx-auto">
-          <AboutUs data={aboutUsList} />
-          <ServicePage />
-          <Clients
-            title="Đối tác media"
-            imgSrc="/assets/svg/media-partner.svg"
-          />
-          <Clients
-            title="Khách hàng của chúng tôi"
-            imgSrc="/assets/svg/clients.svg"
-          />
-          <ProductSlider products={Products} />
-          <WhyUs data={whyUsList} />
-        </div>
-      )}
-    </>
+      <Container isVisible={currentSection === 3 || !mediumScreen}>
+        <Clients title="Đối tác media" imgSrc="/assets/svg/media-partner.svg" />
+      </Container>
+      <Container isVisible={currentSection === 4 || !mediumScreen}>
+        <Clients
+          title="Khách hàng của chúng tôi"
+          imgSrc="/assets/svg/clients.svg"
+        />
+      </Container>
+      <Container
+        isFullpage={true}
+        isVisible={currentSection === 5 || !mediumScreen}
+      >
+        <ProductSlider products={Products} />
+      </Container>
+      <Container isVisible={currentSection === 6 || !mediumScreen}>
+        <WhyUs data={whyUsList} />
+      </Container>
+    </ReactScrollWheelHandler>
   );
 };
 

@@ -1,3 +1,92 @@
 {
-  "great": "Xin Chao tu DoanBao"
+  "home": "Trang chủ",
+
+  "home:hero": "Công ty truyền thông đa phương tiện thế hệ mới",
+
+  "home:about_us:title": "Về chúng tôi",
+
+  "home:about_us:vision:content": "Tầm nhìn",
+  "home:about_us:vision": "Là cầu nối truyền thông đặc biệt đưa Việt Nam đến gần thế giới",
+  "home:about_us:core_value:title": "Giá trị cốt lõi",
+  "home:about_us:core_value:content": "Chân thành – Thấu hiểu – Bền bỉ – Sáng tạo – Khác biệt",
+  "home:about_us:mission:title": "Sứ mệnh",
+  "home:about_us:mission:content": "Sẵn sàng mang những ý tưởng, dự án, sản phẩm, thương hiệu lan toả theo một cách khác biệt, với lượng, chất bền vững",
+
+  "home:service:title": "Dịch vụ",
+
+  "home:service:brand_communication:title": "Truyền thông thương hiệu",
+  "home:service:brand_communication:content": "S-World cung cấp giải pháp toàn diện cho thương hiệu khi tư vấn và xây dựng những yếu tố: Câu chuyện thương hiệu, slogan, định vị khách hàng và chiến lược phát triển, để doanh nghiệp đến gần hơn với khách hàng.",
+  "home:service:brand_communication:sub_content": "",
+
+  "home:service:brand_communication:pr": "",
+  "home:service:brand_communication:pr:strength": "",
+  "home:service:brand_communication:pr:services": "",
+
+  "home:service:brand_communication:social": "",
+  "home:service:brand_communication:social:strength": "",
+  "home:service:brand_communication:social:services": "",
+
+  "home:service:brand_communication:kol": "",
+  "home:service:brand_communication:kol:strength": "",
+  "home:service:brand_communication:kol:services": "",
+
+  "home:service:brand_communication:marketing": "",
+  "home:service:brand_communication:marketing:strength": "",
+  "home:service:brand_communication:marketing:services": "",
+
+  "home:service:branding:title": "Xây dựng thương hiệu",
+  "home:service:branding:content": "S-World cung cấp giải pháp truyền thông cho thương hiệu trên đa nền tảng online bao gồm 4 dòng dịch vụ: Tiếp thị, Truyền thông báo chí - truyền hình (PR), truyền thông Social Media, và truyền thông qua KOL & Influencer",
+  "home:service:branding:sub_content": "",
+
+  "home:service:branding:concept": "",
+  "home:service:branding:concept:strength": "",
+  "home:service:branding:concept:services": "",
+
+  "home:service:branding:strategy": "",
+  "home:service:branding:strategy:strength": "",
+  "home:service:branding:strategy:services": "",
+
+  "home:service:production:title": "Sản xuất",
+  "home:service:production:content": "S-World cung cấp dịch vụ sản xuất Video cho khách hàng. Đồng thời chúng tôi cũng sở hữu những format chương trình nổi tiếng do chính chúng tôi sáng tạo và phát triển cùng các đối tác Media hàng đầu Việt Nam. Ví dụ như Talkshow Nguy Cơ, Learn to love, etc.",
+  "home:service:production:sub_content": "",
+
+  "home:service:production:for_client": "",
+  "home:service:production:for_client:strength": "",
+  "home:service:production:for_client:services": "",
+
+  "home:service:production:format": "",
+  "home:service:production:format:strength": "",
+  "home:service:production:format:services": "",
+
+  "home:service:event:title": "Sự kiện",
+  "home:service:event:content": "",
+  "home:service:event:sub_content": "",
+
+  "home:service:event:online": "",
+  "home:service:event:online:strength": "",
+  "home:service:event:online:services": "",
+
+  "home:service:event:offline": "",
+  "home:service:event:offline:strength": "",
+  "home:service:event:offline:services": "",
+
+  "home:service:international_relations:title": "Kết nối quốc tế",
+  "home:service:international_relations:content": "",
+  "home:service:international_relations:sub_content": "",
+
+  "home:service:international_relations:for_vn": "",
+  "home:service:international_relations:for_vn:strength": "",
+  "home:service:international_relations:for_vn:services": "",
+
+  "home:service:international_relations:for_foreign": "",
+  "home:service:international_relations:for_foreign:strength": "",
+  "home:service:international_relations:for_foreign:services": "",
+
+  "home:partner:title": "Our partners",
+
+  "home:client:title": "Our clients",
+
+  "home:products:title": "Newest products",
+
+  "home:whyus:title": "Why us"
 }
