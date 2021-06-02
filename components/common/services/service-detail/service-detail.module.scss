@@ -2,10 +2,39 @@
   margin-right: 0;
   margin-left: auto;
   height: 100%;
+
+  @apply sw-mx-4;
 }
 
 .box {
-  height: 20rem;
+  height: 11rem;
   border-radius: 8px;
   padding: 2rem;
+}
+
+@screen md {
+  .container {
+    @apply sw-mx-0;
+  }
+
+  .box {
+    &:first-child,
+    &:nth-child(3) {
+      @apply sw-mr-4;
+    }
+  }
+}
+
+@screen xl {
+  .box {
+    &:not(:last-child) {
+      @apply sw-mr-4;
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .box {
+    height: 13rem;
+  }
 }

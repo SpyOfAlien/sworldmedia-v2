@@ -1,3 +1,13 @@
 .modal {
-  @apply sw-fixed sw-inset-0 z-50 sw-bg-background sw-w-full;
+  @apply sw-relative sw-top-0 z-50 sw-bg-background sw-w-screen sw-h-auto;
+}
+
+@screen md {
+  .modal {
+    @apply sw-fixed sw-inset-0;
+  }
+
+  .content {
+    @apply sw-w-full;
+  }
 }

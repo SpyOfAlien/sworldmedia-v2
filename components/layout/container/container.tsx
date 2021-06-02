@@ -39,7 +39,7 @@ const Container: FC<Props> = ({
           exit="exit"
           variants={variants}
           className={cn(
-            'sw-absolute sw-inset-0',
+            'md:sw-absolute md:sw-inset-0',
             { [s.container]: !isFullpage },
             cl
           )}

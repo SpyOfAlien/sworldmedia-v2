@@ -44,77 +44,76 @@ const HomePage = ({ locales, allPosts }) => {
   }, [currentSection]);
 
   const onPageScrollUp = () => {
-    // Check animation done
-    if (isDesktopOrLaptop) onScrollUp();
+    onScrollUp();
   };
 
   const onPageScrollDown = () => {
-    // check animation done
-    if (isDesktopOrLaptop) onScrollDown();
+    onScrollDown();
   };
 
-  const isDesktopOrLaptop = useMediaQuery({
-    query: '(min-device-width: 1280px)',
+  const mediumScreen = useMediaQuery({
+    query: '(min-device-width: 768px)',
   });
 
   return (
-    <ReactScrollWheelHandler
-      upHandler={onPageScrollUp}
-      downHandler={onPageScrollDown}
-      timeout={1000}
-    >
-      <ParticlesLayout />
+    <>
+      {' '}
+      {mediumScreen ? (
+        <ReactScrollWheelHandler
+          upHandler={onPageScrollUp}
+          downHandler={onPageScrollDown}
+          timeout={1000}
+        >
+          {currentSection === 1 && <Glow path="about-glow" />}
+          {currentSection === 2 && <Glow path="service-glow" />}
+          {currentSection === 3 && <Glow path="partner-glow" />}
+          {currentSection === 4 && <Glow path="client-glow" />}
+          {currentSection === 6 && <Glow path="whyus-glow" />}
 
-      {currentSection === 1 && <Glow path="about-glow" />}
-      {currentSection === 2 && <Glow path="service-glow" />}
-      {currentSection === 3 && <Glow path="partner-glow" />}
-      {currentSection === 4 && <Glow path="client-glow" />}
-      {currentSection === 6 && <Glow path="whyus-glow" />}
+          <Container isVisible={currentSection === 1}>
+            <AboutUs data={aboutUsList} />
+          </Container>
 
-      <Container isVisible={currentSection === 1}>
-        <AboutUs data={aboutUsList} />
-      </Container>
+          <Container isVisible={currentSection === 2}>
+            <ServicePage />
+          </Container>
 
-      <Container isVisible={currentSection === 2}>
-        <ServicePage />
-      </Container>
-
-      <Container isVisible={currentSection === 3}>
-        <Clients title="Đối tác media" imgSrc="/assets/svg/media-partner.svg" />
-      </Container>
-      <Container isVisible={currentSection === 4}>
-        <Clients
-          title="Khách hàng của chúng tôi"
-          imgSrc="/assets/svg/clients.svg"
-        />
-      </Container>
-      <Container isFullpage={true} isVisible={currentSection === 5}>
-        <ProductSlider products={Products} />
-      </Container>
-      <Container isVisible={currentSection === 6}>
-        <WhyUs data={whyUsList} />
-      </Container>
-    </ReactScrollWheelHandler>
-    // <div>
-    //   {isDesktopOrLaptop ? (
-
-    //   ) : (
-    //     <Container>
-    //       <AboutUs data={aboutUsList} />
-    //       <ServicePage />
-    //       <Clients
-    //         title="Đối tác media"
-    //         imgSrc="/assets/svg/media-partner.svg"
-    //       />
-    //       <Clients
-    //         title="Khách hàng của chúng tôi"
-    //         imgSrc="/assets/svg/clients.svg"
-    //       />
-    //       <ProductSlider products={Products} />
-    //       <WhyUs data={whyUsList} />
-    //     </Container>
-    //   )}
-    // </div>
+          <Container isVisible={currentSection === 3}>
+            <Clients
+              title="Đối tác media"
+              imgSrc="/assets/svg/media-partner.svg"
+            />
+          </Container>
+          <Container isVisible={currentSection === 4}>
+            <Clients
+              title="Khách hàng của chúng tôi"
+              imgSrc="/assets/svg/clients.svg"
+            />
+          </Container>
+          <Container isFullpage={true} isVisible={currentSection === 5}>
+            <ProductSlider products={Products} />
+          </Container>
+          <Container isVisible={currentSection === 6}>
+            <WhyUs data={whyUsList} />
+          </Container>
+        </ReactScrollWheelHandler>
+      ) : (
+        <div className="sw-mx-8 sw-mx-auto">
+          <AboutUs data={aboutUsList} />
+          <ServicePage />
+          <Clients
+            title="Đối tác media"
+            imgSrc="/assets/svg/media-partner.svg"
+          />
+          <Clients
+            title="Khách hàng của chúng tôi"
+            imgSrc="/assets/svg/clients.svg"
+          />
+          <ProductSlider products={Products} />
+          <WhyUs data={whyUsList} />
+        </div>
+      )}
+    </>
   );
 };
 

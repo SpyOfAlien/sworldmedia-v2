@@ -8,14 +8,14 @@ import particles from '../../../lib/data/particles';
 
 interface Props {
   children?: any;
-  className?: string;
+  cl?: string;
 }
 
-const ParticlesLayout: FC<Props> = ({ children, className }) => {
+const ParticlesLayout: FC<Props> = ({ children, cl }) => {
   return (
     <>
       <Particles
-        className={cn('sw-bg-background sw-w-screen sw-h-screen', styles.under)}
+        className={cn('sw-w-screen sw-h-screen', styles.under, cl)}
         params={particles}
       />
       {children}

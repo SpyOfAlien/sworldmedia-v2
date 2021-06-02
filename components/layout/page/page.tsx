@@ -8,6 +8,8 @@ import services from '../../../lib/data/services';
 import Menu from '../../common/menu/menu';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
+import { useMediaQuery } from 'react-responsive';
+import { ParticlesLayout } from '..';
 
 interface Props {
   children: any;
@@ -44,6 +46,10 @@ const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
     }
   };
 
+  const mediumScreen = useMediaQuery({
+    query: '(min-device-width: 768px)',
+  });
+
   return (
     <div className={s.root}>
       <AnimatePresence>
@@ -69,6 +75,10 @@ const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
 
         {modalView === 'MENU' && <Menu />}
       </Modal>
+
+      {mediumScreen && route.pathname === '/' && (
+        <ParticlesLayout cl="sw-absolute sw-inset-0" />
+      )}
 
       <div
         className={cn(s.hamburger, s.hamburgerSlider, {

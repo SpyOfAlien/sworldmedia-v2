@@ -4,6 +4,7 @@ import { Container } from '../../layout';
 import Medium from '../../ui/cards/medium/medium';
 import cn from 'classnames';
 import s from './about-us.module.scss';
+import Glow from '../../glows/glow';
 
 interface Props {
   data: any[];
@@ -19,8 +20,16 @@ const AboutUs: FC<Props> = ({ data, cl }) => {
         cl
       )}
     >
-      <div className="md:sw-col-start-2 sw-flex sw-justify-center sw-items-center">
-        <div className="sw-w-full">
+      <div
+        className={cn(
+          'md:sw-col-start-2 sw-flex sw-justify-center sw-items-center',
+          s.globe
+        )}
+      >
+        <div className="sw-w-full sw-p-10 sw-relative">
+          <div className="sw-absolute sw-inset-0">
+            <Glow path="atom-glow" />
+          </div>
           <Image
             src="/assets/svg/aboutus.svg"
             width={580}

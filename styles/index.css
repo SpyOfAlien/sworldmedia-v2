@@ -17,27 +17,6 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-
-  .sw-border {
-    position: relative;
-    z-index: 0;
-  }
-
-  .sw-border:before {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 2px;
-    background: linear-gradient(234.85deg, #a6dbf7 9.06%, #51bcf9 102.41%);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box,
-      linear-gradient(#fff 0 0);
-    -webkit-mask-composite: destination-out;
-    mask-composite: exclude;
-  }
 }
 
 @layer base {

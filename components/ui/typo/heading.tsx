@@ -6,11 +6,14 @@ interface Props {
   children: any;
   cl?: string;
   h: string;
+  gradient?: boolean;
 }
 
-const Heading: FC<Props> = ({ children, cl, h }) => {
+const Heading: FC<Props> = ({ children, cl, h, gradient = true }) => {
   return (
-    <h3 className={cn('sw-font-bold sw-text-gradient', cl, s[h])}>
+    <h3
+      className={cn(`sw-font-bold ${gradient && 'sw-text-gradient'}`, cl, s[h])}
+    >
       {children}
     </h3>
   );

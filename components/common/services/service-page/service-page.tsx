@@ -4,6 +4,7 @@ import SmallCard from '../../../ui/cards/small/small';
 import { useUI } from '../../../../lib/context/ui-context';
 import Image from 'next/image';
 import cn from 'classnames';
+import Glow from '../../../glows/glow';
 
 interface Props {
   cl?: string;
@@ -24,11 +25,14 @@ const ServicePage: FC<Props> = ({ cl }) => {
         cl
       )}
     >
-      <div className="sw-w-full md:sw-w-1/3">
+      <div className="sw-w-full md:sw-w-1/3 sw-relative">
+        <div className="sw-absolute sw-inset-0">
+          <Glow path="atom-glow" />
+        </div>
         <Image
           src="/assets/svg/aboutus.svg"
-          width={580}
-          height={580}
+          width={500}
+          height={500}
           layout="responsive"
         />
       </div>

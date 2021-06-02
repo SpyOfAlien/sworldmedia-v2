@@ -1,4 +1,9 @@
-.item-1 {
+.grid {
+  height: 100%;
+  grid-template-rows: repeat(2, 50%);
+}
+
+.globe {
 }
 
 @screen md {
@@ -16,9 +21,4 @@
       @apply sw-flex sw-items-center;
     }
   }
-}
-
-.grid {
-  height: 100%;
-  grid-template-rows: repeat(2, 50%);
 }
