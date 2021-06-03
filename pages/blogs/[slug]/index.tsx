@@ -58,27 +58,29 @@ export default function Post({ post, morePosts, preview, locale }) {
   );
 }
 
-export async function getStaticProps({ locales, params, preview = false }) {
+export async function getStaticProps({ locale, params, preview = false }) {
   const data = await getPostAndMorePosts(params.slug, preview);
   return {
     props: {
       preview,
       post: data?.post ?? null,
       morePosts: data?.morePosts ?? null,
-      ...(await serverSideTranslations(locales, ['common'])),
+      ...(await serverSideTranslations(locale, ['common', 'blog'])),
     },
   };
 }
 
-export async function getStaticPaths() {
+export async function getStaticPaths({ locales }) {
   const allPosts = await getAllPostsWithSlug();
-  const vnPaths = allPosts.map(({ slug }) => `/en/blogs/${slug}`);
-  const enPaths = allPosts.map(({ slug }) => `/vn/blogs/${slug}`);
-
-  console.log('bao', [...vnPaths, ...enPaths]);
+  const paths = [];
+  allPosts.map(({ slug }) => {
+    for (const item of locales) {
+      paths.push({ params: { slug: slug }, locale: item });
+    }
+  });
 
   return {
-    paths: [...enPaths, ...vnPaths],
-    fallback: true,
+    paths: paths,
+    fallback: false,
   };
 }
