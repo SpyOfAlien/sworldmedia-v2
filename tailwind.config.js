@@ -48,6 +48,7 @@ module.exports = {
 
       borderRadius: {
         sm: '8px',
+        md: '12px',
       },
       backgroundImage: (theme) => ({
         cta: `linear-gradient(254.68deg, #EBE9F9 2.29%, #F9F9FA 97.31%, #E9A9FF 97.31%, #FBFAFE 97.31%)`,

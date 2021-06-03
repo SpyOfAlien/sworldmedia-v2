@@ -47,7 +47,11 @@ const AboutUs: FC<Props> = ({ data, cl }) => {
           )}
         >
           <div>
-            <Medium icon={item.icon} content={item.content} />
+            <Medium
+              icon={item.icon}
+              title={item.title}
+              content={item.content}
+            />
           </div>
         </div>
       ))}

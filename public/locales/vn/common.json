@@ -1,12 +1,12 @@
 {
   "home": "Trang chủ",
 
-  "home:hero": "Công ty truyền thông đa phương tiện thế hệ mới",
+  "home_hero": "Công ty truyền thông đa phương tiện thế hệ mới",
 
   "home:about_us:title": "Về chúng tôi",
 
-  "home:about_us:vision:content": "Tầm nhìn",
-  "home:about_us:vision": "Là cầu nối truyền thông đặc biệt đưa Việt Nam đến gần thế giới",
+  "home__about_us__vision__title": "Tầm nhìn",
+  "home__about_us__vision__content": "Là cầu nối truyền thông đặc biệt đưa Việt Nam đến gần thế giới",
   "home:about_us:core_value:title": "Giá trị cốt lõi",
   "home:about_us:core_value:content": "Chân thành – Thấu hiểu – Bền bỉ – Sáng tạo – Khác biệt",
   "home:about_us:mission:title": "Sứ mệnh",
@@ -14,7 +14,7 @@
 
   "home:service:title": "Dịch vụ",
 
-  "home:service:brand_communication:title": "Truyền thông thương hiệu",
+  "home__service_brand__communication__title": "Truyền thông thương hiệu",
   "home:service:brand_communication:content": "S-World cung cấp giải pháp toàn diện cho thương hiệu khi tư vấn và xây dựng những yếu tố: Câu chuyện thương hiệu, slogan, định vị khách hàng và chiến lược phát triển, để doanh nghiệp đến gần hơn với khách hàng.",
   "home:service:brand_communication:sub_content": "",
 
@@ -82,11 +82,13 @@
   "home:service:international_relations:for_foreign:strength": "",
   "home:service:international_relations:for_foreign:services": "",
 
-  "home:partner:title": "Our partners",
+  "home__partner__title": "Đối tác media",
 
-  "home:client:title": "Our clients",
+  "home__client__title": "Khách hành của chúng tôi",
 
   "home:products:title": "Newest products",
 
-  "home:whyus:title": "Why us"
+  "home:whyus:title": "Why us",
+
+  "test__newline": "Bộ nhận diện thương hiệu gồm: /n Bao đoàn"
 }

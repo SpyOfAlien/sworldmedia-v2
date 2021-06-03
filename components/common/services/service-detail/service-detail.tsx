@@ -2,7 +2,7 @@ import { FC } from 'react';
 import Image from 'next/image';
 import Paragraph from '../../../ui/typo/paragraph';
 import Label from '../../../ui/typo/label';
-import { Container } from '../../../layout';
+import { Container, HomeContainer } from '../../../layout';
 import cn from 'classnames';
 import s from './service-detail.module.scss';
 import Heading from '../../../ui/typo/heading';
@@ -41,7 +41,7 @@ const ServiceDetail: FC<Props> = ({ data, cl }) => {
           <ServiceGlow />
         </div>
       )}
-      <Container cl="sw-flex sw-h-screen sw-items-center" isVisible={true}>
+      <HomeContainer cl="sw-flex sw-h-screen sw-items-center" isVisible={true}>
         <div className="sw-flex sw-flex-col sw-justify-end sw-h-full">
           <div className="sw-w-full sw-mb-12">
             <div className="sw-w-full xl:sw-w-1/2">
@@ -81,7 +81,7 @@ const ServiceDetail: FC<Props> = ({ data, cl }) => {
             </div>
           </div>
         </div>
-      </Container>
+      </HomeContainer>
     </div>
   );
 };

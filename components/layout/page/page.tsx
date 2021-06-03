@@ -10,6 +10,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
 import { useMediaQuery } from 'react-responsive';
 import { ParticlesLayout } from '..';
+import Link from 'next/link';
 
 interface Props {
   children: any;
@@ -27,6 +28,7 @@ const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
   const { closeModal, displayModal, modalView, openModal, setModalView } =
     useUI();
   const [isActiveHumburger, setIsActiveHumburger] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     setIsActiveHumburger(displayModal);
@@ -45,6 +47,8 @@ const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
       setModalView('MENU');
     }
   };
+
+  const handleSwitchLng = () => {};
 
   const mediumScreen = useMediaQuery({
     query: '(min-device-width: 768px)',
@@ -85,6 +89,15 @@ const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
         <div className={s.hamburgerBox}>
           <span className={s.hamburgerInner}></span>
         </div>
+      </div>
+
+      <div className={s.switchLng}>
+        <Link href="/" locale="en">
+          <a> en </a>
+        </Link>
+        <Link href="/" locale="vn">
+          <a> vn </a>
+        </Link>
       </div>
     </div>
   );

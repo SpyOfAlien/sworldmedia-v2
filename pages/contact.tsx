@@ -11,18 +11,18 @@ import { useState } from 'react';
 import Tetxarea from '../components/ui/input/textarea';
 import Button from '../components/ui/button/button';
 import Heading from '../components/ui/typo/heading';
+import { useTranslation } from 'react-i18next';
 
 const ContactPage = () => {
   // State
   const [name, setName] = useState('');
+  const { t } = useTranslation('contact');
 
   const isDesktopOrLaptop = useMediaQuery({
     query: '(min-device-width: 1280px)',
   });
 
-  const onSubscribe = () => {
-    console.log('subscribe');
-  };
+  const onSubscribe = () => {};
 
   return (
     <div className="sw-flex sw-w-full sw-px-12 md:sw-px-24 xl:sw-px-0 xl:sw-p-0 sw-flex-col-reverse sw-pt-40 sw-flex-col xl:sw-flex-row xl:sw-h-screen sw-relative">
@@ -78,7 +78,7 @@ const ContactPage = () => {
           cl="sw-text-gradient sw-mb-md sw-text-center"
           h={isDesktopOrLaptop ? 'h3' : 'h5'}
         >
-          Liên hệ chúng tôi
+          {t('hehe')}
         </Heading>
         <div className="sw-flex sw-flex-col xl:sw-flex-row xl:sw-flex-wrap xl:sw-justify-between">
           <Input

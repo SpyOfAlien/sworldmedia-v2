@@ -4,6 +4,7 @@ import { useMediaQuery } from 'react-responsive';
 import Image from 'next/image';
 import Heading from '../../typo/heading';
 import Paragraph from '../../typo/paragraph';
+import { useTranslation } from 'react-i18next';
 
 interface Props {
   cl?: string;
@@ -17,6 +18,8 @@ const Medium: FC<Props> = ({ cl, icon, content, title }) => {
     query: '(min-device-width: 768px)',
   });
 
+  const { t } = useTranslation('common');
+
   return (
     <div
       className={cn(
@@ -29,14 +32,14 @@ const Medium: FC<Props> = ({ cl, icon, content, title }) => {
       </div>
       {title ? (
         <div>
-          <Heading h="h5" cl="sw-text-gradient">
-            {title}
+          <Heading h="h6" cl="sw-text-gradient">
+            {t(title)}
           </Heading>
         </div>
       ) : null}
 
       <div className="sw-text-center">
-        <Paragraph>{content}</Paragraph>
+        <Paragraph>{t(content)}</Paragraph>
       </div>
     </div>
   );

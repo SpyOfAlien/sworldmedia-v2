@@ -1,12 +1,12 @@
 {
   "home": "Home",
 
-  "home:hero": "S-World multimedia a new generation multimedia company",
+  "home__hero": "S-World multimedia a new generation multimedia company",
 
   "home:about_us:title": "About us",
 
-  "home:about_us:vision:content": "Vision",
-  "home:about_us:vision": "A special communication bridge to bring Vietnam into the world",
+  "home__about_us__vision__title": "Vision",
+  "home__about_us__vision__content": "A special communication bridge to bring Vietnam into the world",
   "home:about_us:core_value:title": "Core value",
   "home:about_us:core_value:content": "Sincerity - Understanding - Perseverance - Creativity - Distinctiveness",
   "home:about_us:mission:title": "Mission",
@@ -14,7 +14,7 @@
 
   "home:service:title": "Our services",
 
-  "home:service:brand_communication:title": "Brand communication",
+  "home__service_brand__communication__title": "Brand communication",
   "home:service:brand_communication:content": "Hello",
   "home:service:brand_communication:sub_content": "",
 
@@ -82,11 +82,13 @@
   "home:service:international_relations:for_foreign:strength": "",
   "home:service:international_relations:for_foreign:services": "",
 
-  "home:partner:title": "Our partners",
+  "home__partner__title": "Our partners",
 
-  "home:client:title": "Our clients",
+  "home__client__title": "Our clients",
 
   "home:products:title": "Newest products",
 
-  "home:whyus:title": "Why us"
+  "home:whyus:title": "Why us",
+
+  "test__newline": "Bộ nhận diện thương hiệu gồm: /n Bao đoàn"
 }

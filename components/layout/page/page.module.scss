@@ -15,6 +15,16 @@
   margin: 0;
 }
 
+.switchLng {
+  position: absolute;
+  top: 36px;
+  right: 90px;
+  z-index: 100;
+  width: 80px;
+  height: 20px;
+  background: chartreuse;
+}
+
 .hamburgerBox {
   width: 40px;
   height: 40px;

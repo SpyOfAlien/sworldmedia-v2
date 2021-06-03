@@ -2,9 +2,9 @@ const baseUrl = '/assets/svg/';
 
 const aboutUsList = [
   {
-    content: 'Là cầu nối truyền thông đặc biệt đưa Việt Nam đến gần thế giới',
+    content: 'home__about_us__vision__content',
     icon: `${baseUrl}vision.svg`,
-    title: 'Tầm nhìn',
+    title: 'home__about_us__vision__title',
   },
   {
     content: 'Chân thành – Thấu hiểu – Bền bỉ – Sáng tạo – Khác biệt',

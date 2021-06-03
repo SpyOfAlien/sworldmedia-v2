@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Heading from '../../ui/typo/heading';
 import Paragraph from '../../ui/typo/paragraph';
 import Button from '../../ui/button/button';
-import { Container } from '../../layout';
+import { Container, HomeContainer } from '../../layout';
 import s from './product.module.scss';
 import cn from 'classnames';
 import { useMediaQuery } from 'react-responsive';
@@ -30,7 +30,7 @@ const ProductHero: FC<Props> = ({ product, cl }) => {
         layout="fill"
       />
       <div className="sw-absolute sw-inset-0 sw-z-20">
-        <Container isVisible={true} cl="sw-h-full">
+        <HomeContainer isVisible={true} cl="sw-h-full">
           <div
             className={cn(
               'sw-w-full xl:sw-w-1/2 3xl:sw-w-5/12 sw-h-1/2 sw-flex sw-justify-center sw-flex-col sw-relative',
@@ -50,7 +50,7 @@ const ProductHero: FC<Props> = ({ product, cl }) => {
               onclick={onWatch}
             />
           </div>
-        </Container>
+        </HomeContainer>
       </div>
       <div className="sw-absolute sw-w-full sw-h-full sw-z-10 sw-slide-overide"></div>
     </div>
