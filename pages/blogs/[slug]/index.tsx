@@ -10,6 +10,8 @@ import Heading from '../../../components/ui/typo/heading';
 import PostContent from '../../../components/common/blog/post-content/post-content';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import Link from 'next/link';
+import { Media, MediaContextProvider } from '../../../lib/media';
 
 export default function Post({ post, morePosts, preview, locale }) {
   const { coverImage, title, tags, slug, date, content } = post;
@@ -20,41 +22,57 @@ export default function Post({ post, morePosts, preview, locale }) {
   }
 
   return (
-    <Container cl="sw-mt-header">
-      <div>Trở về tin tức</div>
-      <div className="sw-relative">
-        <div>
-          <Image
-            src={coverImage.url}
-            layout="responsive"
-            width={1500}
-            height={783}
-          />
+    <MediaContextProvider>
+      <Container cl="sw-my-header">
+        <div className="sw-py-8">
+          <Link href="/blogs">
+            <a>
+              <div className="sw-cursor-pointer sw-flex sw-text-paragraph sw-w-32">
+                <p>
+                  <Image
+                    src="/assets/svg/smallback.svg"
+                    width={12}
+                    height={12}
+                  />
+                </p>
+                <p className="sw-ml-2">Trở về tin tức</p>
+              </div>
+            </a>
+          </Link>
         </div>
-        <div className="sw-absolute sw-inset-0 sw-flex sw-justify-end sw-flex-col sw-px-12 sw-py-8">
-          <Heading h="h3">{title}</Heading>
-          <div className="sw-flex sw-justify-between sw-w-full">
-            <div>
-              {' '}
-              {tags.map((tag, idx) => (
-                <span
-                  key={idx}
-                  className="sw-mr-2 sw-text-paragraph sw-capitalize"
-                >
-                  {tag} {tags.length - 1 === idx ? '' : '|'}
-                </span>
-              ))}{' '}
+        <div className="sw-relative">
+          <div className="sw-relative">
+            <Image
+              src={coverImage.url}
+              layout="responsive"
+              width={1500}
+              height={783}
+            />
+            <div className="sw-absolute sw-inset-0 sw-bg-hero"></div>
+          </div>
+          <div className="xl:sw-absolute xl:sw-inset-0 sw-flex sw-justify-end sw-mt-12 xl:sw-mt-0  sw-flex-col xl:sw-px-12 xl:sw-py-8 sw-z-10">
+            <Heading h="h3">{title}</Heading>
+            <div className="sw-flex sw-justify-between sw-w-full">
+              <div>
+                {' '}
+                {tags.map((tag, idx) => (
+                  <span
+                    key={idx}
+                    className="sw-mr-2 sw-text-paragraph sw-capitalize sw-cursor-pointer"
+                  >
+                    {tag} {tags.length - 1 === idx ? '' : '|'}
+                  </span>
+                ))}{' '}
+              </div>
+              <div className="sw-text-paragraph">{date}</div>
             </div>
-            <div className="sw-text-paragraph">{date}</div>
           </div>
         </div>
-      </div>
-      <div>
-        <div>
+        <div className="sw-mt-12 xl:sw-mt-24 xl:sw-w-1/2 xl:sw-mx-auto">
           <PostContent data={content} />
         </div>
-      </div>
-    </Container>
+      </Container>
+    </MediaContextProvider>
   );
 }
 

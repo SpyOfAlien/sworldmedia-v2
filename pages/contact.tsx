@@ -78,7 +78,7 @@ const ContactPage = () => {
             </div>
           </div>
         </div>
-        <div className="sw-w-full sw-mb-24 xl:sw-mb-0 xl:sw-w-1/2 xl:sw-px-12 xl:sw-py-16 3xl:sw-px-24 xl:sw-py-24">
+        <div className="sw-w-full sw-mb-24 xl:sw-mb-0 xl:sw-w-1/2 xl:sw-px-12 xl:sw-py-16 3xl:sw-px-24 xl:sw-py-24 sw-z-10">
           <Heading
             cl="sw-text-gradient sw-mb-md sw-text-center"
             h={isDesktopOrLaptop ? 'h3' : 'h5'}

@@ -13,6 +13,8 @@ import { ParticlesLayout } from '..';
 import Link from 'next/link';
 import { Container } from '../container';
 import WhiteLogo from '../../icons/white-logo';
+import Image from 'next/image';
+import { Media, MediaContextProvider } from '../../../lib/media';
 
 interface Props {
   children: any;
@@ -50,67 +52,110 @@ const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
     }
   };
 
-  const handleSwitchLng = () => {};
-
-  const mediumScreen = useMediaQuery({
-    query: '(min-device-width: 768px)',
-  });
+  const handleSwitchLng = (lan) => {
+    if (lan === 'vn' && router.locale === 'en')
+      router.push('/', '/', { locale: lan });
+    if (lan === 'en' && router.locale === 'vn')
+      router.push('/', '/', { locale: lan });
+  };
 
   return (
-    <div className={s.root}>
-      <AnimatePresence>
-        <motion.main
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-        >
-          {children}
-        </motion.main>
-      </AnimatePresence>
+    <MediaContextProvider>
+      <div className={s.root}>
+        <AnimatePresence>
+          <motion.main
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            {children}
+          </motion.main>
+        </AnimatePresence>
 
-      <Modal open={displayModal} onClose={closeModal}>
-        {modalView === 'BRAND_COMMUNICATION' && (
-          <ServiceDetail data={services[0]} />
-        )}
-        {modalView === 'BRANDING' && <ServiceDetail data={services[1]} />}
-        {modalView === 'PRODUCTION' && <ServiceDetail data={services[2]} />}
-        {modalView === 'INTERNAL_RELATION' && (
-          <ServiceDetail data={services[3]} />
-        )}
-        {modalView === 'EVENT' && <ServiceDetail data={services[4]} />}
+        <Modal open={displayModal} onClose={closeModal}>
+          {modalView === 'BRAND_COMMUNICATION' && (
+            <ServiceDetail data={services[0]} />
+          )}
+          {modalView === 'BRANDING' && <ServiceDetail data={services[1]} />}
+          {modalView === 'PRODUCTION' && <ServiceDetail data={services[2]} />}
+          {modalView === 'INTERNAL_RELATION' && (
+            <ServiceDetail data={services[3]} />
+          )}
+          {modalView === 'EVENT' && <ServiceDetail data={services[4]} />}
 
-        {modalView === 'MENU' && <Menu />}
-      </Modal>
+          {modalView === 'MENU' && <Menu />}
+        </Modal>
 
-      <div className={s.header}>
-        <Container cl="sw-relative sw-h-full sw-flex sw-items-center">
-          <div>
-            <WhiteLogo />
-          </div>
-          <div className="sw-flex sw-items-center">
-            <div
-              className={cn(s.hamburger, s.hamburgerSlider, {
-                [s.active]: isActiveHumburger,
-              })}
-              onClick={onHamburgerClick}
-            >
-              <div className={s.hamburgerBox}>
-                <span className={s.hamburgerInner}></span>
+        <div className={s.header}>
+          <Container cl="sw-relative sw-h-full sw-flex sw-items-center sw-justify-between">
+            <div>
+              <Media lessThan="lg">
+                <div>
+                  <WhiteLogo width="65px" height="65px" />
+                </div>
+              </Media>
+              <Media greaterThanOrEqual="lg">
+                <div style={{ marginBottom: '10px', cursor: 'pointer' }}>
+                  <Link href="/">
+                    <a>
+                      <WhiteLogo />
+                    </a>
+                  </Link>
+                </div>
+              </Media>
+            </div>
+            <div className="sw-flex sw-items-center">
+              <div className={s.switchLng}>
+                <div
+                  className="sw-text-paragraph sw-cursor-pointer"
+                  onClick={() => handleSwitchLng('vn')}
+                >
+                  {' '}
+                  VN{' '}
+                </div>
+
+                <div
+                  style={{ height: '24px', pointerEvents: 'none' }}
+                  className="sw-mx-2"
+                >
+                  {router.locale !== 'vn' ? (
+                    <Image
+                      src="/assets/svg/switch.svg"
+                      width={40}
+                      height={20}
+                    />
+                  ) : (
+                    <Image
+                      src="/assets/svg/switch-reverse.svg"
+                      width={40}
+                      height={20}
+                    />
+                  )}
+                </div>
+
+                <div
+                  className="sw-text-paragraph sw-cursor-pointer"
+                  onClick={() => handleSwitchLng('en')}
+                >
+                  {' '}
+                  EN{' '}
+                </div>
+              </div>
+              <div
+                className={cn(s.hamburger, s.hamburgerSlider, {
+                  [s.active]: isActiveHumburger,
+                })}
+                onClick={onHamburgerClick}
+              >
+                <div className={s.hamburgerBox}>
+                  <span className={s.hamburgerInner}></span>
+                </div>
               </div>
             </div>
-
-            <div className={s.switchLng}>
-              <Link href="/" locale="en">
-                <a> en </a>
-              </Link>
-              <Link href="/" locale="vn">
-                <a> vn </a>
-              </Link>
-            </div>
-          </div>
-        </Container>
+          </Container>
+        </div>
       </div>
-    </div>
+    </MediaContextProvider>
   );
 };
 

@@ -55,6 +55,7 @@ module.exports = {
         cta: `linear-gradient(254.68deg, #EBE9F9 2.29%, #F9F9FA 97.31%, #E9A9FF 97.31%, #FBFAFE 97.31%)`,
         blue: `linear-gradient(234.85deg, #A6DBF7 9.06%, #51BCF9 102.41%)`,
         card: `linear-gradient(152.2deg, #9CECFB 0%, #65C7F7 50.55%, #0052D4 99.52%)`,
+        hero: `linear-gradient(180deg, rgba(4, 13, 33, 0) 47.4%, #040D21 100%)`,
       }),
       screens: {
         '2xl': '1680px',

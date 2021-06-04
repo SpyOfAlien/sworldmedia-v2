@@ -8,10 +8,6 @@
 }
 
 .hamburger {
-  z-index: 100;
-  position: absolute;
-  right: 0;
-  padding: 2px 2px;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -25,18 +21,15 @@
 }
 
 .switchLng {
-  position: absolute;
-  top: 32px;
-  right: 70px;
-  z-index: 100;
-  width: 70px;
   height: 20px;
-  background: chartreuse;
+  display: flex;
+  align-items: center;
+  margin-right: 14px;
 }
 
 .hamburgerBox {
   width: 40px;
-  height: 40px;
+  height: 30px;
   position: relative;
   cursor: pointer;
 }
