@@ -39,7 +39,7 @@ const HomeContainer: FC<Props> = ({
           exit="exit"
           variants={variants}
           className={cn(
-            'md:sw-absolute md:sw-inset-0',
+            'md:sw-absolute md:sw-inset-0 sw-py-header',
             { [s.container]: !isFullpage },
             cl
           )}

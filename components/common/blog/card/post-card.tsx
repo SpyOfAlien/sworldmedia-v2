@@ -4,6 +4,8 @@ import s from './card.module.scss';
 import Image from 'next/image';
 import Heading from '../../../ui/typo/heading';
 import Link from 'next/link';
+import { format } from 'date-fns';
+import { useRouter } from 'next/router';
 
 interface Props {
   post: any;
@@ -13,6 +15,8 @@ interface Props {
 
 const PostCard: FC<Props> = ({ post, type, cl }) => {
   const { coverImage, title, tags, slug, date } = post;
+
+  const formatedDate = format(new Date(date), 'LLLL d, yyyy');
 
   return (
     <Link href={`/blogs/${slug}`}>
@@ -58,7 +62,7 @@ const PostCard: FC<Props> = ({ post, type, cl }) => {
             </div>
           </div>
 
-          <div className="sw-text-paragraph">{date}</div>
+          <div className="sw-text-paragraph">{formatedDate}</div>
         </div>
       </div>
     </Link>

@@ -6,13 +6,33 @@ import Link from 'next/link';
 import s from './header.module.scss';
 import { useRouter } from 'next/router';
 import { useUI } from '../../../lib/context/ui-context';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import cn from 'classnames';
 
-const Header = () => {
+const Header = ({ isSticky = false }) => {
   const router = useRouter();
   const { closeModal, openModal, setModalView } = useUI();
   const [isActiveHumburger, setIsActiveHumburger] = useState(false);
+  const [isTransparent, setIsTransparent] = useState(false);
+
+  useEffect(() => {
+    if (isActiveHumburger) {
+      setIsActiveHumburger(false);
+      closeModal();
+    }
+
+    console.log(router.pathname);
+
+    if (
+      router.pathname === '/' ||
+      router.pathname === '/contact' ||
+      isActiveHumburger
+    ) {
+      setIsTransparent(true);
+    } else {
+      setIsTransparent(false);
+    }
+  }, [router]);
 
   const onHamburgerClick = () => {
     if (isActiveHumburger) {
@@ -33,24 +53,33 @@ const Header = () => {
   };
 
   return (
-    <div className={s.header}>
+    <div
+      className={cn(
+        s.header,
+        `${isSticky || !isTransparent ? 'sw-bg-background' : null}`
+      )}
+    >
       <Container cl="sw-relative sw-h-full sw-flex sw-items-center sw-justify-between">
-        <div>
-          <Media lessThan="lg">
-            <div>
-              <WhiteLogo width="65px" height="65px" />
-            </div>
-          </Media>
-          <Media greaterThanOrEqual="lg">
-            <div style={{ marginBottom: '10px', cursor: 'pointer' }}>
-              <Link href="/">
-                <a>
-                  <WhiteLogo />
-                </a>
-              </Link>
-            </div>
-          </Media>
-        </div>
+        {router.pathname !== '/contact' ? (
+          <div>
+            <Media lessThan="lg">
+              <div>
+                <WhiteLogo width="65px" height="65px" />
+              </div>
+            </Media>
+            <Media greaterThanOrEqual="lg">
+              <div style={{ marginBottom: '10px', cursor: 'pointer' }}>
+                <Link href="/">
+                  <a>
+                    <WhiteLogo />
+                  </a>
+                </Link>
+              </div>
+            </Media>
+          </div>
+        ) : (
+          <div></div>
+        )}
         <div className="sw-flex sw-items-center">
           <div className={s.switchLng}>
             <div

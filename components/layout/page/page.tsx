@@ -58,7 +58,13 @@ const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
           {modalView === 'MENU' && <Menu />}
         </Modal>
 
-        <Header />
+        <Media lessThan="md">
+          <Header isSticky={true} />
+        </Media>
+
+        <Media greaterThanOrEqual="md">
+          <Header isSticky={false} />
+        </Media>
       </div>
     </MediaContextProvider>
   );
