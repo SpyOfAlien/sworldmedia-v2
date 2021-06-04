@@ -64,7 +64,9 @@ const ContactPage = () => {
           </div>
           <div className="sw-flex sw-flex-col sw-justify-between xl:sw-pl-8 3xl:sw-pl-16 xl:sw-py-12">
             <WhiteLogo />
-            <Infor />
+            <div className="sw-my-8">
+              <Infor />
+            </div>
             <div>
               <div className="sw-flex sw-mb-xsm">
                 <Facebook style={{ marginRight: '40px' }} />

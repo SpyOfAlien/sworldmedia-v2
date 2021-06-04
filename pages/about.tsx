@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Container } from '../components/layout';
+import Team from '../components/team/team';
 import Heading from '../components/ui/typo/heading';
 import Paragraph from '../components/ui/typo/paragraph';
 import { Media, MediaContextProvider } from '../lib/media';
@@ -13,7 +14,7 @@ const AboutUs = () => {
             <Heading h="h3">Câu chuyện của chúng tôi</Heading>
           </Media>
           <Media lessThan="lg">
-            <Heading h="h5">Câu chuyện của chúng tôi</Heading>
+            <Heading h="h4">Câu chuyện của chúng tôi</Heading>
           </Media>
         </section>
         <section className="sw-flex sw-flex-col-reverse sw-justify-between xl:sw-flex-row sw-my-8 xl:sw-my-32 2xl:sw-my-40">
@@ -82,7 +83,7 @@ const AboutUs = () => {
                 </Heading>
               </Media>
               <Media lessThan="lg">
-                <Heading h="h5">
+                <Heading h="h4">
                   Đặng Soan - Nhà sáng lập và giám đốc điều hành
                 </Heading>
               </Media>
@@ -104,7 +105,9 @@ const AboutUs = () => {
             </Paragraph>
           </div>
         </section>
-        <section></section>
+        <section>
+          <Team />
+        </section>
       </Container>
     </MediaContextProvider>
   );

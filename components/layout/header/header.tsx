@@ -11,7 +11,7 @@ import cn from 'classnames';
 
 const Header = ({ isSticky = false }) => {
   const router = useRouter();
-  const { closeModal, openModal, setModalView } = useUI();
+  const { closeModal, openModal, setModalView, displayModal } = useUI();
   const [isActiveHumburger, setIsActiveHumburger] = useState(false);
   const [isTransparent, setIsTransparent] = useState(false);
 
@@ -20,8 +20,6 @@ const Header = ({ isSticky = false }) => {
       setIsActiveHumburger(false);
       closeModal();
     }
-
-    console.log(router.pathname);
 
     if (
       router.pathname === '/' ||
@@ -33,6 +31,10 @@ const Header = ({ isSticky = false }) => {
       setIsTransparent(false);
     }
   }, [router]);
+
+  useEffect(() => {
+    displayModal ? setIsActiveHumburger(true) : setIsActiveHumburger(false);
+  }, [displayModal]);
 
   const onHamburgerClick = () => {
     if (isActiveHumburger) {

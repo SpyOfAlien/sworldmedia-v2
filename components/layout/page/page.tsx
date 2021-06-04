@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import cn from 'classnames';
 import s from './page.module.scss';
 import Modal from '../modal/modal';
@@ -16,6 +16,11 @@ import WhiteLogo from '../../icons/white-logo';
 import Image from 'next/image';
 import { Media, MediaContextProvider } from '../../../lib/media';
 import Header from '../header/header';
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks,
+} from 'body-scroll-lock';
 
 interface Props {
   children: any;
@@ -30,12 +35,18 @@ const ServiceDetail = dynamic(
 
 const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
   const { closeModal, displayModal, modalView } = useUI();
+  const main = useRef();
+
+  useEffect(() => {
+    displayModal ? disableBodyScroll(main) : enableBodyScroll(main);
+  }, [displayModal]);
 
   return (
     <MediaContextProvider>
       <div className={s.root}>
         <AnimatePresence>
           <motion.main
+            ref={main}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
