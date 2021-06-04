@@ -20,7 +20,7 @@ export default function Post({ post, morePosts, preview, locale }) {
   }
 
   return (
-    <Container>
+    <Container cl="sw-mt-header">
       <div>Trở về tin tức</div>
       <div className="sw-relative">
         <div>

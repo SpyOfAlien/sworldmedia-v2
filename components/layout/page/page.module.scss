@@ -1,10 +1,18 @@
+.header {
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
 .hamburger {
   z-index: 100;
   position: absolute;
-  top: 36px;
-  right: 36px;
+  right: 0;
   padding: 2px 2px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   cursor: pointer;
   transition-property: opacity, filter;
   transition-duration: 0.5s;
@@ -17,10 +25,10 @@
 
 .switchLng {
   position: absolute;
-  top: 36px;
-  right: 90px;
+  top: 32px;
+  right: 70px;
   z-index: 100;
-  width: 80px;
+  width: 70px;
   height: 20px;
   background: chartreuse;
 }

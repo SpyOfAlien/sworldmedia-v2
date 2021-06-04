@@ -11,6 +11,8 @@ import { useRouter } from 'next/router';
 import { useMediaQuery } from 'react-responsive';
 import { ParticlesLayout } from '..';
 import Link from 'next/link';
+import { Container } from '../container';
+import WhiteLogo from '../../icons/white-logo';
 
 interface Props {
   children: any;
@@ -80,24 +82,33 @@ const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
         {modalView === 'MENU' && <Menu />}
       </Modal>
 
-      <div
-        className={cn(s.hamburger, s.hamburgerSlider, {
-          [s.active]: isActiveHumburger,
-        })}
-        onClick={onHamburgerClick}
-      >
-        <div className={s.hamburgerBox}>
-          <span className={s.hamburgerInner}></span>
-        </div>
-      </div>
+      <div className={s.header}>
+        <Container cl="sw-relative sw-h-full sw-flex sw-items-center">
+          <div>
+            <WhiteLogo />
+          </div>
+          <div className="sw-flex sw-items-center">
+            <div
+              className={cn(s.hamburger, s.hamburgerSlider, {
+                [s.active]: isActiveHumburger,
+              })}
+              onClick={onHamburgerClick}
+            >
+              <div className={s.hamburgerBox}>
+                <span className={s.hamburgerInner}></span>
+              </div>
+            </div>
 
-      <div className={s.switchLng}>
-        <Link href="/" locale="en">
-          <a> en </a>
-        </Link>
-        <Link href="/" locale="vn">
-          <a> vn </a>
-        </Link>
+            <div className={s.switchLng}>
+              <Link href="/" locale="en">
+                <a> en </a>
+              </Link>
+              <Link href="/" locale="vn">
+                <a> vn </a>
+              </Link>
+            </div>
+          </div>
+        </Container>
       </div>
     </div>
   );
