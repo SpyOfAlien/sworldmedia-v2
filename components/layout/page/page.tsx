@@ -15,6 +15,7 @@ import { Container } from '../container';
 import WhiteLogo from '../../icons/white-logo';
 import Image from 'next/image';
 import { Media, MediaContextProvider } from '../../../lib/media';
+import Header from '../header/header';
 
 interface Props {
   children: any;
@@ -28,36 +29,7 @@ const ServiceDetail = dynamic(
 );
 
 const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
-  const route = useRouter();
-  const { closeModal, displayModal, modalView, openModal, setModalView } =
-    useUI();
-  const [isActiveHumburger, setIsActiveHumburger] = useState(false);
-  const router = useRouter();
-
-  useEffect(() => {
-    setIsActiveHumburger(displayModal);
-  }, [displayModal]);
-
-  useEffect(() => {
-    if (isActiveHumburger) closeModal();
-  }, [route]);
-
-  const onHamburgerClick = () => {
-    if (isActiveHumburger) {
-      closeModal();
-      setIsActiveHumburger(!isActiveHumburger);
-    } else {
-      openModal();
-      setModalView('MENU');
-    }
-  };
-
-  const handleSwitchLng = (lan) => {
-    if (lan === 'vn' && router.locale === 'en')
-      router.push('/', '/', { locale: lan });
-    if (lan === 'en' && router.locale === 'vn')
-      router.push('/', '/', { locale: lan });
-  };
+  const { closeModal, displayModal, modalView } = useUI();
 
   return (
     <MediaContextProvider>
@@ -86,74 +58,7 @@ const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
           {modalView === 'MENU' && <Menu />}
         </Modal>
 
-        <div className={s.header}>
-          <Container cl="sw-relative sw-h-full sw-flex sw-items-center sw-justify-between">
-            <div>
-              <Media lessThan="lg">
-                <div>
-                  <WhiteLogo width="65px" height="65px" />
-                </div>
-              </Media>
-              <Media greaterThanOrEqual="lg">
-                <div style={{ marginBottom: '10px', cursor: 'pointer' }}>
-                  <Link href="/">
-                    <a>
-                      <WhiteLogo />
-                    </a>
-                  </Link>
-                </div>
-              </Media>
-            </div>
-            <div className="sw-flex sw-items-center">
-              <div className={s.switchLng}>
-                <div
-                  className="sw-text-paragraph sw-cursor-pointer"
-                  onClick={() => handleSwitchLng('vn')}
-                >
-                  {' '}
-                  VN{' '}
-                </div>
-
-                <div
-                  style={{ height: '24px', pointerEvents: 'none' }}
-                  className="sw-mx-2"
-                >
-                  {router.locale !== 'vn' ? (
-                    <Image
-                      src="/assets/svg/switch.svg"
-                      width={40}
-                      height={20}
-                    />
-                  ) : (
-                    <Image
-                      src="/assets/svg/switch-reverse.svg"
-                      width={40}
-                      height={20}
-                    />
-                  )}
-                </div>
-
-                <div
-                  className="sw-text-paragraph sw-cursor-pointer"
-                  onClick={() => handleSwitchLng('en')}
-                >
-                  {' '}
-                  EN{' '}
-                </div>
-              </div>
-              <div
-                className={cn(s.hamburger, s.hamburgerSlider, {
-                  [s.active]: isActiveHumburger,
-                })}
-                onClick={onHamburgerClick}
-              >
-                <div className={s.hamburgerBox}>
-                  <span className={s.hamburgerInner}></span>
-                </div>
-              </div>
-            </div>
-          </Container>
-        </div>
+        <Header />
       </div>
     </MediaContextProvider>
   );
