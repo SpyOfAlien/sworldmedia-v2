@@ -15,7 +15,22 @@ const POST_GRAPHQL_FIELDS = `
   }
   content {
     json
+    links {
+      assets {
+        block {
+          sys {
+            id
+          }
+          url
+          width
+          height
+          title
+          description
+        }
+      }
+    }
   }
+  tags
 `;
 
 async function fetchGraphQL(query, preview = false) {
@@ -62,7 +77,7 @@ export async function getPreviewPostBySlug(slug) {
 export async function getAllPostsWithSlug() {
   const entries = await fetchGraphQL(
     `query {
-      postCollection(where: { slug_exists: true }, order: date_DESC) {
+      postCollection(where: { slug_exists: true }, order: date_DESC, limit: 10) {
         items {
           ${POST_GRAPHQL_FIELDS}
         }
@@ -75,7 +90,9 @@ export async function getAllPostsWithSlug() {
 export async function getAllPostsForHome(preview) {
   const entries = await fetchGraphQL(
     `query {
-      postCollection(order: date_DESC, preview: ${preview ? 'true' : 'false'}) {
+      postCollection(order: date_DESC, preview: ${
+        preview ? 'true' : 'false'
+      }, limit: 10) {
         items {
           ${POST_GRAPHQL_FIELDS}
         }

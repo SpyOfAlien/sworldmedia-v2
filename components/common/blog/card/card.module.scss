@@ -1,0 +1,18 @@
+.big {
+  @apply sw-flex-row-reverse sw-justify-between;
+}
+.small {
+  @apply sw-flex-col;
+}
+
+.content {
+  @apply sw-w-11/12;
+}
+
+.contentBig {
+  @apply sw-w-1/2 sw-flex sw-flex-col sw-justify-between sw-pr-12;
+}
+
+.imageBig {
+  @apply sw-w-48;
+}

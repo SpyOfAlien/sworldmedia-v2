@@ -1,6 +1,6 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { getAllPostsForHome } from '../lib/api';
-import { Container, ParticlesLayout } from '../components/layout';
+import { HomeContainer, ParticlesLayout } from '../components/layout';
 import ReactScrollWheelHandler from 'react-scroll-wheel-handler';
 import { useSection } from '../lib/context/section-context';
 import { useEffect, useState } from 'react';
@@ -15,14 +15,16 @@ import Clients from '../components/common/clients/clients';
 import { useMediaQuery } from 'react-responsive';
 import cn from 'classnames';
 import Glow from '../components/glows/glow';
+import { useTranslation } from 'react-i18next';
+import nextI18NextConfig from '../next-i18next.config.js';
+import { Media, MediaContextProvider } from '../lib/media';
 
 export const getStaticProps = async ({ locale, preview }) => {
   const allPosts = (await getAllPostsForHome(preview)) ?? [];
-  const locales = await serverSideTranslations(locale, ['common']);
   return {
     props: {
-      locales,
       allPosts,
+      ...(await serverSideTranslations(locale, ['common', 'home'])),
     },
   };
 };
@@ -31,6 +33,8 @@ const HomePage = ({ locales, allPosts }) => {
   // Context
   const { currentSection, onScrollUp, onScrollDown } = useSection();
   const [desktopView, setDesktopView] = useState(undefined);
+
+  const { t } = useTranslation('common');
 
   useEffect(() => {
     switch (currentSection) {
@@ -51,50 +55,64 @@ const HomePage = ({ locales, allPosts }) => {
     onScrollDown();
   };
 
-  const mediumScreen = useMediaQuery({
-    query: '(min-device-width: 768px)',
-  });
-
   return (
-    <ReactScrollWheelHandler
-      upHandler={onPageScrollUp}
-      downHandler={onPageScrollDown}
-      timeout={mediumScreen ? 1000 : 0}
-    >
-      {mediumScreen && <ParticlesLayout />}
-      {currentSection === 1 && mediumScreen && <Glow path="about-glow" />}
-      {currentSection === 2 && mediumScreen && <Glow path="service-glow" />}
-      {currentSection === 3 && mediumScreen && <Glow path="partner-glow" />}
-      {currentSection === 4 && mediumScreen && <Glow path="client-glow" />}
-      {currentSection === 6 && mediumScreen && <Glow path="whyus-glow" />}
-
-      <Container isVisible={currentSection === 1 || !mediumScreen}>
+    <MediaContextProvider>
+      <Media at="xs">
         <AboutUs data={aboutUsList} />
-      </Container>
-
-      <Container isVisible={currentSection === 2 || !mediumScreen}>
         <ServicePage />
-      </Container>
-
-      <Container isVisible={currentSection === 3 || !mediumScreen}>
-        <Clients title="Đối tác media" imgSrc="/assets/svg/media-partner.svg" />
-      </Container>
-      <Container isVisible={currentSection === 4 || !mediumScreen}>
         <Clients
-          title="Khách hàng của chúng tôi"
+          title={t('test__newline')}
+          imgSrc="/assets/svg/media-partner.svg"
+        />
+        <Clients
+          title={t('home__client__title')}
           imgSrc="/assets/svg/clients.svg"
         />
-      </Container>
-      <Container
-        isFullpage={true}
-        isVisible={currentSection === 5 || !mediumScreen}
-      >
         <ProductSlider products={Products} />
-      </Container>
-      <Container isVisible={currentSection === 6 || !mediumScreen}>
         <WhyUs data={whyUsList} />
-      </Container>
-    </ReactScrollWheelHandler>
+      </Media>
+      <Media greaterThanOrEqual="sm">
+        <ReactScrollWheelHandler
+          upHandler={onPageScrollUp}
+          downHandler={onPageScrollDown}
+          timeout={1000}
+        >
+          <ParticlesLayout />
+          {currentSection === 1 && <Glow path="about-glow" />}
+          {currentSection === 2 && <Glow path="service-glow" />}
+          {currentSection === 3 && <Glow path="partner-glow" />}
+          {currentSection === 4 && <Glow path="client-glow" />}
+          {currentSection === 6 && <Glow path="whyus-glow" />}
+
+          <HomeContainer isVisible={currentSection === 1}>
+            <AboutUs data={aboutUsList} />
+          </HomeContainer>
+
+          <HomeContainer isVisible={currentSection === 2}>
+            <ServicePage />
+          </HomeContainer>
+
+          <HomeContainer isVisible={currentSection === 3}>
+            <Clients
+              title={t('test__newline')}
+              imgSrc="/assets/svg/media-partner.svg"
+            />
+          </HomeContainer>
+          <HomeContainer isVisible={currentSection === 4}>
+            <Clients
+              title={t('home__client__title')}
+              imgSrc="/assets/svg/clients.svg"
+            />
+          </HomeContainer>
+          <HomeContainer isFullpage={true} isVisible={currentSection === 5}>
+            <ProductSlider products={Products} />
+          </HomeContainer>
+          <HomeContainer isVisible={currentSection === 6}>
+            <WhyUs data={whyUsList} />
+          </HomeContainer>
+        </ReactScrollWheelHandler>
+      </Media>
+    </MediaContextProvider>
   );
 };
 
