@@ -15,7 +15,7 @@ interface Props {
 }
 
 const Modal: FC<Props> = ({ children, open, onClose, isFull, subModal }) => {
-  const { closeSubModal } = useUI();
+  const { closeSubModal, setConfirmData } = useUI();
   const subModalRef = useRef<HTMLDivElement>();
 
   useEffect(() => {
@@ -25,6 +25,7 @@ const Modal: FC<Props> = ({ children, open, onClose, isFull, subModal }) => {
     function handleClickOutside(event) {
       const node = subModalRef.current;
       if (node && !node.contains(event.target)) {
+        setConfirmData({});
         closeSubModal();
       }
     }

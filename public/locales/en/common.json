@@ -163,5 +163,19 @@
 
   "home__products__title": "Newest Products",
 
-  "home__whyus__title": "Why us"
+  "home__whyus__title": "Why us",
+
+  "Success": "Success",
+  "Failed": "Failed",
+  "common__failed__message": "Something went wrong, please check your network connection or contact directly with us by phone",
+
+  "subscribe": "Subscribe",
+  "subscribe__success": "You have successfully subscribe to our services. We will send you an email to confirm your email soon",
+  "subscribe__before": "This email already subscribe to our newletter",
+
+  "feedback__success": "Thanks for the feedback on your experience with our team. We will contact with you as soon as posible",
+
+  "contact__personal__required_error": "Please fill phone or email ",
+  "contact__message__required_error": "Please fill your feedback message",
+  "contact__email__error": "Invalid email address"
 }

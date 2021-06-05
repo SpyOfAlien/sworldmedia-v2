@@ -163,5 +163,19 @@
 
   "home__products__title": "Những sản phẩm mới nhất",
 
-  "home__whyus__title": "Tại sao chọn chúng tôi"
+  "home__whyus__title": "Tại sao chọn chúng tôi",
+
+  "Success": "Thành công",
+  "Failed": "Lỗi",
+  "common__failed__message": "Có lỗi xảy ra vui lòng kiểm tra mạng hoặc liên hệ trực tiếp với chúng tôi qua số điện thoại",
+
+  "subscribe": "Đăng ký",
+  "subscribe__success": "Đăng ký thành công, vui lòng kiểm tra xác thực thông tin qua email",
+  "subscribe__before": "Tài khoản email đã đăng ký",
+
+  "feedback__success": "Cảm ơn đã phản hồi, chúng tôi sẽ liên hệ với bạn sớm nhất có thể",
+
+  "contact__personal__required_error": "Vui lòng nhập email hoặc số điện thoại",
+  "contact__message__required_error": "Vui lòng nhập lời nhắn của bạn",
+  "contact__email__error": "Địa chỉ email không đúng"
 }
