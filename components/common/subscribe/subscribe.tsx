@@ -1,14 +1,17 @@
-import { FC, useState } from 'react';
+import { FC, useRef, useState } from 'react';
 import cn from 'classnames';
 import s from './subscribe.module.scss';
 import Button from '../../ui/button/button';
+import { useUI } from '../../../lib/context/ui-context';
 
 interface Props {
   cl?: string;
 }
 
 const SubscribeForm: FC<Props> = ({ cl }) => {
+  const { openSubModal, setSubModalView, setConfirmData } = useUI();
   const [email, setEmail] = useState('');
+  const inputRef = useRef();
   const emailRegex =
     /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
 
@@ -20,13 +23,22 @@ const SubscribeForm: FC<Props> = ({ cl }) => {
 
   const handleSubscribe = async () => {
     if (email && emailRegex.test(email)) {
-      const res = await fetch(
+      fetch(
         'https://kayjurmuxf.execute-api.ap-southeast-1.amazonaws.com/dev/subscribe',
         {
           method: 'POST',
-          body: JSON.stringify({ email: email, confirm: true }),
+          body: JSON.stringify({ body: { email: email, confirm: true } }),
         }
-      );
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          setConfirmData(data);
+          setSubModalView('CONFIRM_MODAL');
+          openSubModal();
+        })
+        .catch((err) => {
+          setEmail('');
+        });
     }
   };
 
@@ -38,6 +50,7 @@ const SubscribeForm: FC<Props> = ({ cl }) => {
       )}
     >
       <input
+        ref={inputRef}
         className={cn(
           'sw-bg-paragraph focus:sw-outline-none sw-h-full sw-w-9/12 sw-rounded-sm',
           s.input

@@ -14,7 +14,10 @@ interface Props {
 const Button: FC<Props> = ({ type, text, icon, cl, onclick }) => {
   return (
     <div className={cn(s.button, cl, s[type])} onClick={onclick}>
-      <span className="sw-font-bold sw-justify-center sw-text-brown sw-leading-4">
+      <span
+        style={{ lineHeight: 'inherit' }}
+        className="sw-font-bold sw-justify-center sw-text-brown"
+      >
         {' '}
         {text}{' '}
       </span>

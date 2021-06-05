@@ -12,4 +12,14 @@
   .root {
     padding: 0;
   }
+
+  .arrow {
+    top: 20px;
+  }
+}
+
+@screen 2xl {
+  .arrow {
+    top: 35px;
+  }
 }

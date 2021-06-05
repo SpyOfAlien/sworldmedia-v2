@@ -66,7 +66,6 @@ const subServices = {
       strength: [
         'home__service__brand_communication__kol__strength1',
         'home__service__brand_communication__kol__strength2',
-        'home__service__brand_communication__kol__strength3',
       ],
       provide: [
         'home__service__brand_communication__kol__services1',

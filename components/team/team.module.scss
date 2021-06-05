@@ -1,0 +1,173 @@
+.root {
+  grid-template-rows: repeat(4, 50%);
+  min-height: 80vh;
+}
+
+.caiDu,
+.rocket,
+.graph,
+.human,
+.globeOne,
+.globeTwo,
+.globeThree,
+.globeFour,
+.designTable,
+.design,
+.editor,
+.pc,
+.calendarOne,
+.calendarTwo,
+.team {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+}
+
+.marketingWrapper,
+.designWrapper,
+.editorWrapper,
+.contentWrapper {
+  position: relative;
+}
+
+.caiDu {
+  top: 10px;
+  height: 10px;
+}
+
+.rocket {
+}
+
+.graph {
+  right: 0;
+  top: -150px;
+  z-index: 2;
+}
+
+.human {
+  right: 0px;
+  top: -120px;
+  z-index: 3;
+}
+
+.globeOne {
+  right: 0px;
+  top: -75px;
+  z-index: 1;
+}
+
+.designTable {
+  top: -150px;
+  left: 0;
+  z-index: 2;
+}
+
+.design {
+  left: 0;
+  top: -70px;
+  z-index: 3;
+}
+
+.globeTwo {
+  left: 0;
+}
+
+.editor {
+  top: -80px;
+  right: 0;
+  z-index: 3;
+}
+
+.pc {
+  top: -120px;
+  right: 0;
+  z-index: 2;
+}
+
+.globeThree {
+  right: 0;
+}
+
+.contentWrapper {
+  left: 30px;
+}
+
+.calendarOne {
+  top: -80px;
+  left: -60px;
+  z-index: 2;
+}
+
+.calendarTwo {
+  z-index: 2;
+  top: -150px;
+  left: 25px;
+}
+
+.team {
+  z-index: 3;
+  top: -60px;
+}
+
+.globeFour {
+  position: absolute;
+}
+
+@screen md {
+  .root {
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 50%);
+  }
+
+  .designTable {
+    top: -150px;
+    right: 0;
+    left: unset;
+    z-index: 2;
+  }
+
+  .design {
+    right: 0;
+    top: -70px;
+    left: unset;
+    z-index: 3;
+  }
+
+  .globeTwo {
+    left: unset;
+    right: 0;
+  }
+
+  .editor {
+    top: -80px;
+    left: 10px;
+    z-index: 3;
+  }
+
+  .pc {
+    top: -120px;
+    left: -70px;
+    z-index: 2;
+  }
+
+  .globeThree {
+    left: 0px;
+  }
+
+  .calendarOne {
+    top: -80px;
+    left: -60px;
+    z-index: 2;
+  }
+
+  .calendarTwo {
+    z-index: 2;
+    top: -150px;
+    left: 25px;
+  }
+
+  .team {
+    z-index: 3;
+    top: -60px;
+  }
+}

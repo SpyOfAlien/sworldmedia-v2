@@ -36,7 +36,18 @@ const SmallCard: FC<Props> = ({ cl, icon, content, onClick }) => {
           </div>
         </Media>
 
-        <Media greaterThanOrEqual="md">
+        <Media between={['md', 'xl']}>
+          <div className="xl:sw-mx-xsm">
+            <Image
+              src={icon}
+              width={90}
+              height={90}
+              alt="Brand communication"
+            />
+          </div>
+        </Media>
+
+        <Media greaterThanOrEqual="xl">
           <div className="xl:sw-mx-xsm">
             <Image
               src={icon}

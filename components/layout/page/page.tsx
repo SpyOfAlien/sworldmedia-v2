@@ -24,6 +24,9 @@ import {
 import SubModal from '../modal/sub-modal';
 import SubService from '../../common/services/sub-service/sub-service';
 import subServices from '../../../lib/data/sub-services';
+import Heading from '../../ui/typo/heading';
+import Paragraph from '../../ui/typo/paragraph';
+import Button from '../../ui/button/button';
 
 interface Props {
   children: any;
@@ -44,12 +47,19 @@ const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
     displaySubModal,
     closeSubModal,
     subModalView,
+    setConfirmData,
+    confirm,
   } = useUI();
   const main = useRef();
 
   useEffect(() => {
     displayModal ? disableBodyScroll(main) : enableBodyScroll(main);
   }, [displayModal]);
+
+  const handleConfirm = () => {
+    setConfirmData({});
+    closeSubModal();
+  };
 
   return (
     <MediaContextProvider>
@@ -127,6 +137,22 @@ const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
             <SubService
               data={subServices.internationalRelation.vnInternational}
             />
+          )}
+          {subModalView === 'CONFIRM_MODAL' && confirm && (
+            <div className="sw-p-8 sw-relative">
+              <Heading cl="sw-mb-4" h="h6">
+                {confirm.title}
+              </Heading>
+              <Paragraph>{confirm.message}</Paragraph>
+              <div className="sw-flex sw-justify-end">
+                <Button
+                  onclick={handleConfirm}
+                  text="OK"
+                  type="gradient"
+                  cl="sw-w-24 sw-h-8 sw-mt-4"
+                ></Button>
+              </div>
+            </div>
           )}
         </Modal>
 

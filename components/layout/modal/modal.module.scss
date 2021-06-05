@@ -1,5 +1,5 @@
 .modal {
-  @apply sw-fixed sw-inset-0  sw-w-screen sw-h-auto;
+  @apply sw-fixed sw-inset-0 sw-z-30 sw-w-screen sw-h-auto;
 }
 
 .content {
@@ -19,15 +19,17 @@
 }
 
 .subContent {
+  width: 320px;
   background: #172d42;
-  width: 600px;
-  height: 70vh;
   border-radius: 8px;
   z-index: 10;
   border: 1px solid#65C7F7;
 }
 
 @screen md {
+  .subContent {
+    width: 600px;
+  }
   .content {
     @apply sw-w-full;
   }

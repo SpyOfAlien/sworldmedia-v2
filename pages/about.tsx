@@ -105,7 +105,7 @@ const AboutUs = () => {
             </Paragraph>
           </div>
         </section>
-        <section>
+        <section className="xl:sw-my-56 2xl:sw-my-44">
           <Team />
         </section>
       </Container>

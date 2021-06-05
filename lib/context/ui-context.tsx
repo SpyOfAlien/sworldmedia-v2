@@ -6,6 +6,7 @@ interface IUIState {
   displaySubModal: boolean;
   modalView: string;
   subModalView: string;
+  confirm: any;
 }
 
 const initialState: IUIState = {
@@ -13,6 +14,7 @@ const initialState: IUIState = {
   displaySubModal: false,
   modalView: '',
   subModalView: '',
+  confirm: {},
 };
 
 type MODAL_VIEWS =
@@ -35,7 +37,8 @@ type MODAL_VIEWS =
   | 'EVENT_OFFLINE'
   | 'INTERNATIONAL_RELATION_FOR_VN'
   | 'INTERNATIONAL_RELATION_FOR_FOREIGN'
-  | 'INTERNATIONAL_RELATION_FOR_VN_INTERNATIONAL';
+  | 'INTERNATIONAL_RELATION_FOR_VN_INTERNATIONAL'
+  | 'CONFIRM_MODAL';
 
 type Action =
   | {
@@ -57,6 +60,10 @@ type Action =
   | {
       type: 'SET_SUB_MODAL_VIEW';
       view: MODAL_VIEWS;
+    }
+  | {
+      type: 'SET_CONFIRM_DATA';
+      confirm: any;
     };
 
 export const UIContext = React.createContext<IUIState | any>(initialState);
@@ -99,6 +106,12 @@ const UIReducer = (state: IUIState, action: Action) => {
         subModalView: action.view,
       };
     }
+    case 'SET_CONFIRM_DATA': {
+      return {
+        ...state,
+        confirm: action.confirm,
+      };
+    }
   }
 };
 
@@ -113,6 +126,8 @@ const UIProvider: FC = (props) => {
     dispatch({ type: 'SET_MODAL_VIEW', view });
   const setSubModalView = (view: MODAL_VIEWS) =>
     dispatch({ type: 'SET_SUB_MODAL_VIEW', view });
+  const setConfirmData = (confirm: any) =>
+    dispatch({ type: 'SET_CONFIRM_DATA', confirm });
 
   const value = useMemo(
     () => ({
@@ -123,6 +138,7 @@ const UIProvider: FC = (props) => {
       openSubModal,
       closeSubModal,
       setSubModalView,
+      setConfirmData,
     }),
     [state]
   );
