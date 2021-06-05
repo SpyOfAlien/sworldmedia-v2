@@ -66,7 +66,7 @@ const ServicePage: FC<Props> = ({ cl }) => {
             <SmallCard
               key={idx}
               cl=" sw-ml-auto sw-mb-4 sw-cursor-pointer xl:sw-w-3/4"
-              content={item.name}
+              content={t(item.name)}
               icon={item.icon}
               onClick={() => openPopup(item.modal)}
             />

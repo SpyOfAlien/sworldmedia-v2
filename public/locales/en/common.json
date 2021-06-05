@@ -14,6 +14,9 @@
 
   "home__service__title": "Our Services",
 
+  "home__sub_service__strength": "Our strength",
+  "home__sub_service__provide": "We provide",
+
   "home__service__brand_communication__title": "Brand Communication",
   "home__service__brand_communication__content": "S-World provides communication solutions for brands on multi-platform online including 4 service lines: Marketing, Press and Television communication (PR), Social Media communication, and KOL & Influencer communication",
   "home__service__brand_communication__sub_content": "",
@@ -83,7 +86,7 @@
   "home__service__production__for_client__strength1": "- A young, dynamic, enthusiastic and well-trained team",
   "home__service__production__for_client__strength2": "- Experienced production team (studio, technical)",
   "home__service__production__for_client__strength3": "- An enthusiastic, creative and professional post-production team",
-  "home__service__production__for_client__services1": "-Video: TVC, Viral video, Documentary, Short Film Phim",
+  "home__service__production__for_client__services1": "- Video: TVC, Viral video, Documentary, Short Film Phim",
   "home__service__production__for_client__services2": "- Show: Reality show, gameshow, talk show",
   "home__service__production__for_client__services3": "- Images: Key Visuals, Poster",
 

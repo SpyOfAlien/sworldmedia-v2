@@ -3,68 +3,108 @@ const baseUrl = '/assets/svg';
 const services = [
   {
     icon: '/assets/svg/brand-communication.svg',
-    name: 'Truyền thông thương hiệu',
+    name: 'home__service__brand_communication__title',
     label: 'Truyền thông thương hiệu',
     modal: 'BRAND_COMMUNICATION',
-    content:
-      'S-World cung cấp giải pháp toàn diện cho thương hiệu khi tư vấn và xây dựng những yếu tố: Câu chuyện thương hiệu, slogan, định vị khách hàng và chiến lược phát triển, để doanh nghiệp đến gần hơn với khách hàng.',
+    content: 'home__service__brand_communication__content',
     subService: [
-      'Phát triển concept',
-      'Thiết kế bộ nhận diện thương hiệu',
-      'Chiến lược thương hiệu',
-      'Chiến lược thương hiệu',
+      {
+        title: 'home__service__branding__concept',
+        modal: 'BRANDING_CONCEPT',
+      },
+      {
+        title: 'home__service__branding__identity',
+        modal: 'BRANDING_IDENTITY',
+      },
+      {
+        title: 'home__service__branding__strategy',
+        modal: 'BRANDING_STRATEGY',
+      },
     ],
   },
   {
     icon: '/assets/svg/branding.svg',
-    name: 'Xây dựng thương hiệu',
+    name: 'home__service__branding__title',
     label: 'Xây dựng thương hiệu',
     modal: 'BRANDING',
-    content:
-      'S-World cung cấp giải pháp toàn diện cho thương hiệu khi tư vấn và xây dựng những yếu tố: Câu chuyện thương hiệu, slogan, định vị khách hàng và chiến lược phát triển, để doanh nghiệp đến gần hơn với khách hàng.',
+    content: 'home__service__branding__content',
     subService: [
-      'Phát triển concept',
-      'Thiết kế bộ nhận diện thương hiệu',
-      'Chiến lược thương hiệu',
+      {
+        title: 'home__service__brand_communication__pr',
+        modal: 'BRANDING_COMMUNICATION_PR',
+      },
+      {
+        title: 'home__service__brand_communication__social',
+        modal: 'BRANDING_COMMUNICATION_SOCIAL',
+      },
+      {
+        title: 'home__service__brand_communication__kol',
+        modal: 'BRANDING_COMMUNICATION_KOL',
+      },
+      {
+        title: 'home__service__brand_communication__marketing',
+        modal: 'BRANDING_COMMUNICATION_MARKETING',
+      },
     ],
   },
   {
     icon: '/assets/svg/production.svg',
-    name: 'Xây dựng thương hiệu',
-    label: 'Xây dựng thương hiệu',
+    name: 'home__service__production__title',
+    label: 'Sản xuất',
     modal: 'PRODUCTION',
-    content:
-      'S-World cung cấp giải pháp toàn diện cho thương hiệu khi tư vấn và xây dựng những yếu tố: Câu chuyện thương hiệu, slogan, định vị khách hàng và chiến lược phát triển, để doanh nghiệp đến gần hơn với khách hàng.',
+    content: 'home__service__production__content',
     subService: [
-      'Phát triển concept',
-      'Thiết kế bộ nhận diện thương hiệu',
-      'Chiến lược thương hiệu',
+      {
+        title: 'home__service__production__for_client',
+        modal: 'PRODUCTION_CLIENT',
+      },
+      {
+        title: 'home__service__production__format',
+        modal: 'PRODUCTION_FORMAT',
+      },
     ],
   },
   {
     icon: '/assets/svg/international-relations.svg',
-    name: 'Xây dựng thương hiệu',
-    label: 'Xây dựng thương hiệu',
+    name: 'home__service__international_relations__title',
+    label: 'Kết nối quốc tế',
     modal: 'INTERNAL_RELATION',
-    content:
-      'S-World cung cấp giải pháp toàn diện cho thương hiệu khi tư vấn và xây dựng những yếu tố: Câu chuyện thương hiệu, slogan, định vị khách hàng và chiến lược phát triển, để doanh nghiệp đến gần hơn với khách hàng.',
+    content: [
+      'home__service__international_relations__content1',
+      'home__service__international_relations__content2',
+      'home__service__international_relations__content3',
+      'home__service__international_relations__content4',
+    ],
     subService: [
-      'Phát triển concept',
-      'Thiết kế bộ nhận diện thương hiệu',
-      'Chiến lược thương hiệu',
+      {
+        title: 'home__service__international_relations__for_vn',
+        modal: 'INTERNATIONAL_RELATION_FOR_VN',
+      },
+      {
+        title: 'home__service__international_relations__for_foreign_inVN',
+        modal: 'INTERNATIONAL_RELATION_FOR_FOREIGN',
+      },
+      {
+        title: 'home__service__international_relations__for_vn_international',
+        modal: 'INTERNATIONAL_RELATION_FOR_VN_INTERNATIONAL',
+      },
     ],
   },
   {
     icon: '/assets/svg/event.svg',
-    name: 'Xây dựng thương hiệu',
+    name: 'home__service__event__title',
     label: 'Xây dựng thương hiệu',
     modal: 'EVENT',
-    content:
-      'S-World cung cấp giải pháp toàn diện cho thương hiệu khi tư vấn và xây dựng những yếu tố: Câu chuyện thương hiệu, slogan, định vị khách hàng và chiến lược phát triển, để doanh nghiệp đến gần hơn với khách hàng.',
+    content: 'home__service__event__content',
     subService: [
-      'Phát triển concept',
-      'Thiết kế bộ nhận diện thương hiệu',
-      'Chiến lược thương hiệu',
+      {
+        title: 'home__service__event__online',
+        modal: 'EVENT_ONLINE',
+      },
+      {
+        title: 'home__service__event__offline',
+        modal: 'EVENT_OFFLINE',
+      },
     ],
   },
 ];

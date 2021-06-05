@@ -21,6 +21,9 @@ import {
   enableBodyScroll,
   clearAllBodyScrollLocks,
 } from 'body-scroll-lock';
+import SubModal from '../modal/sub-modal';
+import SubService from '../../common/services/sub-service/sub-service';
+import subServices from '../../../lib/data/sub-services';
 
 interface Props {
   children: any;
@@ -34,7 +37,14 @@ const ServiceDetail = dynamic(
 );
 
 const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
-  const { closeModal, displayModal, modalView } = useUI();
+  const {
+    closeModal,
+    displayModal,
+    modalView,
+    displaySubModal,
+    closeSubModal,
+    subModalView,
+  } = useUI();
   const main = useRef();
 
   useEffect(() => {
@@ -55,7 +65,7 @@ const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
           </motion.main>
         </AnimatePresence>
 
-        <Modal open={displayModal} onClose={closeModal}>
+        <Modal isFull={true} open={displayModal} onClose={closeModal}>
           {modalView === 'BRAND_COMMUNICATION' && (
             <ServiceDetail data={services[0]} />
           )}
@@ -67,6 +77,57 @@ const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
           {modalView === 'EVENT' && <ServiceDetail data={services[4]} />}
 
           {modalView === 'MENU' && <Menu />}
+        </Modal>
+
+        <Modal subModal={true} open={displaySubModal} onClose={closeSubModal}>
+          {subModalView === 'BRANDING_CONCEPT' && (
+            <SubService data={subServices.branding.concept} />
+          )}
+          {subModalView === 'BRANDING_IDENTITY' && (
+            <SubService data={subServices.branding.brandIdentity} />
+          )}
+          {subModalView === 'BRANDING_STRATEGY' && (
+            <SubService data={subServices.branding.brandStrategy} />
+          )}
+
+          {subModalView === 'BRANDING_COMMUNICATION_PR' && (
+            <SubService data={subServices.brandCommunication.pr} />
+          )}
+          {subModalView === 'BRANDING_COMMUNICATION_SOCIAL' && (
+            <SubService data={subServices.brandCommunication.social} />
+          )}
+
+          {subModalView === 'BRANDING_COMMUNICATION_KOL' && (
+            <SubService data={subServices.brandCommunication.kol} />
+          )}
+          {subModalView === 'BRANDING_COMMUNICATION_MARKETING' && (
+            <SubService data={subServices.brandCommunication.marketing} />
+          )}
+          {subModalView === 'PRODUCTION_CLIENT' && (
+            <SubService data={subServices.production.client} />
+          )}
+          {subModalView === 'PRODUCTION_FORMAT' && (
+            <SubService data={subServices.production.format} />
+          )}
+
+          {subModalView === 'EVENT_ONLINE' && (
+            <SubService data={subServices.event.online} />
+          )}
+          {subModalView === 'EVENT_OFFLINE' && (
+            <SubService data={subServices.event.offline} />
+          )}
+
+          {subModalView === 'INTERNATIONAL_RELATION_FOR_VN' && (
+            <SubService data={subServices.internationalRelation.forVn} />
+          )}
+          {subModalView === 'INTERNATIONAL_RELATION_FOR_FOREIGN' && (
+            <SubService data={subServices.internationalRelation.forForeign} />
+          )}
+          {subModalView === 'INTERNATIONAL_RELATION_FOR_VN_INTERNATIONAL' && (
+            <SubService
+              data={subServices.internationalRelation.vnInternational}
+            />
+          )}
         </Modal>
 
         <Media lessThan="md">

@@ -3,12 +3,16 @@ import { ThemeProvider } from 'next-themes';
 
 interface IUIState {
   displayModal: boolean;
+  displaySubModal: boolean;
   modalView: string;
+  subModalView: string;
 }
 
 const initialState: IUIState = {
   displayModal: false,
+  displaySubModal: false,
   modalView: '',
+  subModalView: '',
 };
 
 type MODAL_VIEWS =
@@ -17,17 +21,41 @@ type MODAL_VIEWS =
   | 'PRODUCTION'
   | 'INTERNAL_RELATION'
   | 'EVENT'
-  | 'MENU';
+  | 'MENU'
+  | 'BRANDING_CONCEPT'
+  | 'BRANDING_IDENTITY'
+  | 'BRANDING_STRATEGY'
+  | 'BRANDING_COMMUNICATION_PR'
+  | 'BRANDING_COMMUNICATION_SOCIAL'
+  | 'BRANDING_COMMUNICATION_KOL'
+  | 'BRANDING_COMMUNICATION_MARKETING'
+  | 'PRODUCTION_CLIENT'
+  | 'PRODUCTION_FORMAT'
+  | 'EVENT_ONLINE'
+  | 'EVENT_OFFLINE'
+  | 'INTERNATIONAL_RELATION_FOR_VN'
+  | 'INTERNATIONAL_RELATION_FOR_FOREIGN'
+  | 'INTERNATIONAL_RELATION_FOR_VN_INTERNATIONAL';
 
 type Action =
   | {
       type: 'OPEN_MODAL';
     }
   | {
+      type: 'OPEN_SUB_MODAL';
+    }
+  | {
+      type: 'CLOSE_SUB_MODAL';
+    }
+  | {
       type: 'CLOSE_MODAL';
     }
   | {
       type: 'SET_MODAL_VIEW';
+      view: MODAL_VIEWS;
+    }
+  | {
+      type: 'SET_SUB_MODAL_VIEW';
       view: MODAL_VIEWS;
     };
 
@@ -41,16 +69,34 @@ const UIReducer = (state: IUIState, action: Action) => {
         displayModal: true,
       };
     }
+    case 'OPEN_SUB_MODAL': {
+      return {
+        ...state,
+        displaySubModal: true,
+      };
+    }
     case 'CLOSE_MODAL': {
       return {
         ...state,
         displayModal: false,
       };
     }
+    case 'CLOSE_SUB_MODAL': {
+      return {
+        ...state,
+        displaySubModal: false,
+      };
+    }
     case 'SET_MODAL_VIEW': {
       return {
         ...state,
         modalView: action.view,
+      };
+    }
+    case 'SET_SUB_MODAL_VIEW': {
+      return {
+        ...state,
+        subModalView: action.view,
       };
     }
   }
@@ -61,8 +107,12 @@ const UIProvider: FC = (props) => {
 
   const openModal = () => dispatch({ type: 'OPEN_MODAL' });
   const closeModal = () => dispatch({ type: 'CLOSE_MODAL' });
+  const openSubModal = () => dispatch({ type: 'OPEN_SUB_MODAL' });
+  const closeSubModal = () => dispatch({ type: 'CLOSE_SUB_MODAL' });
   const setModalView = (view: MODAL_VIEWS) =>
     dispatch({ type: 'SET_MODAL_VIEW', view });
+  const setSubModalView = (view: MODAL_VIEWS) =>
+    dispatch({ type: 'SET_SUB_MODAL_VIEW', view });
 
   const value = useMemo(
     () => ({
@@ -70,6 +120,9 @@ const UIProvider: FC = (props) => {
       openModal,
       closeModal,
       setModalView,
+      openSubModal,
+      closeSubModal,
+      setSubModalView,
     }),
     [state]
   );

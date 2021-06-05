@@ -1,9 +1,30 @@
 .modal {
-  @apply sw-fixed sw-inset-0  z-50 sw-bg-background sw-w-screen sw-h-auto;
+  @apply sw-fixed sw-inset-0  sw-w-screen sw-h-auto;
 }
 
 .content {
   @apply sw-block sw-h-screen sw-overflow-y-auto;
+}
+
+.full {
+  @apply sw-inset-0;
+}
+
+.center {
+  @apply sw-flex sw-justify-center sw-items-center;
+}
+
+.subModal {
+  z-index: 100;
+}
+
+.subContent {
+  background: #172d42;
+  width: 600px;
+  height: 70vh;
+  border-radius: 8px;
+  z-index: 10;
+  border: 1px solid#65C7F7;
 }
 
 @screen md {

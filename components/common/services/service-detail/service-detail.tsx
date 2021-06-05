@@ -9,13 +9,15 @@ import Heading from '../../../ui/typo/heading';
 import Arrow from '../../../icons/arrow';
 import ServiceGlow from '../../../glows/service-glow';
 import { useMediaQuery } from 'react-responsive';
+import { useTranslation } from 'next-i18next';
+import { useUI } from '../../../../lib/context/ui-context';
 
 interface Data {
   name: string;
   label: string;
   icon: string;
-  content: string;
-  subService: string[];
+  content: any;
+  subService: any;
 }
 
 interface Props {
@@ -24,6 +26,8 @@ interface Props {
 }
 
 const ServiceDetail: FC<Props> = ({ data, cl }) => {
+  const { openSubModal, setSubModalView } = useUI();
+
   const tablet = useMediaQuery({
     query: '(min-device-width: 768px)',
   });
@@ -33,6 +37,14 @@ const ServiceDetail: FC<Props> = ({ data, cl }) => {
   const mediumScreen = useMediaQuery({
     query: '(min-device-width: 1920px)',
   });
+
+  const { t } = useTranslation('common');
+
+  const onSubServiceClick = (modal) => {
+    openSubModal();
+
+    setSubModalView(modal);
+  };
 
   return (
     <div>
@@ -55,9 +67,14 @@ const ServiceDetail: FC<Props> = ({ data, cl }) => {
                 alt={data.name}
               />
               <Heading cl="sw-py-4" h={mediumScreen ? 'h3' : 'h5'}>
-                {data.name}
+                {t(data.name)}
               </Heading>
-              <Paragraph>{data.content}</Paragraph>
+
+              {typeof data.content !== 'string' ? (
+                data.content.map((item) => <Paragraph>{t(item)}</Paragraph>)
+              ) : (
+                <Paragraph>{t(data.content)}</Paragraph>
+              )}
             </div>
           </div>
           <div className="sw-w-full">
@@ -69,6 +86,7 @@ const ServiceDetail: FC<Props> = ({ data, cl }) => {
             >
               {data.subService.map((item, idx) => (
                 <div
+                  onClick={() => onSubServiceClick(item.modal)}
                   key={idx}
                   className={cn(
                     'sw-bg-card sw-mb-4 xl:sw-mb-0 sw-flex sw-flex-col sw-justify-between sw-cursor-pointer',
@@ -76,7 +94,7 @@ const ServiceDetail: FC<Props> = ({ data, cl }) => {
                   )}
                 >
                   <Heading gradient={false} h="h6" cl="sw-text-brown">
-                    {item}
+                    {t(item.title)}
                   </Heading>
                   <div className="sw-w-full sw-flex sw-justify-end">
                     <Arrow width={largeScreen ? '50px' : '30px'} />

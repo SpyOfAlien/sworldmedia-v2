@@ -42,6 +42,12 @@ module.exports = {
         h5: '1.77777777778rem',
         h6: '1.333333rem',
       },
+      opacity: {
+        15: '0.15',
+        35: '0.35',
+        65: '0.65',
+        85: '0.85',
+      },
       boxShadow: {
         small: '0 5px 10px rgba(0, 0, 0, 0.12)',
         medium: '0 8px 30px rgba(0, 0, 0, 0.12)',
