@@ -105,7 +105,7 @@ const subServices = {
         'home__service__production__format__strength2',
         'home__service__production__format__strength3',
       ],
-      provide: ['home__service__production__format__service'],
+      provide: ['home__service__production__format__services'],
     },
   },
   internationalRelation: {
