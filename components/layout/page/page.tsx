@@ -7,26 +7,12 @@ import dynamic from 'next/dynamic';
 import services from '../../../lib/data/services';
 import Menu from '../../common/menu/menu';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useRouter } from 'next/router';
-import { useMediaQuery } from 'react-responsive';
-import { ParticlesLayout } from '..';
-import Link from 'next/link';
-import { Container } from '../container';
-import WhiteLogo from '../../icons/white-logo';
-import Image from 'next/image';
 import { Media, MediaContextProvider } from '../../../lib/media';
 import Header from '../header/header';
-import {
-  disableBodyScroll,
-  enableBodyScroll,
-  clearAllBodyScrollLocks,
-} from 'body-scroll-lock';
-import SubModal from '../modal/sub-modal';
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import SubService from '../../common/services/sub-service/sub-service';
 import subServices from '../../../lib/data/sub-services';
-import Heading from '../../ui/typo/heading';
-import Paragraph from '../../ui/typo/paragraph';
-import Button from '../../ui/button/button';
+import Notification from '../notification/notification';
 
 interface Props {
   children: any;
@@ -47,7 +33,6 @@ const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
     displaySubModal,
     closeSubModal,
     subModalView,
-    setConfirmData,
     confirm,
   } = useUI();
   const main = useRef();
@@ -55,11 +40,6 @@ const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
   useEffect(() => {
     displayModal ? disableBodyScroll(main) : enableBodyScroll(main);
   }, [displayModal]);
-
-  const handleConfirm = () => {
-    setConfirmData({});
-    closeSubModal();
-  };
 
   return (
     <MediaContextProvider>
@@ -138,22 +118,7 @@ const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
               data={subServices.internationalRelation.vnInternational}
             />
           )}
-          {subModalView === 'CONFIRM_MODAL' && confirm && (
-            <div className="sw-p-8 sw-relative">
-              <Heading cl="sw-mb-4" h="h6">
-                {confirm.title}
-              </Heading>
-              <Paragraph>{confirm.message}</Paragraph>
-              <div className="sw-flex sw-justify-end">
-                <Button
-                  onclick={handleConfirm}
-                  text="OK"
-                  type="gradient"
-                  cl="sw-w-24 sw-h-8 sw-mt-4"
-                ></Button>
-              </div>
-            </div>
-          )}
+          {subModalView === 'CONFIRM_MODAL' && confirm && <Notification />}
         </Modal>
 
         <Media lessThan="md">
