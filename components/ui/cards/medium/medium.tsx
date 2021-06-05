@@ -14,10 +14,6 @@ interface Props {
 }
 
 const Medium: FC<Props> = ({ cl, icon, content, title }) => {
-  const isDesktopOrLaptop = useMediaQuery({
-    query: '(min-device-width: 768px)',
-  });
-
   const { t } = useTranslation('common');
 
   return (

@@ -5,8 +5,8 @@
 
   "home__about_us__title": "About us",
 
-  "home__about_us__vision__content": "Vision",
-  "home__about_us__vision": "A special communication bridge to bring Vietnam into the world",
+  "home__about_us__vision__title": "Vision",
+  "home__about_us__vision__content": "A special communication bridge to bring Vietnam into the world",
   "home__about_us__core_value__title": "Core Values",
   "home__about_us__core_value__content": "Sincerity - Understanding - Perseverance - Creativity - Distinctiveness",
   "home__about_us__mission__title": "Mission",
@@ -39,7 +39,6 @@
   "home__service__brand_communication__kol__services1": "- Analyzing and selecting appropriate KOLs for brand, product and service",
   "home__service__brand_communication__kol__services2": "- Developing plans in accordance with the budget and target audience",
   "home__service__brand_communication__kol__services3": "- KOL booking",
-  
 
   "home__service__brand_communication__marketing": "- Marketing",
   "home__service__brand_communication__marketing__strength1": "- Deep knowledge of users/customers",
@@ -56,7 +55,7 @@
   "home__service__branding__concept__strength2": "- Develop concept based on creativity and Insight distilled from End-user to ensure execution",
   "home__service__branding__concept__services1": "- Brand story",
   "home__service__branding__concept__services2": "- Brand colors",
-  
+
   "home__service__branding__identity": "Brand Identity Design",
   "home__service__branding__identity__strength1": "- Creative and dynamic design team",
   "home__service__branding__identity__strength2": "- Breakthrough quality design",
@@ -67,7 +66,6 @@
   "home__service__branding__identity__services4": "- Facebook Fanpage",
   "home__service__branding__identity__services5": "- Instagram",
   "home__service__branding__identity__services6": "- LinkedIn",
-  
 
   "home__service__branding__strategy": "Brand Strategy",
   "home__service__branding__strategy__strength1": "- Deep understanding of the market, especially the 4 fields of Education, Health, Technology and International Relations",
@@ -133,7 +131,7 @@
   "home__service__international_relations__for_vn__strength1": "- Global cooperation network with influential partners",
   "home__service__international_relations__for_vn__strength2": "- Culture understanding of international markets, especially European and Japanese markets",
   "home__service__international_relations__for_vn__strength3": "- Having relationship with the Crowd Funding platform such as Republic",
-  
+
   "home__service__international_relations__for_vn__services1": "Connecting overseas Vietnamese companies, units and individuals who want to come to Vietnam:",
   "home__service__international_relations__for_vn__services2": "- Invest",
   "home__service__international_relations__for_vn__services3": "- Discover",
@@ -147,7 +145,7 @@
   "home__service__international_relations__for_foreign_inVN__services2": "- Invest",
   "home__service__international_relations__for_foreign_inVN__services3": "- Discover",
   "home__service__international_relations__for_foreign_inVN__services4": "- Event organization",
-  
+
   "home__service__international_relations__for_vn_international": "For Vietnamese companies desire to commercialize their products to international markets or is international-related",
   "home__service__international_relations__for_vn_international__strength1": "- Deep understanding of international market to build suitable strategy",
   "home__service__international_relations__for_vn_international__strength2": "- Having a team experienced in working with foreign partners",

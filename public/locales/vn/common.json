@@ -5,8 +5,8 @@
 
   "home__about_us__title": "Về chúng tôi",
 
-  "home__about_us__vision__content": "Tầm nhìn",
-  "home__about_us__vision": "Là cầu nối truyền thông đặc biệt đưa Việt Nam đến gần thế giới",
+  "home__about_us__vision__title": "Tầm nhìn",
+  "home__about_us__vision__content": "Là cầu nối truyền thông đặc biệt đưa Việt Nam đến gần thế giới",
   "home__about_us__core_value__title": "Giá trị cốt lõi",
   "home__about_us__core_value__content": "Chân thành – Thấu hiểu – Bền bỉ – Sáng tạo – Khác biệt",
   "home__about_us__mission__title": "Sứ mệnh",
@@ -39,7 +39,6 @@
   "home__service__brand_communication__kol__services1": "- Phân tích và chọn lựa KOL thích hợp với thương hiệu, sản phẩm, dịch vụ",
   "home__service__brand_communication__kol__services2": "- Xây dựng kế hoạch phù hợp với ngân sách và đối tượng mục tiêu",
   "home__service__brand_communication__kol__services3": "- Booking KOL",
-  
 
   "home__service__brand_communication__marketing": "- Tiếp thị - Bán hàng",
   "home__service__brand_communication__marketing__strength1": "- Thấu hiểu người dùng/ khách hàng",
@@ -56,7 +55,7 @@
   "home__service__branding__concept__strength2": "- Phát triển concept dựa trên sự sáng tạo và Insight được chắt lọc từ End-user để đảm bảo tính thực thi",
   "home__service__branding__concept__services1": "- Câu chuyện thương hiệu",
   "home__service__branding__concept__services2": "- Màu sắc thương hiệu",
-  
+
   "home__service__branding__identity": "Thiết kế bộ nhận diện thương hiệu",
   "home__service__branding__identity__strength1": "- Đội ngũ thiết kế sáng tạo, năng động",
   "home__service__branding__identity__strength2": "- Chất lượng thiết kế đột phá",
@@ -67,7 +66,6 @@
   "home__service__branding__identity__services4": "- Facebook Fanpage",
   "home__service__branding__identity__services5": "- Instagram",
   "home__service__branding__identity__services6": "- LinkedIn",
-  
 
   "home__service__branding__strategy": "Chiến lược thương hiệu",
   "home__service__branding__strategy__strength1": "- Am hiểu sâu sắc về thị trường, đặc biệt là 4 lĩnh vực Giáo dục, Y tế, Công nghệ và Đối ngoại",
@@ -133,7 +131,7 @@
   "home__service__international_relations__for_vn__strength1": "- Mạng lưới hợp tác toàn cầu với những đối tác lớn",
   "home__service__international_relations__for_vn__strength2": "- Thấu hiểu văn hóa các thị trường quốc tế, đặc biệt ở thị trường Châu Âu, Nhật Bản",
   "home__service__international_relations__for_vn__strength3": "- Có mối quan hệ với nền tảng gọi vốn cộng đồng quốc tế như là Republic",
-  
+
   "home__service__international_relations__for_vn__services1": "Kết nối các công ty, đơn vị, cá nhân Việt Nam ở nước ngoài muốn đến Việt Nam:",
   "home__service__international_relations__for_vn__services2": "- Đầu tư",
   "home__service__international_relations__for_vn__services3": "- Khám phá",
@@ -147,7 +145,7 @@
   "home__service__international_relations__for_foreign_inVN__services2": "- Đầu tư",
   "home__service__international_relations__for_foreign_inVN__services3": "- Khám phá",
   "home__service__international_relations__for_foreign_inVN__services4": "- Tổ chức sự kiện",
-  
+
   "home__service__international_relations__for_vn_international": "Dành cho công ty Việt Nam muốn đưa sản phẩm ra quốc tế hoặc có yếu tố quốc tế",
   "home__service__international_relations__for_vn_international__strength1": "- Có sự hiểu biết với thị trường quốc tế để xây dựng chiến lược phù hợp",
   "home__service__international_relations__for_vn_international__strength2": "- Sở hữu đội ngũ dày dặn kinh nghiệm khi làm việc với các đối tác nước ngoài",
@@ -162,5 +160,5 @@
 
   "home__products__title": "Những sản phẩm mới nhất",
 
-  "home__whyus__title": "Tại sao chọn chúng tôi",
+  "home__whyus__title": "Tại sao chọn chúng tôi"
 }

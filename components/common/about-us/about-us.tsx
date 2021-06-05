@@ -15,14 +15,14 @@ const AboutUs: FC<Props> = ({ data, cl }) => {
   return (
     <div
       className={cn(
-        'sw-grid sw-grid-cols-1 md:sw-grid-cols-3 sw-w-3/4 sw-mx-auto md:sw-w-full',
+        'sw-grid sw-grid-cols-1 md:sw-grid-cols-3 sw-w-10/12 sw-mx-auto md:sw-w-full',
         s.grid,
         cl
       )}
     >
       <div
         className={cn(
-          'md:sw-col-start-2 sw-flex sw-justify-center sw-items-center',
+          'sw-col-start-1 sw-col-end-2 md:sw-col-start-2 sw-flex sw-justify-center sw-items-center',
           s.globe
         )}
       >
@@ -42,11 +42,11 @@ const AboutUs: FC<Props> = ({ data, cl }) => {
         <div
           key={idx}
           className={cn(
-            'sw-flex sw-justify-center sw-my-12 md:sw-my-0',
+            'sw-flex sw-justify-center md:sw-my-0',
             s[`item-${idx}`]
           )}
         >
-          <div>
+          <div className="sw-flex sw-items-center">
             <Medium
               icon={item.icon}
               title={item.title}

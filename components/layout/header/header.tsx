@@ -61,7 +61,7 @@ const Header = ({ isSticky = false }) => {
         `${isSticky || !isTransparent ? 'sw-bg-background' : null}`
       )}
     >
-      <Container cl="sw-relative sw-h-full sw-flex sw-items-center sw-justify-between">
+      <Container cl=" sw-relative sw-h-full sw-flex sw-items-center sw-justify-between">
         {router.pathname !== '/contact' ? (
           <div>
             <Media lessThan="lg">

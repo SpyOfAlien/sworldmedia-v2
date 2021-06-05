@@ -61,7 +61,7 @@ const HomePage = ({ locales, allPosts }) => {
         <AboutUs data={aboutUsList} />
         <ServicePage />
         <Clients
-          title={t('test__newline')}
+          title={t('home__partner__title')}
           imgSrc="/assets/svg/media-partner.svg"
         />
         <Clients
@@ -94,7 +94,7 @@ const HomePage = ({ locales, allPosts }) => {
 
           <HomeContainer isVisible={currentSection === 3}>
             <Clients
-              title={t('test__newline')}
+              title={t('home__partner__title')}
               imgSrc="/assets/svg/media-partner.svg"
             />
           </HomeContainer>
@@ -104,7 +104,11 @@ const HomePage = ({ locales, allPosts }) => {
               imgSrc="/assets/svg/clients.svg"
             />
           </HomeContainer>
-          <HomeContainer isFullpage={true} isVisible={currentSection === 5}>
+          <HomeContainer
+            hasPadding={false}
+            isFullpage={true}
+            isVisible={currentSection === 5}
+          >
             <ProductSlider products={Products} />
           </HomeContainer>
           <HomeContainer isVisible={currentSection === 6}>

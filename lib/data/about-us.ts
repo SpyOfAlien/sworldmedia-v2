@@ -7,14 +7,14 @@ const aboutUsList = [
     title: 'home__about_us__vision__title',
   },
   {
-    content: 'Chân thành – Thấu hiểu – Bền bỉ – Sáng tạo – Khác biệt',
+    content: 'home__about_us__core_value__content',
     icon: `${baseUrl}business.svg`,
-    title: 'Giá trị cốt lõi',
+    title: 'home__about_us__core_value__title',
   },
   {
-    content: `Sẵn sàng mang những ý tưởng, dự án, sản phẩm, thương hiệu lan toả theo một cách khác biệt, với lượng, chất bền vững`,
+    content: `home__about_us__mission__content`,
     icon: `${baseUrl}target.svg`,
-    title: 'Sứ mệnh',
+    title: 'home__about_us__mission__title',
   },
 ];
 

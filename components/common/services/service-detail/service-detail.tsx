@@ -41,7 +41,10 @@ const ServiceDetail: FC<Props> = ({ data, cl }) => {
           <ServiceGlow />
         </div>
       )}
-      <HomeContainer cl="sw-flex sw-h-screen sw-items-center" isVisible={true}>
+      <HomeContainer
+        cl="sw-flex md:sw-h-screen sw-items-center"
+        isVisible={true}
+      >
         <div className="sw-flex sw-flex-col sw-justify-end sw-h-full">
           <div className="sw-w-full sw-mb-12">
             <div className="sw-w-full xl:sw-w-1/2">
@@ -51,11 +54,13 @@ const ServiceDetail: FC<Props> = ({ data, cl }) => {
                 height={largeScreen ? 200 : 120}
                 alt={data.name}
               />
-              <Heading h={mediumScreen ? 'h3' : 'h4'}>{data.name}</Heading>
+              <Heading cl="sw-py-4" h={mediumScreen ? 'h3' : 'h5'}>
+                {data.name}
+              </Heading>
               <Paragraph>{data.content}</Paragraph>
             </div>
           </div>
-          <div className="sw-w-full xl:sw-mb-12">
+          <div className="sw-w-full">
             <div
               className={cn(
                 'sw-grid sw-grid-cols-1 md:sw-grid-cols-2 xl:sw-grid-cols-4',

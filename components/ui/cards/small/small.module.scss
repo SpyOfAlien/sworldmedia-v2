@@ -1,0 +1,15 @@
+.root {
+  background: #172d42 !important;
+  padding: 15px 20px;
+}
+
+.arrow {
+  top: 30px;
+  right: 10px;
+}
+
+@screen xl {
+  .root {
+    padding: 0;
+  }
+}

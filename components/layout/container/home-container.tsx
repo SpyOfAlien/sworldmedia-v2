@@ -8,12 +8,14 @@ interface Props {
   cl?: string;
   isFullpage?: boolean;
   isVisible?: boolean;
+  hasPadding?: boolean;
 }
 
 const HomeContainer: FC<Props> = ({
   children,
   cl,
   isFullpage = false,
+  hasPadding = true,
   isVisible,
 }) => {
   const variants = {
@@ -39,8 +41,8 @@ const HomeContainer: FC<Props> = ({
           exit="exit"
           variants={variants}
           className={cn(
-            'md:sw-absolute md:sw-inset-0 sw-py-header',
-            { [s.container]: !isFullpage },
+            'md:sw-absolute md:sw-inset-0 md:sw-pb-8 sw-mt-16 md:sw-mt-0',
+            { [s.container]: !isFullpage, [s.padding]: hasPadding },
             cl
           )}
         >

@@ -2,6 +2,10 @@
   @apply sw-fixed sw-inset-0  z-50 sw-bg-background sw-w-screen sw-h-auto;
 }
 
+.content {
+  @apply sw-block sw-h-screen sw-overflow-y-auto;
+}
+
 @screen md {
   .content {
     @apply sw-w-full;

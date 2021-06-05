@@ -1,12 +1,18 @@
 .grid {
   height: 100%;
-  grid-template-rows: repeat(2, 50%);
+  grid-template-rows: repeat(4, 300px);
+  margin: 150px 0 50px 0;
 }
 
 .globe {
 }
 
 @screen md {
+  .grid {
+    grid-template-rows: repeat(2, 40%);
+    margin: 0;
+  }
+
   .item-0 {
     @apply sw-col-start-1 sw-row-start-1 sw-items-end;
   }
@@ -20,5 +26,11 @@
     div {
       @apply sw-flex sw-items-center;
     }
+  }
+}
+
+@screen xl {
+  .grid {
+    grid-template-rows: repeat(2, 50%);
   }
 }
