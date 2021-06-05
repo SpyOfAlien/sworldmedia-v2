@@ -37,13 +37,13 @@ const ContactPage = () => {
   const onSubscribe = () => {
     let error;
     if (!name && !email && !email) {
-      error === 'contact__personal__required_error';
+      error = 'contact__personal__required_error';
     }
     if (email && emailRegex.test(email)) {
-      error === 'contact__email__error';
+      error = 'contact__email__error';
     }
     if (!message) {
-      error === 'contact__message__required_error';
+      error = 'contact__message__required_error';
     }
 
     if (error) {
