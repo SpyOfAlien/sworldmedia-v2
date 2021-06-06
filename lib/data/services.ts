@@ -1,4 +1,4 @@
-const baseUrl = '/assets/svg';
+const baseUrl = '/assets/images/services/';
 
 const services = [
   {
@@ -7,7 +7,7 @@ const services = [
     label: 'Truyền thông thương hiệu',
     modal: 'BRAND_COMMUNICATION',
     content: 'home__service__brand_communication__content',
-    background: `${baseUrl}/services/brand-com.svg`,
+    background: `${baseUrl}brand-com.png`,
     subService: [
       {
         title: 'home__service__branding__concept',
@@ -29,7 +29,7 @@ const services = [
     label: 'Xây dựng thương hiệu',
     modal: 'BRANDING',
     content: 'home__service__branding__content',
-    background: `${baseUrl}/services/branding.svg`,
+    background: `${baseUrl}branding.png`,
     subService: [
       {
         title: 'home__service__brand_communication__pr',
@@ -55,7 +55,7 @@ const services = [
     label: 'Sản xuất',
     modal: 'PRODUCTION',
     content: 'home__service__production__content',
-    background: `${baseUrl}/services/product.svg`,
+    background: `${baseUrl}product.png`,
     subService: [
       {
         title: 'home__service__production__for_client',
@@ -78,7 +78,7 @@ const services = [
       'home__service__international_relations__content3',
       'home__service__international_relations__content4',
     ],
-    background: `${baseUrl}/services/connection.svg`,
+    background: `${baseUrl}connection.png`,
     subService: [
       {
         title: 'home__service__international_relations__for_vn',
@@ -100,7 +100,7 @@ const services = [
     label: 'Xây dựng thương hiệu',
     modal: 'EVENT',
     content: 'home__service__event__content',
-    background: `/assets/images/services/event.png`,
+    background: `${baseUrl}events.png`,
     subService: [
       {
         title: 'home__service__event__online',

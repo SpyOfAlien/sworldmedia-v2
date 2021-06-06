@@ -163,6 +163,38 @@
 
   "home__products__title": "Những sản phẩm mới nhất",
 
+  "home__new_product__techfest__title": "VIDEO GIỚI THIỆU TECHFEST VIETNAM 2020",
+  "home__new_product__techfest__content1": "Tech Fest - Ngày hội khởi nghiệp đổi mới sáng tạo quốc gia TECHFEST VIETNAM 2020 diễn ra từ ngày 27-29/11 tại Hà Nội. Đây là sự kiện thường niên lớn nhất hội tụ các cá nhân, tổ chức, mạng lưới hỗ trợ khởi nghiệp đổi mới sáng tạo trong nước, quốc tế dành cho cộng đồng khởi nghiệp đổi mới sáng tạo do Bộ KH&CN phối hợp với các Bộ, ban ngành tổ chức.",
+  "home__new_product__techfest__content2": "Những hình ảnh mang thông điệp con người chính là trung tâm của kết nối để sáng tạo. Kết nối không giới hạn, không biên giới, không khoảnh cách thời gian và không gian. Và sáng tạo là một thứ tài nguyên mới, từ con người và vì con người, cho thời đại mới.",
+
+  "home__new_product__fischer__title": "PHIM GIỚI THIỆU TIỀM NĂNG ĐẦU TƯ VIỆT NAM CỦA TẬP ĐOÀN FISCHER",
+  "home__new_product__fischer__content": "Fischer là một tập đoàn lớn của Đức sản xuất các thiết bị, linh kiện cho ngành xây dựng và công nghiệp ô tô. Những thước phim này là tư liệu cho Tập đoàn nhìn thấy môi trường đầu tư mới đây tiềm năng của Fischer trong tương lai - đó là Việt Nam. Với những thông tin khách quan từ Mr.Marko Walde - Trưởng đại diện Phòng Công nghiệp và Thương mại Đức tại Việt Nam (GIC/AHK). Những thước phim này còn mang ý nghĩa kết nối đầu tư Việt Nam - Đức.",
+
+  "home__new_product__doventures__title": "TVC DO VENTURES",
+  "home__new_product__doventures__content1": "Do Ventures là quỹ đầu tư mạo hiểm giai đoạn đầu, chuyên hỗ trợ các startup công nghệ thông tin ở Việt Nam và Đông Nam Á và được đồng sáng lập bởi Ông Nguyễn Mạnh Dũng (Shark Dzung) và Bà Lê Hoàng Uyên Vy.",
+  "home__new_product__doventures__content2": "Với thông điệp NGƯỜI TIÊN PHONG, video ngắn giới thiệu Do Ventures mở ra hành trình tìm kiếm và hỗ trợ những nhà sáng lập dám nghĩ dám làm, cùng tạo ra cú hích cho hệ sinh thái khởi nghiệp vào thời điểm vô cùng then chốt - thời điểm ngay sau đại dịch Covid-19.",
+
+  "home__new_product__learn_to_love__title": "LEARN TO LOVE",
+  "home__new_product__learn_to_love__content1": "Talkshow Learn to love là một Format chương trình Talkshow hoàn toàn mới, được phát sóng đa phương tiện với các đối tác truyền hình VTV3&VTV4 và VnExpress, cùng Social media,…",
+  "home__new_product__learn_to_love__content2": "Với mong muốn lan toả những giá trị tích cực đến cộng đồng, trong đó 3 mục tiêu nổi bật là:",
+  "home__new_product__learn_to_love__content3": "• Câu chuyện tình yêu luôn là hành trình không ngừng học hỏi, không ngừng hoàn thiện để phù hợp với đối phương",
+  "home__new_product__learn_to_love__content4": "• Sự giao thoa văn hoá trong tình yêu, trong việc xây dựng gia đình tạo ra nhiều sự chia sẻ những giá trị mới",
+  "home__new_product__learn_to_love__content5": "• Việt Nam là mảnh đất giàu tiềm năng để chọn lựa làm bến đỗ và xây dựng sự nghiệp",
+
+  "home__new_product__nguy_co__title": "TALKSHOW NGUY – CƠ",
+  "home__new_product__nguy_co__content1": "Talkshow Nguy - Cơ là không gian để các doanh nghiệp, doanh nhân phân tích trực diện các vấn đề kinh doanh trong các cơn bão thương trường nói chung và giai đoạn Covid-19 nói riêng.",
+  "home__new_product__nguy_co__content2": "Là nơi công chúng tìm ra những góc nhìn mới, những hướng đi sáng tạo, khác biệt của những người tiên phong.",
+  "home__new_product__nguy_co__content3": "Kết hợp cùng báo điện tử VnExpress, chương trình lan toả những câu chuyện truyền cảm hứng: dám dấn thân, dám thất bại, dám thử thách kiến tạo giá trị mới.",
+
+  "home__new_product__dung_bo_lo__title": "ĐỪNG BỎ LỠ",
+  "home__new_product__dung_bo_lo__content1": "Đừng bỏ lỡ là chương trình trải nghiệm du lịch, văn hoá, ẩm thực.",
+  "home__new_product__dung_bo_lo__content2": "Khán giả sẽ theo chân nhân vật trải nghiệm khám phá các địa điểm độc đáo vòng quanh TPHCM và các khu vực lân cận.",
+  "home__new_product__dung_bo_lo__content3": "Nhân vật trải nghiệm là người nước ngoài với tình yêu lớn dành cho văn hoá Việt Nam.",
+  "home__new_product__dung_bo_lo__content4": "Kỳ vọng phát sóng đa phương tiện trên truyền hình, báo điện tử và social media.",
+
+  "home__new_product__viet_challenge__title": "VIETCHALLENGE",
+  "home__new_product__viet_challenge__content": "Kết nối, lan toả cuộc thi Vietchallenge với truyền thông Việt Nam.",
+
   "home__whyus__title": "Tại sao chọn chúng tôi",
 
   "Success": "Thành công",
