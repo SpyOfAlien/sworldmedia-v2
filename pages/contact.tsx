@@ -14,8 +14,17 @@ import Heading from '../components/ui/typo/heading';
 import { useTranslation } from 'react-i18next';
 import { Media, MediaContextProvider } from '../lib/media';
 import { useUI } from '../lib/context/ui-context';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-const ContactPage = () => {
+export const getStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+    },
+  };
+};
+
+const ContactPage = ({ locale }) => {
   //Context
   const { openSubModal, setSubModalView, setConfirmData } = useUI();
 
@@ -25,7 +34,7 @@ const ContactPage = () => {
   const [phone, setPhone] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
-  const { t } = useTranslation('contact');
+  const { t } = useTranslation('common');
 
   const emailRegex =
     /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;

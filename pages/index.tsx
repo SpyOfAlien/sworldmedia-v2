@@ -57,7 +57,6 @@ const HomePage = ({ locales, allPosts }) => {
 
   return (
     <MediaContextProvider>
-      <div>{t('contact__title')}</div>
       <Media at="xs">
         <AboutUs data={aboutUsList} />
         <ServicePage />
