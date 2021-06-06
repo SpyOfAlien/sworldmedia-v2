@@ -16,6 +16,7 @@ import { Media, MediaContextProvider } from '../lib/media';
 import { useUI } from '../lib/context/ui-context';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
+import * as gtag from '../lib/gtag';
 
 export const getStaticProps = async ({ locale }) => {
   return {
@@ -45,6 +46,13 @@ const ContactPage = ({ locale }) => {
   });
 
   const onSubscribe = () => {
+    gtag.event({
+      action: 'submit_form',
+      category: 'Contact',
+      label: name || email || phone,
+      value: message,
+    });
+
     let error;
     if (!name && !email && !email) {
       error = 'contact__personal__required_error';

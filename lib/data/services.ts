@@ -100,7 +100,7 @@ const services = [
     label: 'Xây dựng thương hiệu',
     modal: 'EVENT',
     content: 'home__service__event__content',
-    background: `${baseUrl}/services/events.svg`,
+    background: `/assets/images/services/event.png`,
     subService: [
       {
         title: 'home__service__event__online',
