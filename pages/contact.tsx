@@ -49,7 +49,7 @@ const ContactPage = ({ locale }) => {
     if (!name && !email && !email) {
       error = 'contact__personal__required_error';
     }
-    if (email && emailRegex.test(email)) {
+    if (email && !emailRegex.test(email)) {
       error = 'contact__email__error';
     }
     if (!message) {

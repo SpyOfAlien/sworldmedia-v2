@@ -80,7 +80,6 @@ const Header = ({ isSticky = false }) => {
             ) : null}
           </Media>
         </div>
-        )
         <div className="sw-flex sw-items-center">
           <div className={s.switchLng}>
             <div
