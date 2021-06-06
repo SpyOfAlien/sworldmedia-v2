@@ -5,7 +5,8 @@ import Image from 'next/image';
 import Heading from '../../../ui/typo/heading';
 import Link from 'next/link';
 import { format } from 'date-fns';
-import { useRouter } from 'next/router';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import Paragraph from '../../../ui/typo/paragraph';
 
 interface Props {
   post: any;
@@ -14,7 +15,7 @@ interface Props {
 }
 
 const PostCard: FC<Props> = ({ post, type, cl }) => {
-  const { coverImage, title, tags, slug, date } = post;
+  const { coverImage, title, tags, slug, date, summary } = post;
 
   const formatedDate = format(new Date(date), 'LLLL d, yyyy');
 
@@ -41,7 +42,7 @@ const PostCard: FC<Props> = ({ post, type, cl }) => {
             [s.content]: type !== 'big',
           })}
         >
-          <div className="sw-my-2">
+          <div>
             <div>
               {tags
                 ? tags.map((tag, idx) => (
@@ -61,6 +62,7 @@ const PostCard: FC<Props> = ({ post, type, cl }) => {
             >
               <Heading h="h6">{title}</Heading>
             </div>
+            {type === 'big' && <Paragraph cl="sw-py-2">{summary}</Paragraph>}
           </div>
 
           <div className="sw-text-paragraph">{formatedDate}</div>

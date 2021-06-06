@@ -7,7 +7,7 @@ import PostList from '../../components/common/blog/post-list/post-list';
 import Tags from '../../components/common/blog/tags/tags/tags';
 import { Container } from '../../components/layout';
 import { getAllPostsForHome } from '../../lib/api';
-import { useMediaQuery } from 'react-responsive';
+import { Media, MediaContextProvider } from '../../lib/media';
 
 export const getStaticProps = async ({ locale, preview }) => {
   const allPosts = (await getAllPostsForHome(preview)) ?? [];
@@ -21,9 +21,6 @@ export const getStaticProps = async ({ locale, preview }) => {
 };
 
 const BlogsPage = ({ allPosts }) => {
-  const mediumScreen = useMediaQuery({
-    query: '(min-device-width: 768px)',
-  });
   const tags = [
     'Truyền thông thương hiệu',
     'Xây dựng thương hiệu',
@@ -35,25 +32,28 @@ const BlogsPage = ({ allPosts }) => {
   const listPost = allPosts.slice(1);
 
   return (
-    <Container cl="sw-h-full sw-mt-xl">
-      <div className="sw-w-full">
-        <HeroBanner />
-      </div>
-      <div className="sw-flex sw-justify-center sw-my-16">
-        <Tags tags={tags} />
-      </div>
-      <div></div>
-      <div>
-        <Container>
-          {mediumScreen ? (
-            <PostCard cl="sw-mb-16" type="big" post={allPosts[0]} />
-          ) : (
-            <PostCard cl="sw-mb-16" type="small" post={allPosts[0]} />
-          )}
-          <PostList posts={listPost} />
-        </Container>
-      </div>
-    </Container>
+    <MediaContextProvider>
+      <Container cl="sw-h-full sw-mt-xl">
+        <div className="sw-w-full">
+          <HeroBanner />
+        </div>
+        <div className="sw-flex sw-justify-center sw-my-16">
+          <Tags tags={tags} />
+        </div>
+        <div></div>
+        <div>
+          <Container>
+            <Media lessThan="sm">
+              <PostCard cl="sw-mb-16" type="small" post={allPosts[0]} />
+            </Media>
+            <Media greaterThanOrEqual="sm">
+              <PostCard cl="sw-mb-16" type="big" post={allPosts[0]} />
+            </Media>
+            <PostList posts={listPost} />
+          </Container>
+        </div>
+      </Container>
+    </MediaContextProvider>
   );
 };
 

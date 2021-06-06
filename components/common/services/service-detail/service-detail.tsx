@@ -87,7 +87,9 @@ const ServiceDetail: FC<Props> = ({ data, cl }) => {
               </Heading>
 
               {typeof data.content !== 'string' ? (
-                data.content.map((item) => <Paragraph>{t(item)}</Paragraph>)
+                data.content.map((item, idx) => (
+                  <Paragraph key={idx}>{t(item)}</Paragraph>
+                ))
               ) : (
                 <Paragraph>{t(data.content)}</Paragraph>
               )}
@@ -109,9 +111,7 @@ const ServiceDetail: FC<Props> = ({ data, cl }) => {
                     s.box
                   )}
                 >
-                  <Heading gradient={false} h="h6" cl="sw-text-brown">
-                    {t(item.title)}
-                  </Heading>
+                  <p className="sw-text-brown sw-font-bold">{t(item.title)}</p>
                   <div className="sw-w-full sw-flex sw-justify-end">
                     <Arrow width={largeScreen ? '50px' : '30px'} />
                   </div>

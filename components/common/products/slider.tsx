@@ -38,7 +38,7 @@ const PrevArrow = (props) => {
 };
 
 const ProductSlider: FC<Props> = ({ products, cl }) => {
-  const baseUrl = '/assets/images/products';
+  const baseUrl = '/assets/images/products/events';
 
   const settings = {
     customPaging: (i) => {

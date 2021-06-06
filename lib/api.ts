@@ -13,6 +13,7 @@ const POST_GRAPHQL_FIELDS = `
       }
     }
   }
+  summary
   content {
     json
     links {

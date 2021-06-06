@@ -102,19 +102,19 @@ export function getRichTextRenderOptions(links, options) {
         <h6 className={cn(s.h6, 'sw-text-gradient')}>{children}</h6>
       ),
       [BLOCKS.PARAGRAPH]: (node, children) => (
-        <Paragraph cl="">{children}</Paragraph>
+        <Paragraph cl="sw-mb-4">{children}</Paragraph>
       ),
       [BLOCKS.QUOTE]: (node, children) => (
-        <blockquote className={``}>{children}</blockquote>
+        <blockquote className={`sw-italic`}>{children}</blockquote>
       ),
       [BLOCKS.UL_LIST]: (node, children) => (
-        <ul className={s.ul}>{children}</ul>
+        <ul className={`sw-ml-4`}>{children}</ul>
       ),
       [BLOCKS.OL_LIST]: (node, children) => (
         <ol className={s.ol}>{children}</ol>
       ),
       [BLOCKS.LIST_ITEM]: (node, children) => (
-        <li className={``}>{children}</li>
+        <li className={`sw-list-disc sw-text-paragraph`}>{children}</li>
       ),
       [INLINES.EMBEDDED_ENTRY]: (node, children) => {
         const entry = entryMap.get(node.data.target.sys.id);
@@ -147,13 +147,13 @@ export function getRichTextRenderOptions(links, options) {
         ) as any;
         if (renderNativeImg) {
           return (
-            <div className={``}>
+            <div className={`sw-my-4`}>
               <img src={url} alt={description} height={height} width={width} />
             </div>
           );
         } else {
           return (
-            <div className={`sw-my-4`}>
+            <div className={`sw-my-6`}>
               <Image
                 src={url}
                 alt={description}
