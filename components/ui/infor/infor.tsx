@@ -11,7 +11,7 @@ const Infor = () => {
 
   return (
     <div>
-      <Heading h="h6" cl="sw-text-paragraph sw-mb-xsm">
+      <Heading h="h5" cl="sw-text-paragraph sw-mb-xsm">
         {t('contact__infor')}
       </Heading>
       <span className="sw-flex sw-mb-sm">

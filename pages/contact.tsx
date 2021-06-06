@@ -15,6 +15,7 @@ import { useTranslation } from 'react-i18next';
 import { Media, MediaContextProvider } from '../lib/media';
 import { useUI } from '../lib/context/ui-context';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import Link from 'next/link';
 
 export const getStaticProps = async ({ locale }) => {
   return {
@@ -133,9 +134,21 @@ const ContactPage = ({ locale }) => {
             </div>
             <div>
               <div className="sw-flex sw-mb-xsm">
-                <Facebook style={{ marginRight: '40px' }} />
-                <Linkedin style={{ marginRight: '40px' }} />
-                <Youtube style={{ marginRight: '40px' }} />
+                <Link href="https://www.facebook.com/sworldmultimedia">
+                  <a>
+                    <Facebook style={{ marginRight: '40px' }} />
+                  </a>
+                </Link>
+                <Link href="https://www.linkedin.com/company/s-worldmultimedia">
+                  <a>
+                    <Linkedin style={{ marginRight: '40px' }} />
+                  </a>
+                </Link>
+                <Link href="https://www.youtube.com/channel/UCzod695AmgnnUeKSSUZ-t1A">
+                  <a>
+                    <Youtube style={{ marginRight: '40px' }} />
+                  </a>
+                </Link>
               </div>
 
               <Paragraph cl="sw-mb-md">

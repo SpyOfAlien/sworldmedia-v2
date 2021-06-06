@@ -62,14 +62,14 @@ const Header = ({ isSticky = false }) => {
       )}
     >
       <Container cl=" sw-relative sw-h-full sw-flex sw-items-center sw-justify-between">
-        {router.pathname !== '/contact' ? (
-          <div>
-            <Media lessThan="lg">
-              <div>
-                <WhiteLogo width="65px" height="65px" />
-              </div>
-            </Media>
-            <Media greaterThanOrEqual="lg">
+        <div>
+          <Media lessThan="lg">
+            <div>
+              <WhiteLogo width="65px" height="65px" />
+            </div>
+          </Media>
+          <Media greaterThanOrEqual="lg">
+            {router.pathname !== '/contact' ? (
               <div style={{ marginBottom: '10px', cursor: 'pointer' }}>
                 <Link href="/">
                   <a>
@@ -77,11 +77,10 @@ const Header = ({ isSticky = false }) => {
                   </a>
                 </Link>
               </div>
-            </Media>
-          </div>
-        ) : (
-          <div></div>
-        )}
+            ) : null}
+          </Media>
+        </div>
+        )
         <div className="sw-flex sw-items-center">
           <div className={s.switchLng}>
             <div
