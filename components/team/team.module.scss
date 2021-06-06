@@ -1,6 +1,15 @@
 .root {
-  grid-template-rows: repeat(4, 50%);
-  min-height: 80vh;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(1, 100%);
+}
+
+.videoEditor,
+.graphicDesign,
+.content,
+.marketing {
+  padding: 8px;
+  cursor: pointer;
+  position: relative;
 }
 
 .caiDu,
@@ -19,155 +28,78 @@
 .calendarTwo,
 .team {
   position: absolute;
-  width: 150px;
-  height: 150px;
+  width: 65%;
+  padding: 8px;
+  left: 25%;
 }
 
-.marketingWrapper,
-.designWrapper,
-.editorWrapper,
-.contentWrapper {
-  position: relative;
+.design,
+.editor,
+.human,
+.team {
+  z-index: 10;
 }
 
-.caiDu {
-  top: 10px;
-  height: 10px;
-}
-
-.rocket {
+.graph,
+.pc,
+.designTable,
+.calendarOne,
+.calendarTwo {
+  z-index: 2;
 }
 
 .graph {
-  right: 0;
-  top: -150px;
-  z-index: 2;
+  top: 37%;
 }
 
 .human {
-  right: 0px;
-  top: -120px;
-  z-index: 3;
-}
-
-.globeOne {
-  right: 0px;
-  top: -75px;
-  z-index: 1;
-}
-
-.designTable {
-  top: -150px;
-  left: 0;
-  z-index: 2;
-}
-
-.design {
-  left: 0;
-  top: -70px;
-  z-index: 3;
-}
-
-.globeTwo {
-  left: 0;
-}
-
-.editor {
-  top: -80px;
-  right: 0;
-  z-index: 3;
-}
-
-.pc {
-  top: -120px;
-  right: 0;
-  z-index: 2;
-}
-
-.globeThree {
-  right: 0;
-}
-
-.contentWrapper {
-  left: 30px;
-}
-
-.calendarOne {
-  top: -80px;
-  left: -60px;
-  z-index: 2;
-}
-
-.calendarTwo {
-  z-index: 2;
-  top: -150px;
-  left: 25px;
+  top: 42%;
 }
 
 .team {
-  z-index: 3;
-  top: -60px;
+  top: 50%;
 }
 
-.globeFour {
-  position: absolute;
+.calendarOne {
+  top: 42%;
+  left: -5%;
 }
 
-@screen md {
-  .root {
-    grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(2, 50%);
-  }
-
-  .designTable {
-    top: -150px;
-    right: 0;
-    left: unset;
-    z-index: 2;
-  }
-
-  .design {
-    right: 0;
-    top: -70px;
-    left: unset;
-    z-index: 3;
-  }
-
-  .globeTwo {
-    left: unset;
-    right: 0;
-  }
-
-  .editor {
-    top: -80px;
-    left: 10px;
-    z-index: 3;
-  }
-
-  .pc {
-    top: -120px;
-    left: -70px;
-    z-index: 2;
-  }
-
-  .globeThree {
-    left: 0px;
-  }
-
-  .calendarOne {
-    top: -80px;
-    left: -60px;
-    z-index: 2;
-  }
-
-  .calendarTwo {
-    z-index: 2;
-    top: -150px;
-    left: 25px;
-  }
-
-  .team {
-    z-index: 3;
-    top: -60px;
-  }
+.calendarTwo {
+  top: 38%;
+  left: 46%;
 }
+
+.editor {
+  top: 32%;
+  left: 28%;
+}
+
+.pc {
+  top: 25%;
+  left: 0;
+}
+
+.design {
+  top: 33%;
+  left: 27%;
+}
+
+.designTable {
+  top: 24%;
+  left: 15%;
+}
+
+// @media screen and (min-width: 768px) {
+//   .root {
+//     grid-template-rows: repeat(2, 50%);
+//     grid-template-columns: repeat(2, 50%);
+//   }
+// }
+
+// @media screen and (min-width: 1280px) {
+//   .root {
+//     grid-template-columns: repeat(4, 25%);
+//     grid-template-rows: repeat(1, 100%);
+//   }
+// }

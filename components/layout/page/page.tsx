@@ -9,7 +9,11 @@ import Menu from '../../common/menu/menu';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Media, MediaContextProvider } from '../../../lib/media';
 import Header from '../header/header';
-import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks,
+} from 'body-scroll-lock';
 import SubService from '../../common/services/sub-service/sub-service';
 import subServices from '../../../lib/data/sub-services';
 import Notification from '../notification/notification';
@@ -38,7 +42,7 @@ const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
   const main = useRef();
 
   useEffect(() => {
-    displayModal ? disableBodyScroll(main) : enableBodyScroll(main);
+    displayModal ? disableBodyScroll(document.body) : clearAllBodyScrollLocks();
   }, [displayModal]);
 
   return (
@@ -46,7 +50,6 @@ const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
       <div className={s.root}>
         <AnimatePresence>
           <motion.main
-            ref={main}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
