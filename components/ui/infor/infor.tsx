@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import SubscribeForm from '../../common/subscribe/subscribe';
 import Gmail from '../../icons/gmail';
 import Location from '../../icons/location';
@@ -6,10 +7,12 @@ import Heading from '../typo/heading';
 import Paragraph from '../typo/paragraph';
 
 const Infor = () => {
+  const { t } = useTranslation();
+
   return (
     <div>
       <Heading h="h6" cl="sw-text-paragraph sw-mb-xsm">
-        Thông tin liên hệ
+        {t('contact__infor')}
       </Heading>
       <span className="sw-flex sw-mb-sm">
         <span className="sw-block">
@@ -28,8 +31,7 @@ const Infor = () => {
           <Location />
         </span>
         <Paragraph cl="sw-ml-4 sw-font-normal">
-          31.OT.09, Landmark 81, Vinhomes Central Park, 720A Điện Biên Phủ,
-          Phường 22, Quận Bình Thạnh, TP.HCM
+          {t('contact__address__content')}
         </Paragraph>
       </span>
     </div>

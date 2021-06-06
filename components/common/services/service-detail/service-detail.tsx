@@ -17,6 +17,7 @@ interface Data {
   label: string;
   icon: string;
   content: any;
+  background: string;
   subService: any;
 }
 
@@ -53,6 +54,21 @@ const ServiceDetail: FC<Props> = ({ data, cl }) => {
           <ServiceGlow />
         </div>
       )}
+
+      <div className="sw-absolute sw-inset-0">
+        <div
+          style={{ top: '100px' }}
+          className="sw-absolute sw-w-4/5 xl:sw-w-1/2 sw-right-0 xl:sw-top-0 sw-z-0"
+        >
+          <Image
+            src={data.background}
+            layout="responsive"
+            width={1225}
+            height={764}
+          />
+        </div>
+      </div>
+
       <HomeContainer
         cl="sw-flex md:sw-h-screen sw-items-center"
         isVisible={true}
