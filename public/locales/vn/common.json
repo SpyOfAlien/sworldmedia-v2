@@ -177,5 +177,13 @@
 
   "contact__personal__required_error": "Vui lòng nhập email hoặc số điện thoại",
   "contact__message__required_error": "Vui lòng nhập lời nhắn của bạn",
-  "contact__email__error": "Địa chỉ email không đúng"
+  "contact__email__error": "Địa chỉ email không đúng",
+
+  "contact__title": "Để lại lời nhắn",
+  "contact__name": "Tên:",
+  "contact__phone": "SĐT:",
+  "contact__mail": "Mail:",
+  "contact__service": "Dịch vụ bạn cần:",
+  "contact__message": "Lời nhắn cho chúng tôi:",
+  "contact__submit_btn": "Gửi phản hồi"
 }

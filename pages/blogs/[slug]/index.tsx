@@ -12,10 +12,12 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
 import { Media, MediaContextProvider } from '../../../lib/media';
+import { format } from 'date-fns';
 
 export default function Post({ post, morePosts, preview, locale }) {
   const { coverImage, title, tags, slug, date, content } = post;
   const router = useRouter();
+  const formatedDate = format(new Date(date), 'LLLL d, yyyy');
 
   if (!router.isFallback && !post) {
     return <ErrorPage statusCode={404} />;
@@ -54,17 +56,18 @@ export default function Post({ post, morePosts, preview, locale }) {
             <Heading h="h3">{title}</Heading>
             <div className="sw-flex sw-justify-between sw-w-full">
               <div>
-                {' '}
-                {tags.map((tag, idx) => (
-                  <span
-                    key={idx}
-                    className="sw-mr-2 sw-text-paragraph sw-capitalize sw-cursor-pointer"
-                  >
-                    {tag} {tags.length - 1 === idx ? '' : '|'}
-                  </span>
-                ))}{' '}
+                {tags
+                  ? tags.map((tag, idx) => (
+                      <span
+                        key={idx}
+                        className="sw-mr-2 sw-text-paragraph sw-capitalize sw-cursor-pointer"
+                      >
+                        {tag} {tags.length - 1 === idx ? '' : '|'}
+                      </span>
+                    ))
+                  : null}
               </div>
-              <div className="sw-text-paragraph">{date}</div>
+              <div className="sw-text-paragraph">{formatedDate}</div>
             </div>
           </div>
         </div>

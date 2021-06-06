@@ -1,20 +1,32 @@
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Image from 'next/image';
+import { useTranslation } from 'react-i18next';
 import { Container } from '../components/layout';
 import Team from '../components/team/team';
 import Heading from '../components/ui/typo/heading';
 import Paragraph from '../components/ui/typo/paragraph';
 import { Media, MediaContextProvider } from '../lib/media';
 
-const AboutUs = () => {
+export const getStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+    },
+  };
+};
+
+const AboutUs = ({ locale }) => {
+  const { t } = useTranslation('common');
+
   return (
     <MediaContextProvider>
       <Container cl="sw-my-header">
         <section className="sw-text-center sw-py-4">
           <Media greaterThanOrEqual="lg">
-            <Heading h="h3">Câu chuyện của chúng tôi</Heading>
+            <Heading h="h3">{t('aboutus__title')}</Heading>
           </Media>
           <Media lessThan="lg">
-            <Heading h="h4">Câu chuyện của chúng tôi</Heading>
+            <Heading h="h4">{t('aboutus__title')}</Heading>
           </Media>
         </section>
         <section className="sw-flex sw-flex-col-reverse sw-justify-between xl:sw-flex-row sw-my-8 xl:sw-my-32 2xl:sw-my-40">

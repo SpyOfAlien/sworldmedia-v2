@@ -140,31 +140,32 @@ const ContactPage = () => {
             cl="sw-text-gradient sw-mb-md sw-text-center"
             h={isDesktopOrLaptop ? 'h3' : 'h5'}
           >
-            {t('hehe')}
+            {t('contact__title')}
           </Heading>
+
           <div className="sw-flex sw-flex-col xl:sw-flex-row xl:sw-flex-wrap xl:sw-justify-between">
             <Input
               cl="sw-mb-md xl:sw-w-48"
-              placeholder="Joe Biden"
-              label="Tên:"
+              placeholder="Sworld Multimedia"
+              label={t('contact__name')}
               onChange={(data) => setName(data)}
             />
             <Input
               cl="sw-mb-md xl:sw-w-48"
-              placeholder="035 6688 619"
-              label="Số điện thoại:"
+              placeholder="(+84) 817 701 604"
+              label={t('contact__phone')}
               onChange={(data) => setPhone(data)}
             />
             <Input
               cl="sw-mb-md xl:sw-w-48"
               placeholder="example.sworld@gmail.com"
-              label="Mail: "
+              label={t('contact__mail')}
               onChange={(data) => setEmail(data)}
             />
             <Input
               cl="sw-mb-md xl:sw-w-48"
               placeholder="Xây dựng thương hiệu"
-              label="Dịch vụ bạn cần:"
+              label={t('contact__service')}
               onChange={(data) => setSubject(data)}
             />
           </div>
@@ -173,7 +174,7 @@ const ContactPage = () => {
               rows={isDesktopOrLaptop ? 4 : 6}
               cl="sw-mb-md"
               placeholder="Tin nhắn của bạn"
-              label="Dịch vụ bạn cần:"
+              label={t('contact__message')}
               onChange={(data) => setMessage(data)}
             />
           </div>
@@ -181,7 +182,7 @@ const ContactPage = () => {
           <div className="sw-w-full xl:sw-w-2/5">
             <Button
               cl="sw-h-10"
-              text="Gửi tin nhắn"
+              text={t('contact__submit_btn')}
               type="gradient"
               onclick={onSubscribe}
             />

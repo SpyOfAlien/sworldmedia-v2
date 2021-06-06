@@ -11,10 +11,11 @@ import { useMediaQuery } from 'react-responsive';
 
 export const getStaticProps = async ({ locale, preview }) => {
   const allPosts = (await getAllPostsForHome(preview)) ?? [];
+  const locales = await serverSideTranslations(locale, ['common']);
   return {
     props: {
       allPosts,
-      ...(await serverSideTranslations(locale, ['common', 'blog'])),
+      locale: locales,
     },
   };
 };

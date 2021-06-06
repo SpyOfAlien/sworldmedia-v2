@@ -43,15 +43,16 @@ const PostCard: FC<Props> = ({ post, type, cl }) => {
         >
           <div className="sw-my-2">
             <div>
-              {' '}
-              {tags.map((tag, idx) => (
-                <span
-                  key={idx}
-                  className="sw-mr-2 sw-text-paragraph sw-capitalize"
-                >
-                  {tag} {tags.length - 1 === idx ? '' : '|'}
-                </span>
-              ))}{' '}
+              {tags
+                ? tags.map((tag, idx) => (
+                    <span
+                      key={idx}
+                      className="sw-mr-2 sw-text-paragraph sw-capitalize"
+                    >
+                      {tag} {tags.length - 1 === idx ? '' : '|'}
+                    </span>
+                  ))
+                : null}
             </div>
 
             <div
