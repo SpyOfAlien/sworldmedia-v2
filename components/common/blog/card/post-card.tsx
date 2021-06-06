@@ -50,7 +50,12 @@ const PostCard: FC<Props> = ({ post, type, cl }) => {
                       key={idx}
                       className="sw-mr-2 sw-text-paragraph sw-capitalize"
                     >
-                      {tag} {tags.length - 1 === idx ? '' : '|'}
+                      {tag}
+                      {tags.length - 1 === idx ? (
+                        ''
+                      ) : (
+                        <span className="sw-ml-2">|</span>
+                      )}
                     </span>
                   ))
                 : null}
