@@ -12,10 +12,19 @@ import { useSection } from '../../../lib/context/section-context';
 
 const Header = ({ isSticky = false }) => {
   const router = useRouter();
-  const { closeModal, openModal, setModalView, displayModal } = useUI();
+  const { closeModal, openModal, setModalView, displayModal, modalView } =
+    useUI();
   const { onSetSection } = useSection();
   const [isActiveHumburger, setIsActiveHumburger] = useState(false);
   const [isTransparent, setIsTransparent] = useState(false);
+
+  const servicesModal = [
+    'BRAND_COMMUNICATION',
+    'BRANDING',
+    'PRODUCTION',
+    'INTERNAL_RELATION',
+    'EVENT',
+  ];
 
   useEffect(() => {
     if (isActiveHumburger) {
@@ -66,7 +75,8 @@ const Header = ({ isSticky = false }) => {
       className={cn(
         s.header,
         `${
-          (isSticky || !isTransparent) && !isActiveHumburger
+          ((isSticky || !isTransparent) && !isActiveHumburger) ||
+          (servicesModal.includes(modalView) && window.innerWidth < 768)
             ? 'sw-bg-background'
             : null
         }`

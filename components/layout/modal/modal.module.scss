@@ -1,9 +1,5 @@
 .modal {
-  @apply sw-fixed sw-inset-0 sw-z-30 sw-w-screen sw-h-auto;
-}
-
-.content {
-  @apply sw-block sw-h-screen sw-overflow-y-auto;
+  @apply sw-fixed sw-inset-0 sw-z-30 sw-w-screen sw-h-auto sw-overflow-y-auto;
 }
 
 .full {
@@ -32,5 +28,9 @@
   }
   .content {
     @apply sw-w-full;
+  }
+
+  .modal {
+    @apply sw-overflow-hidden;
   }
 }

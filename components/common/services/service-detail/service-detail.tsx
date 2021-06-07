@@ -55,10 +55,10 @@ const ServiceDetail: FC<Props> = ({ data, cl }) => {
         </div>
       )}
 
-      <div className="sw-absolute sw-inset-0">
+      <div style={{ height: '50%' }} className=" sw-absolute sw-inset-0 ">
         <div
-          style={{ top: '100px' }}
-          className="sw-absolute sw-w-4/5 xl:sw-w-1/2 sw-right-0 xl:sw-top-0 sw-z-0"
+          style={{ top: '60px' }}
+          className=" sw-absolute sw-w-4/5 xl:sw-w-1/2 sw-right-0 xl:sw-top-0"
         >
           <Image
             src={data.background}

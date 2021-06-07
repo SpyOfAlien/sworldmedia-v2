@@ -29,7 +29,7 @@ const ServicePage = () => {
   const { openSubModal, setSubModalView, displaySubModal } = useUI();
 
   useEffect(() => {
-    displaySubModal
+    displaySubModal && window && window.innerWidth > 768
       ? disableBodyScroll(document.body)
       : clearAllBodyScrollLocks();
   }, [displaySubModal]);
