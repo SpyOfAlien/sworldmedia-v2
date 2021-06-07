@@ -15,6 +15,10 @@ type Action =
     }
   | {
       type: 'SCROLL_DOWN';
+    }
+  | {
+      type: 'SET_PAGE_SECTION';
+      payload: number;
     };
 
 export const SectionContext =
@@ -35,9 +39,14 @@ const sectionReducer = (state: ISectionState, action: Action) => {
       return {
         ...state,
         currentSection:
-          state.currentSection < 6
+          state.currentSection < 7
             ? state.currentSection + 1
             : state.currentSection,
+      };
+    case 'SET_PAGE_SECTION':
+      return {
+        ...state,
+        currentSection: action.payload,
       };
   }
 };
@@ -50,12 +59,18 @@ const SectionProvider: FC = (props) => {
     dispatch({
       type: 'SCROLL_DOWN',
     });
+  const onSetSection = (payload) =>
+    dispatch({
+      type: 'SET_PAGE_SECTION',
+      payload,
+    });
 
   const value = useMemo(
     () => ({
       ...state,
       onScrollUp,
       onScrollDown,
+      onSetSection,
     }),
     [state]
   );

@@ -1,8 +1,35 @@
 const POST_GRAPHQL_FIELDS = `
-  slug
-  title
+  priority
+  vnSlug: slug(locale: "vi-VN")
+  enSlug: slug(locale: "en-US")
+  vnTitle: title(locale: "vi-VN")
+  enTitle: title(locale: "en-US")
+  vnSummary: summary(locale: "vi-VN")
+  enSummary: summary(locale: "en-US")
   coverImage {
     url
+  }
+  vnContent: content(locale: "vi-VN") {
+    json
+  }
+  enContent: content(locale: "en-US") {
+    json
+  }
+  assets: content(locale: "en-US") {
+    links {
+      assets {
+        block {
+          url
+          width
+          height
+          title
+          description
+          sys {
+            id
+          }
+        }
+      }
+    }
   }
   date
   author {
@@ -13,25 +40,8 @@ const POST_GRAPHQL_FIELDS = `
       }
     }
   }
-  summary
-  content {
-    json
-    links {
-      assets {
-        block {
-          sys {
-            id
-          }
-          url
-          width
-          height
-          title
-          description
-        }
-      }
-    }
-  }
-  tags
+  enTags: tags(locale: "en-US")
+  vnTags: tags(locale: "vi-VN")
 `;
 
 async function fetchGraphQL(query, preview = false) {
@@ -105,12 +115,14 @@ export async function getAllPostsForHome(preview) {
   return extractPostEntries(entries);
 }
 
-export async function getPostAndMorePosts(slug, preview) {
+export async function getPostAndMorePosts(slug, preview, locale) {
+  const currentLocale = locale === 'vn' ? 'vi-VN' : 'en-US';
+
   const entry = await fetchGraphQL(
     `query {
       postCollection(where: { slug: "${slug}" }, preview: ${
       preview ? 'true' : 'false'
-    }, limit: 1) {
+    }, limit: 1, locale: "${currentLocale}") {
         items {
           ${POST_GRAPHQL_FIELDS}
         }
@@ -118,6 +130,7 @@ export async function getPostAndMorePosts(slug, preview) {
     }`,
     preview
   );
+
   const entries = await fetchGraphQL(
     `query {
       postCollection(where: { slug_not_in: "${slug}" }, order: date_DESC, preview: ${
@@ -130,6 +143,7 @@ export async function getPostAndMorePosts(slug, preview) {
     }`,
     preview
   );
+
   return {
     post: extractPost(entry),
     morePosts: extractPostEntries(entries),

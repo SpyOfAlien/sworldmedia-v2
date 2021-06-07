@@ -44,7 +44,7 @@ const ProductSlider: FC<Props> = ({ products, cl }) => {
     customPaging: (i) => {
       return (
         <a>
-          <Image src={`${baseUrl}/${i + 1}.jpg`} width={320} height={180} />
+          <Image src={`${baseUrl}/${i + 1}.png`} width={320} height={180} />
         </a>
       );
     },

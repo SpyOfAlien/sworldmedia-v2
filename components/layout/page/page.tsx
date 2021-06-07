@@ -17,6 +17,8 @@ import {
 import SubService from '../../common/services/sub-service/sub-service';
 import subServices from '../../../lib/data/sub-services';
 import Notification from '../notification/notification';
+import { useSection } from '../../../lib/context/section-context';
+import { useRouter } from 'next/router';
 
 interface Props {
   children: any;
@@ -39,7 +41,8 @@ const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
     subModalView,
     confirm,
   } = useUI();
-  const main = useRef();
+  const { onSetSection, currentSection } = useSection();
+  const router = useRouter();
 
   useEffect(() => {
     displayModal ? disableBodyScroll(document.body) : clearAllBodyScrollLocks();
@@ -123,6 +126,53 @@ const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
           )}
           {subModalView === 'CONFIRM_MODAL' && confirm && <Notification />}
         </Modal>
+
+        {/* <div className="sw-absolute sw-w-24 sw-right-0 sw-top-0 sw-h-screen sw-flex sw-items-center">
+          <ul>
+            <li
+              className="sw-text-gradient sw-font-bold sw-my-2 sw-text-h5 sw-cursor-pointer sw-w-8 sw-flex sw-justify-center sw-items-center sw-h-16"
+              onClick={() => onSetSection(1)}
+            >
+              o
+            </li>
+            <li
+              className="sw-text-gradient sw-font-bold sw-my-2 sw-text-h5 sw-cursor-pointer sw-w-8 sw-flex sw-justify-center sw-items-center sw-h-16"
+              onClick={() => onSetSection(2)}
+            >
+              o
+            </li>
+            <li
+              className="sw-text-gradient sw-font-bold sw-my-2 sw-text-h5 sw-cursor-pointer sw-w-8 sw-flex sw-justify-center sw-items-center sw-h-16"
+              onClick={() => onSetSection(3)}
+            >
+              o
+            </li>
+            <li
+              className="sw-text-gradient sw-font-bold sw-my-2 sw-text-h5 sw-cursor-pointer sw-w-8 sw-flex sw-justify-center sw-items-center sw-h-16"
+              onClick={() => onSetSection(4)}
+            >
+              o
+            </li>
+            <li
+              className="sw-text-gradient sw-font-bold sw-my-2 sw-text-h5 sw-cursor-pointer sw-w-8 sw-flex sw-justify-center sw-items-center sw-h-16"
+              onClick={() => onSetSection(5)}
+            >
+              o
+            </li>
+            <li
+              className="sw-text-gradient sw-font-bold sw-my-2 sw-text-h5 sw-cursor-pointer sw-w-8 sw-flex sw-justify-center sw-items-center sw-h-16"
+              onClick={() => onSetSection(6)}
+            >
+              o
+            </li>
+            <li
+              className="sw-text-gradient sw-font-bold sw-my-2 sw-text-h5 sw-cursor-pointer sw-w-8 sw-flex sw-justify-center sw-items-center sw-h-16"
+              onClick={() => onSetSection(7)}
+            >
+              o
+            </li>
+          </ul>
+        </div> */}
 
         <Media lessThan="md">
           <Header isSticky={true} />

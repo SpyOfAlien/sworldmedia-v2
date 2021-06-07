@@ -1,6 +1,7 @@
 import { BlockList } from 'net';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { FC } from 'react';
+import { useRouter } from 'next/router';
+import { FC, useEffect, useState } from 'react';
 import PostCard from '../../components/common/blog/card/post-card';
 import HeroBanner from '../../components/common/blog/hero-banner/hero-banner';
 import PostList from '../../components/common/blog/post-list/post-list';
@@ -10,17 +11,21 @@ import { getAllPostsForHome } from '../../lib/api';
 import { Media, MediaContextProvider } from '../../lib/media';
 
 export const getStaticProps = async ({ locale, preview }) => {
-  const allPosts = (await getAllPostsForHome(preview)) ?? [];
+  const allPosts = (await getAllPostsForHome(preview)) || [];
   const locales = await serverSideTranslations(locale, ['common']);
+
   return {
     props: {
-      allPosts,
+      posts: allPosts,
       locale: locales,
     },
   };
 };
 
-const BlogsPage = ({ allPosts }) => {
+const BlogsPage = ({ posts }) => {
+  const priorityPost = posts.find((item) => item.priority === true);
+  const otherPosts = posts.filter((item) => item.priority === false);
+
   const tags = [
     'Truyền thông thương hiệu',
     'Xây dựng thương hiệu',
@@ -28,8 +33,6 @@ const BlogsPage = ({ allPosts }) => {
     'Tổ chức sự kiện',
     'Kết nối quốc tế',
   ];
-
-  const listPost = allPosts.slice(1);
 
   return (
     <MediaContextProvider>
@@ -44,12 +47,12 @@ const BlogsPage = ({ allPosts }) => {
         <div>
           <Container>
             <Media lessThan="sm">
-              <PostCard cl="sw-mb-16" type="small" post={allPosts[0]} />
+              <PostCard cl="sw-mb-16" type="small" post={priorityPost} />
             </Media>
             <Media greaterThanOrEqual="sm">
-              <PostCard cl="sw-mb-16" type="big" post={allPosts[0]} />
+              <PostCard cl="sw-mb-16" type="big" post={priorityPost} />
             </Media>
-            <PostList posts={listPost} />
+            {otherPosts && <PostList posts={otherPosts} />}
           </Container>
         </div>
       </Container>

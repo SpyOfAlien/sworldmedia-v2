@@ -18,6 +18,7 @@ import Glow from '../components/glows/glow';
 import { useTranslation } from 'react-i18next';
 import nextI18NextConfig from '../next-i18next.config.js';
 import { Media, MediaContextProvider } from '../lib/media';
+import VideoBackground from '../components/common/video/video-background';
 
 export const getStaticProps = async ({ locale, preview }) => {
   const allPosts = (await getAllPostsForHome(preview)) ?? [];
@@ -58,6 +59,7 @@ const HomePage = ({ locales, allPosts }) => {
   return (
     <MediaContextProvider>
       <Media at="xs">
+        <VideoBackground />
         <AboutUs data={aboutUsList} />
         <ServicePage />
         <Clients
@@ -78,27 +80,35 @@ const HomePage = ({ locales, allPosts }) => {
           timeout={1000}
         >
           <ParticlesLayout />
-          {currentSection === 1 && <Glow path="about-glow" />}
-          {currentSection === 2 && <Glow path="service-glow" />}
-          {currentSection === 3 && <Glow path="partner-glow" />}
-          {currentSection === 4 && <Glow path="client-glow" />}
-          {currentSection === 6 && <Glow path="whyus-glow" />}
+          {currentSection === 2 && <Glow path="about-glow" />}
+          {currentSection === 3 && <Glow path="service-glow" />}
+          {currentSection === 4 && <Glow path="partner-glow" />}
+          {currentSection === 6 && <Glow path="client-glow" />}
+          {currentSection === 7 && <Glow path="whyus-glow" />}
 
-          <HomeContainer isVisible={currentSection === 1}>
-            <AboutUs data={aboutUsList} />
+          <HomeContainer
+            isFullpage={true}
+            hasPadding={false}
+            isVisible={currentSection === 1}
+          >
+            <VideoBackground />
           </HomeContainer>
 
           <HomeContainer isVisible={currentSection === 2}>
-            <ServicePage />
+            <AboutUs data={aboutUsList} />
           </HomeContainer>
 
           <HomeContainer isVisible={currentSection === 3}>
+            <ServicePage />
+          </HomeContainer>
+
+          <HomeContainer isVisible={currentSection === 4}>
             <Clients
               title={t('home__partner__title')}
               imgSrc="/assets/svg/media-partner.svg"
             />
           </HomeContainer>
-          <HomeContainer isVisible={currentSection === 4}>
+          <HomeContainer isVisible={currentSection === 5}>
             <Clients
               title={t('home__client__title')}
               imgSrc="/assets/svg/clients.svg"
@@ -107,11 +117,11 @@ const HomePage = ({ locales, allPosts }) => {
           <HomeContainer
             hasPadding={false}
             isFullpage={true}
-            isVisible={currentSection === 5}
+            isVisible={currentSection === 6}
           >
             <ProductSlider products={Products} />
           </HomeContainer>
-          <HomeContainer isVisible={currentSection === 6}>
+          <HomeContainer isVisible={currentSection === 7}>
             <WhyUs data={whyUsList} />
           </HomeContainer>
         </ReactScrollWheelHandler>

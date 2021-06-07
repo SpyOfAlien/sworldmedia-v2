@@ -21,3 +21,26 @@
 .h6 {
   @apply sw-text-h6;
 }
+
+.ul {
+  display: block;
+  list-style-type: disc;
+  color: #b8cae6;
+  padding-inline-start: 2rem;
+}
+
+.ol {
+  display: block;
+  list-style-type: decimal;
+  padding-inline-start: 2rem;
+  color: #b8cae6;
+
+  b {
+    display: block;
+  }
+}
+
+.li {
+  line-height: 1.6rem;
+  margin-bottom: 1rem;
+}

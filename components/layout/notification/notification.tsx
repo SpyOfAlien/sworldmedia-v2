@@ -12,8 +12,6 @@ const Notification = () => {
   };
   const { t } = useTranslation('common');
 
-  console.log('jeje', t(confirm.message));
-
   return (
     <div className="sw-p-8 sw-relative">
       <Heading cl="sw-mb-4" h="h6">

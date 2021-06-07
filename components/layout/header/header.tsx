@@ -8,10 +8,12 @@ import { useRouter } from 'next/router';
 import { useUI } from '../../../lib/context/ui-context';
 import { useEffect, useState } from 'react';
 import cn from 'classnames';
+import { useSection } from '../../../lib/context/section-context';
 
 const Header = ({ isSticky = false }) => {
   const router = useRouter();
   const { closeModal, openModal, setModalView, displayModal } = useUI();
+  const { onSetSection } = useSection();
   const [isActiveHumburger, setIsActiveHumburger] = useState(false);
   const [isTransparent, setIsTransparent] = useState(false);
 
@@ -21,16 +23,12 @@ const Header = ({ isSticky = false }) => {
       closeModal();
     }
 
-    if (
-      router.pathname === '/' ||
-      router.pathname === '/contact' ||
-      isActiveHumburger
-    ) {
+    if (router.pathname === '/' || router.pathname === '/contact') {
       setIsTransparent(true);
     } else {
       setIsTransparent(false);
     }
-  }, [router]);
+  }, [router.pathname]);
 
   useEffect(() => {
     displayModal ? setIsActiveHumburger(true) : setIsActiveHumburger(false);
@@ -49,33 +47,45 @@ const Header = ({ isSticky = false }) => {
 
   const handleSwitchLng = (lan) => {
     if (lan === 'vn' && router.locale === 'en')
-      router.push('/', '/', { locale: lan });
+      router.push('/', '/', {
+        locale: lan,
+      });
     if (lan === 'en' && router.locale === 'vn')
-      router.push('/', '/', { locale: lan });
+      router.push('/', '/', {
+        locale: lan,
+      });
+  };
+
+  const handleGoHome = () => {
+    onSetSection(1);
+    router.push('/');
   };
 
   return (
     <div
       className={cn(
         s.header,
-        `${isSticky || !isTransparent ? 'sw-bg-background' : null}`
+        `${
+          (isSticky || !isTransparent) && !isActiveHumburger
+            ? 'sw-bg-background'
+            : null
+        }`
       )}
     >
       <Container cl=" sw-relative sw-h-full sw-flex sw-items-center sw-justify-between">
         <div>
           <Media lessThan="lg">
-            <div>
+            <div onClick={handleGoHome}>
               <WhiteLogo width="65px" height="65px" />
             </div>
           </Media>
           <Media greaterThanOrEqual="lg">
             {router.pathname !== '/contact' ? (
-              <div style={{ marginBottom: '10px', cursor: 'pointer' }}>
-                <Link href="/">
-                  <a>
-                    <WhiteLogo />
-                  </a>
-                </Link>
+              <div
+                onClick={handleGoHome}
+                style={{ marginBottom: '10px', cursor: 'pointer' }}
+              >
+                <WhiteLogo />
               </div>
             ) : null}
           </Media>

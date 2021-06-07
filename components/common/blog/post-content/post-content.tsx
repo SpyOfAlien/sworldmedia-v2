@@ -12,6 +12,7 @@ import Paragraph from '../../../ui/typo/paragraph';
 interface Props {
   cl?: string;
   data: any;
+  assets: any;
 }
 
 function slugifyString(string) {
@@ -57,7 +58,7 @@ export function getRichTextRenderOptions(links, options) {
     renderNode: {
       [INLINES.HYPERLINK]: (node, children) => (
         <a
-          className={``}
+          className={`sw-text-gradient`}
           href={node.data.uri}
           target="_blank"
           rel="nofollow noreferrer"
@@ -108,13 +109,13 @@ export function getRichTextRenderOptions(links, options) {
         <blockquote className={`sw-italic`}>{children}</blockquote>
       ),
       [BLOCKS.UL_LIST]: (node, children) => (
-        <ul className={`sw-ml-4`}>{children}</ul>
+        <ul className={s.ul}>{children}</ul>
       ),
       [BLOCKS.OL_LIST]: (node, children) => (
         <ol className={s.ol}>{children}</ol>
       ),
       [BLOCKS.LIST_ITEM]: (node, children) => (
-        <li className={`sw-list-disc sw-text-paragraph`}>{children}</li>
+        <li className={s.li}>{children}</li>
       ),
       [INLINES.EMBEDDED_ENTRY]: (node, children) => {
         const entry = entryMap.get(node.data.target.sys.id);
@@ -159,6 +160,7 @@ export function getRichTextRenderOptions(links, options) {
                 alt={description}
                 height={height}
                 width={width}
+                title={title}
                 layout="responsive"
               />
             </div>
@@ -169,12 +171,12 @@ export function getRichTextRenderOptions(links, options) {
   };
 }
 
-const PostContent: FC<Props> = ({ cl, data }) => {
+const PostContent: FC<Props> = ({ cl, data, assets }) => {
   return (
     <section className={cn(cl)}>
       {documentToReactComponents(
         data.json,
-        getRichTextRenderOptions(data.links, {})
+        getRichTextRenderOptions(assets.links, {})
       )}
     </section>
   );

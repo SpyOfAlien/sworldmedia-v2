@@ -15,7 +15,16 @@ import { Media, MediaContextProvider } from '../../../lib/media';
 import { format } from 'date-fns';
 
 export default function Post({ post, morePosts, preview, locale }) {
-  const { coverImage, title, tags, slug, date, content } = post;
+  const {
+    vnTitle,
+    coverImage,
+    vnContent,
+    enContent,
+    date,
+    enTags,
+    vnTags,
+    assets,
+  } = post;
   const router = useRouter();
   const formatedDate = format(new Date(date), 'LLLL d, yyyy');
 
@@ -35,6 +44,7 @@ export default function Post({ post, morePosts, preview, locale }) {
                     src="/assets/svg/smallback.svg"
                     width={12}
                     height={12}
+                    layout="responsive"
                   />
                 </p>
                 <p className="sw-ml-2">Trở về tin tức</p>
@@ -53,26 +63,38 @@ export default function Post({ post, morePosts, preview, locale }) {
             <div className="sw-absolute sw-inset-0 sw-bg-hero"></div>
           </div>
           <div className="xl:sw-absolute xl:sw-inset-0 sw-flex sw-justify-end sw-mt-12 xl:sw-mt-0  sw-flex-col xl:sw-px-12 xl:sw-py-8 sw-z-10">
-            <Heading h="h3">{title}</Heading>
+            <Heading h="h3">
+              {router.locale === 'vn' ? vnTitle : vnTitle}
+            </Heading>
             <div className="sw-flex sw-justify-between sw-w-full">
               <div>
-                {tags
-                  ? tags.map((tag, idx) => (
+                {router.locale === 'vn'
+                  ? vnTags.map((tag, idx) => (
                       <span
                         key={idx}
                         className="sw-mr-2 sw-text-paragraph sw-capitalize sw-cursor-pointer"
                       >
-                        {tag} {tags.length - 1 === idx ? '' : '|'}
+                        {tag} {vnTags.length - 1 === idx ? '' : '|'}
                       </span>
                     ))
-                  : null}
+                  : enTags.map((tag, idx) => (
+                      <span
+                        key={idx}
+                        className="sw-mr-2 sw-text-paragraph sw-capitalize sw-cursor-pointer"
+                      >
+                        {tag} {enTags.length - 1 === idx ? '' : '|'}
+                      </span>
+                    ))}
               </div>
               <div className="sw-text-paragraph">{formatedDate}</div>
             </div>
           </div>
         </div>
         <div className="sw-mt-12 xl:sw-mt-24 xl:sw-w-1/2 xl:sw-mx-auto">
-          <PostContent data={content} />
+          <PostContent
+            data={router.locale === 'vn' ? vnContent : enContent}
+            assets={assets}
+          />
         </div>
       </Container>
     </MediaContextProvider>
@@ -80,13 +102,14 @@ export default function Post({ post, morePosts, preview, locale }) {
 }
 
 export async function getStaticProps({ locale, params, preview = false }) {
-  const data = await getPostAndMorePosts(params.slug, preview);
+  const data = await getPostAndMorePosts(params.slug, preview, locale);
+
   return {
     props: {
       preview,
       post: data?.post ?? null,
       morePosts: data?.morePosts ?? null,
-      ...(await serverSideTranslations(locale, ['common', 'blog'])),
+      ...(await serverSideTranslations(locale, ['common'])),
     },
   };
 }
@@ -94,10 +117,10 @@ export async function getStaticProps({ locale, params, preview = false }) {
 export async function getStaticPaths({ locales }) {
   const allPosts = await getAllPostsWithSlug();
   const paths = [];
-  allPosts.map(({ slug }) => {
-    for (const item of locales) {
-      paths.push({ params: { slug: slug }, locale: item });
-    }
+
+  allPosts.map(({ vnSlug, enSlug }) => {
+    paths.push({ params: { slug: vnSlug }, locale: 'vn' });
+    paths.push({ params: { slug: enSlug }, locale: 'en' });
   });
 
   return {

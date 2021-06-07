@@ -17,6 +17,8 @@ import { useUI } from '../lib/context/ui-context';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
 import * as gtag from '../lib/gtag';
+import { useSection } from '../lib/context/section-context';
+import { useRouter } from 'next/router';
 
 export const getStaticProps = async ({ locale }) => {
   return {
@@ -29,6 +31,8 @@ export const getStaticProps = async ({ locale }) => {
 const ContactPage = ({ locale }) => {
   //Context
   const { openSubModal, setSubModalView, setConfirmData } = useUI();
+  const { onSetSection } = useSection();
+  const router = useRouter();
 
   // State
   const [name, setName] = useState('');
@@ -44,6 +48,11 @@ const ContactPage = ({ locale }) => {
   const isDesktopOrLaptop = useMediaQuery({
     query: '(min-device-width: 1280px)',
   });
+
+  const handleGoHome = () => {
+    onSetSection(1);
+    router.push('/');
+  };
 
   const onSubscribe = () => {
     gtag.event({
@@ -136,7 +145,9 @@ const ContactPage = ({ locale }) => {
             </Media>
           </div>
           <div className="sw-flex sw-flex-col sw-justify-between xl:sw-pl-8 3xl:sw-pl-16 xl:sw-py-12">
-            <WhiteLogo />
+            <div className="sw-cursor-pointer sw-z-10" onClick={handleGoHome}>
+              <WhiteLogo />
+            </div>
             <div className="sw-my-8">
               <Infor />
             </div>
