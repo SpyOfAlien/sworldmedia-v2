@@ -9,7 +9,7 @@
 
 @screen md {
   .grid {
-    grid-template-rows: repeat(2, 40%);
+    grid-template-rows: repeat(2, 50%);
     margin: 0;
   }
 
@@ -30,7 +30,7 @@
 }
 
 @screen xl {
-  .grid {
-    grid-template-rows: repeat(2, 50%);
+  .item-2 {
+    @apply sw-pt-8;
   }
 }

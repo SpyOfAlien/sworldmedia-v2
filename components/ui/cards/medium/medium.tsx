@@ -19,7 +19,7 @@ const Medium: FC<Props> = ({ cl, icon, content, title }) => {
   return (
     <div
       className={cn(
-        'sw-flex sw-flex-col sw-items-center sw-px-4 3xl:sw-px-24',
+        'sw-flex sw-flex-col sw-items-center sw-px-4 3xl:sw-px-20',
         cl
       )}
     >

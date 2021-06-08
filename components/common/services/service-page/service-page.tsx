@@ -47,7 +47,7 @@ const ServicePage: FC<Props> = ({ cl }) => {
           <Header />
         </Media>
 
-        <Media className="sw-w-full md:sw-w-1/3" greaterThanOrEqual="md">
+        <Media className="sw-w-full md:sw-w-1/3" greaterThanOrEqual="lg">
           <div className=" sw-relative sw-flex sw-flex-col">
             <div className="sw-absolute sw-inset-0">
               <Glow path="atom-glow" />

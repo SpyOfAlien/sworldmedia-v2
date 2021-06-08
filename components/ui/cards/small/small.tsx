@@ -19,14 +19,14 @@ const SmallCard: FC<Props> = ({ cl, icon, content, onClick }) => {
     <MediaContextProvider>
       <div
         className={cn(
-          'sw-bg-background sw-relative hover:sw-bg-modal sw-rounded-sm sw-flex sw-flex-col xl:sw-flex-row xl:sw-items-center sw-cursor-pointer sw-justify-start',
+          ' sw-relative hover:sw-bg-modal sw-rounded-sm sw-flex sw-flex-col xl:sw-flex-row xl:sw-items-center sw-cursor-pointer sw-justify-start',
           cl,
           s.root
         )}
         onClick={onClick}
       >
         <Media lessThan="md">
-          <div className="xl:sw-mx-xsm sw-mb-8">
+          <div className="xl:sw-mx-xsm sw-mb-8 md:sw-mb-0">
             <Image
               src={icon}
               width={70}
@@ -37,7 +37,7 @@ const SmallCard: FC<Props> = ({ cl, icon, content, onClick }) => {
         </Media>
 
         <Media between={['md', 'xl']}>
-          <div className="xl:sw-mx-xsm">
+          <div className="xl:sw-mx-xsm sw-mb-0">
             <Image
               src={icon}
               width={90}
