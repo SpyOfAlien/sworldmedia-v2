@@ -13,10 +13,12 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
 import { Media, MediaContextProvider } from '../../../lib/media';
 import { format } from 'date-fns';
+import { useTranslation } from 'react-i18next';
 
 export default function Post({ post, morePosts, preview, locale }) {
   const {
     vnTitle,
+    enTitle,
     coverImage,
     vnContent,
     enContent,
@@ -28,6 +30,8 @@ export default function Post({ post, morePosts, preview, locale }) {
   const router = useRouter();
   const formatedDate = format(new Date(date), 'LLLL d, yyyy');
 
+  const { t } = useTranslation('common');
+
   if (!router.isFallback && !post) {
     return <ErrorPage statusCode={404} />;
   }
@@ -35,11 +39,13 @@ export default function Post({ post, morePosts, preview, locale }) {
   return (
     <MediaContextProvider>
       <Container cl="sw-my-header">
-        <div className="sw-py-8">
+        <div className="sw-py-4">
           <Link href="/blogs">
             <a>
-              <div className="sw-cursor-pointer sw-flex sw-text-paragraph sw-w-32">
-                <p>
+              <div className="sw-cursor-pointer sw-flex sw-items-center sw-text-paragraph sw-w-28">
+                <p
+                  style={{ width: '14px', height: '14px', marginBottom: '4px' }}
+                >
                   <Image
                     src="/assets/svg/smallback.svg"
                     width={12}
@@ -47,7 +53,7 @@ export default function Post({ post, morePosts, preview, locale }) {
                     layout="responsive"
                   />
                 </p>
-                <p className="sw-ml-2">Trở về tin tức</p>
+                <p className="sw-ml-2">{t('blog__goback')}</p>
               </div>
             </a>
           </Link>
@@ -63,9 +69,21 @@ export default function Post({ post, morePosts, preview, locale }) {
             <div className="sw-absolute sw-inset-0 sw-bg-hero"></div>
           </div>
           <div className="xl:sw-absolute xl:sw-inset-0 sw-flex sw-justify-end sw-mt-12 xl:sw-mt-0  sw-flex-col xl:sw-px-12 xl:sw-py-8 sw-z-10">
-            <Heading h="h3">
-              {router.locale === 'vn' ? vnTitle : vnTitle}
-            </Heading>
+            <Media greaterThanOrEqual="lg">
+              <Heading h="h3">
+                {router.locale === 'vn' ? vnTitle : enTitle}
+              </Heading>
+            </Media>
+            <Media between={['sm', 'lg']}>
+              <Heading h="h4">
+                {router.locale === 'vn' ? vnTitle : enTitle}
+              </Heading>
+            </Media>
+            <Media lessThan="sm">
+              <Heading h="h5">
+                {router.locale === 'vn' ? vnTitle : enTitle}
+              </Heading>
+            </Media>
             <div className="sw-flex sw-justify-between sw-w-full">
               <div>
                 {router.locale === 'vn'
@@ -114,7 +132,7 @@ export async function getStaticProps({ locale, params, preview = false }) {
   };
 }
 
-export async function getStaticPaths({ locales }) {
+export async function getStaticPaths({ locale }) {
   const allPosts = await getAllPostsWithSlug();
   const paths = [];
 
