@@ -3,6 +3,12 @@ import { FC } from 'react';
 import Slider from 'react-slick';
 import ProductHero from './product-hero';
 import cn from 'classnames';
+import { Media, MediaContextProvider } from '../../../lib/media';
+import { Container, HomeContainer } from '../../layout';
+import Heading from '../../ui/typo/heading';
+import Paragraph from '../../ui/typo/paragraph';
+import Button from '../../ui/button/button';
+import s from './product.module.scss';
 
 interface Props {
   products: any[];
@@ -58,14 +64,44 @@ const ProductSlider: FC<Props> = ({ products, cl }) => {
     prevArrow: <PrevArrow />,
   };
 
+  const onWatch = () => {};
   return (
-    <div>
-      <Slider {...settings}>
-        {products.map((product, idx) => (
-          <ProductHero key={idx} product={product} />
-        ))}
-      </Slider>
-    </div>
+    <MediaContextProvider>
+      <div className={s.slideWrapper}>
+        <Slider {...settings}>
+          {products.map((product, idx) => (
+            <div key={idx} className={s.wrapper}>
+              <ProductHero product={product} />
+              <Media lessThan="lg">
+                <Container cl="sw-h-full md:sw-mt-8">
+                  <div
+                    className={cn(
+                      'sw-w-full sw-flex sw-justify-center sw-flex-col sw-relative',
+                      s.overrideContainer
+                    )}
+                  >
+                    <Media at="sm">
+                      <Heading cl="sw-text-gradient" h="h6">
+                        {product.title}
+                      </Heading>
+                    </Media>
+                    <div className={cn('sw-my-xsm', s.content)}>
+                      <Paragraph>{product.content}</Paragraph>
+                    </div>
+                    <Button
+                      cl="sw-w-1/3 md:sw-w-1/4 sw-h-10"
+                      text="Xem video"
+                      type="gradient"
+                      onclick={onWatch}
+                    />
+                  </div>
+                </Container>
+              </Media>
+            </div>
+          ))}
+        </Slider>
+      </div>
+    </MediaContextProvider>
   );
 };
 

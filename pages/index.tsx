@@ -79,7 +79,7 @@ const HomePage = ({ locales, allPosts }) => {
           downHandler={onPageScrollDown}
           timeout={1000}
         >
-          {currentSection !== 1 && currentSection !== 5 && <ParticlesLayout />}
+          {currentSection !== 1 && currentSection !== 6 && <ParticlesLayout />}
           {currentSection === 2 && <Glow path="about-glow" />}
           {currentSection === 3 && <Glow path="service-glow" />}
           {currentSection === 4 && <Glow path="partner-glow" />}

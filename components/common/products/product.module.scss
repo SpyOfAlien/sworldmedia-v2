@@ -3,7 +3,7 @@
 }
 
 .content {
-  height: 120px;
+  height: 180px;
   @apply sw-overflow-y-scroll sw-pr-4;
 }
 
@@ -29,7 +29,14 @@
   background: #51bcf9;
 }
 
-@media screen and (min-width: 480px) {
+.wrapper {
+  display: flex;
+}
+
+@media screen and (min-width: 400px) {
+  .content {
+    height: 200px;
+  }
 }
 
 @media screen and (min-width: 640px) {
