@@ -14,6 +14,7 @@ import Link from 'next/link';
 import { Media, MediaContextProvider } from '../../../lib/media';
 import { format } from 'date-fns';
 import { useTranslation } from 'react-i18next';
+import { BlogJsonLd } from 'next-seo';
 
 export default function Post({ post, morePosts, preview, locale }) {
   const {
@@ -26,6 +27,8 @@ export default function Post({ post, morePosts, preview, locale }) {
     enTags,
     vnTags,
     assets,
+    vnSummary,
+    enSummary,
   } = post;
   const router = useRouter();
   const formatedDate = format(new Date(date), 'LLLL d, yyyy');
@@ -38,6 +41,15 @@ export default function Post({ post, morePosts, preview, locale }) {
 
   return (
     <MediaContextProvider>
+      <BlogJsonLd
+        url={`https://www.s-worldmedia.com${router.pathname}`}
+        title={router.locale === 'vn' ? vnTitle : enTitle}
+        images={[]}
+        datePublished={date}
+        dateModified={date}
+        authorName="S-worldmeida"
+        description={router.locale === 'vn' ? vnSummary : enSummary}
+      />
       <Container cl="sw-my-header">
         <div className="sw-py-4">
           <Link href="/blogs">

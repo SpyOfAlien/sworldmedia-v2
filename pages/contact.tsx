@@ -19,6 +19,7 @@ import Link from 'next/link';
 import * as gtag from '../lib/gtag';
 import { useSection } from '../lib/context/section-context';
 import { useRouter } from 'next/router';
+import { CorporateContactJsonLd } from 'next-seo';
 
 export const getStaticProps = async ({ locale }) => {
   return {
@@ -109,6 +110,19 @@ const ContactPage = ({ locale }) => {
 
   return (
     <MediaContextProvider>
+      <CorporateContactJsonLd
+        url="http://www.s-worldmedia.com"
+        logo="http://www.s-worldmedia/logo.png"
+        contactPoint={[
+          {
+            telephone: '(+84) 817 701 604',
+            contactType: 'customer service',
+            areaServed: 'VN',
+            availableLanguage: ['English', 'Vietnamese'],
+          },
+        ]}
+      />
+
       <div className="sw-flex sw-w-full sw-px-12 md:sw-px-24 xl:sw-px-0 xl:sw-p-0 sw-flex-col-reverse sw-pt-40 sw-flex-col xl:sw-flex-row xl:sw-h-screen sw-relative">
         <Media greaterThanOrEqual="lg">
           <div className="sw-absolute sw-inset-0 sw-w-full">

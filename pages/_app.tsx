@@ -6,6 +6,8 @@ import Page from '../components/layout/page/page';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import * as gtag from '../lib/gtag';
+import { DefaultSeo } from 'next-seo';
+import seo from '../seo.config';
 
 const MyApp = ({ Component, pageProps }) => {
   const router = useRouter();
@@ -22,6 +24,7 @@ const MyApp = ({ Component, pageProps }) => {
     <UIManager>
       <SectionManager>
         <Page pageProps={pageProps}>
+          <DefaultSeo {...seo} />
           <Component {...pageProps} />
         </Page>
       </SectionManager>
