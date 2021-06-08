@@ -56,16 +56,24 @@ export function getRichTextRenderOptions(links, options) {
     },
 
     renderNode: {
-      [INLINES.HYPERLINK]: (node, children) => (
-        <a
-          className={`sw-text-gradient`}
-          href={node.data.uri}
-          target="_blank"
-          rel="nofollow noreferrer"
-        >
-          {children}
-        </a>
-      ),
+      [INLINES.HYPERLINK]: (node, children) => {
+        if (node.data.uri.includes('youtube.com/embed')) {
+          return (
+            <DynamicVideoEmbed embedUrl={node.data.uri} title={children} />
+          );
+        } else {
+          return (
+            <a
+              className={`sw-text-gradient`}
+              href={node.data.uri}
+              target="_blank"
+              rel="nofollow noreferrer"
+            >
+              {children}
+            </a>
+          );
+        }
+      },
       [BLOCKS.HR]: (text) => <hr />,
       [BLOCKS.HEADING_1]: (node, children) => (
         <h1 className={cn(s.h1, 'sw-text-gradient')}>{children}</h1>
