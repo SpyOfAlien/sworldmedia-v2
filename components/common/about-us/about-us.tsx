@@ -8,6 +8,8 @@ import Glow from '../../glows/glow';
 import Heading from '../../ui/typo/heading';
 import { Media, MediaContextProvider } from '../../../lib/media';
 import { useTranslation } from 'next-i18next';
+import { NextSeo } from 'next-seo';
+import { useRouter } from 'next/router';
 
 interface Props {
   data: any[];
@@ -16,6 +18,7 @@ interface Props {
 
 const AboutUs: FC<Props> = ({ data, cl }) => {
   const { t } = useTranslation('common');
+  const router = useRouter();
 
   return (
     <div
@@ -25,6 +28,19 @@ const AboutUs: FC<Props> = ({ data, cl }) => {
         cl
       )}
     >
+      <NextSeo
+        title={
+          router.locale === 'vn'
+            ? 'S-worldmedia | thành viên'
+            : 'S-worldmedia | team '
+        }
+        description={
+          router.locale === 'vn'
+            ? 'Chân thành – Thấu hiểu – Bền bỉ – Sáng tạo – Khác biệt'
+            : 'Sincerity - Understanding - Perseverance - Creativity - Distinctiveness'
+        }
+        canonical="https://www.s-worldmedia.com/about"
+      />
       <div
         className={cn(
           'sw-col-start-1 sw-col-end-2 md:sw-col-start-2 sw-flex sw-flex-col sw-justify-center sw-items-center',

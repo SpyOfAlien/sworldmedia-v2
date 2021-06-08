@@ -7,6 +7,7 @@ import { Container, HomeContainer } from '../../layout';
 import s from './product.module.scss';
 import cn from 'classnames';
 import { Media, MediaContextProvider } from '../../../lib/media';
+import { useTranslation } from 'react-i18next';
 
 interface Props {
   product: any;
@@ -15,6 +16,7 @@ interface Props {
 
 const ProductHero: FC<Props> = ({ product, cl }) => {
   const { title, content, link, imgSrc } = product;
+  const { t } = useTranslation();
 
   const imgRef = useRef<HTMLDivElement>();
 
@@ -44,16 +46,22 @@ const ProductHero: FC<Props> = ({ product, cl }) => {
               >
                 <Media at="sm">
                   <Heading cl="sw-text-gradient" h="h6">
-                    {title}
+                    {t(title)}
                   </Heading>
                 </Media>
                 <Media greaterThan="sm">
                   <Heading cl="sw-text-gradient" h="h5">
-                    {title}
+                    {t(title)}
                   </Heading>
                 </Media>
                 <div className={cn('sw-my-xsm', s.content)}>
-                  <Paragraph>{content}</Paragraph>
+                  {typeof content === 'string' ? (
+                    <Paragraph>{t(content)}</Paragraph>
+                  ) : (
+                    content.map((item, idx) => (
+                      <Paragraph key={idx}>{t(item)}</Paragraph>
+                    ))
+                  )}
                 </div>
                 <Button
                   cl="sw-w-1/3 md:sw-w-1/4 sw-h-10"

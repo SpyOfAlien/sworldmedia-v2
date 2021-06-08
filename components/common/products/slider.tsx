@@ -9,6 +9,7 @@ import Heading from '../../ui/typo/heading';
 import Paragraph from '../../ui/typo/paragraph';
 import Button from '../../ui/button/button';
 import s from './product.module.scss';
+import { useTranslation } from 'react-i18next';
 
 interface Props {
   products: any[];
@@ -45,6 +46,7 @@ const PrevArrow = (props) => {
 
 const ProductSlider: FC<Props> = ({ products, cl }) => {
   const baseUrl = '/assets/images/products/events';
+  const { t } = useTranslation();
 
   const settings = {
     customPaging: (i) => {
@@ -80,13 +82,32 @@ const ProductSlider: FC<Props> = ({ products, cl }) => {
                       s.overrideContainer
                     )}
                   >
-                    <Media at="sm">
-                      <Heading cl="sw-text-gradient" h="h6">
-                        {product.title}
-                      </Heading>
-                    </Media>
-                    <div className={cn('sw-my-xsm', s.content)}>
-                      <Paragraph>{product.content}</Paragraph>
+                    <div className="sw-my-sm">
+                      <Media lessThan="sm">
+                        <Heading cl="sw-text-gradient" h="h6">
+                          {t(product.title)}
+                        </Heading>
+                      </Media>
+                      <Media at="sm">
+                        <Heading cl="sw-text-gradient" h="h5">
+                          {t(product.title)}
+                        </Heading>
+                      </Media>
+                      <Media greaterThan="sm">
+                        <Heading cl="sw-text-gradient" h="h4">
+                          {t(product.title)}
+                        </Heading>
+                      </Media>
+                    </div>
+                    <div className={cn('sw-mb-sm', s.content)}>
+                      {typeof product.content === 'string' ? (
+                        <Paragraph>{t(product.content)}</Paragraph>
+                      ) : (
+                        product.content.map((item, idx) => (
+                          <Paragraph key={idx}>{t(item)}</Paragraph>
+                        ))
+                      )}
+                      <Paragraph>{t(product.content)}</Paragraph>
                     </div>
                     <Button
                       cl="sw-w-1/3 md:sw-w-1/4 sw-h-10"

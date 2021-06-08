@@ -111,8 +111,8 @@ const ContactPage = ({ locale }) => {
   return (
     <MediaContextProvider>
       <CorporateContactJsonLd
-        url="http://www.s-worldmedia.com"
-        logo="http://www.s-worldmedia/logo.png"
+        url="https://www.s-worldmedia.com"
+        logo="https://www.s-worldmedia.com/logo.png"
         contactPoint={[
           {
             telephone: '(+84) 817 701 604',
