@@ -20,7 +20,9 @@ const ProductHero: FC<Props> = ({ product, cl }) => {
 
   const imgRef = useRef<HTMLDivElement>();
 
-  const onWatch = () => {};
+  const onWatch = () => {
+    window && window.open(link);
+  };
 
   return (
     <MediaContextProvider>

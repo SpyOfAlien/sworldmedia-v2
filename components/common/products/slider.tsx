@@ -66,7 +66,9 @@ const ProductSlider: FC<Props> = ({ products, cl }) => {
     prevArrow: <PrevArrow />,
   };
 
-  const onWatch = () => {};
+  const onWatch = (link) => {
+    window && window.open(link);
+  };
   return (
     <MediaContextProvider>
       <div className={s.slideWrapper}>
@@ -113,7 +115,7 @@ const ProductSlider: FC<Props> = ({ products, cl }) => {
                       cl="sw-w-1/3 md:sw-w-1/4 sw-h-10"
                       text="Xem video"
                       type="gradient"
-                      onclick={onWatch}
+                      onclick={() => onWatch(product.link)}
                     />
                   </div>
                 </Container>
