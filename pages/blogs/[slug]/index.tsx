@@ -14,7 +14,7 @@ import Link from 'next/link';
 import { Media, MediaContextProvider } from '../../../lib/media';
 import { format } from 'date-fns';
 import { useTranslation } from 'react-i18next';
-import { ArticleJsonLd, BlogJsonLd } from 'next-seo';
+import { ArticleJsonLd, BlogJsonLd, NextSeo } from 'next-seo';
 import titleStyle from '../../../lib/utils/title-style';
 import { dateTime } from '../../../lib/utils/date-format';
 
@@ -36,6 +36,8 @@ const Post = ({ post, morePosts, preview, locale }) => {
   const isVN = router.locale === 'vn';
   const baseUrl = 'https://www.s-worldmedia.com';
 
+  console.log();
+
   const formatedDate = format(new Date(date), 'LLLL d, yyyy');
   const formattedTitle = titleStyle(isVN ? vnTitle : enTitle);
   const imgUrls = assets?.links?.assets?.block?.map((img) => img.url);
@@ -49,82 +51,25 @@ const Post = ({ post, morePosts, preview, locale }) => {
 
   return (
     <MediaContextProvider>
-      <Head>
-        <title>{formattedTitle}</title>
-        <meta charSet="utf-8" />
-        <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
-        {enSummary && (
-          <meta content={isVN ? vnSummary : enSummary} name="description" />
-        )}
-        {/* {keywords && <meta content={keywords} name="keywords" />} */}
-        <meta content="follow, index" name="robots" />
-        <meta content="#ffffff" name="theme-color" />
-        <meta content="#ffffff" name="msapplication-TileColor" />
-        <meta
-          content="/favicons/browserconfig.xml"
-          name="msapplication-config"
-        />
-        <link
-          href="/favicons/apple-touch-icon.png"
-          rel="apple-touch-icon"
-          sizes="180x180"
-        />
-        <link
-          href="/favicons/favicon-32x32.png"
-          rel="icon"
-          sizes="32x32"
-          type="image/png"
-        />
-        <link
-          href="/favicons/favicon-16x16.png"
-          rel="icon"
-          sizes="16x16"
-          type="image/png"
-        />
-        <link href="/favicons/site.webmanifest" rel="manifest" />
-        <link
-          color="#5bbad5"
-          href="/favicons/safari-pinned-tab.svg"
-          rel="mask-icon"
-        />
-        <link href="/favicons/favicon.ico" rel="shortcut icon" />
+      <NextSeo
+        title={formattedTitle}
+        description={isVN ? vnSummary : enSummary}
+        canonical={`${baseUrl}${router.asPath}`}
+        openGraph={{
+          type: 'article',
+          images: [
+            {
+              url: coverImage.url,
+              alt: formattedTitle,
+              width: coverImage.width,
+              height: coverImage.height,
+            },
+          ],
+          locale: router.locale,
+          url: `${baseUrl}${router.asPath}`,
+        }}
+      />
 
-        {/* <script defer src="https://gumroad.com/js/gumroad.js" /> */}
-        {baseUrl && (
-          <link href={`${baseUrl}${router.asPath}`} rel="canonical" />
-        )}
-        {isVN ? (
-          <meta content="vi_VN" property="og:locale" />
-        ) : (
-          <meta content="en_US" property="og:locale" />
-        )}
-        <meta content={formattedTitle} property="og:title" />
-        <meta
-          content={isVN ? vnSummary : enSummary}
-          property="og:description"
-        />
-        <meta content={baseUrl} property="og:url" />
-        {/* <meta content="5e41b2275db646a5" name="yandex-verification" /> */}
-        <meta
-          content="VedQ7X2rCk96g_FaXM-HEeZM2_fpvSuKj38NgEapuxw"
-          name="google-site-verification"
-        />
-        {coverImage && (
-          <>
-            <meta content={coverImage.url} property="og:image" />
-            <meta content={formattedTitle} property="og:image:alt" />
-          </>
-        )}
-        <>
-          <meta content="article" property="og:type" />
-          <meta content={dateTime(date)} property="article:published_time" />
-        </>
-        <meta name="fb:status" content={isVN ? vnTitle : enTitle} />
-        <meta content="summary_large_image" name="twitter:card" />
-        <meta content="@sworlmedia" name="twitter:site" />
-        <meta content="@sworlmedia" name="twitter:creator" />
-      </Head>
       <ArticleJsonLd
         url={`${baseUrl}${router.asPath}`}
         title={isVN ? vnTitle : enTitle}

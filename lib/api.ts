@@ -8,6 +8,10 @@ const POST_GRAPHQL_FIELDS = `
   enSummary: summary(locale: "en-US")
   coverImage {
     url
+    description
+    title
+    width
+    height
   }
   vnContent: content(locale: "vi-VN") {
     json
