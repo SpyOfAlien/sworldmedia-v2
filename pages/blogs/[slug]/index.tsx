@@ -116,12 +116,10 @@ const Post = ({ post, morePosts, preview, locale }) => {
             <meta content={formattedTitle} property="og:image:alt" />
           </>
         )}
-        {date && (
-          <>
-            <meta content="article" property="og:type" />
-            <meta content={dateTime(date)} property="article:published_time" />
-          </>
-        )}
+        <>
+          <meta content="article" property="og:type" />
+          <meta content={dateTime(date)} property="article:published_time" />
+        </>
         <meta name="fb:status" content={isVN ? vnTitle : enTitle}></meta>
         <meta content="summary_large_image" name="twitter:card" />
         <meta content="@sworlmedia" name="twitter:site" />
