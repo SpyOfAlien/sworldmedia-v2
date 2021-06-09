@@ -7,9 +7,9 @@ const SEO = {
     description: 'Truyền thông đa phương tiện thế hệ mới',
     images: [
       {
-        url: 'https://www.s-worldmedia.com/assets/images/others/logo.png',
-        width: 1200,
-        height: 630,
+        url: 'https://www.s-worldmedia.com/assets/images/others/brown-logo.png',
+        width: 1171,
+        height: 927,
         alt: 'S-worldmedia | Truyền thông đa phương tiện thế hệ mới',
       },
     ],

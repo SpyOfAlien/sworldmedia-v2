@@ -18,6 +18,7 @@ import { Media, MediaContextProvider } from '../lib/media';
 import VideoBackground from '../components/common/video/video-background';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 
 export const getStaticProps = async ({ locale, preview }) => {
   const allPosts = (await getAllPostsForHome(preview)) ?? [];

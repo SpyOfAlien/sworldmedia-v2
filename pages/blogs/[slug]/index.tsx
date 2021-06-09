@@ -67,7 +67,19 @@ const Post = ({ post, morePosts, preview, locale }) => {
           ],
           locale: router.locale,
           url: `${baseUrl}${router.asPath}`,
+          article: {
+            publishedTime: date,
+            modifiedTime: date,
+            authors: ['Sworlmedia'],
+            tags: router.locale === 'vn' ? vnTags : enTags,
+          },
         }}
+        additionalMetaTags={[
+          {
+            property: 'keywords',
+            content: router.locale === 'vn' ? vnTags : enTags,
+          },
+        ]}
       />
 
       <ArticleJsonLd
