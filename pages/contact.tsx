@@ -121,7 +121,7 @@ const ContactPage = ({ locale }) => {
             isVn ? 'Liên hệ với Sworldmedia' : 'Contact with Sworldmedia'
           }
         />
-        <meta name="homepage" content="true" />
+        <meta name="homepage" content="false" />
         <meta name="referrer" content="unsafe-url" />
         <meta name="referrer" content="always" />
         <meta property="og:type" content="website" />

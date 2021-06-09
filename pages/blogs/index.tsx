@@ -1,6 +1,6 @@
 import { BlockList } from 'net';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { Head } from 'next/document';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { FC, useEffect, useState } from 'react';
 import PostCard from '../../components/common/blog/card/post-card';

@@ -6,7 +6,7 @@ import Team from '../components/team/team';
 import Heading from '../components/ui/typo/heading';
 import Paragraph from '../components/ui/typo/paragraph';
 import { Media, MediaContextProvider } from '../lib/media';
-import { Head } from 'next/document';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
 
 export const getStaticProps = async ({ locale }) => {

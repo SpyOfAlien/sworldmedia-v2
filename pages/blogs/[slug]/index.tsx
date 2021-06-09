@@ -120,7 +120,7 @@ const Post = ({ post, morePosts, preview, locale }) => {
           <meta content="article" property="og:type" />
           <meta content={dateTime(date)} property="article:published_time" />
         </>
-        <meta name="fb:status" content={isVN ? vnTitle : enTitle}></meta>
+        <meta name="fb:status" content={isVN ? vnTitle : enTitle} />
         <meta content="summary_large_image" name="twitter:card" />
         <meta content="@sworlmedia" name="twitter:site" />
         <meta content="@sworlmedia" name="twitter:creator" />
