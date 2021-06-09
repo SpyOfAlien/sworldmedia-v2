@@ -15,6 +15,8 @@ import {
   enableBodyScroll,
   clearAllBodyScrollLocks,
 } from 'body-scroll-lock';
+import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 export const getStaticProps = async ({ locale }) => {
   return {
@@ -27,6 +29,8 @@ export const getStaticProps = async ({ locale }) => {
 const ServicePage = () => {
   const { t } = useTranslation('common');
   const { openSubModal, setSubModalView, displaySubModal } = useUI();
+  const router = useRouter();
+  const isVn = router.locale === 'vn';
 
   useEffect(() => {
     displaySubModal && window && window.innerWidth > 768
@@ -42,6 +46,47 @@ const ServicePage = () => {
 
   return (
     <MediaContextProvider>
+      <Head>
+        <title>{isVn ? 'Dịch vụ' : 'Services'}</title>
+        <link rel="canonical" href="https://www.s-worldmedia.com/services" />
+        <meta
+          name="description"
+          content={
+            isVn
+              ? 'Truyền thông thương hiệu - Xây dựng thương hiệu - Sản xuất - Sự kiện - Kết nối quốc tế'
+              : 'Brand Communication - Branding - Production - Online & Offline Events - International Relations'
+          }
+        />
+        <meta name="homepage" content="false" />
+        <meta name="referrer" content="unsafe-url" />
+        <meta name="referrer" content="always" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:description"
+          content={
+            isVn
+              ? 'Truyền thông thương hiệu - Xây dựng thương hiệu - Sản xuất - Sự kiện - Kết nối quốc tế'
+              : 'Brand Communication - Branding - Production - Online & Offline Events - International Relations'
+          }
+        />
+        <meta
+          property="og:title"
+          content={isVn ? 'Dịch vụ Sworldmedia' : 'Sworldmedia services'}
+        />
+        <meta property="og:url" content="https://www.s-worldmedia.com/about" />
+        <meta
+          name="twitter:description"
+          content={
+            isVn
+              ? 'Truyền thông thương hiệu - Xây dựng thương hiệu - Sản xuất - Sự kiện - Kết nối quốc tế'
+              : 'Brand Communication - Branding - Production - Online & Offline Events - International Relations'
+          }
+        />
+        <meta
+          name="twitter:title"
+          content={isVn ? 'Dịch vụ Sworldmedia' : 'Sworldmedia services'}
+        />
+      </Head>
       <div>
         {services.map((data, idx) => (
           <Container key={idx} cl="sw-flex md:sw-h-screen sw-items-center">

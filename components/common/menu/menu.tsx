@@ -33,7 +33,7 @@ const Menu: FC<Props> = () => {
             <Link href="/">
               <a className="sw-mb-md"> Trang chủ </a>
             </Link>
-            <Link href="/service">
+            <Link href="/services">
               <a className="sw-mb-md"> Dịch vụ </a>
             </Link>
             <Link href="/about">

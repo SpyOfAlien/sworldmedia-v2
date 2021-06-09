@@ -19,6 +19,8 @@ import { useTranslation } from 'react-i18next';
 import nextI18NextConfig from '../next-i18next.config.js';
 import { Media, MediaContextProvider } from '../lib/media';
 import VideoBackground from '../components/common/video/video-background';
+import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 export const getStaticProps = async ({ locale, preview }) => {
   const allPosts = (await getAllPostsForHome(preview)) ?? [];
@@ -34,6 +36,8 @@ const HomePage = ({ locales, allPosts }) => {
   // Context
   const { currentSection, onScrollUp, onScrollDown } = useSection();
   const [desktopView, setDesktopView] = useState(undefined);
+  const router = useRouter();
+  const isVn = router.locale === 'vn';
 
   const { t } = useTranslation('common');
 
@@ -58,6 +62,41 @@ const HomePage = ({ locales, allPosts }) => {
 
   return (
     <MediaContextProvider>
+      <Head>
+        <title>{isVn ? 'Trang chủ' : 'Home'}</title>
+        <link rel="canonical" href="https://www.s-worldmedia.com" />
+        <meta
+          name="description"
+          content={
+            isVn
+              ? 'Công ty truyền thông đa phương tiện thế hệ mới'
+              : 'S-world multimedia a new generation multimedia company'
+          }
+        />
+        <meta name="homepage" content="true" />
+        <meta name="referrer" content="unsafe-url" />
+        <meta name="referrer" content="always" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:description"
+          content={
+            isVn
+              ? 'Công ty truyền thông đa phương tiện thế hệ mới'
+              : 'S-world multimedia a new generation multimedia company'
+          }
+        />
+        <meta property="og:title" content="Home - Sworldmedia" />
+        <meta property="og:url" content="https://www.s-worldmedia.com" />
+        <meta
+          name="twitter:description"
+          content={
+            isVn
+              ? 'Công ty truyền thông đa phương tiện thế hệ mới'
+              : 'S-world multimedia a new generation multimedia company'
+          }
+        />
+        <meta name="twitter:title" content="Home - Sworldmedia" />
+      </Head>
       <Media at="xs">
         <VideoBackground />
         <AboutUs data={aboutUsList} />

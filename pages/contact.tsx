@@ -20,6 +20,7 @@ import * as gtag from '../lib/gtag';
 import { useSection } from '../lib/context/section-context';
 import { useRouter } from 'next/router';
 import { CorporateContactJsonLd } from 'next-seo';
+import Head from 'next/head';
 
 export const getStaticProps = async ({ locale }) => {
   return {
@@ -34,6 +35,7 @@ const ContactPage = ({ locale }) => {
   const { openSubModal, setSubModalView, setConfirmData } = useUI();
   const { onSetSection } = useSection();
   const router = useRouter();
+  const isVn = router.locale === 'vn';
 
   // State
   const [name, setName] = useState('');
@@ -110,6 +112,38 @@ const ContactPage = ({ locale }) => {
 
   return (
     <MediaContextProvider>
+      <Head>
+        <title>{isVn ? 'Liên hệ' : 'Contact'}</title>
+        <link rel="canonical" href="https://www.s-worldmedia.com/contact" />
+        <meta
+          name="description"
+          content={
+            isVn ? 'Liên hệ với Sworldmedia' : 'Contact with Sworldmedia'
+          }
+        />
+        <meta name="homepage" content="true" />
+        <meta name="referrer" content="unsafe-url" />
+        <meta name="referrer" content="always" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:description"
+          content={
+            isVn ? 'Liên hệ với Sworldmedia' : 'Contact with Sworldmedia'
+          }
+        />
+        <meta property="og:title" content="Contact - Sworldmedia" />
+        <meta
+          property="og:url"
+          content="https://www.s-worldmedia.com/contact"
+        />
+        <meta
+          name="twitter:description"
+          content={
+            isVn ? 'Liên hệ với Sworldmedia' : 'Contact with Sworldmedia'
+          }
+        />
+        <meta name="twitter:title" content="Contact - Sworldmedia" />
+      </Head>
       <CorporateContactJsonLd
         url="https://www.s-worldmedia.com"
         logo="https://www.s-worldmedia.com/logo.png"

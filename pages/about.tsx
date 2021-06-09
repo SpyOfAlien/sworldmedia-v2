@@ -6,6 +6,8 @@ import Team from '../components/team/team';
 import Heading from '../components/ui/typo/heading';
 import Paragraph from '../components/ui/typo/paragraph';
 import { Media, MediaContextProvider } from '../lib/media';
+import { Head } from 'next/document';
+import { useRouter } from 'next/router';
 
 export const getStaticProps = async ({ locale }) => {
   return {
@@ -17,9 +19,52 @@ export const getStaticProps = async ({ locale }) => {
 
 const AboutUs = ({ locale }) => {
   const { t } = useTranslation('common');
+  const router = useRouter();
+  const isVn = router.locale === 'vn';
 
   return (
     <MediaContextProvider>
+      <Head>
+        <title>{isVn ? 'Đội ngũ' : 'Teams'}</title>
+        <link rel="canonical" href="https://www.s-worldmedia.com/about" />
+        <meta
+          name="description"
+          content={
+            isVn
+              ? 'S-World mong muốn nhân những giá trị kết nối và kiến tạo những giá trị mới khác biệt từ multimedia (đa phương tiện)'
+              : 'S-World hopes to connect and create new values from multimedia'
+          }
+        />
+        <meta name="homepage" content="false" />
+        <meta name="referrer" content="unsafe-url" />
+        <meta name="referrer" content="always" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:description"
+          content={
+            isVn
+              ? 'S-World mong muốn nhân những giá trị kết nối và kiến tạo những giá trị mới khác biệt từ multimedia (đa phương tiện)'
+              : 'S-World hopes to connect and create new values from multimedia'
+          }
+        />
+        <meta
+          property="og:title"
+          content={isVn ? 'Đội ngũ Sworldmedia' : 'Sworldmedia teams'}
+        />
+        <meta property="og:url" content="https://www.s-worldmedia.com/about" />
+        <meta
+          name="twitter:description"
+          content={
+            isVn
+              ? 'S-World mong muốn nhân những giá trị kết nối và kiến tạo những giá trị mới khác biệt từ multimedia (đa phương tiện)'
+              : 'S-World hopes to connect and create new values from multimedia'
+          }
+        />
+        <meta
+          name="twitter:title"
+          content={isVn ? 'Đội ngũ Sworldmedia' : 'Sworldmedia team'}
+        />
+      </Head>
       <Container cl="sw-my-header">
         <section className="sw-text-center sw-py-4">
           <Media greaterThanOrEqual="lg">
