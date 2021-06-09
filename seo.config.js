@@ -20,6 +20,9 @@ const SEO = {
     site: '@s-worldmedia',
     cardType: 'summary_large_image',
   },
+  facebook: {
+    appId: '2885511891672360',
+  },
 };
 
 export default SEO;

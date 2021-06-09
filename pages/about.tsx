@@ -32,21 +32,12 @@ const AboutUs = ({ locale }) => {
         <section className="sw-flex sw-flex-col-reverse sw-justify-between xl:sw-flex-row sw-my-8 xl:sw-my-32 2xl:sw-my-40">
           <div className="sw-w-full xl:sw-w-48">
             <div className="sw-mb-6">
-              <Heading cl="sw-mb-4" h="h5">
-                Giá trị kết nối khác biệt
-              </Heading>
               <Paragraph>{t('aboutus__story__content1')}</Paragraph>
             </div>
             <div className="sw-mb-6">
-              <Heading cl="sw-mb-4" h="h5">
-                Lan Tỏa
-              </Heading>
               <Paragraph>{t('aboutus__story__content2')}</Paragraph>
             </div>
             <div className="sw-mb-6">
-              <Heading cl="sw-mb-4" h="h5">
-                Cam kết
-              </Heading>
               <Paragraph>{t('aboutus__story__content3')}</Paragraph>
             </div>
           </div>
