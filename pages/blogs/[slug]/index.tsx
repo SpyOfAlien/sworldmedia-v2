@@ -18,7 +18,7 @@ import { ArticleJsonLd, BlogJsonLd } from 'next-seo';
 import titleStyle from '../../../lib/utils/title-style';
 import { dateTime } from '../../../lib/utils/date-format';
 
-export default function Post({ post, morePosts, preview, locale }) {
+const Post = ({ post, morePosts, preview, locale }) => {
   const {
     vnTitle,
     enTitle,
@@ -34,7 +34,7 @@ export default function Post({ post, morePosts, preview, locale }) {
   } = post;
   const router = useRouter();
   const isVN = router.locale === 'vn';
-  const baseUrl = 'https://www.s-worldmedia.com/blogs';
+  const baseUrl = 'https://www.s-worldmedia.com';
 
   const formatedDate = format(new Date(date), 'LLLL d, yyyy');
   const formattedTitle = titleStyle(isVN ? vnTitle : enTitle);
@@ -44,6 +44,8 @@ export default function Post({ post, morePosts, preview, locale }) {
   if (!router.isFallback && !post) {
     return <ErrorPage statusCode={404} />;
   }
+
+  console.log('cover', `${baseUrl}${router.asPath}`);
 
   return (
     <MediaContextProvider>
@@ -89,9 +91,14 @@ export default function Post({ post, morePosts, preview, locale }) {
         <link href="/favicons/favicon.ico" rel="shortcut icon" />
 
         {/* <script defer src="https://gumroad.com/js/gumroad.js" /> */}
-        {baseUrl && <link href={baseUrl} rel="canonical" />}
-        <meta content="en_US" property="og:locale" />
-        <meta content="vi_VN" property="og:locale" />
+        {baseUrl && (
+          <link href={`${baseUrl}${router.asPath}`} rel="canonical" />
+        )}
+        {isVN ? (
+          <meta content="vi_VN" property="og:locale" />
+        ) : (
+          <meta content="en_US" property="og:locale" />
+        )}
         <meta content={formattedTitle} property="og:title" />
         <meta
           content={isVN ? vnSummary : enSummary}
@@ -106,7 +113,7 @@ export default function Post({ post, morePosts, preview, locale }) {
         {coverImage && (
           <>
             <meta content={coverImage.url} property="og:image" />
-            <meta content={coverImage.url} property="og:image:alt" />
+            <meta content={formattedTitle} property="og:image:alt" />
           </>
         )}
         {date && (
@@ -115,20 +122,21 @@ export default function Post({ post, morePosts, preview, locale }) {
             <meta content={dateTime(date)} property="article:published_time" />
           </>
         )}
+        <meta name="fb:status" content={isVN ? vnTitle : enTitle}></meta>
         <meta content="summary_large_image" name="twitter:card" />
         <meta content="@sworlmedia" name="twitter:site" />
         <meta content="@sworlmedia" name="twitter:creator" />
       </Head>
       <ArticleJsonLd
-        url={`https://www.s-worldmedia.com${router.pathname}`}
-        title={router.locale === 'vn' ? vnTitle : enTitle}
+        url={`${baseUrl}${router.asPath}`}
+        title={isVN ? vnTitle : enTitle}
         images={imgUrls}
         datePublished={date}
         dateModified={date}
         authorName="S-worldmedia"
         publisherName="S-worldmedia"
         publisherLogo="https://www.s-worldmedia.com/assets/images/others/logo.png"
-        description={router.locale === 'vn' ? vnSummary : enSummary}
+        description={isVN ? vnSummary : enSummary}
       />
       <Container cl="sw-my-header">
         <div className="sw-py-4">
@@ -162,23 +170,17 @@ export default function Post({ post, morePosts, preview, locale }) {
           </div>
           <div className="xl:sw-absolute xl:sw-inset-0 sw-flex sw-justify-end sw-mt-12 xl:sw-mt-0  sw-flex-col xl:sw-px-12 xl:sw-py-8 sw-z-10">
             <Media greaterThanOrEqual="lg">
-              <Heading h="h3">
-                {router.locale === 'vn' ? vnTitle : enTitle}
-              </Heading>
+              <Heading h="h3">{isVN ? vnTitle : enTitle}</Heading>
             </Media>
             <Media between={['sm', 'lg']}>
-              <Heading h="h4">
-                {router.locale === 'vn' ? vnTitle : enTitle}
-              </Heading>
+              <Heading h="h4">{isVN ? vnTitle : enTitle}</Heading>
             </Media>
             <Media lessThan="sm">
-              <Heading h="h5">
-                {router.locale === 'vn' ? vnTitle : enTitle}
-              </Heading>
+              <Heading h="h5">{isVN ? vnTitle : enTitle}</Heading>
             </Media>
             <div className="sw-flex sw-justify-between sw-w-full">
               <div>
-                {router.locale === 'vn'
+                {isVN
                   ? vnTags.map((tag, idx) => (
                       <span
                         key={idx}
@@ -201,15 +203,14 @@ export default function Post({ post, morePosts, preview, locale }) {
           </div>
         </div>
         <div className="sw-mt-12 xl:sw-mt-24 xl:sw-w-1/2 xl:sw-mx-auto">
-          <PostContent
-            data={router.locale === 'vn' ? vnContent : enContent}
-            assets={assets}
-          />
+          <PostContent data={isVN ? vnContent : enContent} assets={assets} />
         </div>
       </Container>
     </MediaContextProvider>
   );
-}
+};
+
+export default Post;
 
 export async function getStaticProps({ locale, params, preview = false }) {
   const data = await getPostAndMorePosts(params.slug, preview, locale);
