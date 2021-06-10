@@ -9,7 +9,7 @@ import useInView from 'react-cool-inview';
 const Team = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  const baseURL = '/assets/svg/team';
+  const baseURL = '/assets/images/team';
   const graph = useAnimation();
   const human = useAnimation();
   const designerTable = useAnimation();
@@ -179,7 +179,7 @@ const Team = () => {
         >
           <div>
             <Image
-              src="/assets/images/team/MarketingBG.png"
+              src="/assets/images/team/marketing/bg.png"
               width={480}
               height={1080}
               quality={100}
@@ -197,17 +197,17 @@ const Team = () => {
             >
               <motion.div className={s.graph} animate={graph}>
                 <Image
-                  src={`${baseURL}/marketing/graph.svg`}
-                  width={100}
-                  height={100}
+                  src={`${baseURL}/marketing/graph.png`}
+                  width={1019}
+                  height={431}
                   layout="responsive"
                 />
               </motion.div>
               <motion.div className={s.human} animate={human}>
                 <Image
-                  src={`${baseURL}/marketing/human.svg`}
-                  width={100}
-                  height={100}
+                  src={`${baseURL}/marketing/human.png`}
+                  width={1084}
+                  height={586}
                   layout="responsive"
                 />
               </motion.div>
@@ -225,7 +225,7 @@ const Team = () => {
         >
           <div>
             <Image
-              src="/assets/images/team/editorBG.jpg"
+              src="/assets/images/team/editor/bg.png"
               width={480}
               height={1080}
               quality={100}
@@ -243,17 +243,17 @@ const Team = () => {
             >
               <motion.div className={s.editor} animate={editor}>
                 <Image
-                  src={`${baseURL}/editor/editor.svg`}
-                  width={100}
-                  height={100}
+                  src={`${baseURL}/editor/editor.png`}
+                  width={676}
+                  height={792}
                   layout="responsive"
                 />
               </motion.div>
               <motion.div className={s.pc} animate={pc}>
                 <Image
-                  src={`${baseURL}/editor/pc.svg`}
-                  width={100}
-                  height={100}
+                  src={`${baseURL}/editor/PC.png`}
+                  width={735}
+                  height={492}
                   layout="responsive"
                 />
               </motion.div>
@@ -271,7 +271,7 @@ const Team = () => {
         >
           <div>
             <Image
-              src="/assets/images/team/DesignerBG.png"
+              src="/assets/images/team/designer/bg.png"
               width={480}
               height={1080}
               quality={100}
@@ -297,7 +297,7 @@ const Team = () => {
               </motion.div>
               <motion.div className={s.design} animate={designer}>
                 <Image
-                  src={`${baseURL}/designer/designer.svg`}
+                  src={`${baseURL}/designer/designer.png`}
                   width={100}
                   height={100}
                   layout="responsive"
@@ -317,7 +317,7 @@ const Team = () => {
         >
           <div>
             <Image
-              src="/assets/images/team/ContentBG.png"
+              src="/assets/images/team/content/ContentBG.png"
               width={480}
               height={1080}
               quality={100}
@@ -336,25 +336,25 @@ const Team = () => {
             >
               <motion.div className={s.calendarOne} animate={calenderOne}>
                 <Image
-                  src={`${baseURL}/content/calendar.svg`}
-                  width={100}
-                  height={100}
+                  src={`${baseURL}/content/calendar.png`}
+                  width={80}
+                  height={80}
                   layout="responsive"
                 />
               </motion.div>
               <motion.div className={s.calendarTwo} animate={calenderTwo}>
                 <Image
-                  src={`${baseURL}/content/calendar_2.svg`}
-                  width={100}
-                  height={100}
+                  src={`${baseURL}/content/calendar_2.png`}
+                  width={80}
+                  height={80}
                   layout="responsive"
                 />
               </motion.div>
               <motion.div className={s.team} animate={team}>
                 <Image
-                  src={`${baseURL}/content/team.svg`}
-                  width={100}
-                  height={100}
+                  src={`${baseURL}/content/team.png`}
+                  width={80}
+                  height={80}
                   layout="responsive"
                 />
               </motion.div>
