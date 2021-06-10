@@ -43,7 +43,7 @@
   "home__service__brand_communication__kol__services2": "- Developing plans in accordance with the budget and target audience",
   "home__service__brand_communication__kol__services3": "- KOL booking",
 
-  "home__service__brand_communication__marketing": "- Marketing",
+  "home__service__brand_communication__marketing": " Marketing",
   "home__service__brand_communication__marketing__strength1": "- Deep knowledge of users/customers",
   "home__service__brand_communication__marketing__strength2": "- Having thorough strategy and understanding with sales and marketing platforms",
   "home__service__brand_communication__marketing__services1": "- Marketing Strategy Planning",
@@ -209,6 +209,10 @@
 
   "home__whyus__title": "Why us",
   "home__aboutus__title": "About us",
+  "home__aboutus__one": "Thorough and experienced editorial team",
+  "home__aboutus__two": "Brand strategy orientation for sustainable development",
+  "home__aboutus__three": "Professional production quality",
+  "home__aboutus__four": "In-depth and methodical consulting",
 
   "Success": "Success",
   "Failed": "Failed",
@@ -246,6 +250,12 @@
   "aboutus__ceo__content2": "With 10 years of experience in working in the field of media and press and 8 years in external communication, S-world founder has got the opportunities to work in 20 countries around the world, especially in the US.",
   "aboutus__ceo__content3": "As Former Director of the Southern Branch of VTC10-NETVIET, a TV channel on culture and foreign affairs, Soan Dang has joined hands with her co-workers to conduct many programs to popularize the startup movement and inspire startup founders. Notably, Soan was Executive Director of the International Conference on Entrepreneurship: “Connecting and promoting resources for Vietnamese Startups to reach out to the world.",
   "aboutus__ceo__content4": "She is also a close partner of many ministries, departments and localities, especially the Ministry of Information and Communications and the State Committee for Overseas Vietnamese Affairs.",
+
+  "aboutus__inspirational_advisor": "Inspirational Advisor",
+  "aboutus__organizational_advisor": "Organizational advisor",
+  "aboutus__entrepreneurial_advisor": "Entrepreneurial advisor",
+
+  "aboutus__advisor": "Our advisors",
 
   "blog__goback": "Go back to news"
 }

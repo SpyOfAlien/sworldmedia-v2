@@ -3,11 +3,12 @@ import cn from 'classnames';
 import s from './input.module.scss';
 
 interface Props {
-  placeholder: string;
-  label: string;
+  placeholder?: string;
+  label?: string;
   cl?: string;
   rows?: number;
-  onChange: (data) => void;
+  onChange?: (data) => void;
+  value?: string;
 }
 
 const Tetxarea: FC<Props> = ({
@@ -16,6 +17,7 @@ const Tetxarea: FC<Props> = ({
   cl,
   rows = 6,
   onChange,
+  value,
 }) => {
   const handleOnChange = (event) => {
     onChange(event.target.value);
@@ -42,6 +44,7 @@ const Tetxarea: FC<Props> = ({
         autoCapitalize="off"
         spellCheck="false"
         rows={rows}
+        value={value}
       />
     </div>
   );

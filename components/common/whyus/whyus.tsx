@@ -40,7 +40,7 @@ const WhyUs: FC<Props> = ({ data, cl }) => {
           key={idx}
           className="sw-flex sw-justify-center sw-items-center sw-my-12 md:sw-my-0"
         >
-          <Medium icon={item.icon} content={item.content} />
+          <Medium icon={item.icon} content={t(item.content)} />
         </div>
       ))}
     </div>

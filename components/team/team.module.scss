@@ -90,6 +90,25 @@
   left: 15%;
 }
 
+// ADVISOR
+.advisorGrid {
+}
+
+.globe {
+}
+.advisorOne {
+}
+.advisorTwo {
+}
+.advisorThree {
+}
+.advisorFour {
+}
+.advisorFive {
+}
+.advisorSix {
+}
+
 // @media screen and (min-width: 768px) {
 //   .root {
 //     grid-template-rows: repeat(2, 50%);
@@ -97,9 +116,16 @@
 //   }
 // }
 
-// @media screen and (min-width: 1280px) {
-//   .root {
-//     grid-template-columns: repeat(4, 25%);
-//     grid-template-rows: repeat(1, 100%);
-//   }
-// }
+@media screen and (min-width: 1280px) {
+  .item-0,
+  .item-1,
+  .item-2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item-0,
+  .item-2 {
+    justify-content: flex-end;
+  }
+}

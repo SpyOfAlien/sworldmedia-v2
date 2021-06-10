@@ -3,8 +3,8 @@ import cn from 'classnames';
 import s from './input.module.scss';
 
 interface Props {
-  placeholder: string;
-  label: string;
+  placeholder?: string;
+  label?: string;
   cl?: string;
   onChange: (data) => void;
 }

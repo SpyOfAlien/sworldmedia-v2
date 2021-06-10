@@ -8,6 +8,7 @@ import Paragraph from '../components/ui/typo/paragraph';
 import { Media, MediaContextProvider } from '../lib/media';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import Advisor from '../components/team/advisor';
 
 export const getStaticProps = async ({ locale }) => {
   return {
@@ -98,6 +99,9 @@ const AboutUs = ({ locale }) => {
             </div>
           </div>
         </section>
+        <section className="sw-flex sw-flex-col-reverse sw-justify-between xl:sw-flex-row sw-my-8 xl:sw-my-32 2xl:sw-my-40">
+          <Advisor />
+        </section>
         <section className="sw-flex sw-flex-col xl:sw-flex-row sw-justify-between sw-my-8 xl:sw-my-32 2xl:sw-my-40">
           <div className="sw-w-full xl:sw-w-48">
             <Image
@@ -125,54 +129,6 @@ const AboutUs = ({ locale }) => {
         </section>
         <section className="sw-my-24 xl:sw-my-56 2xl:sw-my-44">
           <Team />
-        </section>
-        <section className="sw-flex sw-flex-col-reverse sw-justify-between xl:sw-flex-row sw-my-8 xl:sw-my-32 2xl:sw-my-40">
-          <div className="sw-w-full xl:sw-w-48">
-            <div className="sw-mb-6">
-              <Heading cl="sw-mb-4" h="h5">
-                Giá trị kết nối khác biệt
-              </Heading>
-              <Paragraph>
-                Khiêm tốn đặt bước chân lên bản đồ truyền thông Việt Nam và khát
-                vọng xa hơn là thế giới, S-World mong muốn nhân những giá trị
-                kết nối và kiến tạo những giá trị mới khác biệt từ multimedia
-                (đa phương tiện).
-              </Paragraph>
-            </div>
-            <div className="sw-mb-6">
-              <Heading cl="sw-mb-4" h="h5">
-                Lan Tỏa
-              </Heading>
-              <Paragraph>
-                Chúng tôi luôn sẵn sàng mang những ý tưởng, dự án, sản phẩm,
-                thương hiệu của bạn lan tỏa. Không chỉ với lượng mà còn là chất
-                riêng; không chỉ cho hiện tại mà còn tùy tương lai bền vững.
-                Bằng sự cầu toàn và tràn đầy khát vọng như hình ảnh một chú ngựa
-                phi nước đại, sẵn sàng tiến vào một thế giới rộng lớn còn ẩn
-                chứa vô số điều kỳ diệu để khám phá.
-              </Paragraph>
-            </div>
-            <div className="sw-mb-6">
-              <Heading cl="sw-mb-4" h="h5">
-                Cam kết
-              </Heading>
-              <Paragraph>
-                S-World sẽ luôn đến với bạn bằng trái tim chân thành, nhiệt
-                huyết, bền bỉ và sáng tạo trên con đường bước tới tương lai.
-              </Paragraph>
-            </div>
-          </div>
-          <div className="sw-w-full xl:sw-w-48 sw-mb-12 xl:sw-mb-0 sw-flex sw-items-center">
-            <div className="sw-w-full">
-              <Image
-                src="/assets/svg/team.svg"
-                width={774}
-                height={492}
-                layout="responsive"
-                quality={100}
-              />
-            </div>
-          </div>
         </section>
       </Container>
     </MediaContextProvider>

@@ -2,19 +2,19 @@ const baseUrl = '/assets/svg/';
 
 const whyUsList = [
   {
-    content: 'Đội ngũ biên tập toàn diện, giàu kinh nghiệm',
+    content: 'home__aboutus__one',
     icon: `${baseUrl}people.svg`,
   },
   {
-    content: 'Chất lượng sản xuất chuyên nghiệp',
+    content: 'home__aboutus__two',
     icon: `${baseUrl}quality.svg`,
   },
   {
-    content: `Định hướng chiến lược thương hiệu phát triển bền vững`,
+    content: `home__aboutus__three`,
     icon: `${baseUrl}strategy.svg`,
   },
   {
-    content: `Tư vấn chuyên sâu và bài bản`,
+    content: `home__aboutus__four`,
     icon: `${baseUrl}advisory.svg`,
   },
 ];

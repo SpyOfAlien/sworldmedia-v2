@@ -120,6 +120,7 @@ const Post = ({ post, morePosts, preview, locale }) => {
               layout="responsive"
               width={1500}
               height={783}
+              className="sw-rounded-xl"
             />
             <div className="sw-absolute sw-inset-0 sw-bg-hero"></div>
           </div>
