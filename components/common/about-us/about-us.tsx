@@ -28,19 +28,6 @@ const AboutUs: FC<Props> = ({ data, cl }) => {
         cl
       )}
     >
-      <NextSeo
-        title={
-          router.locale === 'vn'
-            ? 'S-worldmedia | thành viên'
-            : 'S-worldmedia | team '
-        }
-        description={
-          router.locale === 'vn'
-            ? 'Chân thành – Thấu hiểu – Bền bỉ – Sáng tạo – Khác biệt'
-            : 'Sincerity - Understanding - Perseverance - Creativity - Distinctiveness'
-        }
-        canonical="https://www.s-worldmedia.com/about"
-      />
       <div
         className={cn(
           'sw-col-start-1 sw-col-end-2 md:sw-col-start-2 sw-flex sw-flex-col sw-justify-center sw-items-center',
