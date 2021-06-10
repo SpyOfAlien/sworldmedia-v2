@@ -19,7 +19,7 @@ import Link from 'next/link';
 import * as gtag from '../lib/gtag';
 import { useSection } from '../lib/context/section-context';
 import { useRouter } from 'next/router';
-import { CorporateContactJsonLd } from 'next-seo';
+import { CorporateContactJsonLd, NextSeo } from 'next-seo';
 import Head from 'next/head';
 
 export const getStaticProps = async ({ locale }) => {
@@ -112,38 +112,22 @@ const ContactPage = ({ locale }) => {
 
   return (
     <MediaContextProvider>
-      <Head>
-        <title>{isVn ? 'Liên hệ' : 'Contact'}</title>
-        <link rel="canonical" href="https://www.s-worldmedia.com/contact" />
-        <meta
-          name="description"
-          content={
-            isVn ? 'Liên hệ với Sworldmedia' : 'Contact with Sworldmedia'
-          }
-        />
-        <meta name="homepage" content="false" />
-        <meta name="referrer" content="unsafe-url" />
-        <meta name="referrer" content="always" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:description"
-          content={
-            isVn ? 'Liên hệ với Sworldmedia' : 'Contact with Sworldmedia'
-          }
-        />
-        <meta property="og:title" content="Contact - Sworldmedia" />
-        <meta
-          property="og:url"
-          content="https://www.s-worldmedia.com/contact"
-        />
-        <meta
-          name="twitter:description"
-          content={
-            isVn ? 'Liên hệ với Sworldmedia' : 'Contact with Sworldmedia'
-          }
-        />
-        <meta name="twitter:title" content="Contact - Sworldmedia" />
-      </Head>
+      <NextSeo
+        title={isVn ? 'Liên hệ' : 'Contact'}
+        description={
+          isVn ? 'Liên hệ với Sworldmedia' : 'Contact with Sworldmedia'
+        }
+        canonical="https://www.s-worldmedia.com/contact"
+        openGraph={{
+          type: 'website',
+          url: 'https://www.s-worldmedia.com/contact',
+          title: isVn ? 'Liên hệ' : 'Contact',
+          description: isVn
+            ? 'Liên hệ với Sworldmedia'
+            : 'Contact with Sworldmedia',
+        }}
+      />
+
       <CorporateContactJsonLd
         url="https://www.s-worldmedia.com"
         logo="https://www.s-worldmedia.com/logo.png"

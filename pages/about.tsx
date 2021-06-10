@@ -9,6 +9,7 @@ import { Media, MediaContextProvider } from '../lib/media';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Advisor from '../components/team/advisor';
+import { NextSeo } from 'next-seo';
 
 export const getStaticProps = async ({ locale }) => {
   return {
@@ -25,21 +26,28 @@ const AboutUs = ({ locale }) => {
 
   return (
     <MediaContextProvider>
+      <NextSeo
+        title={router.locale === 'vn' ? 'Đội ngũ' : 'Team'}
+        description={
+          router.locale === 'vn'
+            ? 'Chân thành – Thấu hiểu – Bền bỉ – Sáng tạo – Khác biệt'
+            : 'Sincerity - Understanding - Perseverance - Creativity - Distinctiveness'
+        }
+        canonical="https://www.s-worldmedia.com/about"
+        openGraph={{
+          type: 'website',
+          url: 'https://www.s-worldmedia.com/about',
+          title: router.locale === 'vn' ? 'Đội ngũ' : 'Team',
+          description:
+            router.locale === 'vn'
+              ? 'Chân thành – Thấu hiểu – Bền bỉ – Sáng tạo – Khác biệt'
+              : 'Sincerity - Understanding - Perseverance - Creativity - Distinctiveness',
+        }}
+      />
       <Head>
-        <title>{isVn ? 'Đội ngũ' : 'Teams'}</title>
-        <link rel="canonical" href="https://www.s-worldmedia.com/about" />
-        <meta
-          name="description"
-          content={
-            isVn
-              ? 'S-World mong muốn nhân những giá trị kết nối và kiến tạo những giá trị mới khác biệt từ multimedia (đa phương tiện)'
-              : 'S-World hopes to connect and create new values from multimedia'
-          }
-        />
         <meta name="homepage" content="false" />
         <meta name="referrer" content="unsafe-url" />
         <meta name="referrer" content="always" />
-        <meta property="og:type" content="website" />
         <meta
           property="og:description"
           content={

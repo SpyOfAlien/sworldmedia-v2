@@ -60,41 +60,31 @@ const HomePage = ({ locales, allPosts }) => {
 
   return (
     <MediaContextProvider>
-      <Head>
-        <title>{isVn ? 'Trang chủ' : 'Home'}</title>
-        <link rel="canonical" href="https://www.s-worldmedia.com" />
-        <meta
-          name="description"
-          content={
-            isVn
-              ? 'Công ty truyền thông đa phương tiện thế hệ mới'
-              : 'S-world multimedia a new generation multimedia company'
-          }
-        />
-        <meta name="homepage" content="true" />
-        <meta name="referrer" content="unsafe-url" />
-        <meta name="referrer" content="always" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:description"
-          content={
-            isVn
-              ? 'Công ty truyền thông đa phương tiện thế hệ mới'
-              : 'S-world multimedia a new generation multimedia company'
-          }
-        />
-        <meta property="og:title" content="Home - Sworldmedia" />
-        <meta property="og:url" content="https://www.s-worldmedia.com" />
-        <meta
-          name="twitter:description"
-          content={
-            isVn
-              ? 'Công ty truyền thông đa phương tiện thế hệ mới'
-              : 'S-world multimedia a new generation multimedia company'
-          }
-        />
-        <meta name="twitter:title" content="Home - Sworldmedia" />
-      </Head>
+      <NextSeo
+        title={
+          router.locale === 'vn'
+            ? 'S-worldmedia | Truyền thông đa phương tiện thế hệ mới'
+            : 'S-worldmedia | S-world multimedia a new generation multimedia company'
+        }
+        description={
+          router.locale === 'vn'
+            ? 'Chân thành – Thấu hiểu – Bền bỉ – Sáng tạo – Khác biệt'
+            : 'Sincerity - Understanding - Perseverance - Creativity - Distinctiveness'
+        }
+        canonical="https://www.s-worldmedia.com"
+        openGraph={{
+          type: 'website',
+          url: 'https://www.s-worldmedia.com',
+          title:
+            router.locale === 'vn'
+              ? 'S-worldmedia | Truyền thông đa phương tiện thế hệ mới'
+              : 'S-worldmedia | S-world multimedia a new generation multimedia company',
+          description:
+            router.locale === 'vn'
+              ? 'Chân thành – Thấu hiểu – Bền bỉ – Sáng tạo – Khác biệt'
+              : 'Sincerity - Understanding - Perseverance - Creativity - Distinctiveness',
+        }}
+      />
       <Media at="xs">
         <VideoBackground />
         <AboutUs data={aboutUsList} />

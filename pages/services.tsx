@@ -17,6 +17,7 @@ import {
 } from 'body-scroll-lock';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 
 export const getStaticProps = async ({ locale }) => {
   return {
@@ -46,47 +47,24 @@ const ServicePage = () => {
 
   return (
     <MediaContextProvider>
-      <Head>
-        <title>{isVn ? 'Dịch vụ' : 'Services'}</title>
-        <link rel="canonical" href="https://www.s-worldmedia.com/services" />
-        <meta
-          name="description"
-          content={
-            isVn
-              ? 'Truyền thông thương hiệu - Xây dựng thương hiệu - Sản xuất - Sự kiện - Kết nối quốc tế'
-              : 'Brand Communication - Branding - Production - Online & Offline Events - International Relations'
-          }
-        />
-        <meta name="homepage" content="false" />
-        <meta name="referrer" content="unsafe-url" />
-        <meta name="referrer" content="always" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:description"
-          content={
-            isVn
-              ? 'Truyền thông thương hiệu - Xây dựng thương hiệu - Sản xuất - Sự kiện - Kết nối quốc tế'
-              : 'Brand Communication - Branding - Production - Online & Offline Events - International Relations'
-          }
-        />
-        <meta
-          property="og:title"
-          content={isVn ? 'Dịch vụ Sworldmedia' : 'Sworldmedia services'}
-        />
-        <meta property="og:url" content="https://www.s-worldmedia.com/about" />
-        <meta
-          name="twitter:description"
-          content={
-            isVn
-              ? 'Truyền thông thương hiệu - Xây dựng thương hiệu - Sản xuất - Sự kiện - Kết nối quốc tế'
-              : 'Brand Communication - Branding - Production - Online & Offline Events - International Relations'
-          }
-        />
-        <meta
-          name="twitter:title"
-          content={isVn ? 'Dịch vụ Sworldmedia' : 'Sworldmedia services'}
-        />
-      </Head>
+      <NextSeo
+        title={isVn ? 'Dịch vụ' : 'Services'}
+        description={
+          isVn
+            ? 'Truyền thông thương hiệu - Xây dựng thương hiệu - Sản xuất - Sự kiện - Kết nối quốc tế'
+            : 'Brand Communication - Branding - Production - Online & Offline Events - International Relations'
+        }
+        canonical="https://www.s-worldmedia.com/services"
+        openGraph={{
+          type: 'website',
+          url: 'https://www.s-worldmedia.com/services',
+          title: isVn ? 'Dịch vụ' : 'Services',
+          description: isVn
+            ? 'Truyền thông thương hiệu - Xây dựng thương hiệu - Sản xuất - Sự kiện - Kết nối quốc tế'
+            : 'Brand Communication - Branding - Production - Online & Offline Events - International Relations',
+        }}
+      />
+
       <div>
         {services.map((data, idx) => (
           <Container key={idx} cl="sw-flex md:sw-h-screen sw-items-center">
