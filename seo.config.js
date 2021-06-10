@@ -1,6 +1,4 @@
 const SEO = {
-  title: 'S-worldmedia | Truyền thông đa phương tiện thế hệ mới',
-  description: 'Truyền thông đa phương tiện thế hệ mới',
   openGraph: {
     images: [
       {
