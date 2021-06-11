@@ -30,21 +30,23 @@ const Menu: FC<Props> = () => {
         <Container cl="sw-flex">
           {/* Navigation */}
           <div className="sw-flex sw-flex-col sw-w-full sw-items-center sw-h-screen sw-justify-center sw-text-h5 md:sw-text-h4 lg:sw-text-h2 xl:sw-items-start sw-text-gradient 3xl:sw-text-h1 sw-font-bold xl:sw-w-1/2 sw-z-10">
-            <Link href="/">
-              <a className="sw-mb-md"> Trang chủ </a>
-            </Link>
-            <Link href="/services">
-              <a className="sw-mb-md"> Dịch vụ </a>
-            </Link>
-            <Link href="/about">
-              <a className="sw-mb-md"> Về chúng tôi </a>
-            </Link>
-            <Link href="/blogs">
-              <a className="sw-mb-md"> Tin tức </a>
-            </Link>
-            <Link href="/contact">
-              <a className="sw-mb-md"> Liên hệ </a>
-            </Link>
+            <div className="sw-mb-md md:sw-mb-0 sw-flex sw-flex-col sw-items-center">
+              <Link href="/">
+                <a className="sw-mb-sm md:sw-mb-md"> Trang chủ </a>
+              </Link>
+              <Link href="/services">
+                <a className="sw-mb-sm md:sw-mb-md"> Dịch vụ </a>
+              </Link>
+              <Link href="/about">
+                <a className="sw-mb-sm md:sw-mb-md"> Về chúng tôi </a>
+              </Link>
+              <Link href="/blogs">
+                <a className="sw-mb-sm md:sw-mb-md"> Tin tức </a>
+              </Link>
+              <Link href="/contact">
+                <a className="sw-mb-sm md:sw-mb-md"> Liên hệ </a>
+              </Link>
+            </div>
           </div>
 
           {isDesktopOrLaptop ? null : (
@@ -54,17 +56,29 @@ const Menu: FC<Props> = () => {
                 <div className="sw-flex sw-w-full sw-justify-center sw-my-sm">
                   <Link href="https://www.facebook.com/sworldmultimedia">
                     <a>
-                      <Facebook style={{ marginRight: '40px' }} />
+                      <Facebook
+                        width="28px"
+                        height="28px"
+                        style={{ margin: '0 20px' }}
+                      />
                     </a>
                   </Link>
                   <Link href="https://www.linkedin.com/company/s-worldmultimedia">
                     <a>
-                      <Linkedin style={{ marginRight: '40px' }} />
+                      <Linkedin
+                        width="28px"
+                        height="28px"
+                        style={{ margin: '0 20px' }}
+                      />
                     </a>
                   </Link>
                   <Link href="https://www.youtube.com/channel/UCzod695AmgnnUeKSSUZ-t1A">
                     <a>
-                      <Youtube style={{ marginRight: '40px' }} />
+                      <Youtube
+                        width="28px"
+                        height="28px"
+                        style={{ margin: '0 20px' }}
+                      />
                     </a>
                   </Link>
                 </div>
