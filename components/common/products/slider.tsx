@@ -84,7 +84,7 @@ const ProductSlider: FC<Props> = ({ products, cl }) => {
                       s.overrideContainer
                     )}
                   >
-                    <div className="sw-my-sm">
+                    <div className={cn('sw-my-sm', s.title)}>
                       <Media lessThan="sm">
                         <Heading cl="sw-text-gradient" h="h6">
                           {t(product.title)}

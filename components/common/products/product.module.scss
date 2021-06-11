@@ -33,6 +33,15 @@
   display: flex;
 }
 
+.title {
+  h3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}
+
 @media screen and (min-width: 400px) {
   .content {
     height: 25vh;
