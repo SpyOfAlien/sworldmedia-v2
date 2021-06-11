@@ -7,7 +7,7 @@
 .graphicDesign,
 .content,
 .marketing {
-  padding: 12px;
+  padding: 2px;
   cursor: pointer;
   position: relative;
 }
@@ -29,7 +29,7 @@
 .team {
   position: absolute;
   width: 65%;
-  padding: 24px;
+  padding: 10px;
 
   left: 25%;
 }
@@ -128,5 +128,32 @@
   .item-0,
   .item-2 {
     justify-content: flex-end;
+  }
+
+  .videoEditor,
+  .graphicDesign,
+  .content,
+  .marketing {
+    padding: 12px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .caiDu,
+  .rocket,
+  .graph,
+  .human,
+  .globeOne,
+  .globeTwo,
+  .globeThree,
+  .globeFour,
+  .designTable,
+  .design,
+  .editor,
+  .pc,
+  .calendarOne,
+  .calendarTwo,
+  .team {
+    padding: 24px;
   }
 }

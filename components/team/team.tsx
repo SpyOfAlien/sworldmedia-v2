@@ -287,14 +287,14 @@ const Team = () => {
               animate={svgThreeControl}
               className="sw-relative sw-w-full sw-h-full"
             >
-              <motion.div className={s.designTable} animate={designerTable}>
+              {/* <motion.div className={s.designTable} animate={designerTable}>
                 <Image
                   src={`${baseURL}/designer/designer_table.svg`}
                   width={100}
                   height={100}
                   layout="responsive"
                 />
-              </motion.div>
+              </motion.div> */}
               <motion.div className={s.design} animate={designer}>
                 <Image
                   src={`${baseURL}/designer/designer.png`}
