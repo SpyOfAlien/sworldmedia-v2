@@ -3,7 +3,7 @@
 }
 
 .content {
-  height: 180px;
+  height: 20vh;
   @apply sw-overflow-y-scroll sw-pr-4;
 }
 
@@ -35,7 +35,7 @@
 
 @media screen and (min-width: 400px) {
   .content {
-    height: 200px;
+    height: 25vh;
   }
 }
 
@@ -54,7 +54,7 @@
 
 @media screen and (min-width: 1024px) {
   .content {
-    height: 200px;
+    height: 25vh;
   }
 
   .overrideContainer {

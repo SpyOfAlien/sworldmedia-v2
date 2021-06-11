@@ -46,10 +46,6 @@ const Post = ({ post, morePosts, preview, locale }) => {
     return <ErrorPage statusCode={404} />;
   }
 
-  console.log('cover', imgUrls);
-  console.log('vn', vnContent);
-  console.log('en', enContent);
-
   return (
     <MediaContextProvider>
       <NextSeo

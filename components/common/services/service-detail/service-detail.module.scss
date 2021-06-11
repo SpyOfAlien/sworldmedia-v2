@@ -7,7 +7,7 @@
 .box {
   height: 11rem;
   border-radius: 8px;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 @screen md {
@@ -34,5 +34,6 @@
 @media screen and (min-width: 1920px) {
   .box {
     height: 13rem;
+    padding: 2rem;
   }
 }

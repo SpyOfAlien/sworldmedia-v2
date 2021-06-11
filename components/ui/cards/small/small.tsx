@@ -25,7 +25,7 @@ const SmallCard: FC<Props> = ({ cl, icon, content, onClick }) => {
         )}
         onClick={onClick}
       >
-        <Media lessThan="md">
+        <Media lessThan="xl">
           <div className="xl:sw-mx-xsm sw-mb-8 md:sw-mb-0">
             <Image
               src={icon}
@@ -36,7 +36,7 @@ const SmallCard: FC<Props> = ({ cl, icon, content, onClick }) => {
           </div>
         </Media>
 
-        <Media between={['md', 'xl']}>
+        <Media at="xl">
           <div className="xl:sw-mx-xsm sw-mb-0">
             <Image
               src={icon}
@@ -47,32 +47,40 @@ const SmallCard: FC<Props> = ({ cl, icon, content, onClick }) => {
           </div>
         </Media>
 
-        <Media greaterThanOrEqual="xl">
+        <Media greaterThan="xl">
           <div className="xl:sw-mx-xsm">
             <Image
               src={icon}
-              width={120}
-              height={120}
+              width={100}
+              height={100}
               alt="Brand communication"
             />
           </div>
         </Media>
 
-        <Media lessThan="md">
+        <Media lessThan="xl">
           <Heading h="h6">{content}</Heading>
         </Media>
 
-        <Media greaterThanOrEqual="md">
+        <Media at="xl">
+          <Heading h="h5">{content}</Heading>
+        </Media>
+
+        <Media greaterThan="xl">
           <Heading h="h5">{content}</Heading>
         </Media>
 
         <div className={cn('sw-mx-xsm sw-absolute', s.arrow)}>
-          <Media lessThan="md">
+          <Media lessThan="xl">
+            <Arrow width="25px" height="25px" />
+          </Media>
+
+          <Media at="xl">
             <Arrow width="30px" height="30px" />
           </Media>
 
-          <Media greaterThanOrEqual="md">
-            <Arrow />
+          <Media greaterThan="xl">
+            <Arrow width="35px" height="35px" />
           </Media>
         </div>
       </div>
