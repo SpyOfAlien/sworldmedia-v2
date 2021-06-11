@@ -184,7 +184,7 @@ const PostContent: FC<Props> = ({ cl, data, assets }) => {
     <section className={cn(cl)}>
       {documentToReactComponents(
         data.json,
-        getRichTextRenderOptions(assets.links, {})
+        getRichTextRenderOptions(assets, {})
       )}
     </section>
   );

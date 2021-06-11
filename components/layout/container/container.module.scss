@@ -35,3 +35,8 @@
 .padding {
   @apply sw-py-header;
 }
+
+.smallPadding {
+  padding-top: 75px !important;
+  padding-bottom: 0 !important;
+}

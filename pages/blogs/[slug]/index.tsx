@@ -28,7 +28,6 @@ const Post = ({ post, morePosts, preview, locale }) => {
     date,
     enTags,
     vnTags,
-    assets,
     vnSummary,
     enSummary,
   } = post;
@@ -36,18 +35,20 @@ const Post = ({ post, morePosts, preview, locale }) => {
   const isVN = router.locale === 'vn';
   const baseUrl = 'https://www.s-worldmedia.com';
 
-  console.log();
-
   const formatedDate = format(new Date(date), 'LLLL d, yyyy');
   const formattedTitle = titleStyle(isVN ? vnTitle : enTitle);
-  const imgUrls = assets?.links?.assets?.block?.map((img) => img.url);
+  const imgUrls = isVN
+    ? vnContent?.links?.assets?.block?.map((img) => img.url)
+    : enContent?.links?.assets?.block?.map((img) => img.url);
   const { t } = useTranslation('common');
 
   if (!router.isFallback && !post) {
     return <ErrorPage statusCode={404} />;
   }
 
-  console.log('cover', `${baseUrl}${router.asPath}`);
+  console.log('cover', imgUrls);
+  console.log('vn', vnContent);
+  console.log('en', enContent);
 
   return (
     <MediaContextProvider>
@@ -159,7 +160,10 @@ const Post = ({ post, morePosts, preview, locale }) => {
           </div>
         </div>
         <div className="sw-mt-12 xl:sw-mt-24 xl:sw-w-1/2 xl:sw-mx-auto">
-          <PostContent data={isVN ? vnContent : enContent} assets={assets} />
+          <PostContent
+            data={isVN ? vnContent : enContent}
+            assets={isVN ? vnContent.links : enContent.links}
+          />
         </div>
       </Container>
     </MediaContextProvider>

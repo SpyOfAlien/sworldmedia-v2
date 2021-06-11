@@ -121,7 +121,7 @@ const HomePage = ({ locales, allPosts }) => {
             <VideoBackground />
           </HomeContainer>
 
-          <HomeContainer isVisible={currentSection === 2}>
+          <HomeContainer smallPadding={true} isVisible={currentSection === 2}>
             <AboutUs data={aboutUsList} />
           </HomeContainer>
 
@@ -148,7 +148,7 @@ const HomePage = ({ locales, allPosts }) => {
           >
             <ProductSlider products={Products} />
           </HomeContainer>
-          <HomeContainer isVisible={currentSection === 7}>
+          <HomeContainer hasPadding={false} isVisible={currentSection === 7}>
             <WhyUs data={whyUsList} />
           </HomeContainer>
         </ReactScrollWheelHandler>

@@ -9,6 +9,7 @@ interface Props {
   isFullpage?: boolean;
   isVisible?: boolean;
   hasPadding?: boolean;
+  smallPadding?: boolean;
 }
 
 const HomeContainer: FC<Props> = ({
@@ -17,6 +18,7 @@ const HomeContainer: FC<Props> = ({
   isFullpage = false,
   hasPadding = true,
   isVisible,
+  smallPadding = false,
 }) => {
   const variants = {
     initial: {
@@ -42,7 +44,11 @@ const HomeContainer: FC<Props> = ({
           variants={variants}
           className={cn(
             'md:sw-absolute md:sw-inset-0  sw-mt-16 md:sw-mt-0',
-            { [s.container]: !isFullpage, [s.padding]: hasPadding },
+            {
+              [s.container]: !isFullpage,
+              [s.padding]: hasPadding,
+              [s.smallPadding]: smallPadding,
+            },
             cl
           )}
         >

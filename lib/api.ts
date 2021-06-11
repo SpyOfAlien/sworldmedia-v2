@@ -48,6 +48,68 @@ const POST_GRAPHQL_FIELDS = `
   vnTags: tags(locale: "vi-VN")
 `;
 
+const POST_GRAPHQL_SINGLE_POST_FIELDS = `
+  priority
+  vnSlug: slug(locale: "vi-VN")
+  enSlug: slug(locale: "en-US")
+  vnTitle: title(locale: "vi-VN")
+  enTitle: title(locale: "en-US")
+  vnSummary: summary(locale: "vi-VN")
+  enSummary: summary(locale: "en-US")
+  coverImage {
+    url
+    description
+    title
+    width
+    height
+  }
+  vnContent: content(locale: "vi-VN") {
+    json
+    links {
+      assets {
+        block {
+          url
+          width
+          height
+          title
+          description
+          sys {
+            id
+          }
+        }
+      }
+    }
+  }
+  enContent: content(locale: "en-US") {
+    json
+    links {
+      assets {
+        block {
+          url
+          width
+          height
+          title
+          description
+          sys {
+            id
+          }
+        }
+      }
+    }
+  }
+  date
+  author {
+    ... on Author {
+      name
+      avatar {
+        url
+      }
+    }
+  }
+  enTags: tags(locale: "en-US")
+  vnTags: tags(locale: "vi-VN")
+`;
+
 async function fetchGraphQL(query, preview = false) {
   return fetch(
     `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
@@ -128,7 +190,7 @@ export async function getPostAndMorePosts(slug, preview, locale) {
       preview ? 'true' : 'false'
     }, limit: 1, locale: "${currentLocale}") {
         items {
-          ${POST_GRAPHQL_FIELDS}
+          ${POST_GRAPHQL_SINGLE_POST_FIELDS}
         }
       }
     }`,

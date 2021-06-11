@@ -16,7 +16,13 @@ const WhyUs: FC<Props> = ({ data, cl }) => {
   const { t } = useTranslation('common');
 
   return (
-    <div className={cn('md:sw-grid-cols-3 md:sw-w-full sw-pt-8', s.root, cl)}>
+    <div
+      className={cn(
+        'md:sw-grid-cols-3 md:sw-w-full sw-pt-8 xl:sw-pt-0 xl:sw-mt-0',
+        s.root,
+        cl
+      )}
+    >
       <div className="md:sw-col-start-2 md:sw-row-start-1 md:sw-row-end-3 sw-flex sw-justify-center sw-items-center sw-flex-col sw-mt-8">
         <div className="sw-w-full">
           <Image
