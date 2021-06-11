@@ -52,9 +52,21 @@ const Menu: FC<Props> = () => {
               <div className="sw-w-4/5 md:sw-w-3/5">
                 <SubscribeForm />
                 <div className="sw-flex sw-w-full sw-justify-center sw-my-sm">
-                  <Facebook style={{ width: '25px' }} />
-                  <Linkedin style={{ margin: '0 20px', width: '25px' }} />
-                  <Youtube style={{ width: '25px' }} />
+                  <Link href="https://www.facebook.com/sworldmultimedia">
+                    <a>
+                      <Facebook style={{ marginRight: '40px' }} />
+                    </a>
+                  </Link>
+                  <Link href="https://www.linkedin.com/company/s-worldmultimedia">
+                    <a>
+                      <Linkedin style={{ marginRight: '40px' }} />
+                    </a>
+                  </Link>
+                  <Link href="https://www.youtube.com/channel/UCzod695AmgnnUeKSSUZ-t1A">
+                    <a>
+                      <Youtube style={{ marginRight: '40px' }} />
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>
