@@ -95,7 +95,7 @@ const Post = ({ post, morePosts, preview, locale }) => {
           <Link href="/blogs">
             <a>
               <div className="sw-cursor-pointer sw-flex sw-items-center sw-text-paragraph sw-w-28">
-                <p
+                <span
                   style={{ width: '14px', height: '14px', marginBottom: '4px' }}
                 >
                   <Image
@@ -104,8 +104,8 @@ const Post = ({ post, morePosts, preview, locale }) => {
                     height={12}
                     layout="responsive"
                   />
-                </p>
-                <p className="sw-ml-2">{t('blog__goback')}</p>
+                </span>
+                <span className="sw-ml-2">{t('blog__goback')}</span>
               </div>
             </a>
           </Link>

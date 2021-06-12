@@ -136,6 +136,16 @@ const AboutUs = ({ locale }) => {
           </div>
         </section>
         <section className="sw-my-24 xl:sw-my-56 2xl:sw-my-44">
+          <Media greaterThanOrEqual="lg">
+            <Heading cl="sw-text-center sw-mb-md" h="h3">
+              {t('aboutus__team__title')}
+            </Heading>
+          </Media>
+          <Media lessThan="lg">
+            <Heading cl="sw-text-center sw-mb-md" h="h4">
+              {t('aboutus__team__title')}
+            </Heading>
+          </Media>
           <Team />
         </section>
       </Container>
