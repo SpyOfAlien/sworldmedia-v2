@@ -220,6 +220,7 @@
   "common__failed__message": "Có lỗi xảy ra vui lòng kiểm tra mạng hoặc liên hệ trực tiếp với chúng tôi qua số điện thoại",
 
   "subscribe": "Đăng ký",
+  "subscribe__label": "Đăng ký nhận tin tức mới",
   "subscribe__success": "Đăng ký thành công, vui lòng kiểm tra xác thực thông tin qua email",
   "subscribe__before": "Tài khoản email đã đăng ký",
 
@@ -258,5 +259,11 @@
 
   "aboutus__advisor": "Cố vấn",
 
-  "blog__goback": "Trở về tin tức"
+  "blog__goback": "Trở về tin tức",
+
+  "menu__home": "Trang chủ",
+  "menu__services": "Dịch vụ",
+  "menu__about": "Về chúng tôi",
+  "menu__news": "Tin tức",
+  "menu__contact": "Liên hệ"
 }

@@ -55,14 +55,45 @@ const Header = ({ isSticky = false }) => {
   };
 
   const handleSwitchLng = (lan) => {
-    if (lan === 'vn' && router.locale === 'en')
-      router.push('/', '/', {
-        locale: lan,
-      });
-    if (lan === 'en' && router.locale === 'vn')
-      router.push('/', '/', {
-        locale: lan,
-      });
+    if (router.pathname === '/blogs/[slug]') {
+      const vnSlug =
+        router['components']['/blogs/[slug]']['props']['pageProps']['post'][
+          'vnSlug'
+        ];
+      const enSlug =
+        router['components']['/blogs/[slug]']['props']['pageProps']['post'][
+          'enSlug'
+        ];
+
+      if (lan === 'vn' && router.locale === 'en')
+        router.push(
+          router.asPath.replace(enSlug, vnSlug),
+          router.asPath.replace(enSlug, vnSlug),
+          {
+            locale: lan,
+          }
+        );
+
+      if (lan === 'en' && router.locale === 'vn') {
+        router.push(
+          router.asPath.replace(vnSlug, enSlug),
+          router.asPath.replace(vnSlug, enSlug),
+          {
+            locale: lan,
+          }
+        );
+      }
+    } else {
+      if (lan === 'vn' && router.locale === 'en')
+        router.push(router.asPath, router.asPath, {
+          locale: lan,
+        });
+
+      if (lan === 'en' && router.locale === 'vn')
+        router.push(router.asPath, router.asPath, {
+          locale: lan,
+        });
+    }
   };
 
   const handleGoHome = () => {

@@ -219,6 +219,7 @@
   "common__failed__message": "Something went wrong, please check your network connection or contact directly with us by phone",
 
   "subscribe": "Subscribe",
+  "subscribe__label": "Subscribe to our news",
   "subscribe__success": "You have successfully subscribe to our services. We will send you an email to confirm your email soon",
   "subscribe__before": "This email already subscribe to our newletter",
 
@@ -257,5 +258,11 @@
 
   "aboutus__advisor": "Our advisors",
 
-  "blog__goback": "Go back to news"
+  "blog__goback": "Go back to news",
+
+  "menu__home": "Home",
+  "menu__services": "Services",
+  "menu__about": "About us",
+  "menu__news": "News",
+  "menu__contact": "Contact us"
 }

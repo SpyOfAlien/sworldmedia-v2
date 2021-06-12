@@ -11,10 +11,12 @@ import Infor from '../../ui/infor/infor';
 import { Container } from '../../layout';
 import { useMediaQuery } from 'react-responsive';
 import { Media, MediaContextProvider } from '../../../lib/media';
+import { useTranslation } from 'react-i18next';
 
 interface Props {}
 
 const Menu: FC<Props> = () => {
+  const { t } = useTranslation('common');
   const isDesktopOrLaptop = useMediaQuery({
     query: '(min-device-width: 1280px)',
   });
@@ -32,19 +34,19 @@ const Menu: FC<Props> = () => {
           <div className="sw-flex sw-flex-col sw-w-full sw-items-center sw-h-screen sw-justify-center sw-text-h5 md:sw-text-h4 lg:sw-text-h2 xl:sw-items-start sw-text-gradient 3xl:sw-text-h1 sw-font-bold xl:sw-w-1/2 sw-z-10">
             <div className="sw-mb-md md:sw-mb-0 sw-flex sw-flex-col sw-items-center">
               <Link href="/">
-                <a className="sw-mb-sm md:sw-mb-md"> Trang chủ </a>
+                <a className="sw-mb-sm md:sw-mb-md"> {t('menu__home')} </a>
               </Link>
               <Link href="/services">
-                <a className="sw-mb-sm md:sw-mb-md"> Dịch vụ </a>
+                <a className="sw-mb-sm md:sw-mb-md"> {t('menu__services')} </a>
               </Link>
               <Link href="/about">
-                <a className="sw-mb-sm md:sw-mb-md"> Về chúng tôi </a>
+                <a className="sw-mb-sm md:sw-mb-md"> {t('menu__about')} </a>
               </Link>
               <Link href="/blogs">
-                <a className="sw-mb-sm md:sw-mb-md"> Tin tức </a>
+                <a className="sw-mb-sm md:sw-mb-md"> {t('menu__news')} </a>
               </Link>
               <Link href="/contact">
-                <a className="sw-mb-sm md:sw-mb-md"> Liên hệ </a>
+                <a className="sw-mb-sm md:sw-mb-md"> {t('menu__contact')} </a>
               </Link>
             </div>
           </div>
@@ -95,7 +97,7 @@ const Menu: FC<Props> = () => {
                 </div>
 
                 <div className="sw-mb-xsm">
-                  <Paragraph cl="sw-mb-sm">Đăng ký nhận tin tức mới</Paragraph>
+                  <Paragraph cl="sw-mb-sm">{t('subscribe__label')}</Paragraph>
                   <SubscribeForm cl="sw-w-full md:sw-w-11/12 xl:sw-w-10/12 sw-h-12" />
                 </div>
 

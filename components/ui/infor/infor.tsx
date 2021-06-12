@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next';
-import SubscribeForm from '../../common/subscribe/subscribe';
 import Gmail from '../../icons/gmail';
 import Location from '../../icons/location';
 import Phone from '../../icons/phone';
