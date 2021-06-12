@@ -63,8 +63,8 @@ const HomePage = ({ locales, allPosts }) => {
       <NextSeo
         title={
           router.locale === 'vn'
-            ? 'S-worldmedia | Truyền thông đa phương tiện thế hệ mới'
-            : 'S-worldmedia | S-world multimedia a new generation multimedia company'
+            ? 'S-worldmedia | Công ty truyền thông đa phương tiện thế hệ mới'
+            : 'S-worldmedia | A new generation multimedia company'
         }
         description={
           router.locale === 'vn'
@@ -77,8 +77,8 @@ const HomePage = ({ locales, allPosts }) => {
           url: 'https://www.s-worldmedia.com',
           title:
             router.locale === 'vn'
-              ? 'S-worldmedia | Truyền thông đa phương tiện thế hệ mới'
-              : 'S-worldmedia | S-world multimedia a new generation multimedia company',
+              ? 'S-worldmedia | Công ty truyền thông đa phương tiện thế hệ mới'
+              : 'S-worldmedia | A new generation multimedia company',
           description:
             router.locale === 'vn'
               ? 'Chân thành – Thấu hiểu – Bền bỉ – Sáng tạo – Khác biệt'

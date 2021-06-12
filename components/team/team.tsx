@@ -10,15 +10,6 @@ const Team = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const baseURL = '/assets/images/team';
-  const graph = useAnimation();
-  const human = useAnimation();
-  const designerTable = useAnimation();
-  const designer = useAnimation();
-  const editor = useAnimation();
-  const pc = useAnimation();
-  const calenderOne = useAnimation();
-  const calenderTwo = useAnimation();
-  const team = useAnimation();
 
   const videoEditor = useAnimation();
   const graphicDesign = useAnimation();
@@ -195,7 +186,7 @@ const Team = () => {
               animate={svgOneControl}
               className="sw-relative sw-w-full sw-h-full"
             >
-              <motion.div className={s.graph} animate={graph}>
+              <motion.div className={s.graph}>
                 <Image
                   src={`${baseURL}/marketing/graph.png`}
                   width={1019}
@@ -203,7 +194,7 @@ const Team = () => {
                   layout="responsive"
                 />
               </motion.div>
-              <motion.div className={s.human} animate={human}>
+              <motion.div className={s.human}>
                 <Image
                   src={`${baseURL}/marketing/human.png`}
                   width={1084}
@@ -241,7 +232,7 @@ const Team = () => {
               animate={svgTwoControl}
               className="sw-relative sw-w-full sw-h-full"
             >
-              <motion.div className={s.editor} animate={editor}>
+              <motion.div className={s.editor}>
                 <Image
                   src={`${baseURL}/editor/editor.png`}
                   width={676}
@@ -249,7 +240,7 @@ const Team = () => {
                   layout="responsive"
                 />
               </motion.div>
-              <motion.div className={s.pc} animate={pc}>
+              <motion.div className={s.pc}>
                 <Image
                   src={`${baseURL}/editor/PC.png`}
                   width={735}
@@ -295,7 +286,7 @@ const Team = () => {
                   layout="responsive"
                 />
               </motion.div> */}
-              <motion.div className={s.design} animate={designer}>
+              <motion.div className={s.design}>
                 <Image
                   src={`${baseURL}/designer/designer.png`}
                   width={100}
@@ -334,7 +325,7 @@ const Team = () => {
               animate={svgFourControl}
               className="sw-relative sw-w-full sw-h-full"
             >
-              <motion.div className={s.calendarOne} animate={calenderOne}>
+              <motion.div className={s.calendarOne}>
                 <Image
                   src={`${baseURL}/content/calendar.png`}
                   width={80}
@@ -342,7 +333,7 @@ const Team = () => {
                   layout="responsive"
                 />
               </motion.div>
-              <motion.div className={s.calendarTwo} animate={calenderTwo}>
+              <motion.div className={s.calendarTwo}>
                 <Image
                   src={`${baseURL}/content/calendar_2.png`}
                   width={80}
@@ -350,7 +341,7 @@ const Team = () => {
                   layout="responsive"
                 />
               </motion.div>
-              <motion.div className={s.team} animate={team}>
+              <motion.div className={s.team}>
                 <Image
                   src={`${baseURL}/content/team.png`}
                   width={80}
