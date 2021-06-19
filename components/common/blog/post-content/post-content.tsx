@@ -61,6 +61,10 @@ export function getRichTextRenderOptions(links, options) {
           return (
             <DynamicVideoEmbed embedUrl={node.data.uri} title={children} />
           );
+        } else if (node.data.uri.includes('https://www.facebook.com/plugins')) {
+          return (
+            <DynamicVideoEmbed embedUrl={node.data.uri} title={children} />
+          );
         } else {
           return (
             <a
