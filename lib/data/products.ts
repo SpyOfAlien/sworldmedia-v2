@@ -4,7 +4,7 @@ const Products = [
   {
     title: 'home__new_product__randi_title',
     content: 'home__new_product__randi_content',
-    imgSrc: `${baseUrl}1.png`,
+    imgSrc: `${baseUrl}1.jpg`,
     link: 'https://www.facebook.com/107303771001126/videos/164564498844722',
   },
   {
@@ -13,7 +13,7 @@ const Products = [
       'home__new_product__thucvu__content1',
       'home__new_product__thucvu__content2',
     ],
-    imgSrc: `${baseUrl}2.png`,
+    imgSrc: `${baseUrl}2.jpg`,
     link: 'https://www.facebook.com/107303771001126/videos/480523256549036',
   },
   {
@@ -24,7 +24,7 @@ const Products = [
       'home__new_product__metran__content3',
       'home__new_product__metran__content4',
     ],
-    imgSrc: `${baseUrl}3.png`,
+    imgSrc: `${baseUrl}3.jpg`,
     link: 'https://www.facebook.com/sworldmultimedia/videos/347173370088643',
   },
 ];
