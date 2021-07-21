@@ -1,6 +1,10 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { getAllPostsForHome } from '../lib/api';
-import { HomeContainer, ParticlesLayout } from '../components/layout';
+import {
+  HomeContainer,
+  ParticlesLayout,
+  Container,
+} from '../components/layout';
 import ReactScrollWheelHandler from 'react-scroll-wheel-handler';
 import { useSection } from '../lib/context/section-context';
 import { useEffect, useState } from 'react';
@@ -85,21 +89,50 @@ const HomePage = ({ locales, allPosts }) => {
               : 'Sincerity - Understanding - Perseverance - Creativity - Distinctiveness',
         }}
       />
-      <Media at="xs">
-        <VideoBackground />
-        <AboutUs data={aboutUsList} />
-        <ServicePage />
-        <Clients
-          title={t('home__partner__title')}
-          imgSrc="/assets/svg/media-partner.svg"
-        />
-        <Clients
-          title={t('home__client__title')}
-          imgSrc="/assets/svg/clients.svg"
-        />
-        <ProductSlider products={Products} />
-        <WhyUs data={whyUsList} />
+      {/* <Media at="xs"> */}
+      <VideoBackground />
+      <section className="sw-my-32">
+        <Container>
+          <AboutUs data={aboutUsList} />
+        </Container>
+      </section>
+
+      <section className="sw-my-32">
+        <Container>
+          <ServicePage />
+        </Container>
+      </section>
+
+      <section className="sw-my-32">
+        <Container>
+          <Clients
+            title={t('home__partner__title')}
+            imgSrc="/assets/svg/media-partner.svg"
+          />
+        </Container>
+      </section>
+
+      <section className="sw-my-32">
+        <Container>
+          <Clients
+            title={t('home__client__title')}
+            imgSrc="/assets/svg/clients.svg"
+          />
+        </Container>
+      </section>
+
+      <ProductSlider products={Products} />
+      <section className="sw-my-32">
+        <Container>
+          <WhyUs data={whyUsList} />
+        </Container>
+      </section>
+      <Media greaterThanOrEqual="sm">
+        <div className="sw-fixed sw-top-0" style={{ zIndex: -10 }}>
+          <ParticlesLayout />
+        </div>
       </Media>
+      {/* </Media>
       <Media greaterThanOrEqual="sm">
         <ReactScrollWheelHandler
           upHandler={onPageScrollUp}
@@ -152,7 +185,7 @@ const HomePage = ({ locales, allPosts }) => {
             <WhyUs data={whyUsList} />
           </HomeContainer>
         </ReactScrollWheelHandler>
-      </Media>
+      </Media> */}
     </MediaContextProvider>
   );
 };

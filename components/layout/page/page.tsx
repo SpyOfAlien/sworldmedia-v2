@@ -179,7 +179,7 @@ const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
         </Media>
 
         <Media greaterThanOrEqual="md">
-          <Header isSticky={false} />
+          <Header isSticky={true} />
         </Media>
       </div>
     </MediaContextProvider>

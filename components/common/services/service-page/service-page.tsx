@@ -8,6 +8,7 @@ import Glow from '../../../glows/glow';
 import { Media, MediaContextProvider } from '../../../../lib/media';
 import Heading from '../../../ui/typo/heading';
 import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
 
 interface Props {
   cl?: string;
@@ -63,13 +64,16 @@ const ServicePage: FC<Props> = ({ cl }) => {
         </Media>
         <div className="sw-w-full xl:sw-w-2/3">
           {services.map((item, idx) => (
+            <Link key={idx} href={item.href}>
+            
             <SmallCard
-              key={idx}
+              
               cl=" sw-ml-auto sw-mb-4 sw-cursor-pointer xl:sw-w-3/4"
               content={t(item.name)}
               icon={item.icon}
               onClick={() => openPopup(item.modal)}
             />
+            </Link>
           ))}
         </div>
       </div>

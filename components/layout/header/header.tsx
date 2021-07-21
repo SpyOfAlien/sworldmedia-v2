@@ -9,11 +9,18 @@ import { useUI } from '../../../lib/context/ui-context';
 import { useEffect, useState } from 'react';
 import cn from 'classnames';
 import { useSection } from '../../../lib/context/section-context';
+import { useTranslation } from 'next-i18next';
 
 const Header = ({ isSticky = false }) => {
   const router = useRouter();
-  const { closeModal, openModal, setModalView, displayModal, modalView } =
-    useUI();
+  const { t } = useTranslation('common');
+  const {
+    closeModal,
+    openModal,
+    setModalView,
+    displayModal,
+    modalView,
+  } = useUI();
   const { onSetSection } = useSection();
   const [isActiveHumburger, setIsActiveHumburger] = useState(false);
   const [isTransparent, setIsTransparent] = useState(false);
@@ -107,7 +114,7 @@ const Header = ({ isSticky = false }) => {
         s.header,
         `${
           ((isSticky || !isTransparent) && !isActiveHumburger) ||
-          (servicesModal.includes(modalView) && window.innerWidth < 768)
+          servicesModal.includes(modalView)
             ? 'sw-bg-background'
             : null
         }`
@@ -131,6 +138,40 @@ const Header = ({ isSticky = false }) => {
             ) : null}
           </Media>
         </div>
+        <Media greaterThanOrEqual="md">
+          <div>
+            <Link href="/">
+              <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-h6">
+                {' '}
+                {t('menu__home')}{' '}
+              </a>
+            </Link>
+            <Link href="/services">
+              <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-h6">
+                {' '}
+                {t('menu__services')}{' '}
+              </a>
+            </Link>
+            <Link href="/about">
+              <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-h6">
+                {' '}
+                {t('menu__about')}{' '}
+              </a>
+            </Link>
+            <Link href="/blogs">
+              <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-h6">
+                {' '}
+                {t('menu__news')}{' '}
+              </a>
+            </Link>
+            <Link href="/contact">
+              <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-text-h6">
+                {' '}
+                {t('menu__contact')}{' '}
+              </a>
+            </Link>
+          </div>
+        </Media>
         <div className="sw-flex sw-items-center">
           <div className={s.switchLng}>
             <div
@@ -164,16 +205,18 @@ const Header = ({ isSticky = false }) => {
               EN{' '}
             </div>
           </div>
-          <div
-            className={cn(s.hamburger, s.hamburgerSlider, {
-              [s.active]: isActiveHumburger,
-            })}
-            onClick={onHamburgerClick}
-          >
-            <div className={s.hamburgerBox}>
-              <span className={s.hamburgerInner}></span>
+          <Media lessThan="md">
+            <div
+              className={cn(s.hamburger, s.hamburgerSlider, {
+                [s.active]: isActiveHumburger,
+              })}
+              onClick={onHamburgerClick}
+            >
+              <div className={s.hamburgerBox}>
+                <span className={s.hamburgerInner}></span>
+              </div>
             </div>
-          </div>
+          </Media>
         </div>
       </Container>
     </div>

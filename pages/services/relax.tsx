@@ -1,6 +1,6 @@
-import Input from '../components/ui/input/input';
-import Tetxarea from '../components/ui/input/textarea';
-import Heading from '../components/ui/typo/heading';
+import Input from '../../components/ui/input/input';
+import Tetxarea from '../../components/ui/input/textarea';
+import Heading from '../../components/ui/typo/heading';
 
 const Relax = () => {
   const handleChange = () => {};

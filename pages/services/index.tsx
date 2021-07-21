@@ -1,14 +1,14 @@
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Image from 'next/image';
-import { Container, HomeContainer } from '../components/layout';
-import Heading from '../components/ui/typo/heading';
-import Paragraph from '../components/ui/typo/paragraph';
-import services from '../lib/data/services';
-import { Media, MediaContextProvider } from '../lib/media';
+import { Container, HomeContainer } from '../../components/layout';
+import Heading from '../../components/ui/typo/heading';
+import Paragraph from '../../components/ui/typo/paragraph';
+import services from '../../lib/data/services';
+import { Media, MediaContextProvider } from '../../lib/media';
 import cn from 'classnames';
-import Arrow from '../components/icons/arrow';
-import { useUI } from '../lib/context/ui-context';
+import Arrow from '../../components/icons/arrow';
+import { useUI } from '../../lib/context/ui-context';
 import { useEffect } from 'react';
 import {
   disableBodyScroll,
