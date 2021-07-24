@@ -13,9 +13,9 @@ export const getStaticProps = async ({ locale, preview }) => {
   };
 };
 
-const ProductionPage = () => {
+const EventsPage = () => {
   const { t } = useTranslation('common');
-  return <ServiceDetail data={services[2]} products={products} />;
+  return <ServiceDetail data={services[4]} products={products} />;
 };
 
-export default ProductionPage;
+export default EventsPage;

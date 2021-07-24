@@ -10,9 +10,11 @@ import { useEffect, useState } from 'react';
 import cn from 'classnames';
 import { useSection } from '../../../lib/context/section-context';
 import { useTranslation } from 'next-i18next';
+import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 
-const Header = ({ isSticky = false }) => {
+const Header = () => {
   const router = useRouter();
+
   const { t } = useTranslation('common');
   const {
     closeModal,
@@ -23,7 +25,9 @@ const Header = ({ isSticky = false }) => {
   } = useUI();
   const { onSetSection } = useSection();
   const [isActiveHumburger, setIsActiveHumburger] = useState(false);
-  const [isTransparent, setIsTransparent] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+  const [isOffset, setIsOffset] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(false);
 
   const servicesModal = [
     'BRAND_COMMUNICATION',
@@ -37,12 +41,6 @@ const Header = ({ isSticky = false }) => {
     if (isActiveHumburger) {
       setIsActiveHumburger(false);
       closeModal();
-    }
-
-    if (router.pathname === '/' || router.pathname === '/contact') {
-      setIsTransparent(true);
-    } else {
-      setIsTransparent(false);
     }
   }, [router.pathname]);
 
@@ -60,6 +58,24 @@ const Header = ({ isSticky = false }) => {
       setIsActiveHumburger(!isActiveHumburger);
     }
   };
+
+  useScrollPosition(({ currPos }) => {
+    if (currPos.y < -150 && router.pathname === '/') {
+      setIsSticky(true);
+    } else {
+      setIsSticky(false);
+    }
+    if (currPos.y < -160 && router.pathname === '/') {
+      setIsOffset(true);
+    } else {
+      setIsOffset(false);
+    }
+    if (currPos.y < -250 && router.pathname === '/') {
+      setIsScrolling(true);
+    } else {
+      setIsScrolling(false);
+    }
+  });
 
   const handleSwitchLng = (lan) => {
     if (router.pathname === '/blogs/[slug]') {
@@ -110,15 +126,14 @@ const Header = ({ isSticky = false }) => {
 
   return (
     <div
-      className={cn(
-        s.header,
-        `${
-          ((isSticky || !isTransparent) && !isActiveHumburger) ||
-          servicesModal.includes(modalView)
-            ? 'sw-bg-background'
-            : null
-        }`
-      )}
+      className={cn(s.header, {
+        [s.sticky]: isSticky,
+        [s.offset]: isOffset,
+        [s.scrolling]: isScrolling,
+        [s.transparent]:
+          (router.pathname === '/' && !isScrolling) ||
+          router.pathname === '/contact',
+      })}
     >
       <Container cl=" sw-relative sw-h-full sw-flex sw-items-center sw-justify-between">
         <div>
@@ -139,33 +154,33 @@ const Header = ({ isSticky = false }) => {
           </Media>
         </div>
         <Media greaterThanOrEqual="md">
-          <div>
+          <div className="sw-nav">
             <Link href="/">
-              <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-h6">
+              <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-h6 nav-link">
                 {' '}
                 {t('menu__home')}{' '}
               </a>
             </Link>
             <Link href="/services">
-              <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-h6">
+              <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-h6 nav-link">
                 {' '}
                 {t('menu__services')}{' '}
               </a>
             </Link>
             <Link href="/about">
-              <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-h6">
+              <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-h6 nav-link">
                 {' '}
                 {t('menu__about')}{' '}
               </a>
             </Link>
             <Link href="/blogs">
-              <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-h6">
+              <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-h6 nav-link">
                 {' '}
                 {t('menu__news')}{' '}
               </a>
             </Link>
             <Link href="/contact">
-              <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-text-h6">
+              <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-text-h6 nav-link">
                 {' '}
                 {t('menu__contact')}{' '}
               </a>

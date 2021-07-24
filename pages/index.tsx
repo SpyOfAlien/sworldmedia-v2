@@ -1,11 +1,5 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { getAllPostsForHome } from '../lib/api';
-import {
-  HomeContainer,
-  ParticlesLayout,
-  Container,
-} from '../components/layout';
-import ReactScrollWheelHandler from 'react-scroll-wheel-handler';
+import { ParticlesLayout, Container } from '../components/layout';
 import { useSection } from '../lib/context/section-context';
 import { useEffect, useState } from 'react';
 import ProductSlider from '../components/common/products/slider';
@@ -16,25 +10,21 @@ import aboutUsList from '../lib/data/about-us';
 import AboutUs from '../components/common/about-us/about-us';
 import ServicePage from '../components/common/services/service-page/service-page';
 import Clients from '../components/common/clients/clients';
-import Glow from '../components/glows/glow';
 import { useTranslation } from 'react-i18next';
 import { Media, MediaContextProvider } from '../lib/media';
 import VideoBackground from '../components/common/video/video-background';
 import { useRouter } from 'next/router';
-import Head from 'next/head';
 import { NextSeo } from 'next-seo';
 
 export const getStaticProps = async ({ locale, preview }) => {
-  const allPosts = (await getAllPostsForHome(preview)) ?? [];
   return {
     props: {
-      allPosts,
       ...(await serverSideTranslations(locale, ['common'])),
     },
   };
 };
 
-const HomePage = ({ locales, allPosts }) => {
+const HomePage = ({ locales, allPosts = [] }) => {
   // Context
   const { currentSection, onScrollUp, onScrollDown } = useSection();
   const [desktopView, setDesktopView] = useState(undefined);

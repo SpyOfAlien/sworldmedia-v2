@@ -9,16 +9,13 @@ import Menu from '../../common/menu/menu';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Media, MediaContextProvider } from '../../../lib/media';
 import Header from '../header/header';
-import {
-  disableBodyScroll,
-  enableBodyScroll,
-  clearAllBodyScrollLocks,
-} from 'body-scroll-lock';
+import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 import SubService from '../../common/services/sub-service/sub-service';
 import subServices from '../../../lib/data/sub-services';
 import Notification from '../notification/notification';
 import { useSection } from '../../../lib/context/section-context';
 import { useRouter } from 'next/router';
+import Footer from '../footer/footer';
 
 interface Props {
   children: any;
@@ -60,20 +57,6 @@ const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
             {children}
           </motion.main>
         </AnimatePresence>
-
-        <Modal isFull={true} open={displayModal} onClose={closeModal}>
-          {modalView === 'BRAND_COMMUNICATION' && (
-            <ServiceDetail data={services[0]} />
-          )}
-          {modalView === 'BRANDING' && <ServiceDetail data={services[1]} />}
-          {modalView === 'PRODUCTION' && <ServiceDetail data={services[2]} />}
-          {modalView === 'INTERNAL_RELATION' && (
-            <ServiceDetail data={services[3]} />
-          )}
-          {modalView === 'EVENT' && <ServiceDetail data={services[4]} />}
-
-          {modalView === 'MENU' && <Menu />}
-        </Modal>
 
         <Modal subModal={true} open={displaySubModal} onClose={closeSubModal}>
           {subModalView === 'BRANDING_CONCEPT' && (
@@ -126,61 +109,9 @@ const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
           )}
           {subModalView === 'CONFIRM_MODAL' && confirm && <Notification />}
         </Modal>
+        <Header />
 
-        {/* <div className="sw-absolute sw-w-24 sw-right-0 sw-top-0 sw-h-screen sw-flex sw-items-center">
-          <ul>
-            <li
-              className="sw-text-gradient sw-font-bold sw-my-2 sw-text-h5 sw-cursor-pointer sw-w-8 sw-flex sw-justify-center sw-items-center sw-h-16"
-              onClick={() => onSetSection(1)}
-            >
-              o
-            </li>
-            <li
-              className="sw-text-gradient sw-font-bold sw-my-2 sw-text-h5 sw-cursor-pointer sw-w-8 sw-flex sw-justify-center sw-items-center sw-h-16"
-              onClick={() => onSetSection(2)}
-            >
-              o
-            </li>
-            <li
-              className="sw-text-gradient sw-font-bold sw-my-2 sw-text-h5 sw-cursor-pointer sw-w-8 sw-flex sw-justify-center sw-items-center sw-h-16"
-              onClick={() => onSetSection(3)}
-            >
-              o
-            </li>
-            <li
-              className="sw-text-gradient sw-font-bold sw-my-2 sw-text-h5 sw-cursor-pointer sw-w-8 sw-flex sw-justify-center sw-items-center sw-h-16"
-              onClick={() => onSetSection(4)}
-            >
-              o
-            </li>
-            <li
-              className="sw-text-gradient sw-font-bold sw-my-2 sw-text-h5 sw-cursor-pointer sw-w-8 sw-flex sw-justify-center sw-items-center sw-h-16"
-              onClick={() => onSetSection(5)}
-            >
-              o
-            </li>
-            <li
-              className="sw-text-gradient sw-font-bold sw-my-2 sw-text-h5 sw-cursor-pointer sw-w-8 sw-flex sw-justify-center sw-items-center sw-h-16"
-              onClick={() => onSetSection(6)}
-            >
-              o
-            </li>
-            <li
-              className="sw-text-gradient sw-font-bold sw-my-2 sw-text-h5 sw-cursor-pointer sw-w-8 sw-flex sw-justify-center sw-items-center sw-h-16"
-              onClick={() => onSetSection(7)}
-            >
-              o
-            </li>
-          </ul>
-        </div> */}
-
-        <Media lessThan="md">
-          <Header isSticky={true} />
-        </Media>
-
-        <Media greaterThanOrEqual="md">
-          <Header isSticky={true} />
-        </Media>
+        <Footer />
       </div>
     </MediaContextProvider>
   );

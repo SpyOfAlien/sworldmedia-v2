@@ -45,8 +45,7 @@ const ContactPage = ({ locale }) => {
   const [message, setMessage] = useState('');
   const { t } = useTranslation('common');
 
-  const emailRegex =
-    /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
+  const emailRegex = /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
 
   const isDesktopOrLaptop = useMediaQuery({
     query: '(min-device-width: 1280px)',
@@ -176,10 +175,7 @@ const ContactPage = ({ locale }) => {
               </div>
             </Media>
           </div>
-          <div className="sw-flex sw-flex-col sw-justify-between xl:sw-pl-8 3xl:sw-pl-16 xl:sw-py-12">
-            <div className="sw-cursor-pointer sw-z-10" onClick={handleGoHome}>
-              <WhiteLogo />
-            </div>
+          <div className="sw-flex sw-flex-col sw-justify-end xl:sw-pl-8 3xl:sw-pl-16 xl:sw-py-12">
             <div className="sw-my-8">
               <Infor />
             </div>

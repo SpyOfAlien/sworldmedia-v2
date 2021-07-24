@@ -29,7 +29,13 @@ const Clients: FC<Props> = ({ title, imgSrc, cl }) => {
             {title}
           </Heading>
         </Media>
-        <Image className="image" src={imgSrc} width={907} height={680} />
+        <Image
+          quality="100"
+          mix-blend-mode="color-dodge"
+          src={imgSrc}
+          width={907}
+          height={680}
+        />
       </div>
     </MediaContextProvider>
   );

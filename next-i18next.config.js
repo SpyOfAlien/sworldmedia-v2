@@ -3,4 +3,8 @@ module.exports = {
     defaultLocale: 'en',
     locales: ['en', 'vn'],
   },
+  react: {
+    useSuspense: false,
+    wait: true
+  }
 };
