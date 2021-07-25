@@ -139,7 +139,7 @@ const Header = () => {
         <div>
           <Media lessThan="lg">
             <div onClick={handleGoHome}>
-              <WhiteLogo width="65px" height="65px" />
+              <WhiteLogo width="45px" height="45px" />
             </div>
           </Media>
           <Media greaterThanOrEqual="lg">
@@ -148,7 +148,7 @@ const Header = () => {
                 onClick={handleGoHome}
                 style={{ marginBottom: '10px', cursor: 'pointer' }}
               >
-                <WhiteLogo />
+                <WhiteLogo width="60px" height="60px"/>
               </div>
             ) : null}
           </Media>
@@ -156,31 +156,31 @@ const Header = () => {
         <Media greaterThanOrEqual="md">
           <div className="sw-nav">
             <Link href="/">
-              <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-h6 nav-link">
+              <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-link nav-link">
                 {' '}
                 {t('menu__home')}{' '}
               </a>
             </Link>
             <Link href="/services">
-              <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-h6 nav-link">
+              <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-link nav-link">
                 {' '}
                 {t('menu__services')}{' '}
               </a>
             </Link>
             <Link href="/about">
-              <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-h6 nav-link">
+              <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-link nav-link">
                 {' '}
                 {t('menu__about')}{' '}
               </a>
             </Link>
             <Link href="/blogs">
-              <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-h6 nav-link">
+              <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-link nav-link">
                 {' '}
                 {t('menu__news')}{' '}
               </a>
             </Link>
             <Link href="/contact">
-              <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-text-h6 nav-link">
+              <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-text-link nav-link">
                 {' '}
                 {t('menu__contact')}{' '}
               </a>

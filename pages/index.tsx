@@ -97,7 +97,7 @@ const HomePage = ({ locales, allPosts = [] }) => {
         <Container>
           <Clients
             title={t('home__partner__title')}
-            imgSrc="/assets/svg/media-partner.svg"
+            imgSrc="/assets/images/others/tm1.png"
           />
         </Container>
       </section>

@@ -47,7 +47,7 @@ const ServiceDetail: FC<Props> = ({ data, products, cl }) => {
           </div>
         </Media>
         <Container>
-          <div className="sw-flex sw-flex-col sw-justify-end sw-h-full sw-mb-32">
+          <div className="sw-flex sw-flex-col sw-justify-end sw-h-full">
             <div className="sw-w-full sw-mb-12">
               <div className="sw-w-full xl:sw-w-1/2">
                 <Media greaterThanOrEqual="md">
@@ -123,7 +123,7 @@ const ServiceDetail: FC<Props> = ({ data, products, cl }) => {
           </div>
         </Container>
 
-        <div className={s.ServiceDetail__products}>
+        <div className={cn('sw-my-32', s.ServiceDetail__products)}>
           {products && <ProductSlider products={products} />}
         </div>
       </div>

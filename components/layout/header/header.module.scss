@@ -1,6 +1,6 @@
 .header {
   position: fixed;
-  height: 80px;
+  height: 65px;
   width: 100%;
   z-index: 40;
   top: 0;
@@ -127,16 +127,4 @@
 }
 .hamburgerSlider.active .hamburgerInner::after {
   transform: translate3d(0, -20px, 0) rotate(-90deg);
-}
-
-@media screen and (min-width: 768px) {
-  .header {
-    height: 90px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .header {
-    height: 100px;
-  }
 }

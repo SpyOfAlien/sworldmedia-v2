@@ -97,7 +97,7 @@ const Advisor = () => {
                 height={1000}
                 layout="responsive"
                 quality="100"
-                mix-blend-mode="color-dodge"
+                className={s.advisor_globe}
               />
               <Image
                 src="/assets/images/others/t10.png"
@@ -105,6 +105,7 @@ const Advisor = () => {
                 objectPosition="center"
                 quality="100"
                 layout="fill"
+                className={s.advisor_first_glowing}
               />
               <Image
                 src="/assets/images/others/t10.png"
@@ -112,6 +113,7 @@ const Advisor = () => {
                 objectPosition="center"
                 layout="fill"
                 quality="100"
+                className={s.advisor_second_glowing}
               />
             </div>
           </div>

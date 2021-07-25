@@ -111,7 +111,7 @@ const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
         </Modal>
         <Header />
 
-        <Footer />
+        {router.pathname !== '/contact' && <Footer />}
       </div>
     </MediaContextProvider>
   );
