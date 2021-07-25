@@ -55,7 +55,7 @@ const Advisor = () => {
                 {t('aboutus__advisor')}
               </Heading>
               <Image
-                src={`${baseUrl}earth.png`}
+                src="/assets/images/others/test.png"
                 width={1000}
                 height={1000}
                 layout="responsive"
@@ -86,16 +86,34 @@ const Advisor = () => {
           ))}
         </div>
         <Media className="xl:sw-w-1/2" greaterThanOrEqual="lg">
-          <div>
+          <div className="sw-relative">
             <div>
               <Heading cl="sw-text-center" h="h3">
                 {t('aboutus__advisor')}
               </Heading>
               <Image
-                src={`${baseUrl}earth.png`}
+                src="/assets/images/others/t8.png"
                 width={1000}
                 height={1000}
                 layout="responsive"
+                quality="100"
+                className={s.advisor_globe}
+              />
+              <Image
+                src="/assets/images/others/t10.png"
+                objectFit="cover"
+                objectPosition="center"
+                quality="100"
+                layout="fill"
+                className={s.advisor_first_glowing}
+              />
+              <Image
+                src="/assets/images/others/t10.png"
+                objectFit="cover"
+                objectPosition="center"
+                layout="fill"
+                quality="100"
+                className={s.advisor_second_glowing}
               />
             </div>
           </div>

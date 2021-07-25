@@ -1,12 +1,48 @@
 .header {
   position: fixed;
-  height: 80px;
+  height: 65px;
   width: 100%;
   z-index: 40;
   top: 0;
   left: 0;
+  background: #040d21;
+
   &.sticky {
-    background: #040d21;
+    visibility: hidden;
+    opacity: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    &.scrolling {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &.offset {
+    -webkit-transform: translate3d(0, -100%, 0);
+    -moz-transform: translate3d(0, -100%, 0);
+    -ms-transform: translate3d(0, -100%, 0);
+    -o-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &.scrolling {
+    -webkit-transform: translate3d(0, 0px, 0);
+    -moz-transform: translate3d(0, 0px, 0);
+    -ms-transform: translate3d(0, 0px, 0);
+    -o-transform: translate3d(0, 0px, 0);
+    transform: translate3d(0, 0px, 0);
+  }
+
+  &.transparent {
+    background: transparent !important;
   }
 }
 
@@ -91,16 +127,4 @@
 }
 .hamburgerSlider.active .hamburgerInner::after {
   transform: translate3d(0, -20px, 0) rotate(-90deg);
-}
-
-@media screen and (min-width: 768px) {
-  .header {
-    height: 90px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .header {
-    height: 100px;
-  }
 }

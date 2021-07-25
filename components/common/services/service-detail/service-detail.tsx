@@ -12,6 +12,7 @@ import { useMediaQuery } from 'react-responsive';
 import { useTranslation } from 'next-i18next';
 import { useUI } from '../../../../lib/context/ui-context';
 import { Media, MediaContextProvider } from '../../../../lib/media';
+import ProductSlider from '../../products/slider';
 
 interface Data {
   name: string;
@@ -24,69 +25,57 @@ interface Data {
 
 interface Props {
   data: Data;
+  products?: any;
   cl?: string;
 }
 
-const ServiceDetail: FC<Props> = ({ data, cl }) => {
+const ServiceDetail: FC<Props> = ({ data, products, cl }) => {
   const { openSubModal, setSubModalView } = useUI();
-
-  const tablet = useMediaQuery({
-    query: '(min-device-width: 768px)',
-  });
-  const largeScreen = useMediaQuery({
-    query: '(min-device-width: 1920px)',
-  });
-  const mediumScreen = useMediaQuery({
-    query: '(min-device-width: 1920px)',
-  });
-
   const { t } = useTranslation('common');
 
   const onSubServiceClick = (modal) => {
     openSubModal();
-
     setSubModalView(modal);
   };
 
   return (
     <MediaContextProvider>
-      <div>
-        {tablet && (
+      <div className={s.ServiceDetail}>
+        <Media greaterThanOrEqual="lg">
           <div className="sw-absolute sw-inset-0">
             <ServiceGlow />
           </div>
-        )}
-
-        <div style={{ height: '50%' }} className=" sw-absolute sw-inset-0 ">
-          <div
-            style={{ top: '60px' }}
-            className=" sw-absolute sw-w-4/5 xl:sw-w-1/2 sw-right-0 xl:sw-top-0"
-          >
-            <Image
-              src={data.background}
-              layout="responsive"
-              width={1225}
-              height={764}
-            />
-          </div>
-        </div>
-
-        <HomeContainer
-          cl="sw-flex md:sw-h-screen sw-items-center"
-          isVisible={true}
-        >
+        </Media>
+        <Container>
           <div className="sw-flex sw-flex-col sw-justify-end sw-h-full">
             <div className="sw-w-full sw-mb-12">
               <div className="sw-w-full xl:sw-w-1/2">
-                <Image
-                  src={data.icon}
-                  width={largeScreen ? 200 : 120}
-                  height={largeScreen ? 200 : 120}
-                  alt={data.name}
-                />
-                <Heading cl="sw-py-4" h={mediumScreen ? 'h3' : 'h5'}>
-                  {t(data.name)}
-                </Heading>
+                <Media greaterThanOrEqual="md">
+                  <Image
+                    src={data.icon}
+                    width={200}
+                    height={200}
+                    alt={data.name}
+                  />
+                </Media>
+                <Media lessThan="md">
+                  <Image
+                    src={data.icon}
+                    width={120}
+                    height={120}
+                    alt={data.name}
+                  />
+                </Media>
+                <Media greaterThanOrEqual="md">
+                  <Heading cl="sw-py-4" h="h3">
+                    {t(data.name)}
+                  </Heading>
+                </Media>
+                <Media lessThan="md">
+                  <Heading cl="sw-py-4" h="h5">
+                    {t(data.name)}
+                  </Heading>
+                </Media>
 
                 {typeof data.content !== 'string' ? (
                   data.content.map((item, idx) => (
@@ -120,14 +109,23 @@ const ServiceDetail: FC<Props> = ({ data, cl }) => {
                       style={{ right: '16px', bottom: '8px' }}
                       className="sw-w-full sw-flex sw-justify-end sw-absolute"
                     >
-                      <Arrow width={largeScreen ? '50px' : '30px'} />
+                      <Media greaterThanOrEqual="md">
+                        <Arrow width="50px" />
+                      </Media>
+                      <Media lessThan="md">
+                        <Arrow width="30px" />
+                      </Media>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
           </div>
-        </HomeContainer>
+        </Container>
+
+        <div className={cn('sw-my-32', s.ServiceDetail__products)}>
+          {products && <ProductSlider products={products} />}
+        </div>
       </div>
     </MediaContextProvider>
   );

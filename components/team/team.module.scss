@@ -157,3 +157,15 @@
     padding: 24px;
   }
 }
+
+.advisor_globe {
+  mix-blend-mode: color-dodge;
+}
+
+.advisor_first_glowing {
+  z-index: -1;
+}
+.advisor_second_glowing {
+  z-index: -1;
+  transform: rotate(180deg);
+}

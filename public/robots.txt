@@ -1,2 +1,9 @@
+# *
 User-agent: *
 Allow: /
+
+# Host
+Host: https://s-worldmedia.com
+
+# Sitemaps
+Sitemap: https://s-worldmedia.com/sitemap.xml

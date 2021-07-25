@@ -1,7 +1,5 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { getAllPostsForHome } from '../lib/api';
-import { HomeContainer, ParticlesLayout } from '../components/layout';
-import ReactScrollWheelHandler from 'react-scroll-wheel-handler';
+import { ParticlesLayout, Container } from '../components/layout';
 import { useSection } from '../lib/context/section-context';
 import { useEffect, useState } from 'react';
 import ProductSlider from '../components/common/products/slider';
@@ -12,25 +10,21 @@ import aboutUsList from '../lib/data/about-us';
 import AboutUs from '../components/common/about-us/about-us';
 import ServicePage from '../components/common/services/service-page/service-page';
 import Clients from '../components/common/clients/clients';
-import Glow from '../components/glows/glow';
 import { useTranslation } from 'react-i18next';
 import { Media, MediaContextProvider } from '../lib/media';
 import VideoBackground from '../components/common/video/video-background';
 import { useRouter } from 'next/router';
-import Head from 'next/head';
 import { NextSeo } from 'next-seo';
 
 export const getStaticProps = async ({ locale, preview }) => {
-  const allPosts = (await getAllPostsForHome(preview)) ?? [];
   return {
     props: {
-      allPosts,
       ...(await serverSideTranslations(locale, ['common'])),
     },
   };
 };
 
-const HomePage = ({ locales, allPosts }) => {
+const HomePage = ({ locales, allPosts = [] }) => {
   // Context
   const { currentSection, onScrollUp, onScrollDown } = useSection();
   const [desktopView, setDesktopView] = useState(undefined);
@@ -85,21 +79,50 @@ const HomePage = ({ locales, allPosts }) => {
               : 'Sincerity - Understanding - Perseverance - Creativity - Distinctiveness',
         }}
       />
-      <Media at="xs">
-        <VideoBackground />
-        <AboutUs data={aboutUsList} />
-        <ServicePage />
-        <Clients
-          title={t('home__partner__title')}
-          imgSrc="/assets/svg/media-partner.svg"
-        />
-        <Clients
-          title={t('home__client__title')}
-          imgSrc="/assets/svg/clients.svg"
-        />
-        <ProductSlider products={Products} />
-        <WhyUs data={whyUsList} />
+      {/* <Media at="xs"> */}
+      <VideoBackground />
+      <section className="sw-my-32">
+        <Container>
+          <AboutUs data={aboutUsList} />
+        </Container>
+      </section>
+
+      <section className="sw-my-32">
+        <Container>
+          <ServicePage />
+        </Container>
+      </section>
+
+      <section className="sw-my-32">
+        <Container>
+          <Clients
+            title={t('home__partner__title')}
+            imgSrc="/assets/images/others/tm1.png"
+          />
+        </Container>
+      </section>
+
+      <section className="sw-my-32">
+        <Container>
+          <Clients
+            title={t('home__client__title')}
+            imgSrc="/assets/svg/clients.svg"
+          />
+        </Container>
+      </section>
+
+      <ProductSlider products={Products} />
+      <section className="sw-my-32">
+        <Container>
+          <WhyUs data={whyUsList} />
+        </Container>
+      </section>
+      <Media greaterThanOrEqual="sm">
+        <div className="sw-fixed sw-top-0" style={{ zIndex: -10 }}>
+          <ParticlesLayout />
+        </div>
       </Media>
+      {/* </Media>
       <Media greaterThanOrEqual="sm">
         <ReactScrollWheelHandler
           upHandler={onPageScrollUp}
@@ -152,7 +175,7 @@ const HomePage = ({ locales, allPosts }) => {
             <WhyUs data={whyUsList} />
           </HomeContainer>
         </ReactScrollWheelHandler>
-      </Media>
+      </Media> */}
     </MediaContextProvider>
   );
 };

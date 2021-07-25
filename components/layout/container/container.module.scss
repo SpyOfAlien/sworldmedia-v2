@@ -2,6 +2,10 @@
   @apply sw-w-11/12 sw-mx-auto;
 }
 
+.homeContainer {
+  padding: 20px 0;
+}
+
 @screen md {
   .container {
     @apply sw-w-10/12;

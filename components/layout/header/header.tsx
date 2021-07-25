@@ -9,14 +9,25 @@ import { useUI } from '../../../lib/context/ui-context';
 import { useEffect, useState } from 'react';
 import cn from 'classnames';
 import { useSection } from '../../../lib/context/section-context';
+import { useTranslation } from 'next-i18next';
+import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 
-const Header = ({ isSticky = false }) => {
+const Header = () => {
   const router = useRouter();
-  const { closeModal, openModal, setModalView, displayModal, modalView } =
-    useUI();
+
+  const { t } = useTranslation('common');
+  const {
+    closeModal,
+    openModal,
+    setModalView,
+    displayModal,
+    modalView,
+  } = useUI();
   const { onSetSection } = useSection();
   const [isActiveHumburger, setIsActiveHumburger] = useState(false);
-  const [isTransparent, setIsTransparent] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+  const [isOffset, setIsOffset] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(false);
 
   const servicesModal = [
     'BRAND_COMMUNICATION',
@@ -30,12 +41,6 @@ const Header = ({ isSticky = false }) => {
     if (isActiveHumburger) {
       setIsActiveHumburger(false);
       closeModal();
-    }
-
-    if (router.pathname === '/' || router.pathname === '/contact') {
-      setIsTransparent(true);
-    } else {
-      setIsTransparent(false);
     }
   }, [router.pathname]);
 
@@ -53,6 +58,24 @@ const Header = ({ isSticky = false }) => {
       setIsActiveHumburger(!isActiveHumburger);
     }
   };
+
+  useScrollPosition(({ currPos }) => {
+    if (currPos.y < -150 && router.pathname === '/') {
+      setIsSticky(true);
+    } else {
+      setIsSticky(false);
+    }
+    if (currPos.y < -160 && router.pathname === '/') {
+      setIsOffset(true);
+    } else {
+      setIsOffset(false);
+    }
+    if (currPos.y < -250 && router.pathname === '/') {
+      setIsScrolling(true);
+    } else {
+      setIsScrolling(false);
+    }
+  });
 
   const handleSwitchLng = (lan) => {
     if (router.pathname === '/blogs/[slug]') {
@@ -103,21 +126,20 @@ const Header = ({ isSticky = false }) => {
 
   return (
     <div
-      className={cn(
-        s.header,
-        `${
-          ((isSticky || !isTransparent) && !isActiveHumburger) ||
-          (servicesModal.includes(modalView) && window.innerWidth < 768)
-            ? 'sw-bg-background'
-            : null
-        }`
-      )}
+      className={cn(s.header, {
+        [s.sticky]: isSticky,
+        [s.offset]: isOffset,
+        [s.scrolling]: isScrolling,
+        [s.transparent]:
+          (router.pathname === '/' && !isScrolling) ||
+          router.pathname === '/contact',
+      })}
     >
       <Container cl=" sw-relative sw-h-full sw-flex sw-items-center sw-justify-between">
         <div>
           <Media lessThan="lg">
             <div onClick={handleGoHome}>
-              <WhiteLogo width="65px" height="65px" />
+              <WhiteLogo width="45px" height="45px" />
             </div>
           </Media>
           <Media greaterThanOrEqual="lg">
@@ -126,11 +148,45 @@ const Header = ({ isSticky = false }) => {
                 onClick={handleGoHome}
                 style={{ marginBottom: '10px', cursor: 'pointer' }}
               >
-                <WhiteLogo />
+                <WhiteLogo width="60px" height="60px"/>
               </div>
             ) : null}
           </Media>
         </div>
+        <Media greaterThanOrEqual="md">
+          <div className="sw-nav">
+            <Link href="/">
+              <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-link nav-link">
+                {' '}
+                {t('menu__home')}{' '}
+              </a>
+            </Link>
+            <Link href="/services">
+              <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-link nav-link">
+                {' '}
+                {t('menu__services')}{' '}
+              </a>
+            </Link>
+            <Link href="/about">
+              <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-link nav-link">
+                {' '}
+                {t('menu__about')}{' '}
+              </a>
+            </Link>
+            <Link href="/blogs">
+              <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-link nav-link">
+                {' '}
+                {t('menu__news')}{' '}
+              </a>
+            </Link>
+            <Link href="/contact">
+              <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-text-link nav-link">
+                {' '}
+                {t('menu__contact')}{' '}
+              </a>
+            </Link>
+          </div>
+        </Media>
         <div className="sw-flex sw-items-center">
           <div className={s.switchLng}>
             <div
@@ -164,16 +220,18 @@ const Header = ({ isSticky = false }) => {
               EN{' '}
             </div>
           </div>
-          <div
-            className={cn(s.hamburger, s.hamburgerSlider, {
-              [s.active]: isActiveHumburger,
-            })}
-            onClick={onHamburgerClick}
-          >
-            <div className={s.hamburgerBox}>
-              <span className={s.hamburgerInner}></span>
+          <Media lessThan="md">
+            <div
+              className={cn(s.hamburger, s.hamburgerSlider, {
+                [s.active]: isActiveHumburger,
+              })}
+              onClick={onHamburgerClick}
+            >
+              <div className={s.hamburgerBox}>
+                <span className={s.hamburgerInner}></span>
+              </div>
             </div>
-          </div>
+          </Media>
         </div>
       </Container>
     </div>

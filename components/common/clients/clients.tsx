@@ -2,6 +2,7 @@ import Heading from '../../ui/typo/heading';
 import { FC } from 'react';
 import Image from 'next/image';
 import cn from 'classnames';
+import s from './clients.module.scss'
 import { Media, MediaContextProvider } from '../../../lib/media';
 
 interface Props {
@@ -29,7 +30,13 @@ const Clients: FC<Props> = ({ title, imgSrc, cl }) => {
             {title}
           </Heading>
         </Media>
-        <Image className="image" src={imgSrc} width={907} height={680} />
+        <Image
+          quality="100"
+          src={imgSrc}
+          width={907}
+          height={680}
+          className={s.imgDodge}
+        />
       </div>
     </MediaContextProvider>
   );

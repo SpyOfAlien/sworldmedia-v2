@@ -8,6 +8,7 @@ const services = [
     modal: 'BRAND_COMMUNICATION',
     content: 'home__service__brand_communication__content',
     background: `${baseUrl}brand-com.png`,
+    href: '/services/brand-communication',
     subService: [
       {
         title: 'home__service__branding__concept',
@@ -30,6 +31,7 @@ const services = [
     modal: 'BRANDING',
     content: 'home__service__branding__content',
     background: `${baseUrl}branding.png`,
+    href: '/services/branding',
     subService: [
       {
         title: 'home__service__brand_communication__pr',
@@ -56,6 +58,7 @@ const services = [
     modal: 'PRODUCTION',
     content: 'home__service__production__content',
     background: `${baseUrl}product.png`,
+    href: '/services/production',
     subService: [
       {
         title: 'home__service__production__for_client',
@@ -79,6 +82,7 @@ const services = [
       'home__service__international_relations__content4',
     ],
     background: `${baseUrl}connection.png`,
+    href: '/services/international-relation',
     subService: [
       {
         title: 'home__service__international_relations__for_vn',
@@ -101,6 +105,7 @@ const services = [
     modal: 'EVENT',
     content: 'home__service__event__content',
     background: `${baseUrl}events.png`,
+    href: '/services/events',
     subService: [
       {
         title: 'home__service__event__online',

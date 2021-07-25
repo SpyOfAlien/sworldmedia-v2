@@ -5,14 +5,16 @@ import Phone from '../../icons/phone';
 import Heading from '../typo/heading';
 import Paragraph from '../typo/paragraph';
 
-const Infor = () => {
+const Infor = ({heading = true}) => {
   const { t } = useTranslation();
 
   return (
     <div>
-      <Heading h="h5" cl="sw-text-paragraph sw-mb-xsm">
+
+      {heading && <Heading h="h5" cl="sw-text-paragraph sw-mb-xsm">
         {t('contact__infor')}
-      </Heading>
+      </Heading>}
+      
       <span className="sw-flex sw-mb-sm">
         <span className="sw-block">
           <Phone />

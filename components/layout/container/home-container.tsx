@@ -52,7 +52,7 @@ const HomeContainer: FC<Props> = ({
             cl
           )}
         >
-          {children}
+          <div className={s.homeContainer}>{children}</div>
         </motion.div>
       )}
     </AnimatePresence>

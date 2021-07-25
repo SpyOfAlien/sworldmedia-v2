@@ -20,7 +20,7 @@ module.exports = {
         xl: '8rem',
         xxl: '14rem',
         48: '48%',
-        header: '100px',
+        header: '60px',
       },
       letterSpacing: {
         tighter: '-.04em',
@@ -34,6 +34,7 @@ module.exports = {
         bigscreen: '18px',
         desktop: '16px',
         mobile: '14px',
+        link: '1.2rem',
         p: '1rem',
         h1: '4rem',
         h2: '3.11111111111rem',

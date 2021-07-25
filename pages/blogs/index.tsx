@@ -1,4 +1,3 @@
-import { BlockList } from 'net';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { NextSeo } from 'next-seo';
 import Head from 'next/head';
@@ -11,22 +10,22 @@ import Tags from '../../components/common/blog/tags/tags/tags';
 import { Container } from '../../components/layout';
 import { getAllPostsForHome } from '../../lib/api';
 import { Media, MediaContextProvider } from '../../lib/media';
+import { useTranslation } from 'next-i18next';
 
 export const getStaticProps = async ({ locale, preview }) => {
   const allPosts = (await getAllPostsForHome(preview)) || [];
-  const locales = await serverSideTranslations(locale, ['common']);
-
   return {
     props: {
       posts: allPosts,
-      locale: locales,
+      ...await serverSideTranslations(locale, ['common'])
     },
   };
 };
 
-const BlogsPage = ({ posts }) => {
+const BlogsPage = ({ locales, posts}) => {
   const priorityPost = posts.find((item) => item.priority === true);
   const otherPosts = posts.filter((item) => item.priority === false);
+  const { t } = useTranslation('common');
 
   const router = useRouter();
   const isVn = router.locale === 'vn';
