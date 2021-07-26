@@ -1,5 +1,5 @@
 .overrideContainer {
-  top: 50%;
+  top: 120px;
 }
 
 .content {
@@ -77,13 +77,13 @@
   }
 
   .overrideContainer {
-    top: 30%;
+    top: 100px;
   }
 }
 
 @media screen and (min-width: 1920px) {
   .overrideContainer {
-    top: 20%;
+    top: 80px;
   }
 
   .content {

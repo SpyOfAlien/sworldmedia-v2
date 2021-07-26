@@ -33,8 +33,8 @@ const Clients: FC<Props> = ({ title, imgSrc, cl }) => {
         <Image
           quality="100"
           src={imgSrc}
-          width={907}
-          height={680}
+          width={1920}
+          height={1080}
           className={s.imgDodge}
         />
       </div>

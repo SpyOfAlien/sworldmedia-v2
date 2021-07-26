@@ -34,7 +34,7 @@ module.exports = {
         bigscreen: '18px',
         desktop: '16px',
         mobile: '14px',
-        link: '1.2rem',
+        link: '1rem',
         p: '1rem',
         h1: '4rem',
         h2: '3.11111111111rem',
