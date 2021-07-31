@@ -83,8 +83,8 @@ const AboutUs = ({ locale }) => {
             <Heading h="h4">{t('aboutus__title')}</Heading>
           </Media>
         </section>
-        <section className="sw-flex sw-flex-col-reverse sw-justify-between xl:sw-flex-row sw-my-8 xl:sw-my-32 2xl:sw-my-40">
-          <div className="sw-w-full xl:sw-w-48">
+        <section className="sw-flex sw-flex-col-reverse sw-justify-between xl:sw-flex-row sw-my-8 xl:sw-mb-32 2xl:sw-my-40">
+          <div className="sw-w-full xl:sw-w-48 sw-flex sw-flex-col sw-justify-center">
             <div className="sw-mb-6">
               <Paragraph>{t('aboutus__story__content1')}</Paragraph>
             </div>
@@ -98,9 +98,9 @@ const AboutUs = ({ locale }) => {
           <div className="sw-w-full xl:sw-w-48 sw-mb-12 xl:sw-mb-0 sw-flex sw-items-center">
             <div className="sw-w-full">
               <Image
-                src="/assets/svg/team.svg"
-                width={774}
-                height={492}
+                src="/assets/images/others/team.png"
+                width={739}
+                height={587}
                 layout="responsive"
                 quality={100}
               />
@@ -113,9 +113,9 @@ const AboutUs = ({ locale }) => {
         <section className="sw-flex sw-flex-col xl:sw-flex-row sw-justify-between sw-my-8 xl:sw-my-32 2xl:sw-my-40">
           <div className="sw-w-full xl:sw-w-48">
             <Image
-              src="/assets/svg/ceo.svg"
-              width={466}
-              height={593}
+              src="/assets/images/others/CEO.png"
+              width={692}
+              height={742}
               layout="responsive"
               quality={100}
             />
