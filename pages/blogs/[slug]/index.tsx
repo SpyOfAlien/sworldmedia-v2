@@ -133,7 +133,7 @@ const Post = ({ post, morePosts, preview, locale }) => {
             </Media>
             <div className="sw-flex sw-justify-between sw-w-full">
               <div>
-                {isVN
+                {isVN && vnTags.length && vnTags.length
                   ? vnTags.map((tag, idx) => (
                       <span
                         key={idx}
