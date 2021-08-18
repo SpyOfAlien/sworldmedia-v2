@@ -133,7 +133,7 @@ const Post = ({ post, morePosts, preview, locale }) => {
             </Media>
             <div className="sw-flex sw-justify-between sw-w-full">
               <div>
-                {isVN && vnTags.length && vnTags.length
+                {isVN && vnTags
                   ? vnTags.map((tag, idx) => (
                       <span
                         key={idx}
@@ -142,14 +142,16 @@ const Post = ({ post, morePosts, preview, locale }) => {
                         {tag} {vnTags.length - 1 === idx ? '' : '|'}
                       </span>
                     ))
-                  : enTags.map((tag, idx) => (
+                  : enTags
+                  ? enTags.map((tag, idx) => (
                       <span
                         key={idx}
                         className="sw-mr-2 sw-text-paragraph sw-capitalize sw-cursor-pointer"
                       >
                         {tag} {enTags.length - 1 === idx ? '' : '|'}
                       </span>
-                    ))}
+                    ))
+                  : null}
               </div>
               <div className="sw-text-paragraph">{formatedDate}</div>
             </div>
