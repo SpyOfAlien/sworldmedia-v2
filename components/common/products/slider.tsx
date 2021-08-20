@@ -14,6 +14,7 @@ import { useTranslation } from 'react-i18next';
 interface Props {
   products: any[];
   cl?: string;
+  baseUrl: string;
 }
 
 const NextArrow = (props) => {
@@ -44,8 +45,7 @@ const PrevArrow = (props) => {
   );
 };
 
-const ProductSlider: FC<Props> = ({ products, cl }) => {
-  const baseUrl = '/assets/images/products/events';
+const ProductSlider: FC<Props> = ({ products, cl, baseUrl }) => {
   const { t } = useTranslation();
 
   const settings = {
@@ -101,16 +101,18 @@ const ProductSlider: FC<Props> = ({ products, cl }) => {
                         </Heading>
                       </Media>
                     </div>
-                    <div className={cn('sw-mb-sm', s.content)}>
-                      {typeof product.content === 'string' ? (
+                    {product.content && (
+                      <div className={cn('sw-mb-sm', s.content)}>
+                        {typeof product.content === 'string' ? (
+                          <Paragraph>{t(product.content)}</Paragraph>
+                        ) : (
+                          product.content.map((item, idx) => (
+                            <Paragraph key={idx}>{t(item)}</Paragraph>
+                          ))
+                        )}
                         <Paragraph>{t(product.content)}</Paragraph>
-                      ) : (
-                        product.content.map((item, idx) => (
-                          <Paragraph key={idx}>{t(item)}</Paragraph>
-                        ))
-                      )}
-                      <Paragraph>{t(product.content)}</Paragraph>
-                    </div>
+                      </div>
+                    )}
                     <Button
                       cl="sw-w-1/3 md:sw-w-1/4 sw-h-10"
                       text="Xem video"

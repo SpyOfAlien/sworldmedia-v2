@@ -18,17 +18,17 @@
   "home__sub_service__provide": "Dịch vụ gồm",
 
   "home__service__brand_communication__title": "Truyền thông thương hiệu",
-  "home__service__brand_communication__content": "S-World cung cấp giải pháp truyền thông cho thương hiệu trên đa nền tảng online bao gồm 4 dòng dịch vụ: Tiếp thị, Truyền thông báo chí - truyền hình (PR), truyền thông Social Media, và truyền thông qua KOL & Influencer",
+  "home__service__brand_communication__content": "S-World cung cấp giải pháp truyền thông thương hiệu trên đa nền tảng bao gồm 4 dòng dịch vụ: Truyền thông báo chí - truyền hình (PR), Truyền thông xã hội (social media), Truyền thông qua người có ảnh hưởng (KOLs & Influencers) và Tiếp thị - Bán hàng",
   "home__service__brand_communication__sub_content": "",
 
-  "home__service__brand_communication__pr": "Truyền thông báo chí - truyền hình (PR)",
+  "home__service__brand_communication__pr": "Truyền thông Báo chí - Truyền hình (PR)",
   "home__service__brand_communication__pr__strength1": "- S-World có sự hiểu biết sâu và mối quan hệ rộng với các đơn vị truyền thông. Bên cạnh đó S-World cũng là đối tác chiến lược với các đơn vị truyền thông lớn và uy tín tại Việt Nam như là VNE, VTV",
   "home__service__brand_communication__pr__strength2": "- Đội ngũ nhân viên được đào tạo bài bản trong lĩnh vực báo chí",
   "home__service__brand_communication__pr__services1": "- Lên kế hoạch PR thương hiệu, sản phẩm, dịch vụ",
   "home__service__brand_communication__pr__services2": "- Kết nối với các đơn vị báo chí với ngân sách được tối ưu hóa",
   "home__service__brand_communication__pr__services3": "- Xử lý khủng hoảng truyền thông",
 
-  "home__service__brand_communication__social": "Truyền thông Social Media",
+  "home__service__brand_communication__social": "Truyền thông xã hội (social media)",
   "home__service__brand_communication__social__strength1": "- Đội ngũ am hiểu cách thức vận hành của các trang mạng xã hội nổi tiếng như Facebook, Instagram và LinkedIn",
   "home__service__brand_communication__social__strength2": "- Khả năng phân tích đối tượng, lập chiến lược phát triển fanpage",
   "home__service__brand_communication__social__strength3": "- Đội ngũ sáng tạo nội dung chuyên nghiệp và bắt trend",
@@ -36,7 +36,7 @@
   "home__service__brand_communication__social__services2": "- Tổ chức và quản lý mini game, cuộc thi, sự kiện",
   "home__service__brand_communication__social__services3": "- Phân tích độ hiệu quả của chiến dịch",
 
-  "home__service__brand_communication__kol": "Truyền thông qua KOL & Influencer",
+  "home__service__brand_communication__kol": "Truyền thông qua người có ảnh hưởng (KOLs, Influencers)",
   "home__service__brand_communication__kol__strength1": "- Thấu hiểu thị trường KOL",
   "home__service__brand_communication__kol__strength2": "- Khả năng lập kế hoạch với mức đầu tư tối ưu",
   "home__service__brand_communication__kol__services1": "- Phân tích và chọn lựa KOL thích hợp với thương hiệu, sản phẩm, dịch vụ",
@@ -50,16 +50,16 @@
   "home__service__brand_communication__marketing__services2": "- Thực thi chiến dịch marketing trên đa nền tảng",
 
   "home__service__branding__title": "Xây dựng thương hiệu",
-  "home__service__branding__content": "S-World cung cấp giải pháp toàn diện cho thương hiệu khi tư vấn và xây dựng những yếu tố: Câu chuyện thương hiệu, slogan, định vị khách hàng và chiến lược phát triển, để doanh nghiệp đến gần hơn với khách hàng.",
+  "home__service__branding__content": "S-World cung cấp giải pháp xây dựng thương hiệu toàn diện: Câu chuyện thương hiệu, Bộ nhận diện thương hiệu, Định vị khách hàng, Chiến lược truyền thông bền vững... để sản phẩm/doanh nghiệp của bạn đến gần hơn với đối tượng khách hàng.",
   "home__service__branding__sub_content": "",
 
-  "home__service__branding__concept": "Phát triển Concept",
+  "home__service__branding__concept": "Câu chuyện thương hiệu",
   "home__service__branding__concept__strength1": "- Thấu hiểu người dùng của thương hiệu, đặc biệt trong 4 lĩnh vực Giáo dục, Y tế, Công nghệ và Đối ngoại",
   "home__service__branding__concept__strength2": "- Phát triển concept dựa trên sự sáng tạo và Insight được chắt lọc từ End-user để đảm bảo tính thực thi",
   "home__service__branding__concept__services1": "- Câu chuyện thương hiệu",
   "home__service__branding__concept__services2": "- Màu sắc thương hiệu",
 
-  "home__service__branding__identity": "Thiết kế bộ nhận diện thương hiệu",
+  "home__service__branding__identity": "Bộ nhận diện thương hiệu",
   "home__service__branding__identity__strength1": "- Đội ngũ thiết kế sáng tạo, năng động",
   "home__service__branding__identity__strength2": "- Chất lượng thiết kế đột phá",
   "home__service__branding__identity__strength3": "- Đa dạng ý tưởng đáp ứng những yêu cầu khó nhất",
@@ -70,7 +70,7 @@
   "home__service__branding__identity__services5": "- Instagram",
   "home__service__branding__identity__services6": "- LinkedIn",
 
-  "home__service__branding__strategy": "Chiến lược thương hiệu",
+  "home__service__branding__strategy": "Xây dựng chiến lược truyền thông bền vững",
   "home__service__branding__strategy__strength1": "- Am hiểu sâu sắc về thị trường, đặc biệt là 4 lĩnh vực Giáo dục, Y tế, Công nghệ và Đối ngoại",
   "home__service__branding__strategy__strength2": "- Đội ngũ với tư duy chiến lược, được đào tạo toàn cầu",
   "home__service__branding__strategy__strength3": "- Tốc độ thực hiện nhanh chóng",
@@ -79,10 +79,13 @@
   "home__service__branding__strategy__services3": "- Chiến lược phát triển",
 
   "home__service__production__title": "Sản xuất",
-  "home__service__production__content": "S-World cung cấp dịch vụ sản xuất Video cho khách hàng. Đồng thời chúng tôi cũng sở hữu những format chương trình nổi tiếng do chính chúng tôi sáng tạo và phát triển cùng các đối tác Media hàng đầu Việt Nam. Ví dụ như Talkshow Nguy Cơ, Learn to love, etc.",
+  "home__service__production__content1": "S-World cung cấp ba dòng sản phẩm cộng hưởng: ",
+  "home__service__production__content2": "- Sản phẩm truyền hình: phim tài liệu, ký sự, phóng sự, truyền hình thực tế, talkshow, gameshow...",
+  "home__service__production__content3": "- Sản phẩm kỹ thuật số (digital): kết hợp lan toả từ báo điện tử và mạng xã hội ",
+  "home__service__production__content4": "- Sản phẩm dành cho doanh nghiệp: TVC, sản phẩm trực tuyến (viral), phóng sự, phim tài liệu doanh nghiệp",
   "home__service__production__sub_content": "",
 
-  "home__service__production__for_client": "Sản xuất cho đối tác / khách hàng",
+  "home__service__production__for_client": "Sản phẩm truyền hình",
   "home__service__production__for_client__strength1": "- Đội ngũ ekip trẻ, năng động, nhiệt huyết được đào tạo bài bản",
   "home__service__production__for_client__strength2": "- Đội ngũ sản xuất (trường quay, kỹ thuật) giàu kinh nghiệm",
   "home__service__production__for_client__strength3": "- Đội hậu kỳ chuyên môn toàn diện, nhiệt huyết và sáng tạo",
@@ -90,17 +93,19 @@
   "home__service__production__for_client__services2": "- Show: Reality show, gameshow, talk show",
   "home__service__production__for_client__services3": "- Image: KV, Poster",
 
-  "home__service__production__format": "Sản xuất các Format mới và khác biệt mang thương hiệu S-World và các đối tác Media - phát hành đa nền tảng",
+  "home__service__production__format": "Sản phẩm kỹ thuật số (Digital)",
   "home__service__production__format__strength1": "- Thấu hiểu hành vi của user trên đa nền tảng online để từ đó sản xuất những format chương trình thu hút và ý nghĩa",
   "home__service__production__format__strength2": "- Mạng lưới đối tác chiến lược với các trang báo điện tử hàng đầu Việt Nam như VNExpress, VTV",
   "home__service__production__format__strength3": "- Đội ngũ quảng bá chương trình giàu kinh nghiệm để đảm bảo chương trình được lan tỏa",
   "home__service__production__format__services": "TV, Báo điện tử, Social Media",
 
   "home__service__event__title": "Sự kiện",
-  "home__service__event__content": "S-World có kinh nghiệm tổ chức những sự kiện online và offline để tạo cơ hội cho doanh nghiệp giới thiệu sản phẩm, quảng bá thương hiệu đến đối tượng mục tiêu một cách hiệu quả và ấn tượng, để từ đó đạt được những mục tiêu quan trọng của doanh nghiệp.",
-  "home__service__event__sub_content": "",
+  "home__service__event__content1": "- Kỷ niệm",
+  "home__service__event__content2": "- Hội nghị, Hội thảo",
+  "home__service__event__content3": "- Ra mắt sản phẩm ",
+  "home__service__event__content4": "- Triển lãm, Festival, Hội chợ",
 
-  "home__service__event__online": "Sự kiện Online",
+  "home__service__event__online": "Sự kiện trực tuyến",
   "home__service__event__online__strength1": "- Có kinh nghiệm tổ chức những sự kiện lớn và sự kiện cho những nhân vật nổi tiếng",
   "home__service__event__online__strength2": "- Khả năng thấu hiểu đối tác sâu sắc",
   "home__service__event__online__strength3": "- Đội ngũ lập kế hoạch toàn diện",
@@ -113,7 +118,7 @@
   "home__service__event__online__services5": "- Đảm bảo tính dễ hiểu của nội dung",
   "home__service__event__online__services6": "- Kêu gọi tương tác giữa người xem và khách mời",
 
-  "home__service__event__offline": "Sự kiện Offline",
+  "home__service__event__offline": "Sự kiện trực tiếp",
   "home__service__event__offline__strength1": "- Có kinh nghiệm sự kiện cho những đối tác tên tuổi như: Do Venture, Tech Fest, etc.",
   "home__service__event__offline__strength2": "- Khả năng thấu hiểu nhu cầu sâu sắc của đối tác",
   "home__service__event__offline__strength3": "- Đội ngũ lập kế hoạch toàn diện và hiểu biết",
@@ -124,9 +129,9 @@
   "home__service__event__offline__services4": "- Xúc tiến và quảng bá sự kiện",
 
   "home__service__international_relations__title": "Kết nối quốc tế",
-  "home__service__international_relations__content1": "S-World giúp kết nối các:",
-  "home__service__international_relations__content2": "- Đối tác người Việt Nam ở nước ngoài",
-  "home__service__international_relations__content3": "- Đối tác nước ngoài ở Việt Nam",
+  "home__service__international_relations__content1": "Trong xu hướng dịch chuyển của thời đại, dòng chảy thương mại toàn cầu sẽ cần nhiều hơn nữa những cái bắt tay, đồng lòng kiến tạo những điều khác biệt. Hiểu được điều này, S-World định vị mình là cầu nối giữa Việt Nam và thế giới bằng thế mạnh truyền thông đa phương tiện. Chúng tôi mang đến Dịch vụ kết nối quốc tế với hai nhánh chính:",
+  "home__service__international_relations__content2": "- Kết nối các công ty, các đơn vị, cá nhân nước ngoài muốn đến Việt Nam đầu tư, khám phá, tổ chức sự kiện",
+  "home__service__international_relations__content3": "- Kết nối các công ty, các đơn vị, cá nhân Việt Nam muốn ra nước ngoài đầu tư, khám phá, tổ chức sự kiện ",
   "home__service__international_relations__content4": "- Công ty Việt Nam với tầm nhìn mang sản phẩm đến thị trường quốc tế hoặc là có yếu tố Quốc tế ",
   "home__service__international_relations__sub_content": "",
 
@@ -140,16 +145,16 @@
   "home__service__international_relations__for_vn__services3": "- Khám phá",
   "home__service__international_relations__for_vn__services4": "- Tổ chức sự kiện ",
 
-  "home__service__international_relations__for_foreign_inVN": "Dành cho công ty đối tác nước ngoài ở Việt Nam",
+  "home__service__international_relations__for_foreign_inVN": "Đối tác quốc tế ở Việt Nam",
   "home__service__international_relations__for_foreign_inVN__strength1": "- Thấu hiểu thị trường nội địa",
   "home__service__international_relations__for_foreign_inVN__strength2": "- Có mối quan hệ rộng với các đơn vị truyền thông, phát hành, các đại sứ quán",
 
-  "home__service__international_relations__for_foreign_inVN__services1": "Kết nối các công ty, đơn vị, cá nhân Việt Nam muốn ra nước ngoài:",
+  "home__service__international_relations__for_foreign_inVN__services1": "Đối tác Việt Nam ở nước ngoài",
   "home__service__international_relations__for_foreign_inVN__services2": "- Đầu tư",
   "home__service__international_relations__for_foreign_inVN__services3": "- Khám phá",
   "home__service__international_relations__for_foreign_inVN__services4": "- Tổ chức sự kiện",
 
-  "home__service__international_relations__for_vn_international": "Dành cho công ty Việt Nam muốn đưa sản phẩm ra quốc tế hoặc có yếu tố quốc tế",
+  "home__service__international_relations__for_vn_international": "Đối tác Việt Nam có tầm nhìn vươn ra thế giới",
   "home__service__international_relations__for_vn_international__strength1": "- Có sự hiểu biết với thị trường quốc tế để xây dựng chiến lược phù hợp",
   "home__service__international_relations__for_vn_international__strength2": "- Sở hữu đội ngũ dày dặn kinh nghiệm khi làm việc với các đối tác nước ngoài",
 
@@ -192,8 +197,9 @@
   "home__new_product__dung_bo_lo__content3": "Nhân vật trải nghiệm là người nước ngoài với tình yêu lớn dành cho văn hoá Việt Nam.",
   "home__new_product__dung_bo_lo__content4": "Kỳ vọng phát sóng đa phương tiện trên truyền hình, báo điện tử và social media.",
 
-  "home__new_product__viet_challenge__title": "VIETCHALLENGE",
-  "home__new_product__viet_challenge__content": "Kết nối, lan toả cuộc thi Vietchallenge với truyền thông Việt Nam.",
+  "home__new_product__viet_challenge__title": "KẾT NỐI, LAN TOẢ CUỘC THI VIETCHALLENGE VỚI TRUYỀN THÔNG VIỆT NAM",
+  "home__new_product__viet_challenge__content1": "Được khởi xướng từ năm 2015, VietChallenge là hoạt động nằm trong Đề án 'Hỗ trợ hệ sinh thái khởi nghiệp đổi mới sáng tạo quốc gia đến năm 2025' do Bộ Khoa học và Công nghệ chủ trì thực hiện.",
+  "home__new_product__viet_challenge__content2": "Cuộc thi dành cho người Việt Nam trên khắp thế giới do Hội Thanh niên sinh viên Việt Nam tại Hoa Kỳ phát động, tạo cơ hội cho người trẻ khởi nghiệp học hỏi và thiết lập mối quan hệ với các quỹ đầu tư uy tín, các nhà đầu tư trong nước và quốc tế...",
 
   "home__new_product__randi_title": "Hội thảo trực tuyến “Vị thế phụ nữ trong tương lai đầu tư thế giới”.",
   "home__new_product__randi_content": "Hội thảo trực tuyến Đầu tư trong lĩnh vực startup và xây dựng hệ sinh thái: “Vị thế Phụ nữ trong tương lai đầu tư thế giới” do S-World tổ chức vào tháng 5 vừa qua. Chương trình có sự đồng hành của Lãnh sự quán Mỹ tại TP HCM và nền tảng gọi vốn cộng đồng Republic.co, cùng với sự bảo trợ truyền thông của Vn-Express. S-World đã vinh hạnh nhận được cái gật đầu đồng ý tham dự của Randi Zuckerberg – cựu Giám đốc Phát triển thị trường của Facebook, chị gái tỷ phú Mark Zuckerberg và Lê Diệp Kiều Trang – cựu CEO Facebook Việt Nam, đồng sáng lập Quỹ đầu tư Alabaster.",
@@ -207,6 +213,45 @@
   "home__new_product__metran__content2": "Khẩu trang oxy sạch là xu hướng của tương lai?",
   "home__new_product__metran__content3": "Máy thở do người Việt làm toàn bộ phần cứng và phần mềm ưu việt như thế nào trên thế giới?",
   "home__new_product__metran__content4": "Tất cả sẽ có trong series: 𝗔𝗶 𝗿𝗼̂̀𝗶 𝗰𝘂̃𝗻𝗴 𝗞𝗛𝗔́𝗧 cùng nhà phát minh Trần Ngọc Phúc, người sáng lập và Chủ tịch Tập đoàn Metran Japan do S-World thực hiện. Giữa làn sóng dịch bệnh Covid-19 tái bùng phát trên toàn thế giới là lúc chúng ta càng cần kết nối để lan toả thông điệp “Stronger Together” - CÙNG NHAU để MẠNH HƠN.",
+
+  "home__new_product__republic__title": "REPUBLIC - ĐƯA STARTUP FINTECH NỔI DANH ĐẤT MỸ 'THÂM NHẬP' THỊ TRƯỜNG VIỆT NAM ",
+  "home__new_product__republic__content1": "Republic là một nền tảng công nghệ kết nối các startup với các nguồn đầu tư cá nhâ, hình thành cơ hội sinh lời thông qua gọi vốn cộng đồng (crowdfunding), được thành lập từ năm 2016 bởi Kendrick Nguyễn , một luật sư người Mỹ gốc Việt. Hiện nay, Republic đang là một trong những công ty fintech lớn nhất tại Mỹ, đặc biệt là trong lĩnh vực đầu tư bán lẻ và blockchain.",
+  "home__new_product__republic__content2": "Trên hành trình đưa cái tên Republic đến gần hơn với cộng đồng đầu tư và yêu công nghệ tại nước nhà, S-World rất vinh dự khi được đồng hành cùng Republic với vai trò là đại diện truyền thông.",
+  "home__new_product__republic__content3": "Mục tiêu của Republic tại Việt Nam là mở rộng thương hiệu, tăng độ nhận diện của Republic trong cộng đồng đầu tư crypto ở Việt Nam. ",
+
+  "home__new_product__new-age__title": "ĐỒNG HÀNH TRUYỀN THÔNG CÙNG HỆ THỐNG TRƯỜNG TÂN THỜI ĐẠI QUA 2 WEBINAR VỀ GIÁO DỤC",
+  "home__new_product__new-age__content1": "Trong vai trò đối tác truyền thông của Hệ thống giáo dục Tân Thời Đại, S-World đồng hành cùng 2 webinar về giáo dục:",
+  "home__new_product__new-age__content2": "- Thu hút hơn 100.000 lượt xem trong 2 buổi webinar",
+  "home__new_product__new-age__content3": "- Vượt toàn bộ KPI đặt ra cho toàn dự án",
+  "home__new_product__new-age__content4": "- Đặc biệt, mục tiêu tổng lượt xem vượt trên chỉ tiêu 200%.",
+  "home__new_product__new-age__content5": "Từ hai đầu cầu Hà Nội - TP.Hồ Chí Minh, Tân Thời Đại và S-World đã thiết lập một mối duyên đặc biệt, cùng mục tiêu lan tỏa những giá trị của giáo dục. Hai webinar với sự góp mặt của các chuyên gia đầu ngành giáo dục trong và ngoài nước, nổi bật với Tỷ phú Peter - nhà sáng lập Fun Academy & Finest Future, Nhà giáo Nguyễn Thị Thuỷ, Bà Phạm Thị Lam - Chủ tịch HĐQT Hệ thống GD Tân Thời Đại… đã lan tỏa những thông tin hữu ích về phương pháp giáo dục hạnh phúc đến từ đất nước Phần Lan.",
+  "home__new_product__new-age__content6": "Xem lại 2 webinar: ",
+  "home__new_product__new-age__content7": "Du học Phần Lan - Ước mơ trong tầm tay: https://bit.ly/3dQPCrl",
+  "home__new_product__new-age__content8": "PPGD Phần Lan - Giúp trẻ tự tin, sẵn sàng bước vào lớp 1: https://bit.ly/2UeQAqm",
+
+  "home__new_product__library-of-dreams__title": "ĐỒNG HÀNH TRUYỀN THÔNG DỰ ÁN CỘNG ĐỒNG THƯ VIỆN ƯỚC MƠ",
+  "home__new_product__library-of-dreams__content1": "S-World góp sức vào thành công của triển lãm ảnh “Thấu cảm – những chuyện chưa kể” với vai trò cố vấn - hỗ trợ truyền thông. 1.625.000.000 đồng, tương đương 25 Thư viện cho trẻ em Việt Nam là con số ngoài mong đợi mà triển lãm ảnh đã đạt được vào cuối tháng 11/2020. Triển lãm và buổi đấu giá ảnh được tổ chức bởi dự án Thư Viện Ước Mơ ",
+  "home__new_product__library-of-dreams__content2": "Library of Dreams với toàn bộ lợi nhuận được dùng để mua sách, dụng cụ học tập và xây dựng thư viện cho trẻ em miền Trung chịu thiệt hại nặng nề sau bão 2020.",
+
+  "home__new_product__lab__title": "THIẾT KẾ LOGO CHO PHÒNG LAB, MỸ",
+
+  "home__new_product__undp__title": "TALKSHOW CÙNG UNDP HƯỞNG ỨNG TUẦN LỄ DOANH NGHIỆP CÓ TRÁCH NHIỆM",
+  "home__new_product__undp__content": "Talkshow phối hợp thực hiện bởi United Nations Development Programme - UNDP và VnExpress.net hưởng ứng tuần lễ “Doanh nghiệp có trách nghiệm”. Chương trình có sự hỗ trợ từ UNDP Việt Nam và chính phủ Thụy Điển.",
+
+  "home__new_product__talenet__title": "WEBINAR: WHO CAN DRIVE SALES & MARKETING 4.0. ",
+  "home__new_product__talenet__content1": "Hội thảo online Who can drive sales & marketing 4.0 là hội thảo mở màn trong chuỗi sự kiện “The Future of Jobs” với sự góp mặt của các khách mời “khủng” trong ngành sales & marketing, qua đó giúp người quan tâm đến lĩnh vực này có thể định hướng và phát triển sự nghiệp bản thân.",
+  "home__new_product__talenet__content2": "Hội thảo phát trực tuyến trên Facebook chính thức của Talentnet Corporation",
+
+  "home__new_product__uac__title": "KẾT NỐI TRUNG TÂM TIẾP CẬN ĐẠI HỌC (UNIVERSITY ACESS CENTRE) THUỘC TẬP ĐOÀN INTO",
+
+  "home__new_product__international-relation__title": "HỘI THẢO “KẾT NỐI VÀ PHÁT HUY CÁC NGUỒN LỰC ĐỂ STARTUP VIỆT RA THẾ GIỚI” NĂM 2019",
+  "home__new_product__international-relation__content1": "- Đơn vị tham gia tổ chức Bộ Khoa học Công nghệ, đại diện là Thứ trưởng Trần Văn Tùng.",
+  "home__new_product__international-relation__content2": "- Góp mặt ủng hộ từ Tổng Lãnh sự Mỹ tại TP.HCM với đại diện là Tổng Lãnh sự Mỹ Marie C. Damour.",
+  "home__new_product__international-relation__content3": "- Tham gia tổ chức của Uỷ ban Nhà nước về Người Việt Nam ở nước ngoài TPHCM, với đại diện là Chủ nhiệm Phùng Công Dũng.",
+  "home__new_product__international-relation__content4": "- Cục Phát triển thị trường và doanh nghiệp khoa học và công nghệ với đại diện là Cục trưởng Phạm Hồng Quất.",
+  "home__new_product__international-relation__content5": "- Cùng các diễn giả nổi tiếng Hội thảo đã gây được dấu ấn lớn với sự tham gia của 200 khách mời là các chuyên gia, các startup, viện, trường tại Việt Nam và nước ngoài. ",
+  "home__new_product__international-relation__content6": "- Livestream thu hút 10.000 người xem",
+  "home__new_product__international-relation__content7": "- Hơn 40 hãng báo chí – kênh truyền hình đưa tin",
 
   "home__whyus__title": "Tại sao chọn chúng tôi",
   "home__aboutus__title": "Về chúng tôi",

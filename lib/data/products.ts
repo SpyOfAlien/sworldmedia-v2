@@ -1,6 +1,6 @@
 const baseUrl = '/assets/images/products/events/';
 
-const Products = [
+const EventProducts = [
   {
     title: 'home__new_product__randi_title',
     content: 'home__new_product__randi_content',
@@ -28,4 +28,4 @@ const Products = [
     link: 'https://www.facebook.com/sworldmultimedia/videos/347173370088643',
   },
 ];
-export default Products;
+export default EventProducts;

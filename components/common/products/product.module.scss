@@ -7,6 +7,10 @@
   @apply sw-overflow-y-scroll sw-pr-4;
 }
 
+.mt {
+  margin-top: 16px;
+}
+
 /* width */
 .content::-webkit-scrollbar {
   width: 5px;

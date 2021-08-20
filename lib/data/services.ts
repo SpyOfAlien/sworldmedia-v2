@@ -56,7 +56,12 @@ const services = [
     name: 'home__service__production__title',
     label: 'Sản xuất',
     modal: 'PRODUCTION',
-    content: 'home__service__production__content',
+    content: [
+      'home__service__production__content1',
+      'home__service__production__content2',
+      'home__service__production__content3',
+      'home__service__production__content4',
+    ],
     background: `${baseUrl}product.png`,
     href: '/services/production',
     subService: [
@@ -103,7 +108,12 @@ const services = [
     name: 'home__service__event__title',
     label: 'Xây dựng thương hiệu',
     modal: 'EVENT',
-    content: 'home__service__event__content',
+    content: [
+      'home__service__event__content1',
+      'home__service__event__content2',
+      'home__service__event__content3',
+      'home__service__event__content4',
+    ],
     background: `${baseUrl}events.png`,
     href: '/services/events',
     subService: [

@@ -19,8 +19,8 @@ const ServicePage: FC<Props> = ({ cl }) => {
   const { t } = useTranslation('common');
 
   const openPopup = (view) => {
-    openModal();
-    setModalView(view);
+    // openModal();
+    // setModalView(view);
   };
 
   const Header = () => {
@@ -65,14 +65,12 @@ const ServicePage: FC<Props> = ({ cl }) => {
         <div className="sw-w-full xl:sw-w-2/3">
           {services.map((item, idx) => (
             <Link key={idx} href={item.href}>
-            
-            <SmallCard
-              
-              cl=" sw-ml-auto sw-mb-4 sw-cursor-pointer xl:sw-w-3/4"
-              content={t(item.name)}
-              icon={item.icon}
-              onClick={() => openPopup(item.modal)}
-            />
+              <SmallCard
+                cl=" sw-ml-auto sw-mb-4 sw-cursor-pointer xl:sw-w-3/4"
+                content={t(item.name)}
+                icon={item.icon}
+                onClick={() => openPopup(item.modal)}
+              />
             </Link>
           ))}
         </div>

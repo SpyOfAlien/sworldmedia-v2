@@ -111,7 +111,7 @@ const HomePage = ({ locales, allPosts = [] }) => {
         </Container>
       </section>
 
-      <ProductSlider products={Products} />
+      <ProductSlider products={Products} baseUrl="/assets/images/products/events"/>
       <section className="sw-my-32">
         <Container>
           <WhyUs data={whyUsList} />

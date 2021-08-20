@@ -170,9 +170,9 @@ const Team = () => {
         >
           <div>
             <Image
-              src="/assets/images/team/marketing/bg.png"
-              width={480}
-              height={1080}
+              src="/assets/images/team/marketing/mkt-bg.png"
+              width={400}
+              height={900}
               quality={100}
               layout="responsive"
             />
@@ -186,22 +186,14 @@ const Team = () => {
               animate={svgOneControl}
               className="sw-relative sw-w-full sw-h-full"
             >
-              <motion.div className={s.graph}>
+              <div className={s.mkt}>
                 <Image
-                  src={`${baseURL}/marketing/graph.png`}
-                  width={1019}
-                  height={431}
+                  src={`${baseURL}/marketing/mkt.png`}
+                  width={700}
+                  height={700}
                   layout="responsive"
                 />
-              </motion.div>
-              <motion.div className={s.human}>
-                <Image
-                  src={`${baseURL}/marketing/human.png`}
-                  width={1084}
-                  height={586}
-                  layout="responsive"
-                />
-              </motion.div>
+              </div>
             </motion.div>
           </div>
         </motion.div>
@@ -216,9 +208,9 @@ const Team = () => {
         >
           <div>
             <Image
-              src="/assets/images/team/editor/bg.png"
-              width={480}
-              height={1080}
+              src="/assets/images/team/editor/editor-bg.png"
+              width={400}
+              height={900}
               quality={100}
               layout="responsive"
             />
@@ -232,22 +224,14 @@ const Team = () => {
               animate={svgTwoControl}
               className="sw-relative sw-w-full sw-h-full"
             >
-              <motion.div className={s.editor}>
+              <div className={s.editor}>
                 <Image
                   src={`${baseURL}/editor/editor.png`}
-                  width={676}
-                  height={792}
+                  width={700}
+                  height={700}
                   layout="responsive"
                 />
-              </motion.div>
-              <motion.div className={s.pc}>
-                <Image
-                  src={`${baseURL}/editor/PC.png`}
-                  width={735}
-                  height={492}
-                  layout="responsive"
-                />
-              </motion.div>
+              </div>
             </motion.div>
           </div>
         </motion.div>
@@ -262,9 +246,9 @@ const Team = () => {
         >
           <div>
             <Image
-              src="/assets/images/team/designer/bg.png"
-              width={480}
-              height={1080}
+              src="/assets/images/team/designer/designer-bg.png"
+              width={400}
+              height={900}
               quality={100}
               layout="responsive"
             />
@@ -278,19 +262,11 @@ const Team = () => {
               animate={svgThreeControl}
               className="sw-relative sw-w-full sw-h-full"
             >
-              {/* <motion.div className={s.designTable} animate={designerTable}>
-                <Image
-                  src={`${baseURL}/designer/designer_table.svg`}
-                  width={100}
-                  height={100}
-                  layout="responsive"
-                />
-              </motion.div> */}
               <motion.div className={s.design}>
                 <Image
                   src={`${baseURL}/designer/designer.png`}
-                  width={100}
-                  height={100}
+                  width={700}
+                  height={700}
                   layout="responsive"
                 />
               </motion.div>
@@ -308,9 +284,9 @@ const Team = () => {
         >
           <div>
             <Image
-              src="/assets/images/team/content/ContentBG.png"
-              width={480}
-              height={1080}
+              src="/assets/images/team/content/content-bg.png"
+              width={400}
+              height={900}
               quality={100}
               layout="responsive"
             />
@@ -325,30 +301,14 @@ const Team = () => {
               animate={svgFourControl}
               className="sw-relative sw-w-full sw-h-full"
             >
-              <motion.div className={s.calendarOne}>
+              <div className={s.ct}>
                 <Image
-                  src={`${baseURL}/content/calendar.png`}
-                  width={80}
-                  height={80}
+                  src={`${baseURL}/content/content.png`}
+                  width={700}
+                  height={700}
                   layout="responsive"
                 />
-              </motion.div>
-              <motion.div className={s.calendarTwo}>
-                <Image
-                  src={`${baseURL}/content/calendar_2.png`}
-                  width={80}
-                  height={80}
-                  layout="responsive"
-                />
-              </motion.div>
-              <motion.div className={s.team}>
-                <Image
-                  src={`${baseURL}/content/team.png`}
-                  width={80}
-                  height={80}
-                  layout="responsive"
-                />
-              </motion.div>
+              </div>
             </motion.div>
           </div>
         </motion.div>

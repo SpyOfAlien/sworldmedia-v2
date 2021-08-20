@@ -12,110 +12,30 @@
   position: relative;
 }
 
-.caiDu,
-.rocket,
-.graph,
-.human,
-.globeOne,
-.globeTwo,
-.globeThree,
-.globeFour,
-.designTable,
-.design,
 .editor,
-.pc,
-.calendarOne,
-.calendarTwo,
-.team {
+.mkt,
+.design,
+.ct {
+  width: inherit;
   position: absolute;
-  width: 65%;
-  padding: 10px;
-
-  left: 25%;
-}
-
-.design,
-.editor,
-.human,
-.team {
   z-index: 10;
-}
-
-.graph,
-.pc,
-.designTable,
-.calendarOne,
-.calendarTwo {
-  z-index: 2;
-}
-
-.graph {
-  top: 37%;
-}
-
-.human {
-  top: 42%;
-}
-
-.team {
-  top: 50%;
-}
-
-.calendarOne {
-  top: 42%;
-  left: -5%;
-}
-
-.calendarTwo {
-  top: 38%;
-  left: 46%;
 }
 
 .editor {
   top: 32%;
-  left: 28%;
 }
 
-.pc {
-  top: 32%;
-  left: 0;
+.mkt {
+  top: 12%;
 }
 
 .design {
-  top: 33%;
-  left: 27%;
+  top: 13%;
 }
 
-.designTable {
-  top: 24%;
-  left: 15%;
+.ct {
+  top: 30%;
 }
-
-// ADVISOR
-.advisorGrid {
-}
-
-.globe {
-}
-.advisorOne {
-}
-.advisorTwo {
-}
-.advisorThree {
-}
-.advisorFour {
-}
-.advisorFive {
-}
-.advisorSix {
-}
-
-// @media screen and (min-width: 768px) {
-//   .root {
-//     grid-template-rows: repeat(2, 50%);
-//     grid-template-columns: repeat(2, 50%);
-//   }
-// }
 
 @media screen and (min-width: 1280px) {
   .item-0,
@@ -135,26 +55,6 @@
   .content,
   .marketing {
     padding: 12px;
-    cursor: pointer;
-    position: relative;
-  }
-
-  .caiDu,
-  .rocket,
-  .graph,
-  .human,
-  .globeOne,
-  .globeTwo,
-  .globeThree,
-  .globeFour,
-  .designTable,
-  .design,
-  .editor,
-  .pc,
-  .calendarOne,
-  .calendarTwo,
-  .team {
-    padding: 24px;
   }
 }
 

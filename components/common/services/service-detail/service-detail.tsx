@@ -27,15 +27,16 @@ interface Props {
   data: Data;
   products?: any;
   cl?: string;
+  baseUrl: string;
 }
 
-const ServiceDetail: FC<Props> = ({ data, products, cl }) => {
+const ServiceDetail: FC<Props> = ({ data, products, cl, baseUrl }) => {
   const { openSubModal, setSubModalView } = useUI();
   const { t } = useTranslation('common');
 
   const onSubServiceClick = (modal) => {
-    openSubModal();
-    setSubModalView(modal);
+    // openSubModal();
+    // setSubModalView(modal);
   };
 
   return (
@@ -105,7 +106,7 @@ const ServiceDetail: FC<Props> = ({ data, products, cl }) => {
                     <p className="sw-text-brown sw-font-bold">
                       {t(item.title)}
                     </p>
-                    <div
+                    {/* <div
                       style={{ right: '16px', bottom: '8px' }}
                       className="sw-w-full sw-flex sw-justify-end sw-absolute"
                     >
@@ -115,7 +116,7 @@ const ServiceDetail: FC<Props> = ({ data, products, cl }) => {
                       <Media lessThan="md">
                         <Arrow width="30px" />
                       </Media>
-                    </div>
+                    </div> */}
                   </div>
                 ))}
               </div>
@@ -124,7 +125,7 @@ const ServiceDetail: FC<Props> = ({ data, products, cl }) => {
         </Container>
 
         <div className={cn('sw-my-32', s.ServiceDetail__products)}>
-          {products && <ProductSlider products={products} />}
+          {products && <ProductSlider baseUrl={baseUrl} products={products} />}
         </div>
       </div>
     </MediaContextProvider>

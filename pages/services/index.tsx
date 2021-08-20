@@ -40,9 +40,9 @@ const ServicePage = () => {
   }, [displaySubModal]);
 
   const onSubServiceClick = (modal) => {
-    openSubModal();
+    // openSubModal();
 
-    setSubModalView(modal);
+    // setSubModalView(modal);
   };
 
   return (
@@ -119,6 +119,7 @@ const ServicePage = () => {
                         height: '11rem',
                         borderRadius: '8px',
                         padding: '2rem',
+                        minWidth: '280px'
                       }}
                       onClick={() => onSubServiceClick(item.modal)}
                       key={idx}
@@ -129,14 +130,14 @@ const ServicePage = () => {
                       <p className="sw-text-brown sw-font-bold">
                         {t(item.title)}
                       </p>
-                      <div className="sw-w-full sw-flex sw-justify-end">
+                      {/* <div className="sw-w-full sw-flex sw-justify-end">
                         <Media greaterThanOrEqual="xxl">
                           <Arrow width="50px" />
                         </Media>
                         <Media lessThan="xxl">
                           <Arrow width="30px" />
                         </Media>
-                      </div>
+                      </div> */}
                     </div>
                   ))}
                 </div>

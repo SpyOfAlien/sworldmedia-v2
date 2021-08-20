@@ -18,10 +18,10 @@
   "home__sub_service__provide": "We provide",
 
   "home__service__brand_communication__title": "Brand Communication",
-  "home__service__brand_communication__content": "S-World provides communication solutions for brands on multi-platform online including 4 service lines: Marketing, Press and Television communication (PR), Social Media communication, and KOL & Influencer communication",
+  "home__service__brand_communication__content": "S-World provides brand communication solutions on multi-platforms, including 4 services: Press-Television communication (PR), Social media communication, Influencer communication and Marketing - Sales",
   "home__service__brand_communication__sub_content": "",
 
-  "home__service__brand_communication__pr": "Press & Television Communication (PR)",
+  "home__service__brand_communication__pr": "Press - Television communication (PR)",
   "home__service__brand_communication__pr__strength1": "- S-World has deep understanding and wide relationship with media agencies. In addition, S-World is also a strategic partner with large and prestigious media enterprises in Vietnam such as VNE, VTV, etc.",
   "home__service__brand_communication__pr__strength2": "- Staff are well-trained in the field of journalism",
   "home__service__brand_communication__pr__services1": "- PR Planning for brand, product, service",
@@ -36,30 +36,30 @@
   "home__service__brand_communication__social__services2": "- Organizing and managing mini games, contests, events",
   "home__service__brand_communication__social__services3": "- Analyzing campaign effectiveness",
 
-  "home__service__brand_communication__kol": "KOL & Influencer Communication",
+  "home__service__brand_communication__kol": "Influencer Communication",
   "home__service__brand_communication__kol__strength1": "- Deep understanding of KOL market",
   "home__service__brand_communication__kol__strength2": "- Capable of planning within optimal investment",
   "home__service__brand_communication__kol__services1": "- Analyzing and selecting appropriate KOLs for brand, product and service",
   "home__service__brand_communication__kol__services2": "- Developing plans in accordance with the budget and target audience",
   "home__service__brand_communication__kol__services3": "- KOL booking",
 
-  "home__service__brand_communication__marketing": " Marketing",
+  "home__service__brand_communication__marketing": "Marketing - Sales",
   "home__service__brand_communication__marketing__strength1": "- Deep knowledge of users/customers",
   "home__service__brand_communication__marketing__strength2": "- Having thorough strategy and understanding with sales and marketing platforms",
   "home__service__brand_communication__marketing__services1": "- Marketing Strategy Planning",
   "home__service__brand_communication__marketing__services2": "- Executing marketing campaigns on multiple platforms",
 
   "home__service__branding__title": "Branding",
-  "home__service__branding__content": "S-World provides a comprehensive solution for brands when consulting and building elements: Brand story, slogan, customer positioning and development strategy, so that businesses can come closer to customers.",
+  "home__service__branding__content": "S-World provides comprehensive branding solutions: Brand Story, Brand Identity, Customer Positioning and Sustainable Communication Strategy to help products/businesses get closer to their target customers.",
   "home__service__branding__sub_content": "",
 
-  "home__service__branding__concept": "Concept Design",
+  "home__service__branding__concept": "Brand story",
   "home__service__branding__concept__strength1": "- Understanding the brand's users, especially in the 4 fields of Education, Health, Technology and International Relations",
   "home__service__branding__concept__strength2": "- Develop concept based on creativity and Insight distilled from End-user to ensure execution",
   "home__service__branding__concept__services1": "- Brand story",
   "home__service__branding__concept__services2": "- Brand colors",
 
-  "home__service__branding__identity": "Brand Identity Design",
+  "home__service__branding__identity": "Brand Identity",
   "home__service__branding__identity__strength1": "- Creative and dynamic design team",
   "home__service__branding__identity__strength2": "- Breakthrough quality design",
   "home__service__branding__identity__strength3": "- Diverse ideas answering the toughest requirements",
@@ -70,7 +70,7 @@
   "home__service__branding__identity__services5": "- Instagram",
   "home__service__branding__identity__services6": "- LinkedIn",
 
-  "home__service__branding__strategy": "Brand Strategy",
+  "home__service__branding__strategy": "Building sustainable communication strategy",
   "home__service__branding__strategy__strength1": "- Deep understanding of the market, especially the 4 fields of Education, Health, Technology and International Relations",
   "home__service__branding__strategy__strength2": "- Strategic thinking, global training team",
   "home__service__branding__strategy__strength3": "- Amazing execution speed",
@@ -79,10 +79,13 @@
   "home__service__branding__strategy__services3": "- Development strategy",
 
   "home__service__production__title": "Production",
-  "home__service__production__content": "S-World provides video production services for clients. Simultaneously, we also have the program format owned by S-World as Talkshow Nguy Co, Learn to Love, etc.",
+  "home__service__production__content1": "S-World provides 3 resonance product lines:",
+  "home__service__production__content2": "- Television products: documentaries, chronicles, reports, reality shows, talk shows, game shows, etc.",
+  "home__service__production__content3": "- Digital products: combining e-newspapers and social networks",
+  "home__service__production__content4": "- Products for businesses: TVC, online (viral) products, reports, corporate documentaries",
   "home__service__production__sub_content": "",
 
-  "home__service__production__for_client": "On-demand Partner/Client Production",
+  "home__service__production__for_client": "Television products",
   "home__service__production__for_client__strength1": "- A young, dynamic, enthusiastic and well-trained team",
   "home__service__production__for_client__strength2": "- Experienced production team (studio, technical)",
   "home__service__production__for_client__strength3": "- An enthusiastic, creative and professional post-production team",
@@ -90,14 +93,17 @@
   "home__service__production__for_client__services2": "- Show: Reality show, gameshow, talk show",
   "home__service__production__for_client__services3": "- Images: Key Visuals, Poster",
 
-  "home__service__production__format": "Owned Video formats production under the trademark of S-World and Media partners - multiple platforms released",
+  "home__service__production__format": "Digital products",
   "home__service__production__format__strength1": "- Understanding user behavior on multiple online platforms to produce engaging and meaningful program formats",
   "home__service__production__format__strength2": "- Strategic partner network with pioneering digital newspapers in Vietnam such as VNE, VTV, etc.",
   "home__service__production__format__strength3": "- Experienced program promotion team to ensure a strong widespread popularity",
   "home__service__production__format__services": "TV, Digital Newspaper, Social Media",
 
   "home__service__event__title": "Online & Offline Events",
-  "home__service__event__content": "S-World has experience in organizing online and offline events to create opportunities for businesses to introduce products and promote brands to target audiences in an effective and impressive way, thereby achieving important goals of the business.",
+  "home__service__event__content1": "- Anniversaries",
+  "home__service__event__content2": "- Conferences",
+  "home__service__event__content3": "- Product launches",
+  "home__service__event__content4": "- Exhibitions, Festivals, Fairs",
   "home__service__event__sub_content": "",
 
   "home__service__event__online": "Online Event",
@@ -124,13 +130,13 @@
   "home__service__event__offline__services4": "- Promoting and advertising events",
 
   "home__service__international_relations__title": "International Relations",
-  "home__service__international_relations__content1": "S-World helps connect the:",
-  "home__service__international_relations__content2": "- Vietnamese partners working abroad",
-  "home__service__international_relations__content3": "- Foreign partners in Vietnam",
+  "home__service__international_relations__content1": "In the new era, global trade flows require joint efforts to create differences. Knowing this, S-World positions itself as a bridge between Vietnam and the world with its strengths in multimedia communication. We provide international connection services with two key tasks:",
+  "home__service__international_relations__content2": "- Connecting foreign companies, units and individuals that want to come to Vietnam to invest, explore and organize events",
+  "home__service__international_relations__content3": "- Connecting Vietnamese companies, units and individuals that want to go abroad to invest, explore, and organize events",
   "home__service__international_relations__content4": "- Vietnamese company whose vision is bring products to International market or have international elements",
   "home__service__international_relations__sub_content": "",
 
-  "home__service__international_relations__for_vn": "For overseas Vietnamese partners",
+  "home__service__international_relations__for_vn": "Vietnamese partners overseas",
   "home__service__international_relations__for_vn__strength1": "- Global cooperation network with influential partners",
   "home__service__international_relations__for_vn__strength2": "- Culture understanding of international markets, especially European and Japanese markets",
   "home__service__international_relations__for_vn__strength3": "- Having relationship with the Crowd Funding platform such as Republic",
@@ -140,7 +146,7 @@
   "home__service__international_relations__for_vn__services3": "- Discover",
   "home__service__international_relations__for_vn__services4": "- Event organization",
 
-  "home__service__international_relations__for_foreign_inVN": "For foreign partner companies in Vietnam",
+  "home__service__international_relations__for_foreign_inVN": "International partners in Vietnam",
   "home__service__international_relations__for_foreign_inVN__strength1": "- Deep understanding of domestic market",
   "home__service__international_relations__for_foreign_inVN__strength2": "- Having a wide relationship with media agencies, publishers, embassies",
 
@@ -192,7 +198,8 @@
   "home__new_product__dung_bo_lo__content4": "It is expected to be broadcast on TV channels, e-newspapers and social media.",
 
   "home__new_product__viet_challenge__title": "VIETCHALLENGE",
-  "home__new_product__viet_challenge__content": "Connect with the University Access Center under INTO Global University Partnerships",
+  "home__new_product__viet_challenge__content1": "Initiated in 2015, VietChallenge is part of the 'Supporting National Innovative Start-up Ecosystem to 2025' project held by the Ministry of Science and Technology.",
+  "home__new_product__viet_challenge__content2": "The Contest for Vietnamese people all over the world is hosted by the Association of Vietnamese Students and Professionals in the United States, creating opportunities for young startup founders to learn and establish relationships with prestigious investment funds, domestic and international investors, etc.",
 
   "home__new_product__randi_content": "“Startup investment and ecosystem building: The role of women in the future of investing” is a webinar held by S-World in May, 2021, with the support of the US Consulate in Ho Chi Minh city and Republic.co, a crowdfunding platform, and the media sponsorship of VnExpress. S-World was honored to receive the nod to attend from Randi Zuckerberg – former Director of Market Development and Spokesperson for Facebook, sister of billionaire Mark Zuckerberg, and Le Diep Kieu Trang (Christy Le) - former CEO of Facebook Vietnam and co-founder of Alabaster.",
   "home__new_product__randi_title": "Webinar: The role of women in the future of investing",
@@ -206,6 +213,45 @@
   "home__new_product__metran__content2": "Are clean oxygen masks the trend of the future?",
   "home__new_product__metran__content3": "How superior is the ventilator made by Vietnamese people with all hardware and software in the world?",
   "home__new_product__metran__content4": "All will be in the series: “Everyone needs their own Lalaland produced by S-World in association with inventor Tran Ngoc Phuc, founder and chairman of Metran Japan Corporation made by S-World. In the midst of the resurgence of the Covid-19 pandemic around the world, it is high time we needed to connect more and more to spread the message Stronger Together - TOGETHER TO STRONGER.",
+
+  "home__new_product__republic__title": "HELPING REPUBLIC - A FAMOUS FINTECH STARTUP IN US -PENETRATE INTO VIETNAMESE MARKET",
+  "home__new_product__republic__content1": "Republic is a technology platform that connects startups with personal investors through crowdfunding with profitable opportunities. It was founded in 2016 by Kendrick Nguyen, a Vietnamese-American lawyer. Republic is now one of the largest fintech companies in the US, especially in the field of retail investment and blockchain.",
+  "home__new_product__republic__content2": "On Republic's journey to get closer to the investment and technology-loving community in Vietnam, S-World is honored to accompany the business as a media representative.",
+  "home__new_product__republic__content3": "In Vietnam, Republic’s goal is to expand its brand and increase its recognition in the Vietnamese crypto investment community.",
+
+  "home__new_product__new-age__title": "WORKING AS A COMMUNICATION PARTNER OF NEW AGE EDUCATION SYSTEM VIA 2 EDUCATION WEBINARS",
+  "home__new_product__new-age__content1": "As a media partner of New Age Education System, S-World organized two education webinars that:",
+  "home__new_product__new-age__content2": "- Garnered more than 100,000 views",
+  "home__new_product__new-age__content3": "- Exceeded all the KPIs set for the whole project",
+  "home__new_product__new-age__content4": " In particular, the total number of view was 200% as high as set target",
+  "home__new_product__new-age__content5": "From the two ends of Vietnam - Hanoi and HCM city, New Age and S-World have together established a special bond with the same goal of spreading the values of education. With the participation of leading educational experts at home and abroad, notably Peter Vesterbacka - founder of Fun Academy & Finest Future, teacher Nguyen Thi Thuy, Ms. Pham Thi Lam, Chairwoman of BOD at New Age Education System, the two webinars contributed to sharing useful information about the fun learning approach from Finland.",
+  "home__new_product__new-age__content6": "Watch the 2 webinars again: ",
+  "home__new_product__new-age__content7": "Study in Finland - Dream within reach: https://bit.ly/3dQPCrl",
+  "home__new_product__new-age__content8": "Finnish teaching method - Helping children become confident and ready to enter grade 1: https://bit.ly/2UeQAqm",
+
+  "home__new_product__library-of-dreams__title": "COMMUNICATION PARTNER OF LIBRARY OF DREAMS COMMUNITY PROJECT ",
+  "home__new_product__library-of-dreams__content1": "S-World contributed to the success of Empathy - The untold stories photo exhibition as a communication consultant. VND1.625 billion, or 25 libraries for Vietnamese children was an unexpected figure that the exhibition brought about at the end of November 2020.",
+  "home__new_product__library-of-dreams__content2": "he photo exhibition and auction was organized by Library of Dreams project with all the proceeds used to buy books and learning tools and build a library for the Central children severely affected by the storm in 2020. ",
+
+  "home__new_product__lab__title": "DESIGNING LOGO FOR A LAB IN USA",
+
+  "home__new_product__undp__title": "TALK SHOWS IN RESPONSE TO RESPONSIBLE BUSINESS WEEK HELD WITH UNDP",
+  "home__new_product__undp__content": "Talk shows jointly held by United Nations Development Programme - UNDP và VnExpress.net in response to Responsible Business Week. The events were suppored by UNDP Vietnam and Swedish Government.",
+
+  "home__new_product__talenet__title": "WEBINAR: WHO CAN DRIVE SALES & MARKETING 4.0. ",
+  "home__new_product__talenet__content1": "'Who can drive sales & marketing 4.0' was the opening event in the “The Future of Jobs” series with the participation of famous guests in the sales & marketing. It was held in the hope of helping those interested in this field to develop their own career.",
+  "home__new_product__talenet__content2": "The webinar was live streamed on Talentnet Corporation's official Facebook page.",
+
+  "home__new_product__uac__title": "CONNECTING WITH UNIVERSITY ACCESS CENTER UNDER INTO GLOBAL UNIVERSITY PARTNERSHIPS",
+
+  "home__new_product__international-relation__title": "CONFERENCE CONNECTING AND PROMOTING RESOURCES FOR VIETNAMESE STARTUPS TO REACH OUT TO THE WORLD 2019",
+  "home__new_product__international-relation__content1": "- Organizer: the Ministry of Science and Technology, represented by Deputy Minister Tran Van Tung.",
+  "home__new_product__international-relation__content2": "- Supported by the US Consulate General in Ho Chi Minh city, whose representative was US Consul General Marie C. Damour",
+  "home__new_product__international-relation__content3": "- Co-organizers include State Committee for Overseas Vietnamese Affairs (SCOVA) in Ho Chi Minh city, represented by Chairman Phung Cong Dung.",
+  "home__new_product__international-relation__content4": "National Agency for Technology Entrepreneurship and Commercialization Development, represented by Director Pham Hong Quat.",
+  "home__new_product__international-relation__content5": "- And famous speakers The conference made a great impression with the participation of 200 guests who are experts, startup founders and representatives of schools from both Vietnam and other countries.",
+  "home__new_product__international-relation__content6": "- Livestream video attracting 10,000 viewers",
+  "home__new_product__international-relation__content7": "- More than 40 media agencies and TV channels reporting on the event ",
 
   "home__whyus__title": "Why us",
   "home__aboutus__title": "About us",

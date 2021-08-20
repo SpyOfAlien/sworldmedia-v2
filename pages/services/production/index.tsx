@@ -3,7 +3,7 @@ import { ServiceDetail } from '../../../components/common';
 import services from '../../../lib/data/services';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import products from '../../../lib/data/products';
+import Production from '../../../lib/data/production';
 
 export const getStaticProps = async ({ locale, preview }) => {
   return {
@@ -15,7 +15,13 @@ export const getStaticProps = async ({ locale, preview }) => {
 
 const ProductionPage = () => {
   const { t } = useTranslation('common');
-  return <ServiceDetail data={services[2]} products={products} />;
+  return (
+    <ServiceDetail
+      data={services[2]}
+      products={Production}
+      baseUrl="/assets/images/products/production"
+    />
+  );
 };
 
 export default ProductionPage;

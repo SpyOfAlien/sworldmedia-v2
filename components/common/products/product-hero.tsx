@@ -41,6 +41,7 @@ const ProductHero: FC<Props> = ({ product, cl }) => {
           <div className="sw-absolute sw-inset-0 sw-z-20">
             <HomeContainer hasPadding={false} isVisible={true} cl="sw-h-full">
               <div
+              
                 className={cn(
                   'sw-w-full xl:sw-w-1/2 3xl:sw-w-5/12 sw-h-1/2 sw-flex sw-justify-center sw-flex-col sw-relative',
                   s.overrideContainer
@@ -56,17 +57,20 @@ const ProductHero: FC<Props> = ({ product, cl }) => {
                     {t(title)}
                   </Heading>
                 </Media>
-                <div className={cn('sw-my-xsm', s.content)}>
-                  {typeof content === 'string' ? (
-                    <Paragraph>{t(content)}</Paragraph>
-                  ) : (
-                    content.map((item, idx) => (
-                      <Paragraph key={idx}>{t(item)}</Paragraph>
-                    ))
-                  )}
-                </div>
+                {content && (
+                  <div className={cn('sw-my-xsm', s.content)}>
+                    {typeof content === 'string' ? (
+                      <Paragraph>{t(content)}</Paragraph>
+                    ) : (
+                      content.map((item, idx) => (
+                        <Paragraph key={idx}>{t(item)}</Paragraph>
+                      ))
+                    )}
+                  </div>
+                )}
                 <Button
-                  cl="sw-w-1/3 md:sw-w-1/4 sw-h-10"
+                  cl={cn("sw-w-1/3 md:sw-w-1/4 sw-h-10", {[s.mt]: !content})}
+                  
                   text="Xem video"
                   type="gradient"
                   onclick={onWatch}

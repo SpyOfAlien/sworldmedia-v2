@@ -15,7 +15,13 @@ export const getStaticProps = async ({ locale, preview }) => {
 
 const EventsPage = () => {
   const { t } = useTranslation('common');
-  return <ServiceDetail data={services[4]} products={products} />;
+  return (
+    <ServiceDetail
+      data={services[4]}
+      products={products}
+      baseUrl="/assets/images/products/events"
+    />
+  );
 };
 
 export default EventsPage;
