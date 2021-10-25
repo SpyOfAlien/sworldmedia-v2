@@ -180,6 +180,7 @@ export async function getStaticProps({ locale, params, preview = false }) {
       morePosts: data?.morePosts ?? null,
       ...(await serverSideTranslations(locale, ['common'])),
     },
+    revalidate: 10,
   };
 }
 

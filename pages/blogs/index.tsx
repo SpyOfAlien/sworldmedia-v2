@@ -14,15 +14,17 @@ import { useTranslation } from 'next-i18next';
 
 export const getStaticProps = async ({ locale, preview }) => {
   const allPosts = (await getAllPostsForHome(preview)) || [];
+
   return {
     props: {
       posts: allPosts,
-      ...await serverSideTranslations(locale, ['common'])
+      ...(await serverSideTranslations(locale, ['common'])),
     },
+    revalidate: 10,
   };
 };
 
-const BlogsPage = ({ locales, posts}) => {
+const BlogsPage = ({ locales, posts }) => {
   const priorityPost = posts.find((item) => item.priority === true);
   const otherPosts = posts.filter((item) => item.priority === false);
   const { t } = useTranslation('common');

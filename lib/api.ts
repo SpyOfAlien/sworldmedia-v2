@@ -19,22 +19,7 @@ const POST_GRAPHQL_FIELDS = `
   enContent: content(locale: "en-US") {
     json
   }
-  assets: content(locale: "en-US") {
-    links {
-      assets {
-        block {
-          url
-          width
-          height
-          title
-          description
-          sys {
-            id
-          }
-        }
-      }
-    }
-  }
+  
   date
   author {
     ... on Author {
@@ -169,7 +154,7 @@ export async function getAllPostsForHome(preview) {
     `query {
       postCollection(order: date_DESC, preview: ${
         preview ? 'true' : 'false'
-      }, limit: 10) {
+      }, limit: 100) {
         items {
           ${POST_GRAPHQL_FIELDS}
         }
