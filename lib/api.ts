@@ -139,7 +139,7 @@ export async function getPreviewPostBySlug(slug) {
 export async function getAllPostsWithSlug() {
   const entries = await fetchGraphQL(
     `query {
-      postCollection(where: { slug_exists: true }, order: date_DESC, limit: 10) {
+      postCollection(where: { slug_exists: true }, order: date_DESC, limit: 100) {
         items {
           ${POST_GRAPHQL_FIELDS}
         }
