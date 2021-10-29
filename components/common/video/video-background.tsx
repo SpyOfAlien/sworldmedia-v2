@@ -17,7 +17,7 @@ const VideoBackground = () => {
         loop={true}
         muted={true}
       >
-        <source src="/video/video-background.webm" type="video/webm" />
+        <source src="/video/video.mp4" type="video/mp4" />
       </video>
     </div>
   );
