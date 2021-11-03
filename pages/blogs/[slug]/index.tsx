@@ -46,10 +46,12 @@ const Post = ({ post, morePosts, preview, locale }) => {
     return <ErrorPage statusCode={404} />;
   }
 
+  console.log('title', vnTitle);
+
   return (
     <MediaContextProvider>
       <NextSeo
-        title={formattedTitle}
+        title={isVN ? vnTitle : enTitle}
         description={isVN ? vnSummary : enSummary}
         canonical={`${baseUrl}${isVN && '/vn'}${router.asPath}`}
         openGraph={{
@@ -57,7 +59,7 @@ const Post = ({ post, morePosts, preview, locale }) => {
           images: [
             {
               url: coverImage.url,
-              alt: formattedTitle,
+              alt: isVN ? vnTitle : enTitle,
               width: coverImage.width,
               height: coverImage.height,
             },
