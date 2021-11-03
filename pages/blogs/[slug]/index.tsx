@@ -63,7 +63,7 @@ const Post = ({ post, morePosts, preview, locale }) => {
             },
           ],
           locale: router.locale,
-          url: `${baseUrl}${router.asPath}`,
+          url: `${baseUrl}${isVN && '/vn'}${router.asPath}`,
           article: {
             publishedTime: date,
             modifiedTime: date,
@@ -80,7 +80,7 @@ const Post = ({ post, morePosts, preview, locale }) => {
       />
 
       <ArticleJsonLd
-        url={`${baseUrl}${router.asPath}`}
+        url={`${baseUrl}${isVN && '/vn'}${router.asPath}`}
         title={isVN ? vnTitle : enTitle}
         images={imgUrls}
         datePublished={date}
