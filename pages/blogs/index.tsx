@@ -70,12 +70,18 @@ const BlogsPage = ({ locales, posts }) => {
         <div></div>
         <div>
           <Container>
-            <Media lessThan="sm">
-              <PostCard cl="sw-mb-16" type="small" post={priorityPost} />
-            </Media>
-            <Media greaterThanOrEqual="sm">
-              <PostCard cl="sw-mb-16" type="big" post={priorityPost} />
-            </Media>
+            {priorityPost && (
+              <Media lessThan="sm">
+                <PostCard cl="sw-mb-16" type="small" post={priorityPost} />
+              </Media>
+            )}
+
+            {priorityPost && (
+              <Media greaterThanOrEqual="sm">
+                <PostCard cl="sw-mb-16" type="big" post={priorityPost} />
+              </Media>
+            )}
+
             {otherPosts && <PostList posts={otherPosts} />}
           </Container>
         </div>

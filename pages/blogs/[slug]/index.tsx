@@ -51,7 +51,7 @@ const Post = ({ post, morePosts, preview, locale }) => {
       <NextSeo
         title={formattedTitle}
         description={isVN ? vnSummary : enSummary}
-        canonical={`${baseUrl}${isVN && '/vn/'}${router.asPath}`}
+        canonical={`${baseUrl}${isVN && '/vn'}${router.asPath}`}
         openGraph={{
           type: 'article',
           images: [
