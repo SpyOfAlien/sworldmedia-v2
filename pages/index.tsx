@@ -15,7 +15,6 @@ import HomeProject from '../components/partials/home/home-project';
 import HomeAbout from '../components/partials/home/home-about';
 import HomePartner from '../components/partials/home/home-partner';
 import Image from 'next/image';
-import { getProductsByType } from '../lib/api';
 
 export const getStaticProps = async ({ locale, preview }) => {
   return {
