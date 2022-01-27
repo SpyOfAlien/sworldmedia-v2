@@ -15,6 +15,7 @@ import HomeProject from '../components/partials/home/home-project';
 import HomeAbout from '../components/partials/home/home-about';
 import HomePartner from '../components/partials/home/home-partner';
 import Image from 'next/image';
+import { getAllPostsForHome } from '../lib/api';
 
 export const getStaticProps = async ({ locale, preview }) => {
   return {
@@ -30,6 +31,13 @@ const HomePage = ({ locales, allPosts = [] }) => {
   const [desktopView, setDesktopView] = useState(undefined);
   const router = useRouter();
   const isVn = router.locale === 'vn';
+
+  useEffect(() => {
+    getPost();
+  }, []);
+  const getPost = async () => {
+    const allPosts = (await getAllPostsForHome(false)) || [];
+  };
 
   const { t } = useTranslation('common');
 
