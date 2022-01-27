@@ -1,0 +1,11 @@
+.hr {
+  opacity: 0.3;
+}
+
+.prevArrow,
+.nextArrow {
+  position: absolute;
+  z-index: 10;
+  bottom: 50px;
+  cursor: pointer;
+}

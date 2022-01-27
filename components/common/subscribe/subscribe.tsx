@@ -12,8 +12,7 @@ const SubscribeForm: FC<Props> = ({ cl }) => {
   const { openSubModal, setSubModalView, setConfirmData } = useUI();
   const [email, setEmail] = useState('');
   const inputRef = useRef();
-  const emailRegex =
-    /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
+  const emailRegex = /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
 
   const handleOnChange = (e: any) => {
     if (e) {
@@ -64,7 +63,7 @@ const SubscribeForm: FC<Props> = ({ cl }) => {
         onChange={handleOnChange}
       />
       <Button
-        cl="sw-h-10 sw-w-32"
+        cl="sw-h-10 sw-w-31"
         text="Subscribe"
         type="gradient"
         onclick={handleSubscribe}

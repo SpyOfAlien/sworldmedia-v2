@@ -1,4 +1,4 @@
-import '../styles/index.css';
+import '../styles/index.scss';
 import { SectionManager } from '../lib/context/section-context';
 import { appWithTranslation } from 'next-i18next';
 import { UIManager } from '../lib/context/ui-context';

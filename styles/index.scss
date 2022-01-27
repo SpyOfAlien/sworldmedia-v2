@@ -1,0 +1,119 @@
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+@tailwind utilities;
+
+/* react slick */
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
+/* Overide react slick */
+@import './slider.scss';
+
+@layer utilities {
+  .sw-text-gradient {
+    background: linear-gradient(234.85deg, #a6dbf7 9.06%, #51bcf9 102.41%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .sw-gilroy-thin {
+    font-family: GilroyThin;
+  }
+
+  .sw-text-barlow {
+    font-family: Barlow;
+  }
+
+  .sw-glass {
+    background: rgba(234, 233, 242, 0.1);
+    backdrop-filter: blur(30px);
+  }
+
+  .sw-hover-glass {
+    &:hover {
+      background: rgba(234, 233, 242, 0.1);
+      backdrop-filter: blur(30px);
+    }
+  }
+
+  .sw-soles {
+    background: url('/assets/images/others/soles.png');
+    background-blend-mode: color-dodge;
+    mix-blend-mode: lighten;
+  }
+}
+
+@layer base {
+  @font-face {
+    font-family: HK Nova;
+    src: url(/fonts/HKNova/regular.woff) format('woff'),
+      url(/fonts/HKNova/regular.eot) format('eot'),
+      url(/fonts/HKNova/regular.ttf) format('ttf');
+  }
+  @font-face {
+    font-family: Gilroy;
+    src: url(/fonts/Gilroy/Gilroy.ttf) format('ttf'),
+      url(/fonts/Gilroy/Gilroy.woff) format('woff'),
+      url(/fonts/Gilroy/Gilroy.otf) format('otf');
+  }
+  @font-face {
+    font-family: GilroyThin;
+    src: url(/fonts/Gilroy/Gilroy-Thin.ttf) format('ttf'),
+      url(/fonts/Gilroy/Gilroy-Thin.woff) format('woff'),
+      url(/fonts/Gilroy/Gilroy-Thin.otf) format('otf');
+  }
+
+  @font-face {
+    font-family: Barlow;
+    src: url(/fonts/Barlow/Barlow.woff) format('woff'),
+      url(/fonts/Barlow/Barlow.eot) format('eot'),
+      url(/fonts/Barlow/Barlow.ttf) format('ttf');
+  }
+
+  html {
+    font-family: Gilroy;
+    line-height: 1.5;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    @apply sw-text-mobile sw-bg-background;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+  }
+
+  @screen md {
+    html {
+      @apply sw-text-desktop;
+    }
+  }
+
+  @screen 3xl {
+    html {
+      @apply sw-text-bigscreen;
+    }
+  }
+}
+
+#map {
+  filter: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="g"><feColorMatrix type="matrix" values="0.3 0.3 0.3 0 0 0.3 0.3 0.3 0 0 0.3 0.3 0.3 0 0 0 0 0 1 0"/></filter></svg>#g');
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(grayScale=1);
+}

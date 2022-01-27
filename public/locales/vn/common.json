@@ -1,9 +1,16 @@
 {
+  "vn": "Tiếng Việt",
+  "en": "Tiếng anh",
+
   "home": "Trang chủ",
+
+  "action__findoutmore": "Tìm hiểu thêm  ↗",
 
   "home__hero": "Công ty truyền thông đa phương tiện thế hệ mới",
 
   "home__about_us__title": "Về chúng tôi",
+  "home__about_us__define": "S-World là công ty truyền thông thế hệ mới với năng lực quốc tế.",
+  "home__about_us__define_desc": "Thành lập vào năm 2020 trong đại dịch Covid-19, nhưng không ngừng tiến về phía trước như một chú ngựa phi nước đại. Sẵn sàng tiến vào một “thế giới” rộng lớn còn ẩn chứa vô số điều kỳ diệu để khám phá, kiến tạo và lan tỏa.",
 
   "home__about_us__vision__title": "Tầm nhìn",
   "home__about_us__vision__content": "Là cầu nối truyền thông đặc biệt đưa Việt Nam đến gần thế giới",
@@ -18,6 +25,7 @@
   "home__sub_service__provide": "Dịch vụ gồm",
 
   "home__service__brand_communication__title": "Truyền thông thương hiệu",
+  "home__service__brand_communication__desc": "Khả năng phân tích đối tượng, lập chiến lược phát triển fanpage",
   "home__service__brand_communication__content": "S-World cung cấp giải pháp truyền thông thương hiệu trên đa nền tảng bao gồm 4 dòng dịch vụ: Truyền thông báo chí - truyền hình (PR), Truyền thông xã hội (social media), Truyền thông qua người có ảnh hưởng (KOLs & Influencers) và Tiếp thị - Bán hàng",
   "home__service__brand_communication__sub_content": "",
 
@@ -50,6 +58,8 @@
   "home__service__brand_communication__marketing__services2": "- Thực thi chiến dịch marketing trên đa nền tảng",
 
   "home__service__branding__title": "Xây dựng thương hiệu",
+  "home__service__branding__desc": "Đội ngũ biên tập toàn diện, giàu kinh nghiệm",
+
   "home__service__branding__content": "S-World cung cấp giải pháp xây dựng thương hiệu toàn diện: Câu chuyện thương hiệu, Bộ nhận diện thương hiệu, Định vị khách hàng, Chiến lược truyền thông bền vững... để sản phẩm/doanh nghiệp của bạn đến gần hơn với đối tượng khách hàng.",
   "home__service__branding__sub_content": "",
 
@@ -79,6 +89,7 @@
   "home__service__branding__strategy__services3": "- Chiến lược phát triển",
 
   "home__service__production__title": "Sản xuất",
+  "home__service__production__desc": "Đội ngũ biên tập toàn diện, giàu kinh nghiệm",
   "home__service__production__content1": "S-World cung cấp ba dòng sản phẩm cộng hưởng: ",
   "home__service__production__content2": "- Sản phẩm truyền hình: phim tài liệu, ký sự, phóng sự, truyền hình thực tế, talkshow, gameshow...",
   "home__service__production__content3": "- Sản phẩm kỹ thuật số (digital): kết hợp lan toả từ báo điện tử và mạng xã hội ",
@@ -100,6 +111,7 @@
   "home__service__production__format__services": "TV, Báo điện tử, Social Media",
 
   "home__service__event__title": "Sự kiện",
+  "home__service__event__desc": "Sự kiện",
   "home__service__event__content1": "- Kỷ niệm",
   "home__service__event__content2": "- Hội nghị, Hội thảo",
   "home__service__event__content3": "- Ra mắt sản phẩm ",
@@ -129,6 +141,7 @@
   "home__service__event__offline__services4": "- Xúc tiến và quảng bá sự kiện",
 
   "home__service__international_relations__title": "Kết nối quốc tế",
+  "home__service__international_relations__desc": "Đội ngũ biên tập toàn diện, giàu kinh nghiệm",
   "home__service__international_relations__content1": "Trong xu hướng dịch chuyển của thời đại, dòng chảy thương mại toàn cầu sẽ cần nhiều hơn nữa những cái bắt tay, đồng lòng kiến tạo những điều khác biệt. Hiểu được điều này, S-World định vị mình là cầu nối giữa Việt Nam và thế giới bằng thế mạnh truyền thông đa phương tiện. Chúng tôi mang đến Dịch vụ kết nối quốc tế với hai nhánh chính:",
   "home__service__international_relations__content2": "- Kết nối các công ty, các đơn vị, cá nhân nước ngoài muốn đến Việt Nam đầu tư, khám phá, tổ chức sự kiện",
   "home__service__international_relations__content3": "- Kết nối các công ty, các đơn vị, cá nhân Việt Nam muốn ra nước ngoài đầu tư, khám phá, tổ chức sự kiện ",
@@ -163,6 +176,7 @@
   "home__service__international_relations__for_vn_international__service3": "- Quảng bá thương hiệu",
 
   "home__partner__title": "Đối tác của chúng tôi",
+  "home__core_partner__title": "Đối tác chiến lược",
 
   "home__client__title": "Khách hàng của chúng tôi",
 
@@ -253,12 +267,23 @@
   "home__new_product__international-relation__content6": "- Livestream thu hút 10.000 người xem",
   "home__new_product__international-relation__content7": "- Hơn 40 hãng báo chí – kênh truyền hình đưa tin",
 
-  "home__whyus__title": "Tại sao chọn chúng tôi",
+  "home__project__usecase": "Dự án nổi bật của S-World",
+
+  "home__whyus__title": "Điều đặc biệt của S-World",
   "home__aboutus__title": "Về chúng tôi",
   "home__aboutus__one": "Đội ngũ biên tập toàn diện, giàu kinh nghiệm",
   "home__aboutus__two": "Định hướng chiến lược thương hiệu phát triển bền vững",
   "home__aboutus__three": "Chất lượng sản xuất chuyên nghiệp",
   "home__aboutus__four": "Tư vấn chuyên sâu và bài bản",
+
+  "home__whyus__one__title": "Năng lực sản xuất và truyền thông là nền tảng mạnh nhất",
+  "home__whyus__one__desc": "Đội ngũ của chúng tôi xuất thân là các nhà báo, phóng viên và truyền thông có nhiều kinh nghiệm ở Việt Nam và quốc tế.",
+  "home__whyus__two__title": "Tiên phong truyền thông trong các ngành mới, công nghệ mới",
+  "home__whyus__two__desc": "Chúng tôi tiên phong đi đầu trong việc truyền thông và lan tỏa những ngành mới, những công nghệ mới từ nền tảng kiến thức, khả năng phân tích thị trường, data; tốc độ và khả năng sáng tạo của đội ngũ tại S-World.",
+  "home__whyus__three__title": "Khả năng kết nối tạo giá trị bền vững",
+  "home__whyus__three__desc": "Xuất phát từ một ý tưởng và một lần triển khai, chúng tôi  có thể phát triển và hình thành nên các dịch vụ, và phủ sóng trên các nền tảng khác nhau, giúp khách hàng có hiệu quả truyền thông tối ưu nhất.",
+  "home__whyus__four__title": "Bức tranh dịch vụ tổng thể giúp tối ưu hoá ngân sách",
+  "home__whyus__four__desc": "Chúng tôi tiên phong đi đầu trong việc truyền thông và lan tỏa những ngành mới, những công nghệ mới từ nền tảng kiến thức, khả năng phân tích thị trường, data; tốc độ và khả năng sáng tạo của đội ngũ tại S-World.",
 
   "Success": "Thành công",
   "Failed": "Lỗi",
@@ -306,7 +331,13 @@
 
   "aboutus__team__title": "Đội ngũ",
 
+  "about__career_welcome": "Về với team S!",
+  "about__career_welcome_desc": "Gia nhập đội ngũ và cùng S-World nhân giá trị kết nối và kiến tạo giá trị mới khác biệt tại thị trường truyền thông Việt Nam và xa hơn là vươn ra thế giới",
+
   "blog__goback": "Trở về tin tức",
+
+  "service__profile": "Our Profile",
+  "service__profile__sologan": "Create custom landing pages with Sworld that converts more visitors than any website. With lots of unique blocks, you can easily build a page without coding.",
 
   "menu__home": "Trang chủ",
   "menu__services": "Dịch vụ",

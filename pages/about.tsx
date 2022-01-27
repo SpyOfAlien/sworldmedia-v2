@@ -10,6 +10,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Advisor from '../components/team/advisor';
 import { NextSeo } from 'next-seo';
+import AboutCareer from '../components/partials/about/about-career';
 
 export const getStaticProps = async ({ locale }) => {
   return {
@@ -83,7 +84,7 @@ const AboutUs = ({ locale }) => {
             <Heading h="h4">{t('aboutus__title')}</Heading>
           </Media>
         </section>
-        <section className="sw-flex sw-flex-col-reverse sw-justify-between xl:sw-flex-row sw-my-8 xl:sw-mb-32 2xl:sw-my-40">
+        <section className="sw-flex sw-flex-col-reverse sw-justify-between xl:sw-flex-row sw-my-8 xl:sw-mb-40 2xl:sw-my-40">
           <div className="sw-w-full xl:sw-w-48 sw-flex sw-flex-col sw-justify-center">
             <div className="sw-mb-6">
               <Paragraph>{t('aboutus__story__content1')}</Paragraph>
@@ -149,6 +150,8 @@ const AboutUs = ({ locale }) => {
           <Team />
         </section>
       </Container>
+
+      <AboutCareer />
     </MediaContextProvider>
   );
 };

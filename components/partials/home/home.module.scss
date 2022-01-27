@@ -1,0 +1,56 @@
+.containerBorder {
+  border: 3px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+}
+
+.serviceItem {
+  background-color: rgba(234, 233, 242, 0.08);
+  backdrop-filter: blur(20px);
+
+  h3 {
+    font-size: 18px;
+  }
+}
+
+.about {
+  background: linear-gradient(180deg, #2045c5 0%, #112a7f 99.99%, #0d2fa1 100%);
+}
+
+.aboutContainer {
+  min-height: 530px;
+}
+
+.tabControl {
+  opacity: 0.4;
+}
+
+.activeTab {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.whyusItem {
+  &:hover {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(30px);
+  }
+}
+
+.prevArrow,
+.nextArrow {
+  position: absolute;
+  z-index: 10;
+  bottom: 80px;
+}
+
+.gradientBorder {
+  border: 2.1px solid;
+  border-image-source: linear-gradient(
+    134.27deg,
+    #0d349c 5.56%,
+    #479cff 5.57%,
+    #1c55e7 50.66%,
+    #7197ff 93.01%
+  );
+  background: #eae9f20a;
+}

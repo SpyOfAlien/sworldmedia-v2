@@ -19,7 +19,7 @@ const POST_GRAPHQL_FIELDS = `
   enContent: content(locale: "en-US") {
     json
   }
-  
+
   date
   author {
     ... on Author {
@@ -95,6 +95,85 @@ const POST_GRAPHQL_SINGLE_POST_FIELDS = `
   vnTags: tags(locale: "vi-VN")
 `;
 
+const PRODUCT_FIELD = `
+  vnName: name(locale: "vi-VN")
+  enName: name(locale: "en-US")
+  vnSlug: slug(locale: "vi-VN")
+  enSlug: slug(locale: "en-US")
+  vnSummary: summary(locale: "vi-VN")
+  enSummary: summary(locale: "en-US")
+  thumbnail {
+    url
+    description
+    title
+    width
+    height
+  }
+  link
+  type
+`;
+const SERVICE_FIELD = `
+  vnName: name(locale: "vi-VN")
+  enName: name(locale: "en-US")
+  vnSummary: summary(locale: "vi-VN")
+  enSummary: summary(locale: "en-US")
+  showcaseCollection {
+    items {
+      ...on Product {
+        vnName: name(locale: "vi-VN")
+        enName: name(locale: "en-US")
+        vnSummary: summary(locale: "vi-VN")
+        enSummary: summary(locale: "en-US")
+        vnLink: link(locale: "vi-VN")
+        enLink: link(locale: "en-US")
+        thumbnail {
+          url
+          description
+          title
+          width
+          height
+        }
+      }
+    }
+  }
+  feedbackCollection {
+    items {
+      ...on Feedback {
+        vnName: name(locale: "vi-VN")
+        enName: name(locale: "en-US")
+        vnMessage: message(locale: "vi-VN")
+        enMessage: message(locale: "en-US")
+        vnCompany: company(locale: "vi-VN")
+        enCompany: company(locale: "en-US")
+        avatar {
+          url
+          description
+          title
+          width
+          height
+        }
+      }
+    }
+  }
+  subServiceCollection {
+    items {
+      ...on SubService {
+        vnName: name(locale: "vi-VN")
+        enName: name(locale: "en-US")
+        vnSummary: summary(locale: "vi-VN")
+        enSummary: summary(locale: "en-US")
+        icon {
+          url
+          description
+          title
+          width
+          height
+        }
+      }
+    }
+  }
+`;
+
 async function fetchGraphQL(query, preview = false) {
   return fetch(
     `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
@@ -119,6 +198,16 @@ function extractPost(fetchResponse) {
 
 function extractPostEntries(fetchResponse) {
   return fetchResponse?.data?.postCollection?.items;
+}
+function extractServiceEntries(fetchResponse) {
+  const service = fetchResponse?.data?.serviceCollection?.items[0];
+
+  return {
+    ...service,
+    showcaseCollection: service?.showcaseCollection?.items,
+    feedbackCollection: service?.feedbackCollection.items,
+    subServiceCollection: service?.subServiceCollection.items,
+  };
 }
 
 export async function getPreviewPostBySlug(slug) {
@@ -199,4 +288,35 @@ export async function getPostAndMorePosts(slug, preview, locale) {
     post: extractPost(entry),
     morePosts: extractPostEntries(entries),
   };
+}
+
+// export async function getProductsByType(type) {
+//   const entries = await fetchGraphQL(
+//     `query {
+//       productCollection(where: {type_contains_some: "${type}"}, preview: false
+//       , limit: 100) {
+//         items {
+//           ${PRODUCT_FIELD}
+//         }
+//       }
+//     }`,
+//     false
+//   );
+
+//   return extractProductEntries(entries);
+// }
+export async function getServiceByName(name) {
+  const entries = await fetchGraphQL(
+    `query {
+      serviceCollection(where: {name: "${name}"}, preview: false
+      , limit: 1) {
+        items {
+          ${SERVICE_FIELD}
+        }
+      }
+    }`,
+    false
+  );
+
+  return extractServiceEntries(entries);
 }

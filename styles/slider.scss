@@ -1,0 +1,22 @@
+.slick-slider {
+  &.home-project {
+    .slick-slide {
+      &:not(.slick-active) {
+        transform: scale(0.8);
+      }
+    }
+  }
+}
+.slick-slider {
+  &.service-feedback {
+    .slick-slide {
+      &.slick-active {
+        background: rgba(234, 233, 242, 0.1);
+        border-radius: 10px;
+      }
+      &:not(.slick-active) {
+        transform: scale(0.8);
+      }
+    }
+  }
+}

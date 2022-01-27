@@ -1,0 +1,26 @@
+.btn {
+  background: rgba($color: #ffffff, $alpha: 0.1);
+  transition: ease-in-out;
+  transition-duration: 0.1;
+
+  &:hover {
+    background: rgba($color: #ffffff, $alpha: 0.2);
+  }
+}
+
+.glow {
+  background: linear-gradient(
+    134.27deg,
+    rgba(123, 77, 255, 0.6) 5.56%,
+    rgba(22, 101, 255, 0.6) 49.74%,
+    rgba(60, 47, 210, 0.6) 93.01%
+  );
+  filter: blur(250px);
+  border-radius: 1000px;
+  z-index: -1;
+}
+
+.legal {
+  font-size: 14px;
+  font-weight: 400;
+}
