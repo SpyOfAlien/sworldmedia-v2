@@ -15,11 +15,11 @@ export const getStaticProps = async ({ locale, preview }) => {
       service: service,
       profile: productsFilenames,
     },
+    revalidate: 10,
   };
 };
 
 const BrandCommunicationPage = ({ service, profile }) => {
-  const { t } = useTranslation('common');
   return <ServicePage profile={profile} service={service} />;
 };
 

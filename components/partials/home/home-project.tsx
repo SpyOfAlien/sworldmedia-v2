@@ -60,6 +60,7 @@ const HomeProject = () => {
     className: 'home-project center',
     centerMode: true,
     infinite: true,
+    centerPadding: `${width / 4}px`,
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: false,
