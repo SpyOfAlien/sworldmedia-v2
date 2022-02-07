@@ -9,8 +9,7 @@
   "home__hero": "S-WORLD MULTIMEDIA A NEW GENERATION MULTIMEDIA COMPANY",
 
   "home__about_us__title": "About us",
-  "home__about_us__define": "S-World là công ty truyền thông thế hệ mới với năng lực quốc tế.",
-  "home__about_us__define_desc": "Thành lập vào năm 2020 trong đại dịch Covid-19, nhưng không ngừng tiến về phía trước như một chú ngựa phi nước đại. Sẵn sàng tiến vào một “thế giới” rộng lớn còn ẩn chứa vô số điều kỳ diệu để khám phá, kiến tạo và lan tỏa.",
+  "home__about_us__define": "S-World là công ty truyền thông thế hệ mới với năng lực quốc tế. Thành lập vào năm 2020 trong đại dịch Covid-19, nhưng không ngừng tiến về phía trước như một chú ngựa phi nước đại. Sẵn sàng tiến vào một “thế giới” rộng lớn còn ẩn chứa vô số điều kỳ diệu để khám phá, kiến tạo và lan tỏa.",
 
   "home__about_us__vision__title": "Vision",
   "home__about_us__vision__content": "A special communication bridge to bring Vietnam into the world",
@@ -318,10 +317,7 @@
 
   "aboutus__ceo": "DANG SOAN Founder & CEO",
 
-  "aboutus__ceo__content1": "Foreign relations are predestined and connections are desires",
-  "aboutus__ceo__content2": "With 10 years of experience in working in the field of media and press and 8 years in external communication, S-world founder has got the opportunities to work in 20 countries around the world, especially in the US.",
-  "aboutus__ceo__content3": "As Former Director of the Southern Branch of VTC10-NETVIET, a TV channel on culture and foreign affairs, Soan Dang has joined hands with her co-workers to conduct many programs to popularize the startup movement and inspire startup founders. Notably, Soan was Executive Director of the International Conference on Entrepreneurship: “Connecting and promoting resources for Vietnamese Startups to reach out to the world.",
-  "aboutus__ceo__content4": "She is also a close partner of many ministries, departments and localities, especially the Ministry of Information and Communications and the State Committee for Overseas Vietnamese Affairs.",
+  "aboutus__ceo__content": "Foreign relations are predestined and connections are desires\n     With 10 years of experience in working in the field of media and press and 8 years in external communication, S-world founder has got the opportunities to work in 20 countries around the world, especially in the US.\n  As Former Director of the Southern Branch of VTC10-NETVIET, a TV channel on culture and foreign affairs, Soan Dang has joined hands with her co-workers to conduct many programs to popularize the startup movement and inspire startup founders. Notably, Soan was Executive Director of the International Conference on Entrepreneurship: “Connecting and promoting resources for Vietnamese Startups to reach out to the world.\nShe is also a close partner of many ministries, departments and localities, especially the Ministry of Information and Communications and the State Committee for Overseas Vietnamese Affairs.",
 
   "aboutus__inspirational_advisor": "Inspirational Advisor",
   "aboutus__organizational_advisor": "Organizational advisor",
@@ -330,6 +326,7 @@
   "aboutus__advisor": "Our advisors",
 
   "aboutus__team__title": "Our team",
+  "aboutus__team__desc": "Dignissim enim sit amet venenatis urna cursus eget nunc. Praesent elementum facilisis leo vel fringilla est ullamcorper eget nulla.",
 
   "about__career_welcome": "Về với team S!",
   "about__career_welcome_desc": "Gia nhập đội ngũ và cùng S-World nhân giá trị kết nối và kiến tạo giá trị mới khác biệt tại thị trường truyền thông Việt Nam và xa hơn là vươn ra thế giới",
