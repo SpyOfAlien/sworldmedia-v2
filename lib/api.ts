@@ -255,6 +255,22 @@ export async function getAllPostsForHome(preview) {
   return extractPostEntries(entries);
 }
 
+export async function getPosts(page) {
+  const entries = await fetchGraphQL(
+    `query {
+      postCollection(order: date_DESC, preview: 'false'
+      , limit: 9, skip: ${page * 9}) {
+        items {
+          ${POST_GRAPHQL_FIELDS}
+        }
+      }
+    }`,
+    false
+  );
+
+  return extractPostEntries(entries);
+}
+
 export async function getPostAndMorePosts(slug, preview, locale) {
   const currentLocale = locale === 'vn' ? 'vi-VN' : 'en-US';
 

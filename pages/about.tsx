@@ -9,6 +9,7 @@ import AboutTeam from '../components/partials/about/about-team';
 import AboutCEO from '../components/partials/about/about-ceo';
 import AboutAdvisor from '../components/partials/about/about-advisor';
 import AboutSworld from '../components/partials/about/about-sworld';
+import AboutWhyUs from '../components/partials/about/about-whyus';
 
 export const getStaticProps = async ({ locale }) => {
   return {
@@ -75,6 +76,7 @@ const AboutUs = ({ locale }) => {
       </Head>
       <AboutSworld />
       <AboutAdvisor />
+      <AboutWhyUs />
       <AboutCEO />
       <AboutTeam />
       <AboutCareer />

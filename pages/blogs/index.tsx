@@ -11,6 +11,7 @@ import { Container } from '../../components/layout';
 import { getAllPostsForHome } from '../../lib/api';
 import { Media, MediaContextProvider } from '../../lib/media';
 import { useTranslation } from 'next-i18next';
+import Pagination from '../../components/layout/pagination';
 
 export const getStaticProps = async ({ locale, preview }) => {
   const allPosts = (await getAllPostsForHome(preview)) || [];
@@ -25,9 +26,10 @@ export const getStaticProps = async ({ locale, preview }) => {
 };
 
 const BlogsPage = ({ locales, posts }) => {
-  const priorityPost = posts.find((item) => item.priority === true);
-  const otherPosts = posts.filter((item) => item.priority === false);
+  const [showPosts, setShowPosts] = useState([]);
   const { t } = useTranslation('common');
+
+  const [activePage, setActivePage] = useState(1);
 
   const router = useRouter();
   const isVn = router.locale === 'vn';
@@ -39,6 +41,24 @@ const BlogsPage = ({ locales, posts }) => {
     'Tổ chức sự kiện',
     'Kết nối quốc tế',
   ];
+
+  useEffect(() => {
+    setShowPosts(posts.slice((activePage - 1) * 9, (activePage - 1) * 9 + 9));
+  }, [activePage]);
+
+  useEffect(() => {
+    setShowPosts(posts.slice(0, 9));
+  }, []);
+
+  // const getAll = async () => {
+  //   const allPosts = (await getAllPostsForHome(false)) || [];
+
+  //   console.log('alll', allPosts);
+  // };
+
+  const setPage = (page) => {
+    page !== activePage && setActivePage(page);
+  };
 
   return (
     <MediaContextProvider>
@@ -70,7 +90,7 @@ const BlogsPage = ({ locales, posts }) => {
         <div></div>
         <div>
           <Container>
-            {priorityPost && (
+            {/* {priorityPost && (
               <Media lessThan="sm">
                 <PostCard cl="sw-mb-16" type="small" post={priorityPost} />
               </Media>
@@ -80,9 +100,15 @@ const BlogsPage = ({ locales, posts }) => {
               <Media greaterThanOrEqual="sm">
                 <PostCard cl="sw-mb-16" type="big" post={priorityPost} />
               </Media>
-            )}
+            )} */}
 
-            {otherPosts && <PostList posts={otherPosts} />}
+            <PostList posts={showPosts} />
+
+            <Pagination
+              pageCount={Math.round(posts.length / 9)}
+              setPage={(page) => setPage(page)}
+              activePage={activePage}
+            />
           </Container>
         </div>
       </Container>

@@ -14,7 +14,7 @@ const PostList: FC<Props> = ({ posts }) => {
           <div
             key={idx}
             className={cn(
-              `sw-w-full sw-mb-10 md:sw-w-48 sw-flex ${
+              `sw-w-full sw-mb-16 md:sw-w-48 lg:sw-w-31 sw-flex ${
                 (idx + 1) % 2 === 0 ? 'sw-justify-end' : ''
               }`
             )}
