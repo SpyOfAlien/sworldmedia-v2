@@ -93,9 +93,9 @@ const PostCard: FC<Props> = ({ post, type, cl }) => {
               style={{ minHeight: '4rem' }}
               className="sw-my-2 sw-whitespace-nowrap sw-overflow-ellipsis sw-overflow-hidden"
             >
-              <Heading h="h6">
+              <h3 className="sw-text-white">
                 {router.locale === 'vn' ? vnTitle : enTitle}
-              </Heading>
+              </h3>
             </div>
             {type === 'big' && (
               <Paragraph cl="sw-py-2">
