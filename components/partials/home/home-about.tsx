@@ -6,8 +6,10 @@ import { useTranslation } from 'next-i18next';
 const About = ({ t }) => {
   return (
     <div className={cn('sw-text-center sw-text-white sw-w-10/12 sw-mx-auto')}>
-      <h3 className="sw-text-h3 sw-mb-6">{t('home__about_us__define')}</h3>
-      <p>{t('home__about_us__define_desc')}</p>
+      <h3 className="sw-text-h3 sw-mb-6 sw-text-barlow">
+        {t('home__about_us__define')}
+      </h3>
+      <p>{t('home__about_us__define__desc')}</p>
     </div>
   );
 };

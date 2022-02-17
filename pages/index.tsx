@@ -81,21 +81,8 @@ const HomePage = ({ locales, allPosts = [] }) => {
       <HomeServices />
       <HomePartner />
       <HomeClients />
-      <section className="sw-relative">
-        <HomeProject />
-        <HomeAbout />
-        <div className="sw-absolute sw-inset-0">
-          <div></div>
-          <div className="sw-w-full">
-            <Image
-              src="/assets/images/others/starmap.png"
-              width={1918}
-              height={3087}
-              layout="responsive"
-            />
-          </div>
-        </div>
-      </section>
+      <HomeProject />
+      <HomeAbout />
     </MediaContextProvider>
   );
 };

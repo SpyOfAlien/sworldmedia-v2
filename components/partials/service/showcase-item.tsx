@@ -41,7 +41,7 @@ const ShowcaseItem = ({ showcase, isGlass }) => {
       <div className="sw-flex sw-mb-12">
         <div className="sw-w-full sw-flex sw-flex-col sw-justify-between lg:sw-w-1/2 sw-pr-12">
           <div>
-            <h6 className="sw-font-bold sw-barlow sw-mb-4 sw-text-h6">
+            <h6 className="sw-font-bold sw-text-barlow sw-mb-4 sw-text-h6">
               {name}
             </h6>
             <p className="sw-gilroy-thin">{summary}</p>

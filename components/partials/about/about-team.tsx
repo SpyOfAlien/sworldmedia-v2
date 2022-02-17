@@ -15,7 +15,7 @@ const AboutTeam = () => {
   return (
     <section className="sw-text-white sw-w-4/5 sw-mx-auto sw-py-32">
       <div className="sw-text-center sw-w-4/5 sw-mx-auto sw-mb-16">
-        <h3 className="sw-barlow sw-font-bold sw-text-h3 sw-mb-4">
+        <h3 className="sw-text-barlow sw-font-bold sw-text-h3 sw-mb-4">
           {t('aboutus__team__title')}
         </h3>
         <p className="sw-gilroy-thin sw-w-3/5 sw-mx-auto">
