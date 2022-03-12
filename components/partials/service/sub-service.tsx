@@ -27,7 +27,7 @@ const SubService = ({ subService }) => {
     <div
       ref={hoverRef}
       className={cn(
-        'sw-rounded-sm sw-p-6 sw-text-white sw-w-4/5 sw-cursor-pointer',
+        'sw-rounded-sm sw-p-6 sw-text-white sw-w-full lg:sw-w-4/5 sw-cursor-pointer',
         isHovered && 'sw-glass'
       )}
     >

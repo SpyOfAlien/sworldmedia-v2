@@ -66,6 +66,18 @@ const ServiceFeedback = ({ feedbacks }) => {
     dots: false,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false,
+        },
+      },
+    ],
   };
   return (
     <div>
