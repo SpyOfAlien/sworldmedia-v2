@@ -75,8 +75,8 @@ const AboutUs = ({ locale }) => {
         />
       </Head>
       <AboutSworld />
-      <AboutAdvisor />
       <AboutWhyUs />
+      <AboutAdvisor />
       <AboutCEO />
       <AboutTeam />
       <AboutCareer />

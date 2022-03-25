@@ -7,7 +7,7 @@ const AboutSworld = () => {
   const { t } = useTranslation('common');
 
   return (
-    <section className="sw-flex sw-w-4/5 sw-mx-auto sw-justify-center sw-text-white sw-relative">
+    <section className="sw-flex sw-w-4/5 sw-mx-auto sw-justify-center sw-text-white sw-relative sw-my-24">
       <div className="sw-absolute sw-inset-0">
         <div className="sw-w-full">
           <Image

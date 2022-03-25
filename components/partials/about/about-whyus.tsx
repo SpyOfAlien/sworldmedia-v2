@@ -29,7 +29,7 @@ const AboutWhyUs = () => {
       <h3 className="sw-text-h4 sw-text-center sw-text-barlow sw-font-bold sw-mb-12">
         Vì sao chọn S-World
       </h3>
-      <div className="sw-w-3/5 sw-mb-8">
+      <div className="sw-w-4/5 lg:sw-w-3/5 sw-mb-8">
         <h6 className="sw-text-h5 sw-text-barlow sw-font-bold sw-mb-6">
           Con người S-World
         </h6>
@@ -38,7 +38,7 @@ const AboutWhyUs = () => {
           kinh nghiệm truyền thông, có năng lực quốc tế và đam mê sáng tạo.
         </p>
       </div>
-      <div className="sw-w-3/5 sw-mb-8">
+      <div className="sw-w-4/5 lg:sw-w-3/5 sw-mb-8">
         <h6 className="sw-text-h5 sw-text-barlow sw-font-bold sw-mb-6">
           Kết nối của S-World
         </h6>
@@ -47,7 +47,7 @@ const AboutWhyUs = () => {
           của kết nối và sáng tạo, để: CÙNG NHAU MẠNH HƠN.
         </p>
       </div>
-      <div className="sw-w-3/5 sw-mb-8">
+      <div className="sw-w-4/5 lg:sw-w-3/5 sw-mb-8">
         <h6 className="sw-text-h5 sw-text-barlow sw-font-bold sw-mb-6">
           Văn hoá của S-World
         </h6>
@@ -55,7 +55,7 @@ const AboutWhyUs = () => {
           Kết nối đồng đội, đối tác, khách hàng đi NHANH và đi XA cùng nhau.
         </p>
       </div>
-      <div className="sw-w-3/5 sw-mb-8">
+      <div className="sw-w-4/5 lg:sw-w-3/5 sw-mb-8">
         <h6 className="sw-text-h5 sw-text-barlow sw-font-bold sw-mb-6">
           Điều đặc biệt của S-World
         </h6>
