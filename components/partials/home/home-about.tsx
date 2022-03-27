@@ -6,7 +6,7 @@ import { useTranslation } from 'next-i18next';
 const About = ({ t }) => {
   return (
     <div className={cn('sw-text-center sw-text-white sw-w-10/12 sw-mx-auto')}>
-      <h3 className="sw-text-h3 sw-mb-6 sw-text-barlow">
+      <h3 className="sw-text-h5 lg:sw-text-h3 sw-mb-6 sw-text-barlow">
         {t('home__about_us__define')}
       </h3>
       <p>{t('home__about_us__define__desc')}</p>
@@ -39,10 +39,17 @@ const Why = ({ t }) => {
   ];
 
   return (
-    <div className={cn('sw-text-white sw-flex sw-justify-between')}>
+    <div
+      className={cn(
+        'sw-text-white sw-flex sw-flex-col lg:sw-flex-row sw-justify-between'
+      )}
+    >
       {reasons.map((item) => (
         <div
-          className={cn('sw-w-1/4 sw-mx-1 sw-p-3 sw-rounded-xs', s.whyusItem)}
+          className={cn(
+            'sw-w-full lg:sw-w-1/4 sw-mx-1 sw-p-3 sw-rounded-xs',
+            s.whyusItem
+          )}
           key={item.id}
         >
           <h3 className="sw-uppercase sw-mb-2">{t(item.title)}</h3>
@@ -61,7 +68,7 @@ const HomeAbout = () => {
     <section className={cn('sw-mb-40')}>
       <div
         className={cn(
-          'sw-w-2/3 sw-mx-auto sw-py-8',
+          'sw-w-11/12 lg:sw-w-2/3 sw-mx-auto sw-py-8',
           s.containerBorder,
           s.aboutContainer
         )}

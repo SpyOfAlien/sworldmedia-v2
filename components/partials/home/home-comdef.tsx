@@ -93,7 +93,7 @@ const HomeComDef = () => {
   return (
     <section className="sw-mb-40 sw-text-white">
       <MediaContextProvider>
-        <Media greaterThanOrEqual="lg">
+        <Media greaterThanOrEqual="md">
           <div className="sw-flex sw-justify-between sw-text-white sw-w-3/5 sw-mx-auto">
             {defs.map((item) => (
               <div
@@ -123,13 +123,14 @@ const HomeComDef = () => {
             ))}
           </div>
         </Media>
-        <Media lessThan="lg">
+        <Media lessThan="md">
           <Slider {...settings}>
             {defs.map((item) => (
               <div
                 className={cn(
                   'sw-p-4 sw-relative sw-rounded-md sw-cursor-pointer sw-hover-glass',
-                  s.gradientBorder
+                  s.gradientBorder,
+                  s.comdefItem
                 )}
                 key={item.id}
               >

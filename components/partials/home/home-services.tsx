@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 import cn from 'classnames';
 import s from './home.module.scss';
+import { Media, MediaContextProvider } from '../../../lib/media';
 
 const HomeServices = () => {
   const services = [
@@ -52,11 +53,11 @@ const HomeServices = () => {
           />
         </div>
       </div>
-      <h3 className="sw-text-white sw-text-barlow sw-text-h3 sw-font-bold sw-text-center sw-mb-12">
+      <h3 className="sw-text-white sw-text-barlow sw-text-h3 sw-font-bold sw-text-center">
         {t('home__service__title')}
       </h3>
       <div className="sw-flex sw-flex-col lg:sw-flex-row">
-        <div className="sw-w-full lg:sw-w-2/5 2xl:sw-w-1/2">
+        <div className="sw-w-4/5">
           <div className="sw-w-full">
             <Image
               src="/assets/images/common/sworld-horse.png"
@@ -67,35 +68,38 @@ const HomeServices = () => {
             />
           </div>
         </div>
-
-        <div
-          className={cn(
-            'sw-flex sw-flex-wrap sw-p-2 sw-mx-8 xl:sw-mx-16 sw-w-2/5 lg:sw-w-3/5 2xl:sw-w-1/2',
-            s.containerBorder
-          )}
-        >
-          {services.map((item) => (
-            <div
-              className={cn(
-                'sw-w-full lg:sw-w-31 sw-mx-16 xl:sw-mx-2 sw-my-2 sw-p-4 sw-rounded-sm sw-cursor-pointer',
-                s.serviceItem
-              )}
-              key={item.id}
-            >
-              <div className="op-w-9/12 sw-mx-auto">
-                <Image
-                  src={item.iconLink}
-                  width={192}
-                  height={192}
-                  layout="responsive"
-                />
+        <div className="sw-w-full sw-flex sw-items-center">
+          <div
+            className={cn(
+              'sw-flex sw-flex-col sw-p-2 sw-mx-8 xl:sw-mx-16 sw-w-full',
+              s.containerBorder
+            )}
+          >
+            {services.map((item) => (
+              <div
+                className={cn(
+                  'sw-w-full sw-flex sw-my-2 sw-rounded-sm sw-cursor-pointer',
+                  s.serviceItem
+                )}
+                key={item.id}
+              >
+                <div className="sw-w-24">
+                  <Image
+                    src={item.iconLink}
+                    width={192}
+                    height={192}
+                    layout="responsive"
+                  />
+                </div>
+                <div className="sw-w-4/5 sw-flex sw-items-center">
+                  <h3 className="sw-uppercase sw-font-bold sw-text-center">
+                    {t(item.name)}
+                  </h3>
+                  {/* <p className="sw-text-xs">{t(item.desc)}</p> */}
+                </div>
               </div>
-              <div>
-                <h3 className="sw-uppercase sw-font-bold">{t(item.name)}</h3>
-                {/* <p className="sw-text-xs">{t(item.desc)}</p> */}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
