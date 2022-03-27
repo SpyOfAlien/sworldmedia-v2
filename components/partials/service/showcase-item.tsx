@@ -34,23 +34,23 @@ const ShowcaseItem = ({ showcase, isGlass }) => {
   return (
     <div
       className={cn(
-        'sw-text-white sw-p-12 sw-mb-12 sw-rounded-sm sw-relative',
+        'sw-text-white xl:sw-p-12 sw-mb-12 sw-rounded-sm sw-relative',
         isGlass && 'sw-glass'
       )}
     >
-      <div className="sw-flex sw-mb-12">
+      <div className="sw-flex sw-flex-col-reverse lg:sw-flex-row sw-mb-12">
         <div className="sw-w-full sw-flex sw-flex-col sw-justify-between lg:sw-w-1/2 sw-pr-12">
           <div>
             <h6 className="sw-font-bold sw-text-barlow sw-mb-4 sw-text-h6">
               {name}
             </h6>
-            <p className="sw-gilroy-thin">{summary}</p>
+            <p className="sw-gilroy-thin sw-mb-4">{summary}</p>
           </div>
           <span className="sw-cursor-pointer sw-underline" onClick={onReadmore}>
             {t('action__findoutmore')}
           </span>
         </div>
-        <div className="sw-w-full lg:sw-w-1/2">
+        <div className="sw-w-full sw-mb-4 lg:sw-mb-0 lg:sw-w-1/2">
           <div className="sw-w-full">
             <Image
               src={showcase.thumbnail.url}
