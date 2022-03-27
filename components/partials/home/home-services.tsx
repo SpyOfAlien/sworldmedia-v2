@@ -48,34 +48,36 @@ const HomeServices = () => {
             width={1920}
             height={1648}
             layout="responsive"
+            className="sw-mix-blend-screen"
           />
         </div>
       </div>
       <h3 className="sw-text-white sw-text-barlow sw-text-h3 sw-font-bold sw-text-center sw-mb-12">
         {t('home__service__title')}
       </h3>
-      <div className="sw-flex">
-        <div className="sw-w-2/5 2xl:sw-w-1/2">
+      <div className="sw-flex sw-flex-col lg:sw-flex-row">
+        <div className="sw-w-full lg:sw-w-2/5 2xl:sw-w-1/2">
           <div className="sw-w-full">
             <Image
               src="/assets/images/common/sworld-horse.png"
               width={944}
               height={944}
               layout="responsive"
+              className="sw-mix-blend-screen"
             />
           </div>
         </div>
 
         <div
           className={cn(
-            'sw-flex sw-flex-wrap sw-p-2 sw-mx-8 xl:sw-mx-16 sw-w-3/5 2xl:sw-w-1/2',
+            'sw-flex sw-flex-wrap sw-p-2 sw-mx-8 xl:sw-mx-16 sw-w-2/5 lg:sw-w-3/5 2xl:sw-w-1/2',
             s.containerBorder
           )}
         >
           {services.map((item) => (
             <div
               className={cn(
-                'sw-w-31 sw-mx-1 xl:sw-mx-2 sw-my-2 sw-p-4 sw-rounded-sm sw-cursor-pointer',
+                'sw-w-full lg:sw-w-31 sw-mx-16 xl:sw-mx-2 sw-my-2 sw-p-4 sw-rounded-sm sw-cursor-pointer',
                 s.serviceItem
               )}
               key={item.id}

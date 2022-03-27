@@ -99,20 +99,20 @@ export function getRichTextRenderOptions(links, options) {
             </div>
           );
         } else {
-          return <h2 className={cn(s.h2, 'sw-text-gradient')}>{children}</h2>;
+          return <h2 className={cn(s.h2)}>{children}</h2>;
         }
       },
       [BLOCKS.HEADING_3]: (node, children) => (
-        <h3 className={cn(s.h3, 'sw-text-gradient')}>{children}</h3>
+        <h3 className={cn(s.h3)}>{children}</h3>
       ),
       [BLOCKS.HEADING_4]: (node, children) => (
-        <h4 className={cn(s.h4, 'sw-text-gradient')}>{children}</h4>
+        <h4 className={cn(s.h4)}>{children}</h4>
       ),
       [BLOCKS.HEADING_5]: (node, children) => (
-        <h5 className={cn(s.h5, 'sw-text-gradient')}>{children}</h5>
+        <h5 className={cn(s.h5)}>{children}</h5>
       ),
       [BLOCKS.HEADING_6]: (node, children) => (
-        <h6 className={cn(s.h6, 'sw-text-gradient')}>{children}</h6>
+        <h6 className={cn(s.h6)}>{children}</h6>
       ),
       [BLOCKS.PARAGRAPH]: (node, children) => (
         <Paragraph cl="sw-mb-4">{children}</Paragraph>

@@ -8,7 +8,7 @@ const HomePartner = () => {
       <h3 className="sw-text-white sw-text-barlow sw-text-h3 sw-font-bold sw-text-center sw-mb-12">
         {t('home__core_partner__title')}
       </h3>
-      <div className="sw-w-3/5 sw-mx-auto">
+      <div className="sw-w-full lg:sw-w-3/5 sw-mx-auto">
         <Image
           alt="sworld partner"
           src="/assets/images/clients/partner.png"

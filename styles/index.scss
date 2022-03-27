@@ -43,6 +43,10 @@
     background-blend-mode: color-dodge;
     mix-blend-mode: lighten;
   }
+
+  .sw-mix-blend-screen {
+    mix-blend-mode: screen;
+  }
 }
 
 @layer base {

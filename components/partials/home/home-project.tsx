@@ -14,7 +14,11 @@ const HomeProject = () => {
     const { onClick } = props;
     return (
       <div
-        style={{ left: `calc(50% + ${width / 3.4}px - 48px)` }}
+        style={{
+          left: `calc(50% + ${
+            width < 1024 ? width / 2.4 : width / 3.4
+          }px - 48px)`,
+        }}
         className={cn(
           'sw-glass sw-rounded-full sw-w-12 sw-h-12 sw-p-2 sw-flex sw-items-center sw-justify-center sw-cursor-pointer',
           s.nextArrow
@@ -37,7 +41,9 @@ const HomeProject = () => {
     const { onClick } = props;
     return (
       <div
-        style={{ left: `calc(50% - ${width / 3.4}px)` }}
+        style={{
+          left: `calc(50% - ${width < 1024 ? width / 2.4 : width / 3.4}px)`,
+        }}
         className={cn(
           'sw-glass sw-rounded-full sw-w-12 sw-h-12 sw-p-2 sw-flex sw-items-center sw-justify-center sw-cursor-pointer',
           s.prevArrow
@@ -60,7 +66,7 @@ const HomeProject = () => {
     className: 'home-project center',
     centerMode: true,
     infinite: true,
-    centerPadding: `${width / 4}px`,
+    centerPadding: `${width < 1024 ? width / 10 : width / 4.5}px`,
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: false,

@@ -12,8 +12,8 @@ const AboutSworld = () => {
         <div className="sw-w-full">
           <Image
             src="/assets/images/common/globe.png"
-            width={1905}
-            height={1580}
+            width={1135}
+            height={893}
             layout="responsive"
             className="sw-mix-blend-screen"
           />
