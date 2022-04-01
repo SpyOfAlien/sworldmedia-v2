@@ -75,7 +75,17 @@ const HomeProject = () => {
   };
 
   return (
-    <section className="sw-mb-40">
+    <section className="sw-mb-40 sw-relative">
+      <div className="sw-absolute sw-inset-0">
+        <div className="sw-w-full">
+          <Image
+            src="/assets/images/others/starmap.png"
+            width={1918}
+            height={1078}
+            layout="responsive"
+          />
+        </div>
+      </div>
       <h3 className="sw-text-white sw-text-barlow sw-text-h3 sw-font-bold sw-text-center sw-mb-12">
         {t('home__project__usecase')}
       </h3>

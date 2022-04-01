@@ -44,15 +44,7 @@
 }
 
 .gradientBorder {
-  border: 2.1px solid;
-  border-image-source: linear-gradient(
-    134.27deg,
-    #0d349c 5.56%,
-    #479cff 5.57%,
-    #1c55e7 50.66%,
-    #7197ff 93.01%
-  );
-  background: #eae9f20a;
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .comdefItem {

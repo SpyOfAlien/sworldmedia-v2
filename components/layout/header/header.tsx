@@ -11,6 +11,7 @@ import cn from 'classnames';
 import { useSection } from '../../../lib/context/section-context';
 import { useTranslation } from 'next-i18next';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
+import { useHover } from '../../../lib/hook';
 
 const Header = () => {
   const router = useRouter();
@@ -36,6 +37,9 @@ const Header = () => {
     'INTERNAL_RELATION',
     'EVENT',
   ];
+
+  const [serviceRef, isHoverService] = useHover<HTMLAnchorElement>();
+  const [dropdownRef, isHoverDropdown] = useHover<HTMLDivElement>();
 
   useEffect(() => {
     if (isActiveHumburger) {
@@ -148,7 +152,7 @@ const Header = () => {
                 onClick={handleGoHome}
                 style={{ marginBottom: '10px', cursor: 'pointer' }}
               >
-                <WhiteLogo width="60px" height="60px"/>
+                <WhiteLogo width="60px" height="60px" />
               </div>
             ) : null}
           </Media>
@@ -162,9 +166,33 @@ const Header = () => {
               </a>
             </Link>
             <Link href="/services">
-              <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-link nav-link">
-                {' '}
+              <a
+                ref={serviceRef}
+                className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-link nav-link sw-relative"
+              >
                 {t('menu__services')}{' '}
+                {(isHoverService || isHoverDropdown) && (
+                  <div
+                    ref={dropdownRef}
+                    className="sw-absolute sw-bottom-4 sw-left-0  sw-flex sw-flex-col sw-p-4 sw-glass"
+                  >
+                    <Link href="/services/production">
+                      <a className="sw-text-white">lightModal</a>
+                    </Link>
+                    <Link href="/services/production">
+                      <a className="sw-text-white">lightModal</a>
+                    </Link>
+                    <Link href="/services/production">
+                      <a className="sw-text-white">lightModal</a>
+                    </Link>
+                    <Link href="/services/production">
+                      <a className="sw-text-white">lightModal</a>
+                    </Link>
+                    <Link href="/services/production">
+                      <a className="sw-text-white">lightModal</a>
+                    </Link>
+                  </div>
+                )}
               </a>
             </Link>
             <Link href="/about">

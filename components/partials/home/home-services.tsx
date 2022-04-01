@@ -3,41 +3,51 @@ import { useTranslation } from 'next-i18next';
 import cn from 'classnames';
 import s from './home.module.scss';
 import { Media, MediaContextProvider } from '../../../lib/media';
+import { useRouter } from 'next/router';
 
 const HomeServices = () => {
+  const router = useRouter();
   const services = [
     {
       id: 'sv1',
       name: 'home__service__production__title',
       iconLink: '/assets/images/services/icons/production.png',
       desc: 'home__service__production__desc',
+      link: '/services/production',
     },
     {
       id: 'sv2',
       name: 'home__service__branding__title',
       iconLink: '/assets/images/services/icons/branding.png',
       desc: 'home__service__branding__desc',
+      link: '/services/branding',
     },
     {
       id: 'sv3',
       name: 'home__service__international_relations__title',
       iconLink: '/assets/images/services/icons/international-relation.png',
       desc: 'home__service__international_relations__desc',
+      link: '/services/international-relation',
     },
     {
       id: 'sv4',
       name: 'home__service__brand_communication__title',
       iconLink: '/assets/images/services/icons/brand-com.png',
       desc: 'home__service__brand_communication__desc',
+      link: '/services/brand-communication',
     },
     {
       id: 'sv5',
       name: 'home__service__event__title',
       iconLink: '/assets/images/services/icons/event.png',
       desc: 'home__service__event__desc',
+      link: '/services/events',
     },
   ];
 
+  const onNavigate = (link) => {
+    router.push(link);
+  };
   const { t } = useTranslation('common');
 
   return (
@@ -82,6 +92,7 @@ const HomeServices = () => {
                   s.serviceItem
                 )}
                 key={item.id}
+                onClick={() => onNavigate(item.link)}
               >
                 <div className="sw-w-24">
                   <Image
