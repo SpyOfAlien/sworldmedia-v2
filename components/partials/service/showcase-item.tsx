@@ -26,9 +26,10 @@ const ShowcaseItem = ({ showcase, isGlass }) => {
   }, [router.locale]);
 
   const onReadmore = () => {
+    console.log('showcase', showcase);
     isVn
-      ? router.push(`/vn/blogs/${showcase.vnLink[0]}`)
-      : router.push(`/en/blogs/${showcase.enLink[0]}`);
+      ? router.push(`/vn/blogs/${showcase.vnSlug}`)
+      : router.push(`/en/blogs/${showcase.enSlug}`);
   };
 
   return (

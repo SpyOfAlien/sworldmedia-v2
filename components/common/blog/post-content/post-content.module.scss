@@ -1,13 +1,22 @@
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  @apply sw-text-white sw-font-semibold;
+}
+
 .h1 {
-  @apply sw-text-h4 sw-mb-6 sw-mt-2;
+  @apply sw-text-h5 sw-mb-2 sw-mt-2;
 }
 
 .h2 {
-  @apply sw-text-h5 sw-mb-6 sw-mt-2;
+  @apply sw-text-h6 sw-mb-2 sw-mt-2;
 }
 
 .h3 {
-  @apply sw-text-h5 sw-mb-6 sw-mt-2;
+  @apply sw-text-h6 sw-mb-2 sw-mt-2;
 }
 
 .h4 {
@@ -17,7 +26,7 @@
 }
 
 .h5 {
-  @apply sw-text-h6 sw-mb-6 sw-mt-2;
+  @apply sw-text-h6 sw-mb-2 sw-mt-2;
 }
 
 .h6 {

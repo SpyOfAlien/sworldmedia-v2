@@ -80,7 +80,7 @@ export function getRichTextRenderOptions(links, options) {
       },
       [BLOCKS.HR]: (text) => <hr />,
       [BLOCKS.HEADING_1]: (node, children) => (
-        <h1 className={cn(s.h1, 'sw-text-gradient')}>{children}</h1>
+        <h1 className={cn(s.h1)}>{children}</h1>
       ),
       [BLOCKS.HEADING_2]: (node, children) => {
         if (renderH2Links) {

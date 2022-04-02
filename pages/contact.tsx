@@ -1,8 +1,5 @@
 import Image from 'next/image';
-import Facebook from '../components/icons/facebook';
-import Linkedin from '../components/icons/linkedin';
 import WhiteLogo from '../components/icons/white-logo';
-import Youtube from '../components/icons/youtube';
 import Infor from '../components/ui/infor/infor';
 import { useMediaQuery } from 'react-responsive';
 import Paragraph from '../components/ui/typo/paragraph';
@@ -45,7 +42,8 @@ const ContactPage = ({ locale }) => {
   const [message, setMessage] = useState('');
   const { t } = useTranslation('common');
 
-  const emailRegex = /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
+  const emailRegex =
+    /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
 
   const isDesktopOrLaptop = useMediaQuery({
     query: '(min-device-width: 1280px)',
@@ -182,18 +180,33 @@ const ContactPage = ({ locale }) => {
             <div>
               <div className="sw-flex sw-mb-xsm">
                 <Link href="https://www.facebook.com/sworldmultimedia">
-                  <a>
-                    <Facebook style={{ marginRight: '40px' }} />
+                  <a className="sw-w-6 sw-mr-3">
+                    <Image
+                      src="/assets/images/socials/fb.png"
+                      width={16}
+                      height={17}
+                      layout="responsive"
+                    />
                   </a>
                 </Link>
                 <Link href="https://www.linkedin.com/company/s-worldmultimedia">
-                  <a>
-                    <Linkedin style={{ marginRight: '40px' }} />
+                  <a className="sw-w-6 sw-mr-3">
+                    <Image
+                      src="/assets/images/socials/fb.png"
+                      width={16}
+                      height={17}
+                      layout="responsive"
+                    />
                   </a>
                 </Link>
                 <Link href="https://www.youtube.com/channel/UCzod695AmgnnUeKSSUZ-t1A">
-                  <a>
-                    <Youtube style={{ marginRight: '40px' }} />
+                  <a className="sw-w-6 sw-mr-3">
+                    <Image
+                      src="/assets/images/socials/fb.png"
+                      width={16}
+                      height={17}
+                      layout="responsive"
+                    />
                   </a>
                 </Link>
               </div>

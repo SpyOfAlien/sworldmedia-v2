@@ -46,6 +46,21 @@
   }
 }
 
+.serviceDropdown {
+  left: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  width: max-content;
+  top: 25px;
+  a {
+    font-size: 15px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    }
+  }
+}
+
 .hamburger {
   display: flex;
   align-items: center;

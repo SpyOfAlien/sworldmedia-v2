@@ -124,8 +124,8 @@ const SERVICE_FIELD = `
         enName: name(locale: "en-US")
         vnSummary: summary(locale: "vi-VN")
         enSummary: summary(locale: "en-US")
-        vnLink: link(locale: "vi-VN")
-        enLink: link(locale: "en-US")
+        vnSlug: slug(locale: "vi-VN")
+        enSlug: slug(locale: "en-US")
         thumbnail {
           url
           description
@@ -291,7 +291,7 @@ export async function getPostAndMorePosts(slug, preview, locale) {
     `query {
       postCollection(where: { slug_not_in: "${slug}" }, order: date_DESC, preview: ${
       preview ? 'true' : 'false'
-    }, limit: 2) {
+    }, limit: 3) {
         items {
           ${POST_GRAPHQL_FIELDS}
         }

@@ -17,18 +17,14 @@ const Header = () => {
   const router = useRouter();
 
   const { t } = useTranslation('common');
-  const {
-    closeModal,
-    openModal,
-    setModalView,
-    displayModal,
-    modalView,
-  } = useUI();
+  const { closeModal, openModal, setModalView, displayModal, modalView } =
+    useUI();
   const { onSetSection } = useSection();
   const [isActiveHumburger, setIsActiveHumburger] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const [isOffset, setIsOffset] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
+  const [isOpenDropdown, setIsOpenDropdown] = useState(false);
 
   const servicesModal = [
     'BRAND_COMMUNICATION',
@@ -42,9 +38,18 @@ const Header = () => {
   const [dropdownRef, isHoverDropdown] = useHover<HTMLDivElement>();
 
   useEffect(() => {
+    if (isHoverService || isHoverDropdown) {
+      setIsOpenDropdown(true);
+    } else {
+      setIsOpenDropdown(false);
+    }
+  }, [isHoverService, isHoverDropdown]);
+
+  useEffect(() => {
     if (isActiveHumburger) {
       setIsActiveHumburger(false);
       closeModal();
+      setIsOpenDropdown(false);
     }
   }, [router.pathname]);
 
@@ -161,8 +166,7 @@ const Header = () => {
           <div className="sw-nav">
             <Link href="/">
               <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-link nav-link">
-                {' '}
-                {t('menu__home')}{' '}
+                {t('menu__home')}
               </a>
             </Link>
             <Link href="/services">
@@ -170,26 +174,39 @@ const Header = () => {
                 ref={serviceRef}
                 className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-link nav-link sw-relative"
               >
-                {t('menu__services')}{' '}
-                {(isHoverService || isHoverDropdown) && (
+                {t('menu__services')}
+                {isOpenDropdown && (
                   <div
                     ref={dropdownRef}
-                    className="sw-absolute sw-bottom-4 sw-left-0  sw-flex sw-flex-col sw-p-4 sw-glass"
+                    className={cn(
+                      'sw-absolute sw-flex sw-flex-col sw-px-4 sw-py-2 sw-glass',
+                      s.serviceDropdown
+                    )}
                   >
                     <Link href="/services/production">
-                      <a className="sw-text-white">lightModal</a>
+                      <a className="sw-text-gradient sw-mb-2 ">
+                        {t('home__service__production__title')}
+                      </a>
                     </Link>
-                    <Link href="/services/production">
-                      <a className="sw-text-white">lightModal</a>
+                    <Link href="/services/branding">
+                      <a className="sw-text-gradient sw-mb-2 ">
+                        {t('home__service__branding__title')}
+                      </a>
                     </Link>
-                    <Link href="/services/production">
-                      <a className="sw-text-white">lightModal</a>
+                    <Link href="/services/international-relation">
+                      <a className="sw-text-gradient sw-mb-2 ">
+                        {t('home__service__international_relations__title')}
+                      </a>
                     </Link>
-                    <Link href="/services/production">
-                      <a className="sw-text-white">lightModal</a>
+                    <Link href="/services/brand-communication">
+                      <a className="sw-text-gradient sw-mb-2 ">
+                        {t('home__service__brand_communication__title')}
+                      </a>
                     </Link>
-                    <Link href="/services/production">
-                      <a className="sw-text-white">lightModal</a>
+                    <Link href="/services/events">
+                      <a className="sw-text-gradient">
+                        {t('home__service__event__title')}
+                      </a>
                     </Link>
                   </div>
                 )}
@@ -197,20 +214,17 @@ const Header = () => {
             </Link>
             <Link href="/about">
               <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-link nav-link">
-                {' '}
-                {t('menu__about')}{' '}
+                {t('menu__about')}
               </a>
             </Link>
             <Link href="/blogs">
               <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-link nav-link">
-                {' '}
-                {t('menu__news')}{' '}
+                {t('menu__news')}
               </a>
             </Link>
             <Link href="/contact">
               <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-text-link nav-link">
-                {' '}
-                {t('menu__contact')}{' '}
+                {t('menu__contact')}
               </a>
             </Link>
           </div>
@@ -221,8 +235,7 @@ const Header = () => {
               className="sw-text-paragraph sw-cursor-pointer"
               onClick={() => handleSwitchLng('vn')}
             >
-              {' '}
-              VN{' '}
+              VN
             </div>
 
             <div
@@ -244,8 +257,7 @@ const Header = () => {
               className="sw-text-paragraph sw-cursor-pointer"
               onClick={() => handleSwitchLng('en')}
             >
-              {' '}
-              EN{' '}
+              EN
             </div>
           </div>
           <Media lessThan="md">

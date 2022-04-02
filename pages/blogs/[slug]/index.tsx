@@ -17,6 +17,7 @@ import { useTranslation } from 'react-i18next';
 import { ArticleJsonLd, BlogJsonLd, NextSeo } from 'next-seo';
 import titleStyle from '../../../lib/utils/title-style';
 import { dateTime } from '../../../lib/utils/date-format';
+import PostList from '../../../components/common/blog/post-list/post-list';
 
 const Post = ({ post, morePosts, preview, locale }) => {
   const {
@@ -164,6 +165,12 @@ const Post = ({ post, morePosts, preview, locale }) => {
             data={isVN ? vnContent : enContent}
             assets={isVN ? vnContent.links : enContent.links}
           />
+        </div>
+        <div className="sw-mt-24">
+          <Heading cl="sw-text-center sw-mb-12" h="h3" gradient={true}>
+            {t('blog__related-posts')}
+          </Heading>
+          <PostList posts={morePosts} />
         </div>
       </Container>
     </MediaContextProvider>
