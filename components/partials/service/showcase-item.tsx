@@ -4,12 +4,14 @@ import { useEffect, useState } from 'react';
 import cn from 'classnames';
 import s from './service.module.scss';
 import { useTranslation } from 'next-i18next';
+import { useWindowSize } from '../../../lib/hook';
 
 const ShowcaseItem = ({ showcase, isGlass }) => {
   const router = useRouter();
   const [name, setName] = useState('');
   const [summary, setSummary] = useState('');
   const [isVn, setIsVn] = useState(false);
+  const { width } = useWindowSize();
 
   const { t } = useTranslation('common');
 
@@ -36,7 +38,7 @@ const ShowcaseItem = ({ showcase, isGlass }) => {
     <div
       className={cn(
         'sw-text-white xl:sw-p-12 sw-mb-12 sw-rounded-sm sw-relative',
-        isGlass && 'sw-glass'
+        isGlass && width >= 1280 && 'sw-glass'
       )}
     >
       <div className="sw-flex sw-flex-col-reverse lg:sw-flex-row sw-mb-12">

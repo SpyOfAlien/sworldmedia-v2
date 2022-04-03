@@ -192,7 +192,7 @@ const ContactPage = ({ locale }) => {
                 <Link href="https://www.linkedin.com/company/s-worldmultimedia">
                   <a className="sw-w-6 sw-mr-3">
                     <Image
-                      src="/assets/images/socials/fb.png"
+                      src="/assets/images/socials/linkedin.png"
                       width={16}
                       height={17}
                       layout="responsive"
@@ -202,7 +202,17 @@ const ContactPage = ({ locale }) => {
                 <Link href="https://www.youtube.com/channel/UCzod695AmgnnUeKSSUZ-t1A">
                   <a className="sw-w-6 sw-mr-3">
                     <Image
-                      src="/assets/images/socials/fb.png"
+                      src="/assets/images/socials/yt.png"
+                      width={16}
+                      height={17}
+                      layout="responsive"
+                    />
+                  </a>
+                </Link>
+                <Link href="https://www.youtube.com/channel/UCzod695AmgnnUeKSSUZ-t1A">
+                  <a className="sw-w-6 sw-mr-3">
+                    <Image
+                      src="/assets/images/socials/ig.png"
                       width={16}
                       height={17}
                       layout="responsive"

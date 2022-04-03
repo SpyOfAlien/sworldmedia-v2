@@ -11,14 +11,14 @@ const Footer = () => {
   return (
     <footer className="sw-pt-8  sw-bg-footerBg">
       <Container>
-        <div className="sw-flex sw-flex-col lg:sw-flex-row sw-py-12">
+        <div className="sw-flex sw-flex-col-reverse lg:sw-flex-row sw-py-12">
           <div className="sw-w-full sw-flex sw-justify-center lg:sw-ml-0 lg:sw-w-3/5">
             <div className="sw-w-full lg:sw-w-3/5">
               <div className="sw-mb-8">
                 <WhiteLogo />
               </div>
               <Infor heading={false} />
-              <div className="sw-flex sw-w-full sw-mt-8">
+              <div className="sw-flex sw-w-full sw-mt-8 sw-pl-8 lg:sw-pl-0">
                 <Link href="https://www.facebook.com/sworldmultimedia">
                   <a className="sw-w-6 sw-mr-3">
                     <Image
@@ -32,7 +32,7 @@ const Footer = () => {
                 <Link href="https://www.linkedin.com/company/s-worldmultimedia">
                   <a className="sw-w-6 sw-mr-3">
                     <Image
-                      src="/assets/images/socials/fb.png"
+                      src="/assets/images/socials/linkedin.png"
                       width={16}
                       height={17}
                       layout="responsive"
@@ -42,7 +42,17 @@ const Footer = () => {
                 <Link href="https://www.youtube.com/channel/UCzod695AmgnnUeKSSUZ-t1A">
                   <a className="sw-w-6 sw-mr-3">
                     <Image
-                      src="/assets/images/socials/fb.png"
+                      src="/assets/images/socials/yt.png"
+                      width={16}
+                      height={17}
+                      layout="responsive"
+                    />
+                  </a>
+                </Link>
+                <Link href="https://www.youtube.com/channel/UCzod695AmgnnUeKSSUZ-t1A">
+                  <a className="sw-w-6 sw-mr-3">
+                    <Image
+                      src="/assets/images/socials/ig.png"
                       width={16}
                       height={17}
                       layout="responsive"
@@ -52,7 +62,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="sw-w-full sw-flex lg:sw-w-2/5">
+          <div className="sw-w-full sw-flex lg:sw-w-2/5 sw-pl-8 sw-mb-8 lg:sw-pl-0">
             <div className="sw-flex sw-flex-col">
               <Link href="/">
                 <a className="sw-mb-2 sw-text-white">{t('menu__home')}</a>
@@ -75,7 +85,7 @@ const Footer = () => {
         </div>
       </Container>
 
-      <div className="sw-bg-white sw-h-12 sw-flex sw-items-center sw-justify-end sw-px-12">
+      <div className="sw-bg-white sw-h-12 sw-flex sw-items-center sw-justify-center lg:sw-justify-end sw-px-12">
         <p className="sw-text-modal sw-font-semibold">
           S-World 2022. All Rights Reserved
         </p>

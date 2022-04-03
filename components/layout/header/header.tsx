@@ -144,7 +144,7 @@ const Header = () => {
           router.pathname === '/contact',
       })}
     >
-      <Container cl=" sw-relative sw-h-full sw-flex sw-items-center sw-justify-between">
+      <Container cl="sw-relative sw-h-full sw-flex sw-items-center sw-justify-between">
         <div>
           <Media lessThan="lg">
             <div onClick={handleGoHome}>
@@ -169,49 +169,49 @@ const Header = () => {
                 {t('menu__home')}
               </a>
             </Link>
-            <Link href="/services">
-              <a
-                ref={serviceRef}
-                className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-link nav-link sw-relative"
-              >
-                {t('menu__services')}
-                {isOpenDropdown && (
-                  <div
-                    ref={dropdownRef}
-                    className={cn(
-                      'sw-absolute sw-flex sw-flex-col sw-px-4 sw-py-2 sw-glass',
-                      s.serviceDropdown
-                    )}
-                  >
-                    <Link href="/services/production">
-                      <a className="sw-text-gradient sw-mb-2 ">
-                        {t('home__service__production__title')}
-                      </a>
-                    </Link>
-                    <Link href="/services/branding">
-                      <a className="sw-text-gradient sw-mb-2 ">
-                        {t('home__service__branding__title')}
-                      </a>
-                    </Link>
-                    <Link href="/services/international-relation">
-                      <a className="sw-text-gradient sw-mb-2 ">
-                        {t('home__service__international_relations__title')}
-                      </a>
-                    </Link>
-                    <Link href="/services/brand-communication">
-                      <a className="sw-text-gradient sw-mb-2 ">
-                        {t('home__service__brand_communication__title')}
-                      </a>
-                    </Link>
-                    <Link href="/services/events">
-                      <a className="sw-text-gradient">
-                        {t('home__service__event__title')}
-                      </a>
-                    </Link>
-                  </div>
-                )}
-              </a>
-            </Link>
+            {/* <Link href="/services"> */}
+            <span
+              ref={serviceRef}
+              className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-link nav-link sw-relative sw-cursor-pointer"
+            >
+              {t('menu__services')}
+              {isOpenDropdown && (
+                <div
+                  ref={dropdownRef}
+                  className={cn(
+                    'sw-absolute sw-flex sw-flex-col sw-px-4 sw-py-2 sw-glass',
+                    s.serviceDropdown
+                  )}
+                >
+                  <Link href="/services/production">
+                    <a className="sw-text-gradient sw-mb-2 ">
+                      {t('home__service__production__title')}
+                    </a>
+                  </Link>
+                  <Link href="/services/branding">
+                    <a className="sw-text-gradient sw-mb-2 ">
+                      {t('home__service__branding__title')}
+                    </a>
+                  </Link>
+                  <Link href="/services/international-relation">
+                    <a className="sw-text-gradient sw-mb-2 ">
+                      {t('home__service__international_relations__title')}
+                    </a>
+                  </Link>
+                  <Link href="/services/brand-communication">
+                    <a className="sw-text-gradient sw-mb-2 ">
+                      {t('home__service__brand_communication__title')}
+                    </a>
+                  </Link>
+                  <Link href="/services/events">
+                    <a className="sw-text-gradient">
+                      {t('home__service__event__title')}
+                    </a>
+                  </Link>
+                </div>
+              )}
+            </span>
+            {/* </Link> */}
             <Link href="/about">
               <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-link nav-link">
                 {t('menu__about')}

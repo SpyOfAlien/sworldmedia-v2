@@ -5,7 +5,7 @@ import Image from 'next/image';
 import s from './service.module.scss';
 import { useHover } from '../../../lib/hook';
 
-const SubService = ({ subService }) => {
+const SubService = ({ subService, isOdd }) => {
   const router = useRouter();
 
   const [hoverRef, isHovered] = useHover<HTMLDivElement>();
@@ -28,7 +28,7 @@ const SubService = ({ subService }) => {
       ref={hoverRef}
       className={cn(
         'sw-rounded-sm sw-p-6 sw-text-white sw-w-full lg:sw-w-4/5 sw-cursor-pointer',
-        isHovered && 'sw-glass'
+        isOdd && 'sw-glass'
       )}
     >
       <div className="sw-flex sw-items-center sw-mb-4">

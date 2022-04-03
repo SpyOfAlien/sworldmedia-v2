@@ -9,7 +9,7 @@ const Pagination = ({ pageCount, setPage, activePage }) => {
   }, []);
 
   return (
-    <div className="sw-flex sw-justify-center">
+    <div className="sw-flex sw-justify-center sw-my-12">
       {pages.map((item) => (
         <span
           onClick={() => setPage(item + 1)}

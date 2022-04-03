@@ -4,12 +4,12 @@ const AboutTeam = () => {
   const { t } = useTranslation('common');
 
   const teams = [
+    { id: 0, name: 'Sản xuất', amount: '01', place: 'HCM & Ha Noi' },
+    { id: 0, name: 'Sản xuất', amount: '02', place: 'HCM & Ha Noi' },
     { id: 0, name: 'Sản xuất', amount: '03', place: 'HCM & Ha Noi' },
-    { id: 0, name: 'Sản xuất', amount: '03', place: 'HCM & Ha Noi' },
-    { id: 0, name: 'Sản xuất', amount: '03', place: 'HCM & Ha Noi' },
-    { id: 0, name: 'Sản xuất', amount: '03', place: 'HCM & Ha Noi' },
-    { id: 0, name: 'Sản xuất', amount: '03', place: 'HCM & Ha Noi' },
-    { id: 0, name: 'Sản xuất', amount: '03', place: 'HCM & Ha Noi' },
+    { id: 0, name: 'Sản xuất', amount: '04', place: 'HCM & Ha Noi' },
+    { id: 0, name: 'Sản xuất', amount: '05', place: 'HCM & Ha Noi' },
+    { id: 0, name: 'Sản xuất', amount: '06', place: 'HCM & Ha Noi' },
   ];
 
   return (
@@ -18,7 +18,7 @@ const AboutTeam = () => {
         <h3 className="sw-text-barlow sw-font-bold sw-text-h3 sw-mb-4">
           {t('aboutus__team__title')}
         </h3>
-        <p className="sw-gilroy-thin sw-w-3/5 sw-mx-auto">
+        <p className="sw-gilroy-thin sw-w-full lg:sw-w-3/5 sw-mx-auto">
           {t('aboutus__team__desc')}
         </p>
       </div>

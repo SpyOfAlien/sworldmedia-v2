@@ -5,7 +5,7 @@ const AboutCareer = () => {
   const { t } = useTranslation('common');
 
   return (
-    <section className="sw-flex sw-flex-col md:sw-flex-row sw-items-center sw-mb-40 sw-text-white sw-relative sw-py-32 sw-px-8 lg:sw-px-24">
+    <section className="sw-flex sw-flex-col md:sw-flex-row sw-items-center sw-text-white sw-relative sw-py-32 sw-px-8 lg:sw-px-24">
       <div className="sw-absolute sw-inset-0">
         <div className="sw-w-full">
           <Image src="/assets/images/others/career-glow.png" layout="fill" />

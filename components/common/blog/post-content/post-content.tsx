@@ -89,11 +89,7 @@ export function getRichTextRenderOptions(links, options) {
               <h2 id={`${slugifyString(children[0])}`} className={``}>
                 {children}
               </h2>
-              <a
-                className={``}
-                href={`#${slugifyString(children[0])}`}
-                aria-label={children}
-              >
+              <a href={`#${slugifyString(children[0])}`} aria-label={children}>
                 <LinkIcon />
               </a>
             </div>

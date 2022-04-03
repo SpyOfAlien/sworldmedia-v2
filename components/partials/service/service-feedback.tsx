@@ -14,7 +14,7 @@ const ServiceFeedback = ({ feedbacks }) => {
     const { onClick } = props;
     return (
       <div
-        style={{ right: '-48px' }}
+        style={{ right: '-30px' }}
         className={cn(
           'sw-glass sw-rounded-full sw-w-12 sw-h-12 sw-p-2 sw-flex sw-items-center sw-justify-center sw-cursor-pointer',
           s.nextArrow
@@ -37,7 +37,7 @@ const ServiceFeedback = ({ feedbacks }) => {
     const { onClick } = props;
     return (
       <div
-        style={{ left: '-48px' }}
+        style={{ left: '-30px' }}
         className={cn(
           'sw-glass sw-rounded-full sw-w-12 sw-h-12 sw-p-2 sw-flex sw-items-center sw-justify-center sw-cursor-pointer',
           s.prevArrow

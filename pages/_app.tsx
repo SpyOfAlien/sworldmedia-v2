@@ -8,6 +8,7 @@ import { useRouter } from 'next/router';
 import * as gtag from '../lib/gtag';
 import { DefaultSeo } from 'next-seo';
 import seo from '../seo.config';
+import TagManager from 'react-gtm-module';
 
 const MyApp = ({ Component, pageProps }) => {
   const router = useRouter();
@@ -20,6 +21,11 @@ const MyApp = ({ Component, pageProps }) => {
       router.events.off('routeChangeComplete', handleRouteChange);
     };
   }, [router.events]);
+
+  useEffect(() => {
+    TagManager.initialize({ gtmId: 'GTM-TL7JMRW' });
+  }, []);
+
   return (
     <UIManager>
       <SectionManager>
