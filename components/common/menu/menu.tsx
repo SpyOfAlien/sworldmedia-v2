@@ -1,10 +1,7 @@
 import { FC } from 'react';
 import Link from 'next/link';
-import WhiteLogo from '../../icons/white-logo';
+import Image from 'next/image';
 import Paragraph from '../../ui/typo/paragraph';
-import Facebook from '../../icons/facebook';
-import Youtube from '../../icons/youtube';
-import Linkedin from '../../icons/linkedin';
 import SubscribeForm from '../subscribe/subscribe';
 import MenuGlow from '../../glows/menu-glow';
 import Infor from '../../ui/infor/infor';
@@ -57,29 +54,42 @@ const Menu: FC<Props> = () => {
                 <SubscribeForm />
                 <div className="sw-flex sw-w-full sw-justify-center sw-my-sm">
                   <Link href="https://www.facebook.com/sworldmultimedia">
-                    <a>
-                      <Facebook
-                        width="28px"
-                        height="28px"
-                        style={{ margin: '0 20px' }}
+                    <a className="sw-w-6 sw-mr-3">
+                      <Image
+                        src="/assets/images/socials/fb.png"
+                        width={16}
+                        height={17}
+                        layout="responsive"
                       />
                     </a>
                   </Link>
                   <Link href="https://www.linkedin.com/company/s-worldmultimedia">
-                    <a>
-                      <Linkedin
-                        width="28px"
-                        height="28px"
-                        style={{ margin: '0 20px' }}
+                    <a className="sw-w-6 sw-mr-3">
+                      <Image
+                        src="/assets/images/socials/linkedin.png"
+                        width={16}
+                        height={17}
+                        layout="responsive"
                       />
                     </a>
                   </Link>
                   <Link href="https://www.youtube.com/channel/UCzod695AmgnnUeKSSUZ-t1A">
-                    <a>
-                      <Youtube
-                        width="28px"
-                        height="28px"
-                        style={{ margin: '0 20px' }}
+                    <a className="sw-w-6 sw-mr-3">
+                      <Image
+                        src="/assets/images/socials/yt.png"
+                        width={16}
+                        height={17}
+                        layout="responsive"
+                      />
+                    </a>
+                  </Link>
+                  <Link href="https://www.youtube.com/channel/UCzod695AmgnnUeKSSUZ-t1A">
+                    <a className="sw-w-6 sw-mr-3">
+                      <Image
+                        src="/assets/images/socials/ig.png"
+                        width={16}
+                        height={17}
+                        layout="responsive"
                       />
                     </a>
                   </Link>
@@ -103,18 +113,43 @@ const Menu: FC<Props> = () => {
 
                 <div className="sw-flex sw-mb-xsm">
                   <Link href="https://www.facebook.com/sworldmultimedia">
-                    <a>
-                      <Facebook style={{ marginRight: '40px' }} />
+                    <a className="sw-w-6 sw-mr-3">
+                      <Image
+                        src="/assets/images/socials/fb.png"
+                        width={16}
+                        height={17}
+                        layout="responsive"
+                      />
                     </a>
                   </Link>
                   <Link href="https://www.linkedin.com/company/s-worldmultimedia">
-                    <a>
-                      <Linkedin style={{ marginRight: '40px' }} />
+                    <a className="sw-w-6 sw-mr-3">
+                      <Image
+                        src="/assets/images/socials/linkedin.png"
+                        width={16}
+                        height={17}
+                        layout="responsive"
+                      />
                     </a>
                   </Link>
                   <Link href="https://www.youtube.com/channel/UCzod695AmgnnUeKSSUZ-t1A">
-                    <a>
-                      <Youtube style={{ marginRight: '40px' }} />
+                    <a className="sw-w-6 sw-mr-3">
+                      <Image
+                        src="/assets/images/socials/yt.png"
+                        width={16}
+                        height={17}
+                        layout="responsive"
+                      />
+                    </a>
+                  </Link>
+                  <Link href="https://www.youtube.com/channel/UCzod695AmgnnUeKSSUZ-t1A">
+                    <a className="sw-w-6 sw-mr-3">
+                      <Image
+                        src="/assets/images/socials/ig.png"
+                        width={16}
+                        height={17}
+                        layout="responsive"
+                      />
                     </a>
                   </Link>
                 </div>
