@@ -195,6 +195,9 @@ async function fetchGraphQL(query, preview = false) {
 function extractPost(fetchResponse) {
   return fetchResponse?.data?.postCollection?.items?.[0];
 }
+function extractProject(fetchResponse) {
+  return fetchResponse?.data?.productCollection?.items;
+}
 
 function extractPostEntries(fetchResponse) {
   return fetchResponse?.data?.postCollection?.items;
@@ -335,4 +338,31 @@ export async function getServiceByName(name) {
   );
 
   return extractServiceEntries(entries);
+}
+export async function getProjectByType(name) {
+  const entries = await fetchGraphQL(
+    `query {
+      productCollection(where: {type_contains_some: "${name}"}, preview: false
+      , limit: 1) {
+        items {
+          vnName: name(locale: "vi-VN")
+          enName: name(locale: "en-US")
+          vnSummary: summary(locale: "vi-VN")
+          enSummary: summary(locale: "en-US")
+          vnSlug: slug(locale: "vi-VN")
+          enSlug: slug(locale: "en-US")
+          thumbnail {
+            url
+            description
+            title
+            width
+            height
+          }
+        }
+      }
+    }`,
+    false
+  );
+
+  return extractProject(entries);
 }

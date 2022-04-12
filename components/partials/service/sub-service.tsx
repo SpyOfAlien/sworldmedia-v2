@@ -43,10 +43,10 @@ const SubService = ({ subService, isOdd }) => {
         <p className="sw-font-bold">{name}</p>
       </div>
       {/* <p className="sw-gilroy-thin">{summary}</p> */}
-      <p className={cn('sw-gilroy-thin sw-text-xs')}>
+      {/* <p className={cn('sw-gilroy-thin sw-text-xs')}>
         All base UI elements are made using Nested Symbols and shared styles
         that are logically connected with one another.
-      </p>
+      </p> */}
     </div>
   );
 };

@@ -91,7 +91,7 @@ const ServicePage = ({ service, profile }) => {
             ))}
         </section>
 
-        <section className="sw-my-16 lg:sw-my-40">
+        {/* <section className="sw-my-16 lg:sw-my-40">
           <div className="sw-text-center sw-text-white sw-mb-12 lg:sw-mb-24">
             <h3 className="sw-text-h4 lg:sw-text-h3 sw-font-bold">
               Đánh giá của Khách Hàng
@@ -103,7 +103,7 @@ const ServicePage = ({ service, profile }) => {
             </p>
           </div>
           <ServiceFeedback feedbacks={service?.feedbackCollection} />
-        </section>
+        </section> */}
 
         <section>
           <Profile profile={profile} />

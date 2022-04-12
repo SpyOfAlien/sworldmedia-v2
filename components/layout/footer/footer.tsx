@@ -49,16 +49,6 @@ const Footer = () => {
                     />
                   </a>
                 </Link>
-                <Link href="https://www.youtube.com/channel/UCzod695AmgnnUeKSSUZ-t1A">
-                  <a className="sw-w-6 sw-mr-3">
-                    <Image
-                      src="/assets/images/socials/ig.png"
-                      width={16}
-                      height={17}
-                      layout="responsive"
-                    />
-                  </a>
-                </Link>
               </div>
             </div>
           </div>
@@ -85,9 +75,14 @@ const Footer = () => {
         </div>
       </Container>
 
-      <div className="sw-bg-white sw-h-12 sw-flex sw-items-center sw-justify-center lg:sw-justify-end sw-px-12">
+      <div className="sw-bg-white sw-h-12 sw-flex sw-items-center sw-justify-center lg:sw-justify-between sw-px-12">
         <p className="sw-text-modal sw-font-semibold">
           S-World 2022. All Rights Reserved
+        </p>
+        <p>
+          <span className="sw-text-modal sw-font-semibold">
+            Terms of Service
+          </span>
         </p>
       </div>
     </footer>

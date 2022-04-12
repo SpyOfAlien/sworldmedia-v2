@@ -118,23 +118,29 @@ const Post = ({ post, morePosts, preview, locale }) => {
             <Image
               src={coverImage.url}
               layout="responsive"
-              width={1500}
-              height={783}
+              width={coverImage.width}
+              height={coverImage.height}
               className="sw-rounded-xl"
             />
             <div className="sw-absolute sw-inset-0 sw-bg-hero"></div>
           </div>
-          <div className="xl:sw-absolute xl:sw-inset-0 sw-flex sw-justify-end sw-mt-12 xl:sw-mt-0  sw-flex-col xl:sw-px-12 xl:sw-py-8 sw-z-10">
+          <div className="sw-flex sw-justify-end sw-mt-12 xl:sw-mt-0  sw-flex-col xl:sw-px-12 xl:sw-py-8 sw-z-10">
             <Media greaterThanOrEqual="lg">
-              <Heading h="h3">{isVN ? vnTitle : enTitle}</Heading>
+              <h1 className="sw-text-center sw-text-white sw-text-h4 sw-font-bold sw-gilroy">
+                {isVN ? vnTitle : enTitle}
+              </h1>
             </Media>
             <Media between={['sm', 'lg']}>
-              <Heading h="h4">{isVN ? vnTitle : enTitle}</Heading>
+              <h1 className="sw-text-center sw-text-white sw-text-h5 sw-font-bold sw-gilroy">
+                {isVN ? vnTitle : enTitle}
+              </h1>
             </Media>
             <Media lessThan="sm">
-              <Heading h="h5">{isVN ? vnTitle : enTitle}</Heading>
+              <h1 className="sw-text-center sw-text-white sw-text-h6 sw-font-bold sw-gilroy">
+                {isVN ? vnTitle : enTitle}
+              </h1>
             </Media>
-            <div className="sw-flex sw-justify-between sw-w-full">
+            {/* <div className="sw-flex sw-justify-between sw-w-full">
               <div>
                 {isVN && vnTags
                   ? vnTags.map((tag, idx) => (
@@ -157,10 +163,10 @@ const Post = ({ post, morePosts, preview, locale }) => {
                   : null}
               </div>
               <div className="sw-text-paragraph">{formatedDate}</div>
-            </div>
+            </div> */}
           </div>
         </div>
-        <div className="sw-mt-12 xl:sw-mt-24 xl:sw-w-1/2 xl:sw-mx-auto">
+        <div className="sw-mt-12 xl:sw-w-1/2 xl:sw-mx-auto">
           <PostContent
             data={isVN ? vnContent : enContent}
             assets={isVN ? vnContent.links : enContent.links}

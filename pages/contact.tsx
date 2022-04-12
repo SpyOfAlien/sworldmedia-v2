@@ -42,8 +42,7 @@ const ContactPage = ({ locale }) => {
   const [message, setMessage] = useState('');
   const { t } = useTranslation('common');
 
-  const emailRegex =
-    /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
+  const emailRegex = /^[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
 
   const isDesktopOrLaptop = useMediaQuery({
     query: '(min-device-width: 1280px)',
@@ -55,12 +54,12 @@ const ContactPage = ({ locale }) => {
   };
 
   const onSubscribe = () => {
-    gtag.event({
-      action: 'submit_form',
-      category: 'Contact',
-      label: name || email || phone,
-      value: message,
-    });
+    // gtag.event({
+    //   action: 'submit_form',
+    //   category: 'Contact',
+    //   label: name || email || phone,
+    //   value: message,
+    // });
 
     let error;
     if (!name && !email && !email) {
@@ -203,16 +202,6 @@ const ContactPage = ({ locale }) => {
                   <a className="sw-w-6 sw-mr-3">
                     <Image
                       src="/assets/images/socials/yt.png"
-                      width={16}
-                      height={17}
-                      layout="responsive"
-                    />
-                  </a>
-                </Link>
-                <Link href="https://www.youtube.com/channel/UCzod695AmgnnUeKSSUZ-t1A">
-                  <a className="sw-w-6 sw-mr-3">
-                    <Image
-                      src="/assets/images/socials/ig.png"
                       width={16}
                       height={17}
                       layout="responsive"

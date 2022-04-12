@@ -15,17 +15,20 @@ import HomeProject from '../components/partials/home/home-project';
 import HomeAbout from '../components/partials/home/home-about';
 import HomePartner from '../components/partials/home/home-partner';
 import Image from 'next/image';
-import { getAllPostsForHome } from '../lib/api';
+import { getAllPostsForHome, getProjectByType } from '../lib/api';
 
 export const getStaticProps = async ({ locale, preview }) => {
+  const projects = await getProjectByType('Home');
   return {
     props: {
       ...(await serverSideTranslations(locale, ['common'])),
+      projects: projects,
     },
+    revalidate: 10,
   };
 };
 
-const HomePage = ({ locales, allPosts = [] }) => {
+const HomePage = ({ locales, projects, allPosts = [] }) => {
   // Context
   const { currentSection, onScrollUp, onScrollDown } = useSection();
   const [desktopView, setDesktopView] = useState(undefined);
@@ -36,7 +39,9 @@ const HomePage = ({ locales, allPosts = [] }) => {
     getPost();
   }, []);
   const getPost = async () => {
-    const allPosts = (await getAllPostsForHome(false)) || [];
+    const allPosts = await getProjectByType('Home');
+
+    console.log('allPosts', allPosts);
   };
 
   const { t } = useTranslation('common');
@@ -81,7 +86,7 @@ const HomePage = ({ locales, allPosts = [] }) => {
       <HomeServices />
       <HomePartner />
       <HomeClients />
-      <HomeProject />
+      <HomeProject projects={projects} />
       <HomeAbout />
     </MediaContextProvider>
   );

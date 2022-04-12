@@ -6,7 +6,7 @@ import cn from 'classnames';
 import s from './home.module.scss';
 import { useWindowSize } from '../../../lib/hook';
 
-const HomeProject = () => {
+const HomeProject = ({ projects }) => {
   const { t } = useTranslation('common');
   const { width } = useWindowSize();
 
@@ -91,39 +91,12 @@ const HomeProject = () => {
       </h3>
 
       <Slider {...settings}>
-        <div>
-          <ProjectItem
-            project={{
-              name: '02/ Fischer Group- Phim tài liệu tiềm năng Việt Nam',
-              summary:
-                'Fischer là một tập đoàn đa ngành của Đức, trong đó nổi tiếng sản xuất các thiết bị, linh kiện cho ngành xây dựng và công nghiệp ô tô. Thước phim này là tài liệu cho Tập đoàn nhìn thấy môi trường đầu tư mới đây tiềm năng của Fischer trong tương lai - đó là Việt Nam. Với những thông tin khách quan từ Mr.Marko Walde - Trưởng đại diện Phòng Công nghiệp và Thương mại Đức tại Việt Nam (GIC/AHK).',
-              imgUrl: '/assets/images/others/tmp.png',
-              type: 'Sản xuất - TV show',
-            }}
-          />
-        </div>
-        <div>
-          <ProjectItem
-            project={{
-              name: '02/ Fischer Group- Phim tài liệu tiềm năng Việt Nam',
-              summary:
-                'Fischer là một tập đoàn đa ngành của Đức, trong đó nổi tiếng sản xuất các thiết bị, linh kiện cho ngành xây dựng và công nghiệp ô tô. Thước phim này là tài liệu cho Tập đoàn nhìn thấy môi trường đầu tư mới đây tiềm năng của Fischer trong tương lai - đó là Việt Nam. Với những thông tin khách quan từ Mr.Marko Walde - Trưởng đại diện Phòng Công nghiệp và Thương mại Đức tại Việt Nam (GIC/AHK).',
-              imgUrl: '/assets/images/others/tmp.png',
-              type: 'Sản xuất - TV show',
-            }}
-          />
-        </div>
-        <div>
-          <ProjectItem
-            project={{
-              name: '02/ Fischer Group- Phim tài liệu tiềm năng Việt Nam',
-              summary:
-                'Fischer là một tập đoàn đa ngành của Đức, trong đó nổi tiếng sản xuất các thiết bị, linh kiện cho ngành xây dựng và công nghiệp ô tô. Thước phim này là tài liệu cho Tập đoàn nhìn thấy môi trường đầu tư mới đây tiềm năng của Fischer trong tương lai - đó là Việt Nam. Với những thông tin khách quan từ Mr.Marko Walde - Trưởng đại diện Phòng Công nghiệp và Thương mại Đức tại Việt Nam (GIC/AHK).',
-              imgUrl: '/assets/images/others/tmp.png',
-              type: 'Sản xuất - TV show',
-            }}
-          />
-        </div>
+        {projects &&
+          projects.map((project) => (
+            <div key={project.name}>
+              <ProjectItem project={project} />
+            </div>
+          ))}
       </Slider>
     </section>
   );
