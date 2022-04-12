@@ -29,7 +29,7 @@ const Footer = () => {
                     />
                   </a>
                 </Link>
-                <Link href="https://www.linkedin.com/company/s-worldmultimedia">
+                <Link href="https://www.linkedin.com/company/s-worldmultimedia/">
                   <a className="sw-w-6 sw-mr-3">
                     <Image
                       src="/assets/images/socials/linkedin.png"

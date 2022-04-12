@@ -4,14 +4,18 @@ const AboutTeam = () => {
   const { t } = useTranslation('common');
 
   const teams = [
-    { id: 0, name: 'Sản xuất', amount: '01', place: 'HCM & Ha Noi' },
-    { id: 0, name: 'Sản xuất', amount: '02', place: 'HCM & Ha Noi' },
-    { id: 0, name: 'Sản xuất', amount: '03', place: 'HCM & Ha Noi' },
-    { id: 0, name: 'Sản xuất', amount: '04', place: 'HCM & Ha Noi' },
-    { id: 0, name: 'Sản xuất', amount: '05', place: 'HCM & Ha Noi' },
-    { id: 0, name: 'Sản xuất', amount: '06', place: 'HCM & Ha Noi' },
+    { id: 0, name: 'team__production', amount: '01', place: 'HCM & Ha Noi' },
+    { id: 0, name: 'team__mkt', amount: '02', place: 'HCM & Ha Noi' },
+    { id: 0, name: 'team__com', amount: '03', place: 'HCM & Ha Noi' },
+    {
+      id: 0,
+      name: 'team__pj__management',
+      amount: '04',
+      place: 'HCM & Ha Noi',
+    },
+    { id: 0, name: 'team__content', amount: '05', place: 'HCM & Ha Noi' },
+    { id: 0, name: 'team__design', amount: '06', place: 'HCM & Ha Noi' },
   ];
-
   return (
     <section className="sw-text-white sw-w-4/5 sw-mx-auto sw-py-32">
       <div className="sw-text-center sw-w-4/5 sw-mx-auto sw-mb-16">
@@ -32,7 +36,7 @@ const AboutTeam = () => {
               {item.amount}
             </span>
             <div className="">
-              <h6 className="">{item.name}</h6>
+              <h6 className="">{t(item.name)}</h6>
               <p className="sw-gilroy-thin">{item.place}</p>
             </div>
           </div>

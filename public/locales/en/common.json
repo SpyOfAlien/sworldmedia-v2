@@ -4,20 +4,20 @@
 
   "home": "Home",
 
-  "action__findoutmore": "Read more  ↗",
+  "action__findoutmore": "Learn more  ↗",
 
   "home__hero": "S-WORLD MULTIMEDIA A NEW GENERATION MULTIMEDIA COMPANY",
 
   "home__about_us__title": "About us",
-  "home__about_us__define": "S-World là công ty truyền thông thế hệ mới với năng lực quốc tế.",
-  "home__about_us__define__desc": "Thành lập vào năm 2020 trong đại dịch Covid-19, nhưng không ngừng tiến về phía trước như một chú ngựa phi nước đại. Sẵn sàng tiến vào một “thế giới” rộng lớn còn ẩn chứa vô số điều kỳ diệu để khám phá, kiến tạo và lan tỏa.",
+  "home__about_us__define": "S-World is a next-generation media company that is pioneering the development of a connected ecosystem.",
+  "home__about_us__define__desc": "Founded in 2020 during the Covid-19 pandemic, the company has never stopped moving forward like a trusty stallion and is prepared to enter a new world filled with undiscovered wonders.",
 
   "home__about_us__vision__title": "Vision",
-  "home__about_us__vision__content": "A special communication bridge to bring Vietnam into the world",
+  "home__about_us__vision__content": "Become a pioneering, next-generation media company with an ecosystem that connects Vietnam to the world.",
   "home__about_us__core_value__title": "Core Values",
-  "home__about_us__core_value__content": "Sincerity - Understanding - Perseverance - Creativity - Distinctiveness",
+  "home__about_us__core_value__content": "Pioneering - Celerity - Compassion - Innovation - Uniqueness",
   "home__about_us__mission__title": "Mission",
-  "home__about_us__mission__content": "Ready to spread ideas, projects, products, and brand names in a uniquely different way, with quantity - quality balance to create sustainable future",
+  "home__about_us__mission__content": "Strengthen connections and create new values via media, with a sense of perseverance while striving for perfection.",
 
   "home__service__title": "Our Services",
 
@@ -109,7 +109,7 @@
   "home__service__production__format__strength3": "- Experienced program promotion team to ensure a strong widespread popularity",
   "home__service__production__format__services": "TV, Digital Newspaper, Social Media",
 
-  "home__service__event__title": "Online & Offline Events",
+  "home__service__event__title": "Events",
   "home__service__event__desc": "Experienced in organizing big events and events for celebrities",
   "home__service__event__content1": "- Anniversaries",
   "home__service__event__content2": "- Conferences",
@@ -179,7 +179,7 @@
   "home__partner__title": "Our Media Partners",
   "home__core_partner__title": "Strategic partnership",
 
-  "home__client__title": "Our Clients",
+  "home__client__title": "Other Partners",
 
   "home__products__title": "Newest Products",
   "home__new_product__techfest__title": "INTRODUCTION VIDEO TECHFEST VIETNAM 2020",
@@ -267,7 +267,7 @@
   "home__new_product__international-relation__content6": "- Livestream video attracting 10,000 viewers",
   "home__new_product__international-relation__content7": "- More than 40 media agencies and TV channels reporting on the event ",
 
-  "home__project__usecase": "Outstanding projects",
+  "home__project__usecase": "Highlighted Projects",
 
   "home__whyus__title": "Điều đặc biệt của S-World",
   "home__aboutus__title": "About us",
@@ -335,12 +335,23 @@
   "blog__goback": "Go back to news",
   "blog__related-posts": "Related Posts",
 
-  "service__profile": "Our Profile",
-  "service__profile__sologan": "Create custom landing pages with Sworld that converts more visitors than any website. With lots of unique blocks, you can easily build a page without coding.",
+  "service__profile": "Company Profile",
+  "service__profile__sologan": "Everything you need to know about us and how we can help your company stand out with our media strengths",
 
   "menu__home": "Home",
   "menu__services": "Services",
   "menu__about": "About us",
   "menu__news": "News",
-  "menu__contact": "Contact us"
+  "menu__contact": "Contact us",
+
+  "team__production": "Production",
+  "team__mkt": "Maketing",
+  "team__com": "Communication",
+  "team__pj__management": "Project Management",
+  "team__content": "Content",
+  "team__design": "Designer",
+
+
+  "about__infor__download": "Download Our Company Profile",
+  "about__explore__services": "Explore Our Services"
 }

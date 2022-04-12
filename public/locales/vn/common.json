@@ -9,15 +9,15 @@
   "home__hero": "Công ty truyền thông đa phương tiện thế hệ mới",
 
   "home__about_us__title": "Về chúng tôi",
-  "home__about_us__define": "S-World là công ty truyền thông thế hệ mới với năng lực quốc tế.",
-  "home__about_us__define__desc": "Thành lập vào năm 2020 trong đại dịch Covid-19, nhưng không ngừng tiến về phía trước như một chú ngựa phi nước đại. Sẵn sàng tiến vào một “thế giới” rộng lớn còn ẩn chứa vô số điều kỳ diệu để khám phá, kiến tạo và lan tỏa.",
+  "home__about_us__define": "S-World là công ty truyền thông thế hệ mới tiên phong với hệ sinh thái kết nối.",
+  "home__about_us__define__desc": "Thành lập vào năm 2020 trong đại dịch Covid-19, nhưng S-World không ngừng tiến về phía trước như một chú ngựa phi nước đại và sẵn sàng tiến vào một “thế giới” rộng lớn còn ẩn chứa vô số điều kỳ diệu để khám phá, kiến tạo và lan tỏa.",
 
   "home__about_us__vision__title": "Tầm nhìn",
-  "home__about_us__vision__content": "Là cầu nối truyền thông đặc biệt đưa Việt Nam đến gần thế giới",
+  "home__about_us__vision__content": "Trở thành công ty truyền thông thế hệ mới tiên phong với hệ sinh thái kết nối Việt Nam với “thế giới”.",
   "home__about_us__core_value__title": "Giá trị cốt lõi",
-  "home__about_us__core_value__content": "Chân thành – Thấu hiểu – Bền bỉ – Sáng tạo – Khác biệt",
+  "home__about_us__core_value__content": "Tiên phong - Tốc độ - Thấu hiểu - Sáng tạo – Khác biệt",
   "home__about_us__mission__title": "Sứ mệnh",
-  "home__about_us__mission__content": "Sẵn sàng mang những ý tưởng, dự án, sản phẩm, thương hiệu lan toả theo một cách khác biệt, với lượng, chất bền vững",
+  "home__about_us__mission__content": "Nhân những giá trị kết nối và sáng tạo giá trị mới khác biệt từ truyền thông, với sự cầu toàn, bền vững của trái tim giàu khát vọng.",
 
   "home__service__title": "Dịch vụ",
 
@@ -178,7 +178,7 @@
   "home__partner__title": "Đối tác của chúng tôi",
   "home__core_partner__title": "Đối tác chiến lược",
 
-  "home__client__title": "Khách hàng của chúng tôi",
+  "home__client__title": "Đối Tác Khác",
 
   "home__products__title": "Những sản phẩm mới nhất",
 
@@ -267,7 +267,7 @@
   "home__new_product__international-relation__content6": "- Livestream thu hút 10.000 người xem",
   "home__new_product__international-relation__content7": "- Hơn 40 hãng báo chí – kênh truyền hình đưa tin",
 
-  "home__project__usecase": "Dự án nổi bật của S-World",
+  "home__project__usecase": "Các Dự Án Nổi Bật",
 
   "home__whyus__title": "Điều đặc biệt của S-World",
   "home__aboutus__title": "Về chúng tôi",
@@ -338,12 +338,22 @@
   "blog__goback": "Trở về tin tức",
   "blog__related-posts": "Bài viết liên quan",
 
-  "service__profile": "Our Profile",
-  "service__profile__sologan": "Create custom landing pages with Sworld that converts more visitors than any website. With lots of unique blocks, you can easily build a page without coding.",
+  "service__profile": "Hồ Sơ Của S-World",
+  "service__profile__sologan": "Khám phá tất cả thông tin về S-World và làm thế nào để doanh nghiệp của bạn thật nổi bật với thế mạnh truyền thông của S-World.",
 
   "menu__home": "Trang chủ",
   "menu__services": "Dịch vụ",
   "menu__about": "Về chúng tôi",
   "menu__news": "Tin tức",
-  "menu__contact": "Liên hệ"
+  "menu__contact": "Liên hệ",
+
+  "team__production": "Sản xuất",
+  "team__mkt": "Maketing",
+  "team__com": "Truyền thông",
+  "team__pj__management": "Quản lý dự án",
+  "team__content": "Nội dung ",
+  "team__design": "Nội dung",
+
+  "about__infor__download": "Tải Hồ Sơ Của S-World",
+  "about__explore__services": "Khám phá dịch vụ"
 }

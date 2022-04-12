@@ -5,10 +5,12 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import ServiceFeedback from './service-feedback';
 import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
 
 const ServicePage = ({ service, profile }) => {
   const router = useRouter();
   const [summary, setSummary] = useState('');
+  const { t } = useTranslation()
 
   useEffect(() => {
     if (router.locale === 'vn') {
@@ -41,7 +43,7 @@ const ServicePage = ({ service, profile }) => {
           <div className="sw-flex sw-justify-end lg:sw-justify-start">
             <div className="sw-text-white sw-w-40 sw-h-40 sw-flex sw-items-center sw-justify-center sw-border-2 sw-rounded-full sw-p-4 sw-border-dashed">
               <span className="sw-mr-2 sw-cursor-pointer">
-                S-WORLD INFOMATION DOWNLOAD
+                {t("about__infor__download")}
               </span>
               <span className="sw-w-full">
                 <Image
@@ -56,7 +58,7 @@ const ServicePage = ({ service, profile }) => {
         </div>
         <section>
           <h3 className="sw-text-h4 lg:sw-text-h3 sw-text-center sw-font-bold sw-text-white sw-mb-12">
-            Khám phá dịch vụ
+          {t("about__explore__services")}
           </h3>
           <div className="sw-flex sw-flex-wrap">
             {service?.subServiceCollection &&
