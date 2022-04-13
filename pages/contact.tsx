@@ -13,7 +13,7 @@ import { Media, MediaContextProvider } from '../lib/media';
 import { useUI } from '../lib/context/ui-context';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
-import * as gtag from '../lib/gtag';
+// import * as gtag from '../lib/gtag';
 import { useSection } from '../lib/context/section-context';
 import { useRouter } from 'next/router';
 import { CorporateContactJsonLd, NextSeo } from 'next-seo';

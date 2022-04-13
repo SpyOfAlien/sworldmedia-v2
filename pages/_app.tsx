@@ -5,7 +5,7 @@ import { UIManager } from '../lib/context/ui-context';
 import Page from '../components/layout/page/page';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import * as gtag from '../lib/gtag';
+// import * as gtag from '../lib/gtag';
 import { DefaultSeo } from 'next-seo';
 import seo from '../seo.config';
 import TagManager from 'react-gtm-module';
