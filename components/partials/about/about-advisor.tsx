@@ -11,22 +11,28 @@ const AboutAdvisor = () => {
 
   const advisors = [
     {
-      name: 'Trần Ngọc Phúc',
+      name: t('about__advisor__mr__phuc'),
       img: `${baseUrl}tranNgocPhuc.jpg`,
-      role: 'aboutus__entrepreneurial_advisor',
-      company: 'Chủ tịch tập đoàn Metran Nhật Bản',
+      role: t('about__advisor__mr__phuc__swrole'),
+      company: t('about__advisor__mr__phuc__role'),
     },
     {
-      name: 'MR. Don Lê',
+      name: t('about__advisor__mr__donle'),
       img: `${baseUrl}donle.jpg`,
-      role: 'aboutus__inspirational_advisor',
-      company: 'Company role',
+      role: t('about__advisor__mr__donle__swrole'),
+      company: t('about__advisor__mr__donle__role'),
     },
     {
-      name: 'MR. Erik Jonsson',
+      name: t('about__advisor__ms__vyle'),
+      img: `${baseUrl}vyLe.jpg`,
+      role: t('about__advisor__ms__vyle__swrole'),
+      company: t('about__advisor__ms__vyle__role'),
+    },
+    {
+      name: t('about__advisor__mr__erik'),
       img: `${baseUrl}erikJonsson.jpg`,
-      role: 'aboutus__entrepreneurial_advisor',
-      company: 'Giám đốc Quỹ đầu tư mạo hiểm toàn cầu Antler',
+      role: t('about__advisor__mr__erik__swrole'),
+      company: t('about__advisor__mr__erik__role'),
     },
 
     // {
@@ -35,18 +41,13 @@ const AboutAdvisor = () => {
     //   role: 'aboutus__organizational_advisor',
     //   company: 'Company role',
     // },
+
     {
-      name: 'Vy Lê',
-      img: `${baseUrl}vyLe.jpg`,
-      role: 'aboutus__entrepreneurial_advisor',
-      company: 'Đồng sáng lập và Giám đốc Quỹ đầu tư Do Ventures',
+      name: t('about__advisor__mr__hung'),
+      img: `${baseUrl}nguyenQuocHung.jpg`,
+      role: t('about__advisor__mr__hung__swrole'),
+      company: t('about__advisor__mr__hung__role'),
     },
-    // {
-    //   name: 'Nguyễn Quốc Hùng',
-    //   img: `${baseUrl}nguyenQuocHung.jpg`,
-    //   role: 'aboutus__entrepreneurial_advisor',
-    //   company: 'Company role',
-    // },
   ];
 
   return (

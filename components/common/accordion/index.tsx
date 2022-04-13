@@ -2,6 +2,7 @@ import { FC, useState } from 'react';
 import { motion, AnimatePresence, AnimateSharedLayout } from 'framer-motion';
 import Expand from '../../icons/expand';
 import cn from 'classnames';
+import { useTranslation } from 'next-i18next';
 
 interface QA {
   question: string;
@@ -30,7 +31,7 @@ const Accordion: FC<Props> = ({ data, size = 'h5' }) => {
   );
 };
 
-const AccordionContent = ({ answer, size }) => {
+const AccordionContent = ({ answer, size, t }) => {
   return (
     <motion.p
       className={cn(
@@ -51,14 +52,14 @@ const AccordionContent = ({ answer, size }) => {
         transition: { duration: 0.3 },
       }}
     >
-      {answer}
+      {t(answer)}
     </motion.p>
   );
 };
 
 const AccordionItem: FC<any> = ({ question, answer, size }) => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const { t } = useTranslation('common');
   const toggleOpen = () => setIsOpen(!isOpen);
 
   return (
@@ -79,7 +80,7 @@ const AccordionItem: FC<any> = ({ question, answer, size }) => {
             `sw-text-${size}`
           )}
         >
-          {question}
+          {t(question)}
         </p>
         <span
           style={
@@ -92,7 +93,7 @@ const AccordionItem: FC<any> = ({ question, answer, size }) => {
         </span>
       </motion.div>
       <AnimatePresence>
-        {isOpen && <AccordionContent size={size} answer={answer} />}
+        {isOpen && <AccordionContent t={t} size={size} answer={answer} />}
       </AnimatePresence>
     </motion.li>
   );

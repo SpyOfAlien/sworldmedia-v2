@@ -316,9 +316,9 @@
   "aboutus__story__content2": "We are enthusiastic to bring your ideas, products, brand names to life. We offer both qualify and distinctiveness; both for the presence and a sustainable future. We operate with strong perfectionism and energy like a galloping horse, ready to move into a changing world with much to discover.",
   "aboutus__story__content3": "S-World will come to you with a sincere heart, eagerness, resilience and creativeness on the way to the future.",
 
-  "aboutus__ceo": "DANG SOAN Founder & CEO",
+  "aboutus__ceo": "DANG SOAN \n Founder & CEO",
 
-  "aboutus__ceo__content": "Foreign relations are predestined and connections are desires\n     With 10 years of experience in working in the field of media and press and 8 years in external communication, S-world founder has got the opportunities to work in 20 countries around the world, especially in the US.\n  As Former Director of the Southern Branch of VTC10-NETVIET, a TV channel on culture and foreign affairs, Soan Dang has joined hands with her co-workers to conduct many programs to popularize the startup movement and inspire startup founders. Notably, Soan was Executive Director of the International Conference on Entrepreneurship: “Connecting and promoting resources for Vietnamese Startups to reach out to the world.\nShe is also a close partner of many ministries, departments and localities, especially the Ministry of Information and Communications and the State Committee for Overseas Vietnamese Affairs.",
+  "aboutus__ceo__content": "S-World's founder and CEO has over 12 years of experience in the media and journalism industries. She has worked in over 20 countries around the world, most notably the United States.\n  As a former Director of VTC10-NETVIET's Southern Branch, a Vietnamese foreign cultural television channel, she also served as the Ministry of Science and Technology's Master Communication Advisor for Techfest Vietnam 2020.\n  Soan Dang also works closely with several ministries, branches, and localities, most notably the Ministries of Foreign Affairs, Science and Technology, and Information and Communication. In addition, she has developed numerous connections with diplomatic agencies and international organizations in Vietnam.\nPreviously, the founder of S-World also worked as a director, journalist, and producer for a wide range of genres, including TVC, documentaries, talk shows, reality TV, and game shows on VTV, VTC, and HTV channels and more. ",
 
   "aboutus__inspirational_advisor": "Inspirational Advisor",
   "aboutus__organizational_advisor": "Organizational advisor",
@@ -327,7 +327,7 @@
   "aboutus__advisor": "Our advisors",
 
   "aboutus__team__title": "Our team",
-  "aboutus__team__desc": "Dignissim enim sit amet venenatis urna cursus eget nunc. Praesent elementum facilisis leo vel fringilla est ullamcorper eget nulla.",
+  "aboutus__team__desc": "A collective of people with the same vision, highly-trained media expertise, international competence and passion for creativity.",
 
   "about__career_welcome": "Về với team S!",
   "about__career_welcome_desc": "Gia nhập đội ngũ và cùng S-World nhân giá trị kết nối và kiến tạo giá trị mới khác biệt tại thị trường truyền thông Việt Nam và xa hơn là vươn ra thế giới",
@@ -344,14 +344,52 @@
   "menu__news": "News",
   "menu__contact": "Contact us",
 
-  "team__production": "Production",
-  "team__mkt": "Maketing",
-  "team__com": "Communication",
+  "team__production": "Content & Production",
+  "team__mkt": "Marketing & Communications",
+  "team__com": "Business Development",
   "team__pj__management": "Project Management",
-  "team__content": "Content",
-  "team__design": "Designer",
-
+  "team__content": "HR & Admin",
+  "team__design": "Accounting & Finance",
 
   "about__infor__download": "Download Our Company Profile",
-  "about__explore__services": "Explore Our Services"
+  "about__explore__services": "Explore Our Services",
+
+  "about__whysw": "Why choose us",
+  "about__sw__human": "Humans of S-World",
+  "about__sw__human__desc": "A collective of people with the same vision, highly-trained media expertise, international competence and passion for creativity. Culture of S-World: Connections to go fast and far together.",
+  "about__sw__culture": "Culture of S-World",
+  "about__sw__culture__desc": "Connections to go FAST and FAR together.",
+  "about__sw__connect": "S-World Connections",
+  "about__sw__connect__desc": "S-World has an extensive network of prestigious relationships. It aims to create new models of connectivity and creativity to: GROW STRONGER TOGETHER",
+  "about__sw__special": "What’s special about S-World",
+  "about__sw__special__desc": "S-World has an extensive network of prestigious relationships. It aims to create new models of connectivity and creativity to: GROW STRONGER TOGETHER",
+
+  "about__sw__special__one": "Production and communication capabilities are our strongest foundation",
+  "about__sw__special__one__desc": "Our team consists of journalists, reporters and media members with extensive experience in Vietnam and internationally. We take pride in our modern, creative style that is capable of creating diverse and valuable products that can connect with customers on a personal level.",
+  "about__sw__special__two": "Connection creates sustainable value",
+  "about__sw__special__two__desc": "We always focus on connecting people via multimedia, linking prestigious units with organizations and colleagues, and the community with more than 100 Vietnamese and 20 international media outlets. This allows us to spread positive values naturally and sustainably.",
+  "about__sw__special__three": "Our overall culture helps optimize budget",
+  "about__sw__special__three__desc": "A single idea with one implementation method can develop into different services across platforms to help customers enjoy the most effective communications.",
+  "about__sw__special__four": "Pioneering communication in new industries and new technologies",
+  "about__sw__special__four__desc": "We are breaking ground for communicating and spreading positive values for new industries and new technologies with our broad knowledge base, market analysis abilities, data, speed, and creativity.",
+
+  "about__advisor__mr__phuc": "Phuc Tran (Kazufuku Nitta)",
+  "about__advisor__mr__phuc__swrole": "Business Advisor",
+  "about__advisor__mr__phuc__role": "President of Metran Group Japan",
+
+  "about__advisor__mr__donle": "Don Le",
+  "about__advisor__mr__donle__swrole": "Inspirational advisor",
+  "about__advisor__mr__donle__role": "Founder and CEO of Everest Education",
+
+  "about__advisor__ms__vyle": "Vy Le",
+  "about__advisor__ms__vyle__swrole": "Business Advisor",
+  "about__advisor__ms__vyle__role": "Co-Founder and Director of Do Ventures",
+
+  "about__advisor__mr__erik": "Erik Jonsson",
+  "about__advisor__mr__erik__swrole": "Business Advisor",
+  "about__advisor__mr__erik__role": "Partner at Antler Global Venture Fund",
+
+  "about__advisor__mr__hung": "Hung Nguyen",
+  "about__advisor__mr__hung__swrole": "Business Advisor",
+  "about__advisor__mr__hung__role": "President of LogiGear Corporation, US"
 }
