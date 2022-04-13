@@ -149,30 +149,7 @@ const ContactPage = ({ locale }) => {
           </div>
         </Media>
         <div className="sw-flex sw-flex-col xl:sw-flex-row sw-w-full xl:sw-w-1/2">
-          <div className="sw-w-full sw-mb-24 sw-mx-auto xl:sw-h-screen">
-            <Media greaterThanOrEqual="lg">
-              <div className="sw-relative sw-w-full sw-h-screen">
-                <Image
-                  src="/assets/images/others/lm81.png"
-                  layout="fill"
-                  objectFit="cover"
-                  objectPosition="center"
-                />
-              </div>
-            </Media>
-            <Media lessThan="lg">
-              <div>
-                <Image
-                  src="/assets/images/others/lm81.png"
-                  layout="responsive"
-                  width={280}
-                  height={550}
-                  className="sw-rounded-sm"
-                />
-              </div>
-            </Media>
-          </div>
-          <div className="sw-flex sw-flex-col sw-justify-end xl:sw-pl-8 3xl:sw-pl-16 xl:sw-py-12">
+          <div className="sw-flex sw-flex-col sw-justify-center sw-px-8 lg:sw-px-24">
             <div className="sw-my-8">
               <Infor />
             </div>

@@ -10,7 +10,7 @@ const HeroBanner: FC<Props> = ({ img, cl }) => {
   return (
     <div className="sw-relative">
       <div className="sw-w-full sw-absolute sw-inset-0"></div>
-      <Thumbnail img="/assets/images/others/thumbnail.png" cl="sw-rounded-md" />
+      <Thumbnail img="/assets/images/others/thumbnail.jpg" cl="sw-rounded-md" />
     </div>
   );
 };

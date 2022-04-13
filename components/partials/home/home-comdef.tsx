@@ -91,7 +91,29 @@ const HomeComDef = () => {
   ];
 
   return (
-    <section className="sw-mb-40 sw-text-white">
+    <section className="sw-py-56 sw-text-white sw-relative">
+      <div
+        className="sw-absolute sw-w-full"
+        style={{ left: '50%', top: '-60%', opacity: 0.8 }}
+      >
+        <Image
+          src="/assets/images/defs/comdefglow.png"
+          layout="responsive"
+          width={1263}
+          height={1213}
+        />
+      </div>
+      <div
+        className="sw-absolute sw-w-full"
+        style={{ right: '50%', bottom: '-60%', opacity: 0.8 }}
+      >
+        <Image
+          src="/assets/images/defs/comdefglow.png"
+          layout="responsive"
+          width={1263}
+          height={1213}
+        />
+      </div>
       <MediaContextProvider>
         <Media greaterThanOrEqual="md">
           <div className="sw-flex sw-justify-between sw-text-white sw-w-3/5 sw-mx-auto">

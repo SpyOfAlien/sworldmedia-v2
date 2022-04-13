@@ -15,9 +15,9 @@ const AboutCEO = () => {
       <div className="sw-w-full lg:sw-w-1/2">
         <div className="sw-w-full sw-mb-8 lg:sw-mb-0 lg:sw-w-3/5 sw-mx-auto">
           <Image
-            src="/assets/images/others/ceo.png"
-            width={401}
-            height={384}
+            src="/assets/images/others/ceo.jpg"
+            width={1536}
+            height={2048}
             layout="responsive"
           />
         </div>

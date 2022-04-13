@@ -343,7 +343,7 @@ export async function getProjectByType(name) {
   const entries = await fetchGraphQL(
     `query {
       productCollection(where: {type_contains_some: "${name}"}, preview: false
-      , limit: 1) {
+      , limit: 10) {
         items {
           vnName: name(locale: "vi-VN")
           enName: name(locale: "en-US")

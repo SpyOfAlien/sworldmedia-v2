@@ -30,7 +30,7 @@ const AboutTeam = () => {
         {teams.map((item) => (
           <div
             key={item.id}
-            className="sw-w-full md:sw-w-1/2 lg:sw-w-1/3 sw-flex sw-items-center sw-justify-center sw-mb-16 sw-px-4"
+            className="sw-w-full md:sw-w-1/2 lg:sw-w-1/3 sw-flex sw-items-center  sw-mb-16 sw-px-4"
           >
             <span className="sw-block sw-font-bold sw-text-h3 sw-mr-4">
               {item.amount}

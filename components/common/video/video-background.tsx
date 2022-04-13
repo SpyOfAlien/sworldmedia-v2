@@ -8,7 +8,7 @@ const VideoBackground = () => {
   }, []);
 
   return (
-    <section className="sw-relative sw-w-screen sw-h-screen sw-mb-40">
+    <section className="sw-relative sw-w-screen sw-h-screen">
       <video
         ref={video}
         className={s.video}

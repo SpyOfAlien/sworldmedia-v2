@@ -12,7 +12,7 @@ module.exports = {
         lightModal: '#1F3F5C',
         paragraph: '#B8CAE6',
         servicesBg: '#EAE9F214',
-        footerBg: '#040D21',
+        footerBg: '#00093f',
       },
       spacing: {
         xs: '0.75rem',

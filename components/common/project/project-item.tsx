@@ -13,7 +13,10 @@ const ProjectItem = ({ project }) => {
   };
 
   return (
-    <div className="sw-glass sw-text-white sw-flex sw-flex-col lg:sw-flex-row sw-p-4 lg:sw-p-12 sw-rounded-md">
+    <div
+      style={{ minHeight: '450px' }}
+      className="sw-glass sw-text-white sw-flex sw-flex-col lg:sw-flex-row sw-p-4 lg:sw-p-12 sw-rounded-md"
+    >
       <div className="sw-w-full lg:sw-w-3/5 sw-pr-12">
         <h6 className="sw-text-barlow sw-text-h6 sw-mb-4 sw-font-semibold ">
           {router.locale === 'en' ? project.enName : project.vnName}
