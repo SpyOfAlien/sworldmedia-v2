@@ -53,6 +53,12 @@ const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
           </motion.main>
         </AnimatePresence>
         <Header />
+        <Modal subModal={true} open={displaySubModal} onClose={closeSubModal}>
+          {subModalView === 'CONFIRM_MODAL' && confirm && <Notification />}
+        </Modal>
+        <Modal subModal={false} open={displayModal} onClose={closeModal}>
+          {modalView === 'MENU' && <Menu />}
+        </Modal>
         {router.pathname !== '/contact' && <Footer />}
       </div>
     </MediaContextProvider>

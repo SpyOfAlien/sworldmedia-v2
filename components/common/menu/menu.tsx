@@ -83,16 +83,6 @@ const Menu: FC<Props> = () => {
                       />
                     </a>
                   </Link>
-                  <Link href="https://www.youtube.com/channel/UCzod695AmgnnUeKSSUZ-t1A">
-                    <a className="sw-w-6 sw-mr-3">
-                      <Image
-                        src="/assets/images/socials/ig.png"
-                        width={16}
-                        height={17}
-                        layout="responsive"
-                      />
-                    </a>
-                  </Link>
                 </div>
               </div>
             </div>

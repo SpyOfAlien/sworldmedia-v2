@@ -123,7 +123,7 @@ const HomeComDef = () => {
       </Media>
       <MediaContextProvider>
         <Media greaterThanOrEqual="md">
-          <div className="sw-flex sw-justify-between sw-text-white sw-w-3/5 sw-mx-auto">
+          <div className="sw-flex sw-justify-between sw-text-white sw-w-4/5 xl:sw-w-3/5 sw-mx-auto">
             {defs.map((item) => (
               <div
                 className={cn(

@@ -35,8 +35,16 @@ const Modal: FC<Props> = ({ children, open, onClose, isFull, subModal }) => {
     return () => {
       // Unbind the event listener on clean up
       document.removeEventListener('mousedown', handleClickOutside);
+      console.log('out');
     };
   }, [subModalRef]);
+
+  useEffect(() => {
+    console.log('vaooooooo', open);
+    return () => {
+      console.log('vaooo1', open);
+    };
+  }, []);
 
   return (
     <Portal>
@@ -44,7 +52,7 @@ const Modal: FC<Props> = ({ children, open, onClose, isFull, subModal }) => {
         {open ? (
           !subModal ? (
             <motion.div
-              className={cn(s.modal, { [s.full]: isFull }, 'sw-bg-background')}
+              className={cn(s.modal, { [s.full]: isFull })}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
