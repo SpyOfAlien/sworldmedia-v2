@@ -4,6 +4,7 @@ import { useTranslation } from 'next-i18next';
 import cn from 'classnames';
 import { useWindowSize } from '../../../lib/hook';
 import s from './home.module.scss';
+import { Media } from '../../../lib/media';
 
 const HomeClients = () => {
   const { t } = useTranslation('common');
@@ -13,7 +14,17 @@ const HomeClients = () => {
     const { onClick } = props;
     return (
       <div
-        style={{ left: `calc(50% + ${width / 2.4}px - 48px)` }}
+        style={{
+          left: `calc(50% + ${width / 2.4}px - 28px)`,
+          top:
+            width > 1280
+              ? '80px'
+              : width >= 1024
+              ? '50px'
+              : width > 720
+              ? '20px'
+              : '35px',
+        }}
         className={cn(
           ' sw-w-12 sw-h-12 sw-p-2 sw-flex sw-items-center sw-justify-center sw-cursor-pointer',
           s.nextArrow
@@ -36,7 +47,17 @@ const HomeClients = () => {
     const { onClick } = props;
     return (
       <div
-        style={{ left: `calc(50% - ${width / 2.4}px)` }}
+        style={{
+          left: `calc(50% - ${width / 2.4}px  - 20px)`,
+          top:
+            width > 1280
+              ? '80px'
+              : width >= 1024
+              ? '50px'
+              : width > 720
+              ? '20px'
+              : '35px',
+        }}
         className={cn(
           ' sw-w-12 sw-h-12 sw-p-2 sw-flex sw-items-center sw-justify-center sw-cursor-pointer',
           s.prevArrow
@@ -104,17 +125,19 @@ const HomeClients = () => {
 
   return (
     <section className="sw-mb-40 sw-relative">
-      <div
-        className="sw-absolute sw-w-full"
-        style={{ bottom: width > 1024 ? '-20%' : '10%', opacity: 0.8 }}
-      >
-        <Image
-          src="/assets/images/defs/comdefglow.png"
-          layout="responsive"
-          width={1263}
-          height={1213}
-        />
-      </div>
+      <Media greaterThanOrEqual="md">
+        <div
+          className="sw-absolute sw-w-full"
+          style={{ bottom: width > 1024 ? '-20%' : '10%', opacity: 0.8 }}
+        >
+          <Image
+            src="/assets/images/defs/comdefglow.png"
+            layout="responsive"
+            width={1263}
+            height={1213}
+          />
+        </div>
+      </Media>
       <div className="sw-w-4/5 sw-mx-auto ">
         <div className="sw-mb-8">
           <h6 className="sw-text-white sw-text-barlow sw-text-h4 sw-font-bold sw-text-center sw-mb-12">

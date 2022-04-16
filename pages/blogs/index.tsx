@@ -87,33 +87,35 @@ const BlogsPage = ({ locales, posts }) => {
       </div>
 
       <div className="sw-relative">
-        <div
-          className="sw-absolute sw-w-full"
-          style={{
-            left: 0,
-            bottom: width > 1024 ? '-30%' : '10%',
-            opacity: 0.8,
-            transform: 'rotate(180deg)',
-          }}
-        >
-          <Image
-            src="/assets/images/defs/comdefglow.png"
-            layout="responsive"
-            width={1263}
-            height={1213}
-          />
-        </div>
-        <div
-          className="sw-absolute sw-w-full"
-          style={{ bottom: width > 1024 ? '20%' : '10%', opacity: 0.8 }}
-        >
-          <Image
-            src="/assets/images/defs/comdefglow.png"
-            layout="responsive"
-            width={1263}
-            height={1213}
-          />
-        </div>
+        <Media greaterThanOrEqual="md">
+          <div
+            className="sw-absolute sw-w-full"
+            style={{
+              left: 0,
+              bottom: width > 1024 ? '-30%' : '10%',
+              opacity: 0.8,
+              transform: 'rotate(180deg)',
+            }}
+          >
+            <Image
+              src="/assets/images/defs/comdefglow.png"
+              layout="responsive"
+              width={1263}
+              height={1213}
+            />
+          </div>
+          <div
+            className="sw-absolute sw-w-full"
+            style={{ bottom: width > 1024 ? '20%' : '10%', opacity: 0.8 }}
+          >
+            <Image
+              src="/assets/images/defs/comdefglow.png"
+              layout="responsive"
+              width={1263}
+              height={1213}
+            />
+          </div>
+        </Media>
         <Container cl="sw-h-full ">
           <div className="sw-flex sw-justify-center sw-my-16">
             <Tags tags={tags} />

@@ -95,33 +95,35 @@ const Post = ({ post, morePosts, preview, locale }) => {
         description={isVN ? vnSummary : enSummary}
       />
       <div className="sw-relative">
-        <div
-          className="sw-absolute sw-w-full"
-          style={{
-            left: 0,
-            top: width > 1024 ? '-10%' : '10%',
-            opacity: 0.8,
-            transform: 'rotate(180deg)',
-          }}
-        >
-          <Image
-            src="/assets/images/defs/comdefglow.png"
-            layout="responsive"
-            width={1263}
-            height={1213}
-          />
-        </div>
-        <div
-          className="sw-absolute sw-w-full"
-          style={{ bottom: width > 1024 ? '-20%' : '10%', opacity: 0.8 }}
-        >
-          <Image
-            src="/assets/images/defs/comdefglow.png"
-            layout="responsive"
-            width={1263}
-            height={1213}
-          />
-        </div>
+        <Media greaterThanOrEqual="md">
+          <div
+            className="sw-absolute sw-w-full"
+            style={{
+              left: 0,
+              top: width > 1024 ? '-10%' : '10%',
+              opacity: 0.8,
+              transform: 'rotate(180deg)',
+            }}
+          >
+            <Image
+              src="/assets/images/defs/comdefglow.png"
+              layout="responsive"
+              width={1263}
+              height={1213}
+            />
+          </div>
+          <div
+            className="sw-absolute sw-w-full"
+            style={{ bottom: width > 1024 ? '-20%' : '10%', opacity: 0.8 }}
+          >
+            <Image
+              src="/assets/images/defs/comdefglow.png"
+              layout="responsive"
+              width={1263}
+              height={1213}
+            />
+          </div>
+        </Media>
 
         <Container cl="sw-my-header">
           <div className="sw-py-4">

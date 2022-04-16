@@ -92,33 +92,35 @@ const HomeComDef = () => {
 
   return (
     <section className="sw-py-56 sw-text-white sw-relative">
-      <div
-        className="sw-absolute sw-w-full"
-        style={{
-          left: 0,
-          top: width > 1024 ? '-10%' : '10%',
-          opacity: 0.8,
-          transform: 'rotate(180deg)',
-        }}
-      >
-        <Image
-          src="/assets/images/defs/comdefglow.png"
-          layout="responsive"
-          width={1263}
-          height={1213}
-        />
-      </div>
-      <div
-        className="sw-absolute sw-w-full"
-        style={{ bottom: width > 1024 ? '-20%' : '10%', opacity: 0.8 }}
-      >
-        <Image
-          src="/assets/images/defs/comdefglow.png"
-          layout="responsive"
-          width={1263}
-          height={1213}
-        />
-      </div>
+      <Media greaterThanOrEqual="md">
+        <div
+          className="sw-absolute sw-w-full"
+          style={{
+            left: 0,
+            top: width > 1024 ? '-10%' : '10%',
+            opacity: 0.8,
+            transform: 'rotate(180deg)',
+          }}
+        >
+          <Image
+            src="/assets/images/defs/comdefglow.png"
+            layout="responsive"
+            width={1263}
+            height={1213}
+          />
+        </div>
+        <div
+          className="sw-absolute sw-w-full"
+          style={{ bottom: width > 1024 ? '-20%' : '10%', opacity: 0.8 }}
+        >
+          <Image
+            src="/assets/images/defs/comdefglow.png"
+            layout="responsive"
+            width={1263}
+            height={1213}
+          />
+        </div>
+      </Media>
       <MediaContextProvider>
         <Media greaterThanOrEqual="md">
           <div className="sw-flex sw-justify-between sw-text-white sw-w-3/5 sw-mx-auto">
