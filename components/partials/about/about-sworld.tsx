@@ -52,11 +52,11 @@ const AboutSworld = () => {
           </h5>
         </div>
         <div className="sw-w-full lg:sw-w-1/2 sw-flex sw-items-center">
-          <div className={cn('sw-w-full md:sw-w-3/5 sw-mx-auto', s.sEvent)}>
+          <div className={cn('sw-w-full md:sw-w-4/5 sw-mx-auto', s.sEvent)}>
             <Image
-              src="/assets/images/common/sworld-event.jpg"
-              width={387}
-              height={531}
+              src="/assets/images/common/bg_edited.png"
+              width={2048}
+              height={1358}
               layout="responsive"
             />
           </div>

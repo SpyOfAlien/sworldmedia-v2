@@ -3,5 +3,6 @@
 }
 
 .sEvent {
-  max-width: 387px;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
