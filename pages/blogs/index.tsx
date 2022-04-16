@@ -12,6 +12,8 @@ import { getAllPostsForHome } from '../../lib/api';
 import { Media, MediaContextProvider } from '../../lib/media';
 import { useTranslation } from 'next-i18next';
 import Pagination from '../../components/layout/pagination';
+import { useWindowSize } from '../../lib/hook';
+import Image from 'next/image';
 
 export const getStaticProps = async ({ locale, preview }) => {
   const allPosts = (await getAllPostsForHome(preview)) || [];
@@ -60,6 +62,7 @@ const BlogsPage = ({ locales, posts }) => {
     page !== activePage && setActivePage(page);
   };
 
+  const { width } = useWindowSize();
   return (
     <MediaContextProvider>
       <NextSeo
@@ -79,18 +82,46 @@ const BlogsPage = ({ locales, posts }) => {
             : 'Sworld delivers business and media news to the world',
         }}
       />
+      <div className="sw-w-full sw-mt-header">
+        <HeroBanner />
+      </div>
 
-      <Container cl="sw-h-full sw-mt-xl">
-        <div className="sw-w-full">
-          <HeroBanner />
+      <div className="sw-relative">
+        <div
+          className="sw-absolute sw-w-full"
+          style={{
+            left: 0,
+            bottom: width > 1024 ? '-30%' : '10%',
+            opacity: 0.8,
+            transform: 'rotate(180deg)',
+          }}
+        >
+          <Image
+            src="/assets/images/defs/comdefglow.png"
+            layout="responsive"
+            width={1263}
+            height={1213}
+          />
         </div>
-        <div className="sw-flex sw-justify-center sw-my-16">
-          <Tags tags={tags} />
+        <div
+          className="sw-absolute sw-w-full"
+          style={{ bottom: width > 1024 ? '20%' : '10%', opacity: 0.8 }}
+        >
+          <Image
+            src="/assets/images/defs/comdefglow.png"
+            layout="responsive"
+            width={1263}
+            height={1213}
+          />
         </div>
-        <div></div>
-        <div>
-          <Container>
-            {/* {priorityPost && (
+        <Container cl="sw-h-full ">
+          <div className="sw-flex sw-justify-center sw-my-16">
+            <Tags tags={tags} />
+          </div>
+          <div></div>
+          <div>
+            <Container>
+              {/* {priorityPost && (
               <Media lessThan="sm">
                 <PostCard cl="sw-mb-16" type="small" post={priorityPost} />
               </Media>
@@ -102,16 +133,17 @@ const BlogsPage = ({ locales, posts }) => {
               </Media>
             )} */}
 
-            <PostList posts={showPosts} />
+              <PostList posts={showPosts} />
 
-            <Pagination
-              pageCount={Math.round(posts.length / 9)}
-              setPage={(page) => setPage(page)}
-              activePage={activePage}
-            />
-          </Container>
-        </div>
-      </Container>
+              <Pagination
+                pageCount={Math.round(posts.length / 9)}
+                setPage={(page) => setPage(page)}
+                activePage={activePage}
+              />
+            </Container>
+          </div>
+        </Container>
+      </div>
     </MediaContextProvider>
   );
 };

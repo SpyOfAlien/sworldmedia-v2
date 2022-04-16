@@ -44,14 +44,14 @@ const AboutAdvisor = () => {
 
     {
       name: t('about__advisor__mr__hung'),
-      img: `${baseUrl}nguyenQuocHung.jpg`,
+      img: `${baseUrl}nguyenQuocHung.png`,
       role: t('about__advisor__mr__hung__swrole'),
       company: t('about__advisor__mr__hung__role'),
     },
   ];
 
   return (
-    <section className="sw-text-white sw-relative">
+    <section className="sw-text-white sw-relative sw-py-40">
       <div
         className="sw-absolute sw-left-0 sw-right-0"
         style={
@@ -73,11 +73,11 @@ const AboutAdvisor = () => {
         {t('aboutus__advisor')}
       </h3>
       <div>
-        <div className="sw-flex sw-flex-wrap sw-w-3/5 sw-mx-auto">
+        <div className="sw-flex sw-flex-wrap sw-w-4/5 sw-mx-auto">
           {advisors.map((item) => (
             <div
               key={item.name}
-              className="sw-w-full md:sw-w-1/2 lg:sw-w-1/4 sw-text-center sw-mb-8"
+              className="sw-w-full md:sw-w-1/2 lg:sw-w-1/5 sw-text-center sw-mb-8"
             >
               <div
                 className={cn(

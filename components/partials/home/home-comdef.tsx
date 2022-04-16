@@ -94,7 +94,12 @@ const HomeComDef = () => {
     <section className="sw-py-56 sw-text-white sw-relative">
       <div
         className="sw-absolute sw-w-full"
-        style={{ left: '50%', top: '-60%', opacity: 0.8 }}
+        style={{
+          left: 0,
+          top: width > 1024 ? '-10%' : '10%',
+          opacity: 0.8,
+          transform: 'rotate(180deg)',
+        }}
       >
         <Image
           src="/assets/images/defs/comdefglow.png"
@@ -105,7 +110,7 @@ const HomeComDef = () => {
       </div>
       <div
         className="sw-absolute sw-w-full"
-        style={{ right: '50%', bottom: '-60%', opacity: 0.8 }}
+        style={{ bottom: width > 1024 ? '-20%' : '10%', opacity: 0.8 }}
       >
         <Image
           src="/assets/images/defs/comdefglow.png"

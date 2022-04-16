@@ -28,35 +28,19 @@ const Profile = ({ profile }) => {
         <button
           onClick={() => onDownloadFile('en')}
           className={cn(
-            'sw-rounded-sm focus:sw-outline-none sw-flex sw-items-center sw-py-3 sw-px-12 sw-bg-opacity-500 md:sw-mr-8 sw-mb-6 md:sw-mb-0',
+            'sw-rounded-sm focus:sw-outline-none sw-flex sw-items-center sw-justify-center sw-py-3 sw-px-12 sw-bg-opacity-500 md:sw-mr-8 sw-mb-6 md:sw-mb-0',
             s.btn
           )}
         >
-          <span className="sw-block sw-w-8 sw-h-8 sw-mr-2">
-            <Image
-              src="/assets/images/others/vn.png"
-              width={24}
-              height={24}
-              layout="responsive"
-            />
-          </span>
           <span>{t('en')}</span>
         </button>
         <button
           onClick={() => onDownloadFile('vn')}
           className={cn(
-            'sw-rounded-sm focus:sw-outline-none sw-flex sw-items-center sw-py-3 sw-px-12 sw-bg-opacity-500',
+            'sw-rounded-sm focus:sw-outline-none sw-flex sw-items-center sw-justify-center sw-py-3 sw-px-12 sw-bg-opacity-500',
             s.btn
           )}
         >
-          <span className="sw-block sw-w-8 sw-h-8 sw-mr-2">
-            <Image
-              src="/assets/images/others/en.png"
-              width={24}
-              height={24}
-              layout="responsive"
-            />
-          </span>
           <span>{t('vn')}</span>
         </button>
       </div>

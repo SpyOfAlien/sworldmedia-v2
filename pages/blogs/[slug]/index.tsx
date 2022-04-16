@@ -18,6 +18,7 @@ import { ArticleJsonLd, BlogJsonLd, NextSeo } from 'next-seo';
 import titleStyle from '../../../lib/utils/title-style';
 import { dateTime } from '../../../lib/utils/date-format';
 import PostList from '../../../components/common/blog/post-list/post-list';
+import { useWindowSize } from '../../../lib/hook';
 
 const Post = ({ post, morePosts, preview, locale }) => {
   const {
@@ -47,7 +48,7 @@ const Post = ({ post, morePosts, preview, locale }) => {
     return <ErrorPage statusCode={404} />;
   }
 
-  console.log('title', vnTitle);
+  const { width } = useWindowSize();
 
   return (
     <MediaContextProvider>
@@ -93,92 +94,102 @@ const Post = ({ post, morePosts, preview, locale }) => {
         publisherLogo="https://www.s-worldmedia.com/assets/images/others/logo.png"
         description={isVN ? vnSummary : enSummary}
       />
-      <Container cl="sw-my-header">
-        <div className="sw-py-4">
-          <Link href="/blogs">
-            <a>
-              <div className="sw-cursor-pointer sw-flex sw-items-center sw-text-paragraph sw-w-28">
-                <span
-                  style={{ width: '14px', height: '14px', marginBottom: '4px' }}
-                >
-                  <Image
-                    src="/assets/svg/smallback.svg"
-                    width={12}
-                    height={12}
-                    layout="responsive"
-                  />
-                </span>
-                <span className="sw-ml-2">{t('blog__goback')}</span>
-              </div>
-            </a>
-          </Link>
-        </div>
-        <div className="sw-relative">
-          <div className="sw-relative">
-            <Image
-              src={coverImage.url}
-              layout="responsive"
-              width={coverImage.width}
-              height={coverImage.height}
-              className="sw-rounded-xl"
-            />
-            <div className="sw-absolute sw-inset-0 sw-bg-hero"></div>
-          </div>
-          <div className="sw-flex sw-justify-end sw-mt-12 xl:sw-mt-0  sw-flex-col xl:sw-px-12 xl:sw-py-8 sw-z-10">
-            <Media greaterThanOrEqual="lg">
-              <h1 className="sw-text-center sw-text-white sw-text-h4 sw-font-bold sw-gilroy">
-                {isVN ? vnTitle : enTitle}
-              </h1>
-            </Media>
-            <Media between={['sm', 'lg']}>
-              <h1 className="sw-text-center sw-text-white sw-text-h5 sw-font-bold sw-gilroy">
-                {isVN ? vnTitle : enTitle}
-              </h1>
-            </Media>
-            <Media lessThan="sm">
-              <h1 className="sw-text-center sw-text-white sw-text-h6 sw-font-bold sw-gilroy">
-                {isVN ? vnTitle : enTitle}
-              </h1>
-            </Media>
-            {/* <div className="sw-flex sw-justify-between sw-w-full">
-              <div>
-                {isVN && vnTags
-                  ? vnTags.map((tag, idx) => (
-                      <span
-                        key={idx}
-                        className="sw-mr-2 sw-text-paragraph sw-capitalize sw-cursor-pointer"
-                      >
-                        {tag} {vnTags.length - 1 === idx ? '' : '|'}
-                      </span>
-                    ))
-                  : enTags
-                  ? enTags.map((tag, idx) => (
-                      <span
-                        key={idx}
-                        className="sw-mr-2 sw-text-paragraph sw-capitalize sw-cursor-pointer"
-                      >
-                        {tag} {enTags.length - 1 === idx ? '' : '|'}
-                      </span>
-                    ))
-                  : null}
-              </div>
-              <div className="sw-text-paragraph">{formatedDate}</div>
-            </div> */}
-          </div>
-        </div>
-        <div className="sw-mt-12 xl:sw-w-1/2 xl:sw-mx-auto">
-          <PostContent
-            data={isVN ? vnContent : enContent}
-            assets={isVN ? vnContent.links : enContent.links}
+      <div className="sw-relative">
+        <div
+          className="sw-absolute sw-w-full"
+          style={{
+            left: 0,
+            top: width > 1024 ? '-10%' : '10%',
+            opacity: 0.8,
+            transform: 'rotate(180deg)',
+          }}
+        >
+          <Image
+            src="/assets/images/defs/comdefglow.png"
+            layout="responsive"
+            width={1263}
+            height={1213}
           />
         </div>
-        <div className="sw-mt-24">
-          <Heading cl="sw-text-center sw-mb-12" h="h3" gradient={true}>
-            {t('blog__related-posts')}
-          </Heading>
-          <PostList posts={morePosts} />
+        <div
+          className="sw-absolute sw-w-full"
+          style={{ bottom: width > 1024 ? '-20%' : '10%', opacity: 0.8 }}
+        >
+          <Image
+            src="/assets/images/defs/comdefglow.png"
+            layout="responsive"
+            width={1263}
+            height={1213}
+          />
         </div>
-      </Container>
+
+        <Container cl="sw-my-header">
+          <div className="sw-py-4">
+            <Link href="/blogs">
+              <a>
+                <div className="sw-cursor-pointer sw-flex sw-items-center sw-text-paragraph sw-w-28">
+                  <span
+                    style={{
+                      width: '14px',
+                      height: '14px',
+                      marginBottom: '4px',
+                    }}
+                  >
+                    <Image
+                      src="/assets/svg/smallback.svg"
+                      width={12}
+                      height={12}
+                      layout="responsive"
+                    />
+                  </span>
+                  <span className="sw-ml-2">{t('blog__goback')}</span>
+                </div>
+              </a>
+            </Link>
+          </div>
+          <div className="sw-relative">
+            <div className="sw-relative">
+              <Image
+                src={coverImage.url}
+                layout="responsive"
+                width={coverImage.width}
+                height={coverImage.height}
+                className="sw-rounded-xl"
+              />
+              <div className="sw-absolute sw-inset-0 sw-bg-hero"></div>
+            </div>
+            <div className="sw-flex sw-justify-end sw-mt-12 xl:sw-mt-0  sw-flex-col xl:sw-px-12 xl:sw-py-8 sw-z-10">
+              <Media greaterThanOrEqual="lg">
+                <h1 className="sw-text-center sw-text-white sw-text-h4 sw-font-bold sw-gilroy">
+                  {isVN ? vnTitle : enTitle}
+                </h1>
+              </Media>
+              <Media between={['sm', 'lg']}>
+                <h1 className="sw-text-center sw-text-white sw-text-h5 sw-font-bold sw-gilroy">
+                  {isVN ? vnTitle : enTitle}
+                </h1>
+              </Media>
+              <Media lessThan="sm">
+                <h1 className="sw-text-center sw-text-white sw-text-h6 sw-font-bold sw-gilroy">
+                  {isVN ? vnTitle : enTitle}
+                </h1>
+              </Media>
+            </div>
+          </div>
+          <div className="sw-mt-12 xl:sw-w-1/2 xl:sw-mx-auto">
+            <PostContent
+              data={isVN ? vnContent : enContent}
+              assets={isVN ? vnContent.links : enContent.links}
+            />
+          </div>
+          <div className="sw-mt-24">
+            <Heading cl="sw-text-center sw-mb-12" h="h3" gradient={true}>
+              {t('blog__related-posts')}
+            </Heading>
+            <PostList posts={morePosts} />
+          </div>
+        </Container>
+      </div>
     </MediaContextProvider>
   );
 };

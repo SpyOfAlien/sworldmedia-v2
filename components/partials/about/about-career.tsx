@@ -30,9 +30,12 @@ const AboutCareer = () => {
         <p className="sw-mb-4 sw-font-normal sw-gilroy-thin">
           {t('about__career_welcome_desc')}
         </p>
-        <button className="sw-text-barlow sw-w-40 sw-h-12 sw-rounded-xs sw-glass">
+        <a
+          href="https://www.linkedin.com/company/s-worldmultimedia/"
+          className="sw-text-barlow sw-w-40 sw-h-12 sw-rounded-xs sw-glass sw-flex sw-items-center sw-justify-center"
+        >
           S-World linkedin
-        </button>
+        </a>
       </div>
     </section>
   );

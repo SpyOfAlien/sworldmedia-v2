@@ -2,6 +2,7 @@
   background: rgba($color: #ffffff, $alpha: 0.1);
   transition: ease-in-out;
   transition-duration: 0.1;
+  min-width: 200px;
 
   &:hover {
     background: rgba($color: #ffffff, $alpha: 0.2);
