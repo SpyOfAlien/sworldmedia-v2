@@ -2,6 +2,8 @@ import cn from 'classnames';
 import s from './home.module.scss';
 import { useState } from 'react';
 import { useTranslation } from 'next-i18next';
+import Image from 'next/image';
+import { useWindowSize } from '../../../lib/hook';
 
 const About = ({ t }) => {
   return (
@@ -64,8 +66,26 @@ const HomeAbout = () => {
   const [activeTab, setActiveTab] = useState(0);
   const { t } = useTranslation('common');
 
+  const { width } = useWindowSize();
+
   return (
-    <section className={cn('sw-mb-40')}>
+    <section className={cn('sw-mb-40 sw-relative')}>
+      <div
+        className="sw-absolute sw-w-full lg:sw-w-1/2"
+        style={{
+          left: 0,
+          top: width > 1024 ? '-110%' : '10%',
+          opacity: 0.8,
+          transform: 'rotate(180deg)',
+        }}
+      >
+        <Image
+          src="/assets/images/defs/comdefglow.png"
+          layout="responsive"
+          width={651}
+          height={1213}
+        />
+      </div>
       <div
         className={cn(
           'sw-w-11/12 lg:sw-w-2/3 sw-mx-auto sw-py-8',
