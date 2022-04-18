@@ -49,7 +49,10 @@ const ShowcaseItem = ({ showcase, isGlass }) => {
             </h6>
             <p className="sw-gilroy-thin sw-mb-4">{summary}</p>
           </div>
-          <span className="sw-cursor-pointer sw-underline" onClick={onReadmore}>
+          <span
+            className="sw-cursor-pointer sw-underline sw-mb-4 lg:sw-mb-0"
+            onClick={onReadmore}
+          >
             {t('action__findoutmore')}
           </span>
         </div>

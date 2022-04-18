@@ -24,7 +24,7 @@ const ProjectItem = ({ project }) => {
         <p className="sw-mb-4 sw-gilroy-thin">
           {router.locale === 'en' ? project.enSummary : project.vnSummary}
         </p>
-        <button onClick={onReadmore}>{t('action__findoutmore')}</button>
+        <button className="sw-mb-4 lg:sw-mb-0" onClick={onReadmore}>{t('action__findoutmore')}</button>
       </div>
       <div className="sw-w-full lg:sw-w-2/5">
         <div className="sw-w-full sw-mb-4">

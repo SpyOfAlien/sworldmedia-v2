@@ -103,7 +103,7 @@ const HomeServices = () => {
                   />
                 </div>
                 <div className="sw-w-4/5 sw-flex sw-items-center">
-                  <h3 className="sw-uppercase sw-font-bold sw-text-center">
+                  <h3 className="sw-uppercase sw-font-bold lg:sw-text-center">
                     {t(item.name)}
                   </h3>
                   {/* <p className="sw-text-xs">{t(item.desc)}</p> */}

@@ -20,7 +20,21 @@ export const getStaticProps = async ({ locale, preview }) => {
 };
 
 const BrandCommunicationPage = ({ service, profile }) => {
-  return <ServicePage profile={profile} service={service} />;
+  return (
+    <ServicePage
+      profile={profile}
+      service={service}
+      seo={{
+        vnName: 'S-world | Communication',
+        enName: 'S-world | Truyền thông thương hiệu',
+        vnDesc:
+          'S-World truyền thông thương hiệu trên đa nền tảng với 6 dòng dịch vụ kết nối bền chặt',
+        enDesc:
+          'S-World provides multi-platform brand communication solutions with 6 interconnecting services',
+        url: 'http://localhost:3000/vn/services/brand-communication',
+      }}
+    />
+  );
 };
 
 export default BrandCommunicationPage;

@@ -21,7 +21,20 @@ export const getStaticProps = async ({ locale, preview }) => {
 };
 
 const ProductionPage = ({ service, profile }) => {
-  return <ServicePage service={service} profile={profile} />;
+  return (
+    <ServicePage
+      service={service}
+      profile={profile}
+      seo={{
+        vnName: 'S-world | Production',
+        enName: 'S-world | Sản xuất',
+        vnDesc:
+          'Sản xuất là một trong những dịch vụ có thế mạnh lớn nhất của S-World',
+        enDesc: 'Production is one of S-World’s greatest strengths',
+        url: 'http://localhost:3000/vn/services/production',
+      }}
+    />
+  );
 };
 
 export default ProductionPage;
