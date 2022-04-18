@@ -80,7 +80,7 @@ export function getRichTextRenderOptions(links, options) {
       },
       [BLOCKS.HR]: (text) => <hr />,
       [BLOCKS.HEADING_1]: (node, children) => (
-        <h1 className={cn(s.h1, 'sw-text-gradient')}>{children}</h1>
+        <h1 className={cn(s.h1)}>{children}</h1>
       ),
       [BLOCKS.HEADING_2]: (node, children) => {
         if (renderH2Links) {
@@ -89,30 +89,26 @@ export function getRichTextRenderOptions(links, options) {
               <h2 id={`${slugifyString(children[0])}`} className={``}>
                 {children}
               </h2>
-              <a
-                className={``}
-                href={`#${slugifyString(children[0])}`}
-                aria-label={children}
-              >
+              <a href={`#${slugifyString(children[0])}`} aria-label={children}>
                 <LinkIcon />
               </a>
             </div>
           );
         } else {
-          return <h2 className={cn(s.h2, 'sw-text-gradient')}>{children}</h2>;
+          return <h2 className={cn(s.h2)}>{children}</h2>;
         }
       },
       [BLOCKS.HEADING_3]: (node, children) => (
-        <h3 className={cn(s.h3, 'sw-text-gradient')}>{children}</h3>
+        <h3 className={cn(s.h3)}>{children}</h3>
       ),
       [BLOCKS.HEADING_4]: (node, children) => (
-        <h4 className={cn(s.h4, 'sw-text-gradient')}>{children}</h4>
+        <h4 className={cn(s.h4)}>{children}</h4>
       ),
       [BLOCKS.HEADING_5]: (node, children) => (
-        <h5 className={cn(s.h5, 'sw-text-gradient')}>{children}</h5>
+        <h5 className={cn(s.h5)}>{children}</h5>
       ),
       [BLOCKS.HEADING_6]: (node, children) => (
-        <h6 className={cn(s.h6, 'sw-text-gradient')}>{children}</h6>
+        <h6 className={cn(s.h6)}>{children}</h6>
       ),
       [BLOCKS.PARAGRAPH]: (node, children) => (
         <Paragraph cl="sw-mb-4">{children}</Paragraph>

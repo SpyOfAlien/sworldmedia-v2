@@ -5,35 +5,40 @@ import Phone from '../../icons/phone';
 import Heading from '../typo/heading';
 import Paragraph from '../typo/paragraph';
 
-const Infor = ({heading = true}) => {
+const Infor = ({ heading = true }) => {
   const { t } = useTranslation();
 
   return (
     <div>
+      {heading && (
+        <Heading h="h5" cl="sw-text-white sw-mb-xsm">
+          {t('contact__infor')}
+        </Heading>
+      )}
 
-      {heading && <Heading h="h5" cl="sw-text-paragraph sw-mb-xsm">
-        {t('contact__infor')}
-      </Heading>}
-      
       <span className="sw-flex sw-mb-sm">
         <span className="sw-block">
           <Phone />
         </span>
-        <Paragraph cl="sw-ml-4 sw-font-normal">(+84) 817 701 604</Paragraph>
+        <p className="sw-text-white sw-ml-2 sw-font-normal">
+          (+84) 817 701 604
+        </p>
       </span>
       <span className="sw-flex sw-mb-sm">
         <span className="sw-block">
           <Gmail />
         </span>
-        <Paragraph cl="sw-ml-4 sw-font-normal">info@s-worldmedia.com</Paragraph>
+        <p className="sw-text-white sw-ml-2 sw-font-normal">
+          info@s-worldmedia.com
+        </p>
       </span>
       <span className="sw-flex sw-mb-sm">
         <span className="sw-block">
           <Location />
         </span>
-        <Paragraph cl="sw-ml-4 sw-font-normal">
+        <p className="sw-text-white sw-ml-2 sw-font-normal">
           {t('contact__address__content')}
-        </Paragraph>
+        </p>
       </span>
     </div>
   );

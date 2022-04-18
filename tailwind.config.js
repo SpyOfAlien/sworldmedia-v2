@@ -7,12 +7,15 @@ module.exports = {
         black: '#000000',
         brown: '#5f3d2c',
         white: '#FFFFFF',
-        background: '#040D21',
+        background: '#0E2193',
         modal: '#172D42',
         lightModal: '#1F3F5C',
         paragraph: '#B8CAE6',
+        servicesBg: '#EAE9F214',
+        footerBg: '#00093f',
       },
       spacing: {
+        xs: '0.75rem',
         sm: '1rem',
         xsm: '1.5rem',
         md: '2rem',
@@ -20,6 +23,7 @@ module.exports = {
         xl: '8rem',
         xxl: '14rem',
         48: '48%',
+        31: '31%',
         header: '60px',
       },
       letterSpacing: {
@@ -35,6 +39,7 @@ module.exports = {
         desktop: '16px',
         mobile: '14px',
         link: '1rem',
+        xs: '0.75rem',
         p: '1rem',
         h1: '4rem',
         h2: '3.11111111111rem',
@@ -55,6 +60,7 @@ module.exports = {
       },
 
       borderRadius: {
+        xs: '4px',
         sm: '8px',
         md: '12px',
         lg: '16px',
@@ -69,6 +75,9 @@ module.exports = {
       screens: {
         '2xl': '1680px',
         '3xl': '1920px',
+      },
+      zIndex: {
+        '-100': '-100',
       },
     },
   },

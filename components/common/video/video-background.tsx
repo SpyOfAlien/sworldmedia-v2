@@ -8,7 +8,7 @@ const VideoBackground = () => {
   }, []);
 
   return (
-    <div className="sw-relative sw-w-screen sw-h-screen">
+    <section className="sw-relative sw-w-screen sw-h-screen">
       <video
         ref={video}
         className={s.video}
@@ -19,7 +19,7 @@ const VideoBackground = () => {
       >
         <source src="/video/video.mp4" type="video/mp4" />
       </video>
-    </div>
+    </section>
   );
 };
 

@@ -1,16 +1,23 @@
 {
+  "vn": "Vietnamese",
+  "en": "English",
+
   "home": "Home",
+
+  "action__findoutmore": "Learn more  ↗",
 
   "home__hero": "S-WORLD MULTIMEDIA A NEW GENERATION MULTIMEDIA COMPANY",
 
   "home__about_us__title": "About us",
+  "home__about_us__define": "S-World is a next-generation media company that is pioneering the development of a connected ecosystem.",
+  "home__about_us__define__desc": "Founded in 2020 during the Covid-19 pandemic, the company has never stopped moving forward like a trusty stallion and is prepared to enter a new world filled with undiscovered wonders.",
 
   "home__about_us__vision__title": "Vision",
-  "home__about_us__vision__content": "A special communication bridge to bring Vietnam into the world",
+  "home__about_us__vision__content": "Become a pioneering, next-generation media company with an ecosystem that connects Vietnam to the world.",
   "home__about_us__core_value__title": "Core Values",
-  "home__about_us__core_value__content": "Sincerity - Understanding - Perseverance - Creativity - Distinctiveness",
+  "home__about_us__core_value__content": "Pioneering - Celerity - Compassion - Innovation - Uniqueness",
   "home__about_us__mission__title": "Mission",
-  "home__about_us__mission__content": "Ready to spread ideas, projects, products, and brand names in a uniquely different way, with quantity - quality balance to create sustainable future",
+  "home__about_us__mission__content": "Strengthen connections and create new values via media, with a sense of perseverance while striving for perfection.",
 
   "home__service__title": "Our Services",
 
@@ -18,6 +25,7 @@
   "home__sub_service__provide": "We provide",
 
   "home__service__brand_communication__title": "Brand Communication",
+  "home__service__brand_communication__desc": "Khả năng phân tích đối tượng, lập chiến lược phát triển fanpage",
   "home__service__brand_communication__content": "S-World provides brand communication solutions on multi-platforms, including 4 services: Press-Television communication (PR), Social media communication, Influencer communication and Marketing - Sales",
   "home__service__brand_communication__sub_content": "",
 
@@ -50,6 +58,7 @@
   "home__service__brand_communication__marketing__services2": "- Executing marketing campaigns on multiple platforms",
 
   "home__service__branding__title": "Branding",
+  "home__service__branding__desc": "Đội ngũ biên tập toàn diện, giàu kinh nghiệm",
   "home__service__branding__content": "S-World provides comprehensive branding solutions: Brand Story, Brand Identity, Customer Positioning and Sustainable Communication Strategy to help products/businesses get closer to their target customers.",
   "home__service__branding__sub_content": "",
 
@@ -79,6 +88,7 @@
   "home__service__branding__strategy__services3": "- Development strategy",
 
   "home__service__production__title": "Production",
+  "home__service__production__desc": "Đội ngũ biên tập toàn diện, giàu kinh nghiệm",
   "home__service__production__content1": "S-World provides 3 resonance product lines:",
   "home__service__production__content2": "- Television products: documentaries, chronicles, reports, reality shows, talk shows, game shows, etc.",
   "home__service__production__content3": "- Digital products: combining e-newspapers and social networks",
@@ -99,7 +109,8 @@
   "home__service__production__format__strength3": "- Experienced program promotion team to ensure a strong widespread popularity",
   "home__service__production__format__services": "TV, Digital Newspaper, Social Media",
 
-  "home__service__event__title": "Online & Offline Events",
+  "home__service__event__title": "Events",
+  "home__service__event__desc": "Experienced in organizing big events and events for celebrities",
   "home__service__event__content1": "- Anniversaries",
   "home__service__event__content2": "- Conferences",
   "home__service__event__content3": "- Product launches",
@@ -130,6 +141,8 @@
   "home__service__event__offline__services4": "- Promoting and advertising events",
 
   "home__service__international_relations__title": "International Relations",
+  "home__service__international_relations__desc": "Đội ngũ biên tập toàn diện, giàu kinh nghiệm",
+
   "home__service__international_relations__content1": "In the new era, global trade flows require joint efforts to create differences. Knowing this, S-World positions itself as a bridge between Vietnam and the world with its strengths in multimedia communication. We provide international connection services with two key tasks:",
   "home__service__international_relations__content2": "- Connecting foreign companies, units and individuals that want to come to Vietnam to invest, explore and organize events",
   "home__service__international_relations__content3": "- Connecting Vietnamese companies, units and individuals that want to go abroad to invest, explore, and organize events",
@@ -164,8 +177,9 @@
   "home__service__international_relations__for_vn_international__service3": "- Brand promotion",
 
   "home__partner__title": "Our Media Partners",
+  "home__core_partner__title": "Strategic partnership",
 
-  "home__client__title": "Our Clients",
+  "home__client__title": "Other Partners",
 
   "home__products__title": "Newest Products",
   "home__new_product__techfest__title": "INTRODUCTION VIDEO TECHFEST VIETNAM 2020",
@@ -253,12 +267,23 @@
   "home__new_product__international-relation__content6": "- Livestream video attracting 10,000 viewers",
   "home__new_product__international-relation__content7": "- More than 40 media agencies and TV channels reporting on the event ",
 
-  "home__whyus__title": "Why us",
+  "home__project__usecase": "Highlighted Projects",
+
+  "home__whyus__title": "Điều đặc biệt của S-World",
   "home__aboutus__title": "About us",
   "home__aboutus__one": "Thorough and experienced editorial team",
   "home__aboutus__two": "Brand strategy orientation for sustainable development",
   "home__aboutus__three": "Professional production quality",
   "home__aboutus__four": "In-depth and methodical consulting",
+
+  "home__whyus__one__title": "Năng lực sản xuất và truyền thông là nền tảng mạnh nhất",
+  "home__whyus__one__desc": "Đội ngũ của chúng tôi xuất thân là các nhà báo, phóng viên và truyền thông có nhiều kinh nghiệm ở Việt Nam và quốc tế.",
+  "home__whyus__two__title": "Tiên phong truyền thông trong các ngành mới, công nghệ mới",
+  "home__whyus__two__desc": "Chúng tôi tiên phong đi đầu trong việc truyền thông và lan tỏa những ngành mới, những công nghệ mới từ nền tảng kiến thức, khả năng phân tích thị trường, data; tốc độ và khả năng sáng tạo của đội ngũ tại S-World.",
+  "home__whyus__three__title": "Khả năng kết nối tạo giá trị bền vững",
+  "home__whyus__three__desc": "Xuất phát từ một ý tưởng và một lần triển khai, chúng tôi  có thể phát triển và hình thành nên các dịch vụ, và phủ sóng trên các nền tảng khác nhau, giúp khách hàng có hiệu quả truyền thông tối ưu nhất.",
+  "home__whyus__four__title": "Bức tranh dịch vụ tổng thể giúp tối ưu hoá ngân sách",
+  "home__whyus__four__desc": "Chúng tôi tiên phong đi đầu trong việc truyền thông và lan tỏa những ngành mới, những công nghệ mới từ nền tảng kiến thức, khả năng phân tích thị trường, data; tốc độ và khả năng sáng tạo của đội ngũ tại S-World.",
 
   "Success": "Success",
   "Failed": "Failed",
@@ -291,12 +316,9 @@
   "aboutus__story__content2": "We are enthusiastic to bring your ideas, products, brand names to life. We offer both qualify and distinctiveness; both for the presence and a sustainable future. We operate with strong perfectionism and energy like a galloping horse, ready to move into a changing world with much to discover.",
   "aboutus__story__content3": "S-World will come to you with a sincere heart, eagerness, resilience and creativeness on the way to the future.",
 
-  "aboutus__ceo": "DANG SOAN Founder & CEO",
+  "aboutus__ceo": "DANG SOAN \n Founder & CEO",
 
-  "aboutus__ceo__content1": "Foreign relations are predestined and connections are desires",
-  "aboutus__ceo__content2": "With 10 years of experience in working in the field of media and press and 8 years in external communication, S-world founder has got the opportunities to work in 20 countries around the world, especially in the US.",
-  "aboutus__ceo__content3": "As Former Director of the Southern Branch of VTC10-NETVIET, a TV channel on culture and foreign affairs, Soan Dang has joined hands with her co-workers to conduct many programs to popularize the startup movement and inspire startup founders. Notably, Soan was Executive Director of the International Conference on Entrepreneurship: “Connecting and promoting resources for Vietnamese Startups to reach out to the world.",
-  "aboutus__ceo__content4": "She is also a close partner of many ministries, departments and localities, especially the Ministry of Information and Communications and the State Committee for Overseas Vietnamese Affairs.",
+  "aboutus__ceo__content": "S-World's founder and CEO has over 12 years of experience in the media and journalism industries. She has worked in over 20 countries around the world, most notably the United States.\n  As a former Director of VTC10-NETVIET's Southern Branch, a Vietnamese foreign cultural television channel, she also served as the Ministry of Science and Technology's Master Communication Advisor for Techfest Vietnam 2020.\n  Soan Dang also works closely with several ministries, branches, and localities, most notably the Ministries of Foreign Affairs, Science and Technology, and Information and Communication. In addition, she has developed numerous connections with diplomatic agencies and international organizations in Vietnam.\nPreviously, the founder of S-World also worked as a director, journalist, and producer for a wide range of genres, including TVC, documentaries, talk shows, reality TV, and game shows on VTV, VTC, and HTV channels and more. ",
 
   "aboutus__inspirational_advisor": "Inspirational Advisor",
   "aboutus__organizational_advisor": "Organizational advisor",
@@ -305,12 +327,69 @@
   "aboutus__advisor": "Our advisors",
 
   "aboutus__team__title": "Our team",
+  "aboutus__team__desc": "A collective of people with the same vision, highly-trained media expertise, international competence and passion for creativity.",
+
+  "about__career_welcome": "Về với team S!",
+  "about__career_welcome_desc": "Gia nhập đội ngũ và cùng S-World nhân giá trị kết nối và kiến tạo giá trị mới khác biệt tại thị trường truyền thông Việt Nam và xa hơn là vươn ra thế giới",
 
   "blog__goback": "Go back to news",
+  "blog__related-posts": "Related Posts",
+
+  "service__profile": "Company Profile",
+  "service__profile__sologan": "Everything you need to know about us and how we can help your company stand out with our media strengths",
 
   "menu__home": "Home",
   "menu__services": "Services",
   "menu__about": "About us",
   "menu__news": "News",
-  "menu__contact": "Contact us"
+  "menu__contact": "Contact us",
+
+  "team__production": "Content & Production",
+  "team__mkt": "Marketing & Communications",
+  "team__com": "Business Development",
+  "team__pj__management": "Project Management",
+  "team__content": "HR & Admin",
+  "team__design": "Accounting & Finance",
+
+  "about__infor__download": "Download Our Company Profile",
+  "about__explore__services": "Explore Our Services",
+
+  "about__whysw": "Why choose us",
+  "about__sw__human": "Humans of S-World",
+  "about__sw__human__desc": "A collective of people with the same vision, highly-trained media expertise, international competence and passion for creativity. Culture of S-World: Connections to go fast and far together.",
+  "about__sw__culture": "Culture of S-World",
+  "about__sw__culture__desc": "Connections to go FAST and FAR together.",
+  "about__sw__connect": "S-World Connections",
+  "about__sw__connect__desc": "S-World has an extensive network of prestigious relationships. It aims to create new models of connectivity and creativity to: GROW STRONGER TOGETHER",
+  "about__sw__special": "What’s special about S-World",
+  "about__sw__special__desc": "S-World has an extensive network of prestigious relationships. It aims to create new models of connectivity and creativity to: GROW STRONGER TOGETHER",
+
+  "about__sw__special__one": "Production and communication capabilities are our strongest foundation",
+  "about__sw__special__one__desc": "Our team consists of journalists, reporters and media members with extensive experience in Vietnam and internationally. We take pride in our modern, creative style that is capable of creating diverse and valuable products that can connect with customers on a personal level.",
+  "about__sw__special__two": "Connection creates sustainable value",
+  "about__sw__special__two__desc": "We always focus on connecting people via multimedia, linking prestigious units with organizations and colleagues, and the community with more than 100 Vietnamese and 20 international media outlets. This allows us to spread positive values naturally and sustainably.",
+  "about__sw__special__three": "Our overall culture helps optimize budget",
+  "about__sw__special__three__desc": "A single idea with one implementation method can develop into different services across platforms to help customers enjoy the most effective communications.",
+  "about__sw__special__four": "Pioneering communication in new industries and new technologies",
+  "about__sw__special__four__desc": "We are breaking ground for communicating and spreading positive values for new industries and new technologies with our broad knowledge base, market analysis abilities, data, speed, and creativity.",
+
+  "about__advisor__mr__phuc": "Phuc Tran (Kazufuku Nitta)",
+  "about__advisor__mr__phuc__swrole": "Business Advisor",
+  "about__advisor__mr__phuc__role": "President of Metran Group Japan",
+
+  "about__advisor__mr__donle": "Don Le",
+  "about__advisor__mr__donle__swrole": "Inspirational advisor",
+  "about__advisor__mr__donle__role": "Founder and CEO of Everest Education",
+
+  "about__advisor__ms__vyle": "Vy Le",
+  "about__advisor__ms__vyle__swrole": "Business Advisor",
+  "about__advisor__ms__vyle__role": "Co-Founder and Director of Do Ventures",
+
+  "about__advisor__mr__erik": "Erik Jonsson",
+  "about__advisor__mr__erik__swrole": "Business Advisor",
+  "about__advisor__mr__erik__role": "Partner at Antler Global Venture Fund",
+
+  "about__advisor__mr__hung": "Hung Nguyen",
+  "about__advisor__mr__hung__swrole": "Business Advisor",
+  "about__advisor__mr__hung__role": "President of LogiGear Corporation, US"
 }

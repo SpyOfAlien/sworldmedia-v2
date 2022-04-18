@@ -1,8 +1,5 @@
 import Image from 'next/image';
-import Facebook from '../components/icons/facebook';
-import Linkedin from '../components/icons/linkedin';
 import WhiteLogo from '../components/icons/white-logo';
-import Youtube from '../components/icons/youtube';
 import Infor from '../components/ui/infor/infor';
 import { useMediaQuery } from 'react-responsive';
 import Paragraph from '../components/ui/typo/paragraph';
@@ -16,7 +13,7 @@ import { Media, MediaContextProvider } from '../lib/media';
 import { useUI } from '../lib/context/ui-context';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Link from 'next/link';
-import * as gtag from '../lib/gtag';
+// import * as gtag from '../lib/gtag';
 import { useSection } from '../lib/context/section-context';
 import { useRouter } from 'next/router';
 import { CorporateContactJsonLd, NextSeo } from 'next-seo';
@@ -57,12 +54,12 @@ const ContactPage = ({ locale }) => {
   };
 
   const onSubscribe = () => {
-    gtag.event({
-      action: 'submit_form',
-      category: 'Contact',
-      label: name || email || phone,
-      value: message,
-    });
+    // gtag.event({
+    //   action: 'submit_form',
+    //   category: 'Contact',
+    //   label: name || email || phone,
+    //   value: message,
+    // });
 
     let error;
     if (!name && !email && !email) {
@@ -152,48 +149,40 @@ const ContactPage = ({ locale }) => {
           </div>
         </Media>
         <div className="sw-flex sw-flex-col xl:sw-flex-row sw-w-full xl:sw-w-1/2">
-          <div className="sw-w-full sw-mb-24 sw-mx-auto xl:sw-h-screen">
-            <Media greaterThanOrEqual="lg">
-              <div className="sw-relative sw-w-full sw-h-screen">
-                <Image
-                  src="/assets/images/others/lm81.png"
-                  layout="fill"
-                  objectFit="cover"
-                  objectPosition="center"
-                />
-              </div>
-            </Media>
-            <Media lessThan="lg">
-              <div>
-                <Image
-                  src="/assets/images/others/lm81.png"
-                  layout="responsive"
-                  width={280}
-                  height={550}
-                  className="sw-rounded-sm"
-                />
-              </div>
-            </Media>
-          </div>
-          <div className="sw-flex sw-flex-col sw-justify-end xl:sw-pl-8 3xl:sw-pl-16 xl:sw-py-12">
+          <div className="sw-flex sw-flex-col sw-justify-center sw-px-8 lg:sw-px-24">
             <div className="sw-my-8">
               <Infor />
             </div>
             <div>
               <div className="sw-flex sw-mb-xsm">
                 <Link href="https://www.facebook.com/sworldmultimedia">
-                  <a>
-                    <Facebook style={{ marginRight: '40px' }} />
+                  <a className="sw-w-6 sw-mr-3">
+                    <Image
+                      src="/assets/images/socials/fb.png"
+                      width={16}
+                      height={17}
+                      layout="responsive"
+                    />
                   </a>
                 </Link>
                 <Link href="https://www.linkedin.com/company/s-worldmultimedia">
-                  <a>
-                    <Linkedin style={{ marginRight: '40px' }} />
+                  <a className="sw-w-6 sw-mr-3">
+                    <Image
+                      src="/assets/images/socials/linkedin.png"
+                      width={16}
+                      height={17}
+                      layout="responsive"
+                    />
                   </a>
                 </Link>
                 <Link href="https://www.youtube.com/channel/UCzod695AmgnnUeKSSUZ-t1A">
-                  <a>
-                    <Youtube style={{ marginRight: '40px' }} />
+                  <a className="sw-w-6 sw-mr-3">
+                    <Image
+                      src="/assets/images/socials/yt.png"
+                      width={16}
+                      height={17}
+                      layout="responsive"
+                    />
                   </a>
                 </Link>
               </div>

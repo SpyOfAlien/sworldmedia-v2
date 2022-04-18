@@ -1,25 +1,38 @@
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  @apply sw-text-white sw-font-semibold;
+}
+
 .h1 {
-  @apply sw-text-h1 sw-mb-4 sw-mt-2;
+  @apply sw-text-h5 sw-mb-2 sw-mt-2;
 }
 
 .h2 {
-  @apply sw-text-h2 sw-mb-4 sw-mt-2;
+  @apply sw-text-h6 sw-mb-2 sw-mt-2;
 }
 
 .h3 {
-  @apply sw-text-h3 sw-mb-4 sw-mt-2;
+  @apply sw-text-h6 sw-mb-2 sw-mt-2;
 }
 
 .h4 {
-  @apply sw-text-h4 sw-mb-4 sw-mt-2;
+  font-size: 1.7rem;
+  margin-bottom: 0.5rem;
+  color: white;
 }
 
 .h5 {
-  @apply sw-text-h5;
+  @apply sw-text-h6 sw-mb-2 sw-mt-2;
 }
 
 .h6 {
-  @apply sw-text-h6;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: white;
 }
 
 .ul {

@@ -10,7 +10,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Media, MediaContextProvider } from '../../../lib/media';
 import Header from '../header/header';
 import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
-import SubService from '../../common/services/sub-service/sub-service';
 import subServices from '../../../lib/data/sub-services';
 import Notification from '../notification/notification';
 import { useSection } from '../../../lib/context/section-context';
@@ -23,10 +22,6 @@ interface Props {
     page?: any;
   };
 }
-
-const ServiceDetail = dynamic(
-  () => import('../../common/services/service-detail')
-);
 
 const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
   const {
@@ -57,60 +52,13 @@ const Page: FC<Props> = ({ children, pageProps: { ...pageProps } }) => {
             {children}
           </motion.main>
         </AnimatePresence>
-
+        <Header />
         <Modal subModal={true} open={displaySubModal} onClose={closeSubModal}>
-          {subModalView === 'BRANDING_CONCEPT' && (
-            <SubService data={subServices.branding.concept} />
-          )}
-          {subModalView === 'BRANDING_IDENTITY' && (
-            <SubService data={subServices.branding.brandIdentity} />
-          )}
-          {subModalView === 'BRANDING_STRATEGY' && (
-            <SubService data={subServices.branding.brandStrategy} />
-          )}
-
-          {subModalView === 'BRANDING_COMMUNICATION_PR' && (
-            <SubService data={subServices.brandCommunication.pr} />
-          )}
-          {subModalView === 'BRANDING_COMMUNICATION_SOCIAL' && (
-            <SubService data={subServices.brandCommunication.social} />
-          )}
-
-          {subModalView === 'BRANDING_COMMUNICATION_KOL' && (
-            <SubService data={subServices.brandCommunication.kol} />
-          )}
-          {subModalView === 'BRANDING_COMMUNICATION_MARKETING' && (
-            <SubService data={subServices.brandCommunication.marketing} />
-          )}
-          {subModalView === 'PRODUCTION_CLIENT' && (
-            <SubService data={subServices.production.client} />
-          )}
-          {subModalView === 'PRODUCTION_FORMAT' && (
-            <SubService data={subServices.production.format} />
-          )}
-
-          {subModalView === 'EVENT_ONLINE' && (
-            <SubService data={subServices.event.online} />
-          )}
-          {subModalView === 'EVENT_OFFLINE' && (
-            <SubService data={subServices.event.offline} />
-          )}
-
-          {subModalView === 'INTERNATIONAL_RELATION_FOR_VN' && (
-            <SubService data={subServices.internationalRelation.forVn} />
-          )}
-          {subModalView === 'INTERNATIONAL_RELATION_FOR_FOREIGN' && (
-            <SubService data={subServices.internationalRelation.forForeign} />
-          )}
-          {subModalView === 'INTERNATIONAL_RELATION_FOR_VN_INTERNATIONAL' && (
-            <SubService
-              data={subServices.internationalRelation.vnInternational}
-            />
-          )}
           {subModalView === 'CONFIRM_MODAL' && confirm && <Notification />}
         </Modal>
-        <Header />
-
+        <Modal subModal={false} open={displayModal} onClose={closeModal}>
+          {modalView === 'MENU' && <Menu />}
+        </Modal>
         {router.pathname !== '/contact' && <Footer />}
       </div>
     </MediaContextProvider>

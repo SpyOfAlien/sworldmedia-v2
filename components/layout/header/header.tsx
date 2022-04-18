@@ -11,23 +11,20 @@ import cn from 'classnames';
 import { useSection } from '../../../lib/context/section-context';
 import { useTranslation } from 'next-i18next';
 import { useScrollPosition } from '@n8tb1t/use-scroll-position';
+import { useHover } from '../../../lib/hook';
 
 const Header = () => {
   const router = useRouter();
 
   const { t } = useTranslation('common');
-  const {
-    closeModal,
-    openModal,
-    setModalView,
-    displayModal,
-    modalView,
-  } = useUI();
+  const { closeModal, openModal, setModalView, displayModal, modalView } =
+    useUI();
   const { onSetSection } = useSection();
   const [isActiveHumburger, setIsActiveHumburger] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const [isOffset, setIsOffset] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
+  const [isOpenDropdown, setIsOpenDropdown] = useState(false);
 
   const servicesModal = [
     'BRAND_COMMUNICATION',
@@ -37,10 +34,22 @@ const Header = () => {
     'EVENT',
   ];
 
+  const [serviceRef, isHoverService] = useHover<HTMLAnchorElement>();
+  const [dropdownRef, isHoverDropdown] = useHover<HTMLDivElement>();
+
+  useEffect(() => {
+    if (isHoverService || isHoverDropdown) {
+      setIsOpenDropdown(true);
+    } else {
+      setIsOpenDropdown(false);
+    }
+  }, [isHoverService, isHoverDropdown]);
+
   useEffect(() => {
     if (isActiveHumburger) {
       setIsActiveHumburger(false);
       closeModal();
+      setIsOpenDropdown(false);
     }
   }, [router.pathname]);
 
@@ -135,7 +144,7 @@ const Header = () => {
           router.pathname === '/contact',
       })}
     >
-      <Container cl=" sw-relative sw-h-full sw-flex sw-items-center sw-justify-between">
+      <Container cl="sw-relative sw-h-full sw-flex sw-items-center sw-justify-between">
         <div>
           <Media lessThan="lg">
             <div onClick={handleGoHome}>
@@ -148,7 +157,7 @@ const Header = () => {
                 onClick={handleGoHome}
                 style={{ marginBottom: '10px', cursor: 'pointer' }}
               >
-                <WhiteLogo width="60px" height="60px"/>
+                <WhiteLogo width="60px" height="60px" />
               </div>
             ) : null}
           </Media>
@@ -157,32 +166,65 @@ const Header = () => {
           <div className="sw-nav">
             <Link href="/">
               <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-link nav-link">
-                {' '}
-                {t('menu__home')}{' '}
+                {t('menu__home')}
               </a>
             </Link>
-            <Link href="/services">
-              <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-link nav-link">
-                {' '}
-                {t('menu__services')}{' '}
-              </a>
-            </Link>
+            {/* <Link href="/services"> */}
+            <span
+              ref={serviceRef}
+              className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-link nav-link sw-relative sw-cursor-pointer"
+            >
+              {t('menu__services')}
+              {isOpenDropdown && (
+                <div
+                  ref={dropdownRef}
+                  className={cn(
+                    'sw-absolute sw-flex sw-flex-col sw-px-4 sw-py-2 sw-glass',
+                    s.serviceDropdown
+                  )}
+                >
+                  <Link href="/services/production">
+                    <a className="sw-text-gradient sw-mb-2 ">
+                      {t('home__service__production__title')}
+                    </a>
+                  </Link>
+                  <Link href="/services/branding">
+                    <a className="sw-text-gradient sw-mb-2 ">
+                      {t('home__service__branding__title')}
+                    </a>
+                  </Link>
+                  <Link href="/services/international-relation">
+                    <a className="sw-text-gradient sw-mb-2 ">
+                      {t('home__service__international_relations__title')}
+                    </a>
+                  </Link>
+                  <Link href="/services/brand-communication">
+                    <a className="sw-text-gradient sw-mb-2 ">
+                      {t('home__service__brand_communication__title')}
+                    </a>
+                  </Link>
+                  <Link href="/services/events">
+                    <a className="sw-text-gradient">
+                      {t('home__service__event__title')}
+                    </a>
+                  </Link>
+                </div>
+              )}
+            </span>
+            {/* </Link> */}
             <Link href="/about">
               <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-link nav-link">
-                {' '}
-                {t('menu__about')}{' '}
+                {t('menu__about')}
               </a>
             </Link>
             <Link href="/blogs">
               <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-mr-10 sw-text-link nav-link">
-                {' '}
-                {t('menu__news')}{' '}
+                {t('menu__news')}
               </a>
             </Link>
             <Link href="/contact">
               <a className="sw-mb-sm md:sw-mb-md sw-text-gradient sw-text-link nav-link">
-                {' '}
-                {t('menu__contact')}{' '}
+                {t('menu__contact')}
               </a>
             </Link>
           </div>
@@ -193,8 +235,7 @@ const Header = () => {
               className="sw-text-paragraph sw-cursor-pointer"
               onClick={() => handleSwitchLng('vn')}
             >
-              {' '}
-              VN{' '}
+              VN
             </div>
 
             <div
@@ -216,8 +257,7 @@ const Header = () => {
               className="sw-text-paragraph sw-cursor-pointer"
               onClick={() => handleSwitchLng('en')}
             >
-              {' '}
-              EN{' '}
+              EN
             </div>
           </div>
           <Media lessThan="md">
