@@ -19,7 +19,21 @@ export const getStaticProps = async ({ locale, preview }) => {
 };
 
 const InternationalRelationPage = ({ service, profile }) => {
-  return <ServicePage service={service} profile={profile} />;
+  return (
+    <ServicePage
+      service={service}
+      profile={profile}
+      seo={{
+        vnName: 'S-world | International Relations',
+        enName: 'S-world | Kết nối quốc tế',
+        vnDesc:
+          'Định vị là cầu nối giữa Việt Nam và thế giới, bằng thế mạnh truyền thông đa phương tiện, S-World mang giải pháp khác biệt cho các doanh nghiệp, tổ chức',
+        enDesc:
+          'Positioning itself as a bridge between Vietnam and the world with its strength in multimedia communication, S-World brings new solutions to businesses and organizations',
+        url: 'http://localhost:3000/vn/services/international-relation',
+      }}
+    />
+  );
 };
 
 export default InternationalRelationPage;

@@ -21,7 +21,7 @@ const Menu: FC<Props> = () => {
     <MediaContextProvider>
       <Container cl="sw-flex">
         {/* Navigation */}
-        <div className="sw-flex sw-flex-col sw-w-full sw-items-center sw-h-screen sw-justify-center sw-text-h5 md:sw-text-h4 lg:sw-text-h2 xl:sw-items-start sw-text-gradient 3xl:sw-text-h1 sw-font-bold xl:sw-w-1/2 sw-z-10">
+        <div className="sw-flex sw-flex-col sw-w-full sw-items-center sw-h-screen sw-justify-center sw-text-h5 md:sw-text-h4 lg:sw-text-h2 xl:sw-items-start sw-text-white 3xl:sw-text-h1 sw-font-bold xl:sw-w-1/2 sw-z-10">
           <div className="sw-mb-md md:sw-mb-0 sw-flex sw-flex-col sw-items-center">
             <Link href="/">
               <a className="sw-mb-sm md:sw-mb-md"> {t('menu__home')} </a>
