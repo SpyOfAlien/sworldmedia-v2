@@ -20,6 +20,7 @@ const AboutSworld = () => {
             bottom: width > 1024 ? '-10%' : '10%',
             opacity: 0.8,
             transform: 'rotate(180deg)',
+            zIndex: -1,
           }}
         >
           <Image
@@ -31,7 +32,11 @@ const AboutSworld = () => {
         </div>
         <div
           className="sw-absolute sw-w-full"
-          style={{ top: width > 1024 ? '-20%' : '10%', opacity: 0.8 }}
+          style={{
+            top: width > 1024 ? '-20%' : '10%',
+            opacity: 0.8,
+            zIndex: -1,
+          }}
         >
           <Image
             src="/assets/images/defs/comdefglow.png"
