@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 
-const AboutCEO = () => {
+const AboutCEO = ({ data }) => {
   const { t } = useTranslation('common');
 
   return (

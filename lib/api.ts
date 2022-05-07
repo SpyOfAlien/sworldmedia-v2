@@ -366,3 +366,146 @@ export async function getProjectByType(name) {
 
   return extractProject(entries);
 }
+
+export async function getAboutUsData() {
+  const entries = await fetchGraphQL(
+    `query {
+      vnAboutSw: sWorldOverviewCollection(limit: 5, locale: "vi-VN") {
+        items {
+          title
+          overview
+          image {
+            url
+            width
+            height
+            title
+          }
+        }
+      }
+      enAboutSw: sWorldOverviewCollection(limit: 5, locale: "en-US") {
+        items {
+          title
+          overview
+          image {
+            url
+            width
+            height
+            title
+          }
+        }
+      }
+      
+      vnWhyUs: sWorldWhyCollection(limit: 5, locale: "vi-VN") {
+        items {
+          title
+          description
+        }
+      }
+      enWhyUs: sWorldWhyCollection(limit: 5, locale: "en-US") {
+        items {
+          title
+          description
+        }
+      }
+
+      vnSWSpecial:sWorldSpecialCollection(limit: 10, locale:"vi-VN") {
+        items {
+          name
+          description
+        }
+      }
+       enSWSpecial:sWorldSpecialCollection(limit: 10, locale:"en-US") {
+        items {
+          name
+          description
+        }
+      }
+      
+      vnAdvisors: advisorsCollection(limit: 10, locale:"vi-VN") {
+        items {
+          name
+          advisorRole
+          role
+          image {
+            url
+            width
+            height
+            description
+            title
+          }
+        }
+      }
+      enAdvisors: advisorsCollection(limit: 10, locale:"en-US") {
+        items {
+          name
+          advisorRole
+          role
+          image {
+            url
+            width
+            height
+            description
+            title
+          }
+        }
+      }
+      
+      vnCEO: ceoCollection(limit: 1, locale:"vi-VN") {
+        items {
+          name
+          description
+          image {
+            url
+            width
+            height
+            title
+          }
+        }
+      }
+      enCEO: ceoCollection(limit: 1, locale:"en-US") {
+        items {
+          name
+          description
+          image {
+            url
+            width
+            height
+            title
+          }
+        }
+      }
+      
+      vnTeams: teamsCollection(limit: 20, locale: "vi-VN") {
+        items {
+          title
+          overview
+          teams: teamsCollection {
+            items {
+              ... on Team {
+                name
+                location
+              }
+            }
+          }
+        }
+      }
+      enTeams: teamsCollection(limit: 20, locale: "en-US") {
+        items {
+          title
+          overview
+          teams: teamsCollection {
+            items {
+              ... on Team {
+                name
+                location
+              }
+            }
+          }
+        }
+      }
+    }`,
+    false
+  );
+
+  return entries.data;
+}

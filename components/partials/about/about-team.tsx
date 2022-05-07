@@ -1,6 +1,6 @@
 import { useTranslation } from 'next-i18next';
 
-const AboutTeam = () => {
+const AboutTeam = ({ data }) => {
   const { t } = useTranslation('common');
 
   const teams = [

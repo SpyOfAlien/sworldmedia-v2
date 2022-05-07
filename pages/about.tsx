@@ -10,19 +10,57 @@ import AboutCEO from '../components/partials/about/about-ceo';
 import AboutAdvisor from '../components/partials/about/about-advisor';
 import AboutSworld from '../components/partials/about/about-sworld';
 import AboutWhyUs from '../components/partials/about/about-whyus';
+import { getAboutUsData } from '../lib/api';
+import { useEffect, useState } from 'react';
 
 export const getStaticProps = async ({ locale }) => {
+  const aboutUs = await getAboutUsData();
+
   return {
     props: {
+      aboutUs,
       ...(await serverSideTranslations(locale, ['common'])),
     },
+    revalidate: 10,
   };
 };
 
-const AboutUs = ({ locale }) => {
+const AboutUs = ({ locale, aboutUs }) => {
+  const [aboutSw, setAboutSw] = useState(null);
+  const [aboutWhyUs, setAboutWhyUs] = useState(null);
+  const [aboutSwSpecial, setAboutSwSpecial] = useState(null);
+  const [aboutAdvisors, setAboutAdvisors] = useState(null);
+  const [aboutCeo, setAboutCeo] = useState(null);
+  const [aboutTeams, setAboutTeams] = useState(null);
+
   const { t } = useTranslation('common');
   const router = useRouter();
   const isVn = router.locale === 'vn';
+
+  useEffect(() => {
+    updateContents();
+  }, []);
+  useEffect(() => {
+    updateContents();
+  }, [router.locale]);
+
+  const updateContents = () => {
+    if (isVn) {
+      setAboutSw(aboutUs?.vnAboutSw?.items);
+      setAboutWhyUs(aboutUs?.vnWhyUs?.items);
+      setAboutSwSpecial(aboutUs?.vnSWSpecial?.items);
+      setAboutAdvisors(aboutUs?.vnAdvisors?.items);
+      setAboutCeo(aboutUs?.vnCEO?.items);
+      setAboutTeams(aboutUs?.vnTeams?.items);
+    } else {
+      setAboutSw(aboutUs?.enAboutSw?.items);
+      setAboutWhyUs(aboutUs?.enWhyUs?.items);
+      setAboutSwSpecial(aboutUs?.vnSWSpecial?.items);
+      setAboutAdvisors(aboutUs?.enAdvisors?.items);
+      setAboutCeo(aboutUs?.enCEO?.items);
+      setAboutTeams(aboutUs?.vnTeams?.items);
+    }
+  };
 
   return (
     <MediaContextProvider>
@@ -74,11 +112,11 @@ const AboutUs = ({ locale }) => {
           content={isVn ? 'Đội ngũ Sworldmedia' : 'Sworldmedia team'}
         />
       </Head>
-      <AboutSworld />
-      <AboutWhyUs />
-      <AboutAdvisor />
-      <AboutCEO />
-      <AboutTeam />
+      <AboutSworld data={aboutSw} />
+      <AboutWhyUs whyUs={aboutWhyUs} special={aboutSwSpecial} />
+      <AboutAdvisor data={aboutAdvisors} />
+      <AboutCEO data={aboutCeo} />
+      <AboutTeam data={aboutTeams} />
       <AboutCareer />
     </MediaContextProvider>
   );

@@ -1,7 +1,7 @@
 import Accordion from '../../common/accordion';
 import { useTranslation } from 'next-i18next';
 
-const AboutWhyUs = () => {
+const AboutWhyUs = ({ whyUs, special }) => {
   const { t } = useTranslation();
 
   const reasons = [

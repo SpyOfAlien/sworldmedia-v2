@@ -79,6 +79,7 @@ const HomeAbout = () => {
             top: width > 1024 ? '-110%' : '10%',
             opacity: 0.8,
             transform: 'rotate(180deg)',
+            zIndex: -100,
           }}
         >
           <Image

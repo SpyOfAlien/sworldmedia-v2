@@ -4,7 +4,7 @@ import s from './about.module.scss';
 import cn from 'classnames';
 import { useWindowSize } from '../../../lib/hook';
 
-const AboutAdvisor = () => {
+const AboutAdvisor = ({ data }) => {
   const baseUrl = '/assets/images/advisors/';
   const { t } = useTranslation('common');
   const { width } = useWindowSize();

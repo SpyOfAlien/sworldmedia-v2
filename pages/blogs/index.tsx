@@ -95,6 +95,7 @@ const BlogsPage = ({ locales, posts }) => {
               bottom: width > 1024 ? '-30%' : '10%',
               opacity: 0.8,
               transform: 'rotate(180deg)',
+              zIndex: -100,
             }}
           >
             <Image
@@ -106,7 +107,11 @@ const BlogsPage = ({ locales, posts }) => {
           </div>
           <div
             className="sw-absolute sw-w-full"
-            style={{ bottom: width > 1024 ? '20%' : '10%', opacity: 0.8 }}
+            style={{
+              bottom: width > 1024 ? '20%' : '10%',
+              opacity: 0.8,
+              zIndex: -100,
+            }}
           >
             <Image
               src="/assets/images/defs/comdefglow.png"
